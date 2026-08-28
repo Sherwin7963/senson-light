@@ -4,11 +4,13 @@ B2B LED infrared sensor light foreign trade website built with React + TypeScrip
 
 ## 🚀 Quick Start - Deploy to GitHub Pages
 
-### Method 1: Upload ZIP contents directly (Simplest)
+### Method 1: Upload files directly (Simplest)
 
 1. **Extract** the ZIP file to your local computer
 2. **Create** a new GitHub repository (e.g., `led-sensor-light-website`)
-3. **Upload all files** (not the folder itself) from the extracted ZIP to the repository's `main` branch root directory
+3. **Upload ALL files** (not the folder itself) from the extracted ZIP to the repository's `main` branch root directory
+   - ⚠️ **Make sure to upload `404.html`** — this is critical for SPA routing
+   - If you skip `404.html`, directly visiting sub-pages (like `/admin` or `/products/1`) will show GitHub's default 404 page
 4. **Enable GitHub Pages**:
    - Go to **Settings → Pages**
    - Under **Build and deployment → Source**, select `Deploy from a branch`
@@ -16,6 +18,14 @@ B2B LED infrared sensor light foreign trade website built with React + TypeScrip
    - Click **Save**
 5. **Wait** 1-2 minutes for deployment to complete
 6. **Visit**: `https://<username>.github.io/<repo-name>/`
+
+### Important: Admin Panel Access
+
+- **Admin Login URL**: `https://<username>.github.io/<repo-name>/admin/login`
+- **Default Password**: `admin123`
+- After logging in, you'll be redirected to the dashboard at `/admin/dashboard`
+- All admin pages require login; unauthenticated access redirects to the login page automatically
+- **There is no admin link in the public navigation** — the admin panel is accessed by directly entering the URL
 
 ### Method 2: Deploy with GitHub Actions
 
@@ -48,7 +58,7 @@ jobs:
 ## ✅ Important Notes for GitHub Pages
 
 - **Subpath support**: This app is pre-configured to work with GitHub Pages subpath URLs (`/repo-name/`). The basename is auto-detected from the URL.
-- **SPA routing**: `404.html` handles SPA fallback. When users visit deep links directly, they'll be redirected to the home page which then restores the correct route.
+- **SPA routing**: `404.html` is identical to `index.html`. This is the standard GitHub Pages SPA approach — when a user visits a deep link directly (e.g., `/admin/login`, `/products/1`), GitHub Pages returns `404.html`, which contains the full app. The app then reads the URL and renders the correct page.
 - **Relative paths**: All asset paths (`./assets/`, `./images/`) are relative, so the site works regardless of the repository name.
 - **No build step needed**: The ZIP contains pre-built static files. Just upload and go.
 
@@ -57,7 +67,7 @@ jobs:
 ```
 /
 ├── index.html          # Main entry point (relative asset paths)
-├── 404.html            # SPA fallback for GitHub Pages routing
+├── 404.html            # SPA fallback — identical to index.html (required!)
 ├── favicon.svg         # Site favicon
 ├── icons.svg           # SVG icons sprite
 ├── sitemap.xml         # SEO sitemap
@@ -115,8 +125,15 @@ jobs:
 - `/admin/login` - Admin login (password: `admin123`)
 - `/admin/dashboard` - Dashboard with KPIs
 - `/admin/products` - Product management (CRUD)
+- `/admin/categories` - Category management (CRUD)
+- `/admin/features` - Feature management (CRUD)
 - `/admin/advantages` - Advantage management (CRUD)
 - `/admin/testimonials` - Testimonial management (CRUD)
+- `/admin/hero-slides` - Hero slide management (CRUD)
+- `/admin/about` - About page content management
+- `/admin/images` - Image library management
+- `/admin/translate-settings` - Translation settings
+- `/admin/seo` - SEO settings
 
 ## 🛠️ Tech Stack
 
