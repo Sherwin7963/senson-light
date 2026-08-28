@@ -1,156 +1,105 @@
 # LED Sensor Light Website - GitHub Pages Deployment
 
-B2B LED infrared sensor light foreign trade website built with React + TypeScript + Tailwind CSS.
+OWELL Industrial LED 红外感应灯外贸独立站 - GitHub Pages 部署包。
 
-## 🚀 Quick Start - Deploy to GitHub Pages
+## 功能特性
 
-### Method 1: Upload files directly (Simplest)
+- 🏭 工业风黑红配色 B2B 外贸网站
+- 🌐 四语言支持（English / 简体中文 / Español / 日本語）
+- 🛒 产品展示 + 分类筛选 + 产品详情页
+- 📝 询盘表单 + WhatsApp 悬浮按钮
+- 🏢 关于我们（工厂实力、发展历程、资质认证、OEM 能力）
+- 📱 完全响应式，适配桌面 / 平板 / 移动端
+- 🔒 后台管理系统（产品、优势、评价、轮播、SEO、翻译等全功能 CRUD）
+- 🔑 后台密码可修改，默认密码 `admin123`
 
-1. **Extract** the ZIP file to your local computer
-2. **Create** a new GitHub repository (e.g., `led-sensor-light-website`)
-3. **Upload ALL files** (not the folder itself) from the extracted ZIP to the repository's `main` branch root directory
-   - ⚠️ **Make sure to upload `404.html`** — this is critical for SPA routing
-   - If you skip `404.html`, directly visiting sub-pages (like `/admin` or `/products/1`) will show GitHub's default 404 page
-4. **Enable GitHub Pages**:
-   - Go to **Settings → Pages**
-   - Under **Build and deployment → Source**, select `Deploy from a branch`
-   - Select branch: `main`, folder: `/ (root)`
-   - Click **Save**
-5. **Wait** 1-2 minutes for deployment to complete
-6. **Visit**: `https://<username>.github.io/<repo-name>/`
+## 部署步骤
 
-### Important: Admin Panel Access
-
-- **Admin Login URL**: `https://<username>.github.io/<repo-name>/admin/login`
-- **Default Password**: `admin123`
-- After logging in, you'll be redirected to the dashboard at `/admin/dashboard`
-- All admin pages require login; unauthenticated access redirects to the login page automatically
-- **There is no admin link in the public navigation** — the admin panel is accessed by directly entering the URL
-
-### Method 2: Deploy with GitHub Actions
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-## ✅ Important Notes for GitHub Pages
-
-- **Subpath support**: This app is pre-configured to work with GitHub Pages subpath URLs (`/repo-name/`). The basename is auto-detected from the URL.
-- **SPA routing**: `404.html` is identical to `index.html`. This is the standard GitHub Pages SPA approach — when a user visits a deep link directly (e.g., `/admin/login`, `/products/1`), GitHub Pages returns `404.html`, which contains the full app. The app then reads the URL and renders the correct page.
-- **Relative paths**: All asset paths (`./assets/`, `./images/`) are relative, so the site works regardless of the repository name.
-- **No build step needed**: The ZIP contains pre-built static files. Just upload and go.
-
-## 📁 File Structure
+### 1. 文件清单
 
 ```
-/
-├── index.html          # Main entry point (relative asset paths)
-├── 404.html            # SPA fallback — identical to index.html (required!)
-├── favicon.svg         # Site favicon
-├── icons.svg           # SVG icons sprite
-├── sitemap.xml         # SEO sitemap
-├── robots.txt          # Search engine crawler rules
-├── README.md           # This file
-├── assets/             # Compiled JS/CSS bundles (9 files)
-│   ├── index-*.js      # Main application bundle
-│   ├── index-*.css     # Main stylesheet
-│   ├── polyfills.js    # Browser polyfills
-│   ├── toolkit-*.js    # APaaS toolkit SDK
-│   ├── radix-*.js      # Radix UI primitives
-│   └── rolldown-*.js   # Runtime
-└── images/             # Local images (16 images, zero external links)
-    ├── hero-slide-1.jpg
-    ├── hero-slide-2.jpg
-    ├── hero-slide-3.jpg
-    ├── product-1.jpg
-    ├── product-2.jpg
-    ├── product-3.jpg
-    ├── product-4.jpg
-    ├── about-hero.jpg
-    ├── factory-assembly.jpg
-    ├── factory-production.jpg
-    ├── factory-qc.jpg
-    ├── factory-rd.jpg
-    ├── factory-showroom.jpg
-    ├── factory-warehouse.jpg
-    ├── oem-odm.jpg
-    └── why-choose-us.jpg
+├── index.html          # 主页
+├── 404.html            # SPA 路由回退（与 index.html 内容一致）
+├── assets/             # JS / CSS 资源
+├── images/             # 16 张本地图片
+├── favicon.svg         # 网站图标
+├── sitemap.xml         # SEO 站点地图
+├── robots.txt          # 爬虫规则
+└── README.md           # 本说明
 ```
 
-## ✨ Features
+### 2. GitHub Pages 部署
 
-- 🏭 **B2B Industrial Design**: Dark theme with red accents, industrial aesthetic
-- 🌍 **4 Languages**: English, Chinese, Spanish, Japanese
-- 📦 **Product Catalog**: Filterable product grid with detail pages
-- 📝 **Inquiry Form**: Contact form with validation
-- 📱 **Fully Responsive**: Mobile, tablet, desktop
-- 🔍 **SEO Optimized**: Meta tags, schema.org structured data, sitemap
-- 🍪 **GDPR Compliant**: Cookie consent banner
-- 💬 **WhatsApp Integration**: Floating WhatsApp button
-- 🔧 **Admin Panel**: Product/advantage/testimonial management (localStorage)
+**方式一：直接上传仓库**
 
-## 🔗 Pages
+1. 新建 GitHub 仓库（如 `led-sensor-light-website`）
+2. 将解压后的所有文件上传到仓库根目录
+3. 仓库 Settings → Pages → Source 选择 `Deploy from a branch`
+4. Branch 选择 `main` / 根目录 `/`，保存
+5. 等待几分钟，访问 `https://<username>.github.io/<repo-name>/`
 
-### Frontend (Customer-facing)
-- `/` - Home page with hero, advantages, products, testimonials
-- `/products` - Product listing with category filters
-- `/products/:id` - Product detail page
-- `/about` - About us / company profile
-- `/contact` - Contact / inquiry form
-- `/privacy-policy` - Privacy policy (GDPR)
+**方式二：手动部署**
 
-### Backend (Admin)
-- `/admin/login` - Admin login (password: `admin123`)
-- `/admin/dashboard` - Dashboard with KPIs
-- `/admin/products` - Product management (CRUD)
-- `/admin/categories` - Category management (CRUD)
-- `/admin/features` - Feature management (CRUD)
-- `/admin/advantages` - Advantage management (CRUD)
-- `/admin/testimonials` - Testimonial management (CRUD)
-- `/admin/hero-slides` - Hero slide management (CRUD)
-- `/admin/about` - About page content management
-- `/admin/images` - Image library management
-- `/admin/translate-settings` - Translation settings
-- `/admin/seo` - SEO settings
+将所有文件直接上传到任意静态托管服务（Vercel / Netlify / Cloudflare Pages / 自己的服务器）。
 
-## 🛠️ Tech Stack
+### 3. 后台访问方式
 
-- React 19 + TypeScript
-- Tailwind CSS 4
-- React Router DOM 7
-- Vite 8 (build tool)
-- shadcn/ui components
-- LocalStorage for data persistence
+部署成功后，在网站 URL 后追加 `/admin/login` 访问管理后台：
 
-## 🌐 Browser Support
+```
+https://<your-domain>/admin/login
+```
 
-- Chrome (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- Edge (latest 2 versions)
+- **默认密码**：`admin123`
+- **修改密码**：登录后台 → 左侧菜单「修改密码」→ 输入当前密码和新密码 → 确认修改
+- 修改密码后立即生效，下次登录请使用新密码
 
-## 📄 License
+### 4. 后台功能
 
-MIT License
+| 菜单项 | 说明 |
+|-------|------|
+| Dashboard | 数据概览仪表盘 |
+| Hero Slides | 首页轮播图管理 |
+| Products | 产品增删改查 |
+| Categories | 产品分类管理 |
+| Features | 首页特性管理 |
+| Advantages | 核心优势管理 |
+| Testimonials | 客户评价管理 |
+| About Page | 关于页面全部内容（里程碑/画廊/认证/OEM 等） |
+| Images | 图片素材库 |
+| Translate Settings | 多语言翻译批量设置 |
+| SEO Settings | SEO 元信息配置 |
+| Change Password | 修改后台登录密码 |
+
+### 5. 数据存储说明
+
+本项目为纯前端静态站点，所有管理后台数据存储在浏览器 localStorage 中：
+
+- 产品数据 → `__app_ledlight_products`
+- 优势数据 → `__app_ledlight_advantages`
+- 评价数据 → `__app_ledlight_testimonials`
+- 后台登录状态 → `__app_ledlight_admin_auth`
+- 后台密码 → `__app_ledlight_admin_password`
+
+> ⚠️ localStorage 按浏览器隔离，不同浏览器 / 设备数据不共享。
+
+### 6. 常见问题
+
+**Q: 直接打开子路径（如 /products）显示 404？**
+A: GitHub Pages 使用 404.html 作为 SPA 回退，已配置好。如部署到其他平台，请确保所有路由都返回 index.html。
+
+**Q: 忘记后台密码怎么办？**
+A: 打开浏览器开发者工具 → Application → Local Storage → 删除 `__app_ledlight_admin_password` 键，即可恢复默认密码 `admin123`。
+
+**Q: 图片资源路径不对？**
+A: 部署包使用相对路径（./assets/、./images/），适用于 GitHub Pages 子路径部署。如部署在根域名，同样兼容。
+
+## 版本信息
+
+- **版本**: v10
+- **技术栈**: React 19 + TypeScript + Vite + Tailwind CSS
+- **最新更新**: 添加后台修改密码功能、公司简介段落可动态增减
+
+---
+
+*由 妙搭 (MiaoDa) 生成*
