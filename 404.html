@@ -1,1 +1,46 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=./"><title>Redirecting...</title><script>window.location.replace('./' + window.location.pathname.split('/').slice(1).join('/') + window.location.search + window.location.hash);</script></head><body><p>If you are not redirected automatically, <a href="./">click here</a>.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=./" />
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA 路由回退方案
+    // 当用户直接访问子页面（如 /repo-name/products/1）时，GitHub Pages 返回 404.html
+    // 此脚本将 URL 重写为 index.html + hash 形式，让前端路由接管
+    (function () {
+      // 获取当前路径（相对于仓库根目录）
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // 移除末尾的 404.html（如果有的话）
+      if (pathname.endsWith('404.html')) {
+        pathname = pathname.replace(/404\.html$/, '');
+      }
+
+      // 重定向到首页，保留原路径作为 hash
+      // 这样 React Router 可以正确解析路由
+      var target = './' + hash;
+      if (hash) {
+        // 如果已有 hash，直接跳转
+        window.location.replace(target);
+      } else {
+        // 没有 hash 时，把路径信息编码到 hash 中
+        // 计算相对路径（去掉 basename 部分）
+        var segments = pathname.split('/').filter(Boolean);
+        // 第一段是仓库名，后面的是路由路径
+        var routePath = segments.slice(1).join('/');
+        if (routePath) {
+          window.location.replace('./#' + search + '#/' + routePath);
+        } else {
+          window.location.replace('./');
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a href="./">click here to go home</a>.</p>
+</body>
+</html>
