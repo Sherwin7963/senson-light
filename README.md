@@ -1,4 +1,4 @@
-# LED Sensor Light Website - GitHub Pages Deployment (v15)
+# LED Sensor Light Website - GitHub Pages Deployment (v16)
 
 B2B LED infrared sensor light foreign trade website. Built with React + TypeScript + Tailwind CSS.
 
@@ -32,7 +32,7 @@ B2B LED infrared sensor light foreign trade website. Built with React + TypeScri
 - **Download**: Direct download without opening new tab
 - **Admin**: Upload custom catalog PDF from admin panel → Catalog Management
 
-## v15 What's New
+## v16 What's New
 
 - **PDF.js viewer** — Replaced iframe with PDF.js to avoid Chromium blocking
 - **Direct PDF download** — fetch + Blob + a.click(), no new tab
