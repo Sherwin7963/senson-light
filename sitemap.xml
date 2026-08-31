@@ -22,6 +22,56 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="/products"/>
   </url>
   <url>
+    <loc>/news</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news"/>
+  </url>
+  <url>
+    <loc>/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency"/>
+  </url>
+  <url>
+    <loc>/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor"/>
+  </url>
+  <url>
+    <loc>/news/oem-odm-led-induction-lighting-solutions-for-global-buyers</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers"/>
+  </url>
+  <url>
+    <loc>/news/led-motion-sensor-lamp-installation-lifespan-common-faqs</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs"/>
+  </url>
+  <url>
     <loc>/about</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

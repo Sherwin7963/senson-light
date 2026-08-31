@@ -15,6 +15,12 @@
     "path": "/app/app_17cbf2gmwh9/contact"
   },
   {
+    "path": "/app/app_17cbf2gmwh9/news"
+  },
+  {
+    "path": "/app/app_17cbf2gmwh9/news/:slug"
+  },
+  {
     "path": "/app/app_17cbf2gmwh9/privacy-policy"
   },
   {
@@ -42,7 +48,7 @@
     "path": "/app/app_17cbf2gmwh9/admin/testimonials"
   },
   {
-    "path": "/app/app_17cbf2gmwh9/admin/images"
+    "path": "/app/app_17cbf2gmwh9/admin/news"
   },
   {
     "path": "/app/app_17cbf2gmwh9/admin/features"
