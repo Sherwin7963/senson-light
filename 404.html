@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Page Not Found | OWELL Industrial</title>
     <script>
-      // GitHub Pages SPA fallback: redirect to index.html preserving path
+      // GitHub Pages SPA fallback for BrowserRouter (History API)
+      // 原理：把 404 时的完整路径存入 sessionStorage，然后重定向到 index.html
+      // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
+      // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
       (function () {
         var path = window.location.pathname + window.location.search + window.location.hash;
-        window.location.replace('./' + '#' + path);
+        try {
+          sessionStorage.setItem('spa-redirect', path);
+        } catch (e) {
+          // sessionStorage 不可用时降级为 hash 方式
+          window.location.replace('./#' + path);
+          return;
+        }
+        // 重定向到根 index.html（用相对路径适配子路径部署）
+        var base = window.location.pathname.split('/').slice(0, -1).join('/') || '.';
+        window.location.replace(base + '/');
       })();
     </script>
   </head>
