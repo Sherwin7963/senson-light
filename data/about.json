@@ -1,0 +1,596 @@
+{
+  "heroTitle": {
+    "en": "24+ Years of LED Lighting Manufacturing Excellence",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "heroSubtitle": {
+    "en": "We are a professional LED infrared sensor light manufacturer based in Jiujiang, Jiangxi, China, serving global clients with high-quality security lighting solutions.",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "heroImage": "/images/about-hero.jpg",
+  "stats": [
+    {
+      "id": "s1",
+      "value": "24+",
+      "label": {
+        "en": "Years Experience",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 1
+    },
+    {
+      "id": "s2",
+      "value": "36+",
+      "label": {
+        "en": "Years Market Experience",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 2
+    },
+    {
+      "id": "s3",
+      "value": "40K㎡",
+      "label": {
+        "en": "Factory Area",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 3
+    }
+  ],
+  "introBadge": "OWELL Industrial",
+  "introTitle": {
+    "en": "Your Trusted LED Lighting Partner",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "introParagraphs": [
+    {
+      "id": "ip1",
+      "text": {
+        "en": "Founded in 2003, OWELL Industrial (Jiujiang Ouwei Industrial Co.LTD) has grown into a leading manufacturer of LED sensor lights and security lighting solutions. Our 40,000㎡ state-of-the-art factory in Jiujiang combines advanced production technology with rigorous quality control.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 1
+    },
+    {
+      "id": "ip2",
+      "text": {
+        "en": "We specialize in PIR motion sensor lights, solar LED lights, and commercial lighting products, serving clients in over 50 countries. Our commitment to quality, innovation, and customer satisfaction has earned us long-term partnerships with leading brands worldwide.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 2
+    }
+  ],
+  "milestonesTitle": {
+    "en": "Company Milestones",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "milestonesSubtitle": {
+    "en": "Our journey of innovation and growth in the LED lighting industry.",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "milestones": [
+    {
+      "id": "m1",
+      "year": "2003",
+      "title": {
+        "en": "Ningbo Tanjeon Founded",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Tanjeon Electronics established in Ningbo, marking the beginning of our journey in sensor lighting industry.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 1
+    },
+    {
+      "id": "m2",
+      "year": "2004",
+      "title": {
+        "en": "First Battery-Powered Sensor Light",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Launched the world's first dry-cell battery powered sensor light, and the first sensor light using NICHIA LED chip — a breakthrough in low-power LED sensing technology.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 2
+    },
+    {
+      "id": "m3",
+      "year": "2007",
+      "title": {
+        "en": "Jiujiang Ouwei Established",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Jiujiang Ouwei (OWELL) Industrial Co.,LTD founded; launched the first SMD LED sensor light, advancing production efficiency and product consistency.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 3
+    },
+    {
+      "id": "m4",
+      "year": "2012",
+      "title": {
+        "en": "Jiujiang Tanjeon Tech Co.,LTD Founded",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Jiujiang Tanjeon established, expanding manufacturing capacity and consolidating our presence in the Jiangxi production base.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 4
+    },
+    {
+      "id": "m5",
+      "year": "2015",
+      "title": {
+        "en": "Triple-Head Sensor Light & Good Design Gold Award",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Launched the first triple-head sensor light; awarded the Japan Good Design Gold Award, recognizing our excellence in product design and innovation.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 5
+    }
+  ],
+  "galleryTitle": {
+    "en": "Our Factory",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "gallery": [
+    {
+      "id": "g1",
+      "image": "/images/factory-production.jpg",
+      "title": {
+        "en": "Production Line",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Modern automated production line",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "g2",
+      "image": "/images/factory-qc.jpg",
+      "title": {
+        "en": "QC Workshop",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Quality control inspection area",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "g3",
+      "image": "/images/factory-warehouse.jpg",
+      "title": {
+        "en": "Warehouse",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Finished goods warehouse",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "g4",
+      "image": "/images/factory-rd.jpg",
+      "title": {
+        "en": "R&D Center",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Product research and development",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 4,
+      "visible": true
+    },
+    {
+      "id": "g5",
+      "image": "/images/factory-assembly.jpg",
+      "title": {
+        "en": "Assembly Area",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Manual assembly workshop",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 5,
+      "visible": true
+    },
+    {
+      "id": "g6",
+      "image": "/images/factory-showroom.jpg",
+      "title": {
+        "en": "Exhibition Hall",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Product showroom",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 6,
+      "visible": true
+    }
+  ],
+  "qualityTitle": {
+    "en": "Strict QC Process",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "qualitySubtitle": {
+    "en": "4-step quality assurance ensures every product meets our high standards before shipping.",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "qualitySteps": [
+    {
+      "id": "q1",
+      "step": 1,
+      "title": {
+        "en": "Raw Material Inspection",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Strict testing of all incoming components and materials before production.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Package",
+      "order": 1
+    },
+    {
+      "id": "q2",
+      "step": 2,
+      "title": {
+        "en": "Production Monitoring",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Real-time quality checks on the assembly line by trained QC engineers.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Eye",
+      "order": 2
+    },
+    {
+      "id": "q3",
+      "step": 3,
+      "title": {
+        "en": "Aging Test",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "72-hour continuous aging test for every batch to ensure long-term reliability.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Clock",
+      "order": 3
+    },
+    {
+      "id": "q4",
+      "step": 4,
+      "title": {
+        "en": "Final Inspection",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Comprehensive appearance and function test before shipping with detailed QC report.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "CheckCircle2",
+      "order": 4
+    }
+  ],
+  "certificationsTitle": {
+    "en": "Global Certifications",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "certificationsSubtitle": {
+    "en": "All products comply with international standards and hold major certifications.",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "certifications": [
+    {
+      "id": "c1",
+      "name": {
+        "en": "CE",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "authority": {
+        "en": "EU Safety Standard",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "image": "",
+      "year": "2010",
+      "order": 1
+    },
+    {
+      "id": "c2",
+      "name": {
+        "en": "RoHS",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "authority": {
+        "en": "Environmental Compliance",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "image": "",
+      "year": "2012",
+      "order": 2
+    },
+    {
+      "id": "c3",
+      "name": {
+        "en": "ISO9001",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "authority": {
+        "en": "Quality Management",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "image": "",
+      "year": "2015",
+      "order": 3
+    },
+    {
+      "id": "c4",
+      "name": {
+        "en": "FCC",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "authority": {
+        "en": "EMC Compliance",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "image": "",
+      "year": "2018",
+      "order": 4
+    }
+  ],
+  "oemTitle": {
+    "en": "Customization Capabilities",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "oemDescription": {
+    "en": "We offer comprehensive OEM/ODM/JDM services to meet your unique requirements. From custom logo printing to full product design, our engineering team is ready to bring your vision to life.",
+    "zh": "",
+    "es": "",
+    "ja": ""
+  },
+  "oemImage": "/images/oem-odm.jpg",
+  "oemServices": [
+    {
+      "id": "o1",
+      "title": {
+        "en": "Custom Logo Printing",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Custom logo printing on product & packaging",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Stamp",
+      "order": 1
+    },
+    {
+      "id": "o2",
+      "title": {
+        "en": "Custom Housing",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Custom housing color & material",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Palette",
+      "order": 2
+    },
+    {
+      "id": "o3",
+      "title": {
+        "en": "Packaging Design",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Customized packaging design",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Box",
+      "order": 3
+    },
+    {
+      "id": "o4",
+      "title": {
+        "en": "Adjustable Parameters",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Adjustable technical parameters",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Settings",
+      "order": 4
+    },
+    {
+      "id": "o5",
+      "title": {
+        "en": "Private Label",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Private label & white label service",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Tag",
+      "order": 5
+    },
+    {
+      "id": "o6",
+      "title": {
+        "en": "Custom PCB Design",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Custom PCB & driver design",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Cpu",
+      "order": 6
+    }
+  ],
+  "showHero": true,
+  "showIntro": true,
+  "showStats": true,
+  "showStatsOnHome": true,
+  "showCoreAdvantages": true,
+  "showCoreAdvantagesOnHome": true,
+  "showWhyChooseUs": true,
+  "showMilestones": true,
+  "showGallery": true,
+  "showStrictQC": true,
+  "showGlobalCertifications": true,
+  "showOEM": true,
+  "showProductCatalog": true
+}
