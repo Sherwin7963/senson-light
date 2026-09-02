@@ -1,49 +1,23 @@
 # OWELL Industrial - LED Sensor Light Website
 
-B2B LED 红外感应灯外贸独立站 - GitHub Pages 部署包 v50
-
-## 部署说明
-
-将本目录所有文件上传到 GitHub Pages 仓库的根目录即可。
-
-## 文件结构
-
-```
-├── index.html          # 主页（SPA 入口）
-├── 404.html            # SPA Fallback（BrowserRouter 刷新支持）
-├── favicon.png         # 网站图标
-├── sitemap.xml         # SEO 站点地图（含产品详情页 URL）
-├── robots.txt          # 搜索引擎爬虫规则
-├── README.md           # 本文件
-├── assets/             # JS / CSS 构建产物
-├── images/             # 所有图片资源
-│   ├── news/           # 新闻封面图（4 张）
-│   └── avatars/        # 评价头像（4 张）
-└── files/
-    └── Catalog.pdf     # 产品目录 PDF
-```
-
-## 功能特性
-
-- 前台：首页、产品列表、产品详情、关于我们、联系我们、新闻中心、隐私政策
-- 后台：仪表盘、产品管理、优势管理、评价管理、About 管理、新闻管理、轮播图管理、设置
-- 四语言支持：English / 中文 / Español / 日本語
-- 深色工业风格（黑红配色）
-- localStorage 数据持久化
-- 响应式设计，适配桌面/平板/移动端
-
-## v50 更新内容
-
-- 修复 About 版块 localStorage 配额超限问题
-  - 全面收紧图片压缩参数（Hero / Gallery / Certifications）
-  - v2 数据迁移：自动压缩历史上传的大图
-  - 管理页新增 Storage Usage 存储用量可视化卡片
-  - 新增一键压缩所有图片功能
-  - 新增 compressBase64 工具函数支持 base64 图片再压缩
+B2B 外贸独立站，展示 LED 红外感应灯工厂实力与产品体系。
 
 ## 技术栈
 
 - React 19 + TypeScript
-- Tailwind CSS 4
 - Vite 8
+- Tailwind CSS 4
 - React Router DOM 7
+
+## 功能
+
+- 前台：首页、产品列表、产品详情、关于我们、联系我们、新闻中心、隐私政策
+- 后台：仪表盘、产品管理、优势管理、评价管理、特性管理、首页轮播管理、类目管理、关于页面管理、图片管理、翻译设置、SEO设置、邮件设置、产品目录、页脚设置、新闻管理、隐私政策管理、修改密码
+- 四语言切换：英文、中文、西班牙语、日语
+- 数据本地持久化（localStorage）
+
+## 部署到 GitHub Pages
+
+1. 将本目录所有文件上传到 GitHub 仓库
+2. 在仓库 Settings → Pages 中选择部署分支
+3. 访问 `https://<username>.github.io/<repo>/`
