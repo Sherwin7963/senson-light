@@ -1,33 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/"/>
   </url>
   <url>
     <loc>/products</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products"/>
   </url>
   <url>
     <loc>/about</loc>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/about?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/about?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/about?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/about"/>
   </url>
   <url>
     <loc>/contact</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>/news</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/contact?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/contact?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/contact?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/contact?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/contact"/>
   </url>
   <url>
     <loc>/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/privacy-policy?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/privacy-policy?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/privacy-policy?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/privacy-policy?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/privacy-policy"/>
+  </url>
+  <url>
+    <loc>/news</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news"/>
+  </url>
+  <url>
+    <loc>/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/how-led-motion-sensor-lights-improve-factory-energy-efficiency"/>
+  </url>
+  <url>
+    <loc>/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/choosing-solar-powered-led-sensor-lights-for-warehouse-outdoor"/>
+  </url>
+  <url>
+    <loc>/news/oem-odm-led-induction-lighting-solutions-for-global-buyers</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/oem-odm-led-induction-lighting-solutions-for-global-buyers"/>
+  </url>
+  <url>
+    <loc>/news/led-motion-sensor-lamp-installation-lifespan-common-faqs</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/news/led-motion-sensor-lamp-installation-lifespan-common-faqs"/>
+  </url>
+  <url>
+    <loc>/products/p_default_1</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_1?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_1?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_1?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_1?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_1"/>
+  </url>
+  <url>
+    <loc>/products/p_default_2</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_2?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_2?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_2?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_2?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_2"/>
+  </url>
+  <url>
+    <loc>/products/p_default_3</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_3?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_3?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_3?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_3?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_3"/>
+  </url>
+  <url>
+    <loc>/products/p_default_4</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_4?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_4?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_4?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_4?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_4"/>
+  </url>
+  <url>
+    <loc>/products/p_default_5</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_5?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_5?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_5?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_5?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_5"/>
+  </url>
+  <url>
+    <loc>/products/p_default_6</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_6?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_6?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_6?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_6?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_6"/>
+  </url>
+  <url>
+    <loc>/products/p_default_7</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="/products/p_default_7?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="/products/p_default_7?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="/products/p_default_7?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="/products/p_default_7?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/products/p_default_7"/>
   </url>
 </urlset>
