@@ -11,21 +11,24 @@
       // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
       // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
       //
-      // 修复 v48：之前使用 slice(0,-1) 计算上一级目录并重定向，
-      // 在根域名部署下访问 /admin/dashboard 等多级路径时，会重定向到
-      // /admin/（仍是 404），形成无限重定向循环，页面一直闪烁。
-      // 改为直接重定向到站点根 /，无论深度多少都能命中 index.html。
+      // 修复 v52：
+      // - 根域名部署（如 example.com/products）和子路径部署
+      //   （如 example.com/repo-name/products）都能正确回到 index.html
+      // - 使用相对路径 './'，重定向到当前 404.html 所在目录（即站点根）
+      // - 在子路径部署下，404.html 始终在仓库根目录，所以 './' 就是仓库根
       (function () {
         var path = window.location.pathname + window.location.search + window.location.hash;
         try {
           sessionStorage.setItem('spa-redirect', path);
         } catch (e) {
           // sessionStorage 不可用时降级为 hash 方式
-          window.location.replace('/#' + path);
+          window.location.replace('./#' + path);
           return;
         }
-        // 直接重定向到站点根（根域名 / GitHub Pages 仓库根都命中 index.html）
-        window.location.replace('/');
+        // 相对路径：回到 404.html 所在目录（即站点/仓库根），命中 index.html
+        // 根域名部署 → './' = '/'
+        // 子路径部署 → './' = '/repo-name/'
+        window.location.replace('./');
       })();
     </script>
   </head>
