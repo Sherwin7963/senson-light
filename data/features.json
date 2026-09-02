@@ -1,0 +1,106 @@
+{
+  "features": [
+    {
+      "id": "1",
+      "title": {
+        "en": "Direct Factory",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Own manufacturing base with full production lines",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Factory",
+      "order": 1
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Quality Assured",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "100% QC inspection before shipment",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "ShieldCheck",
+      "order": 2
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Global Export",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Export to 50+ countries worldwide",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Globe",
+      "order": 3
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Fast Delivery",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "7-15 days standard lead time",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Clock",
+      "order": 4
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Custom OEM",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Custom logo, packaging & parameters",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Settings",
+      "order": 5
+    },
+    {
+      "id": "6",
+      "title": {
+        "en": "24/7 Support",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "description": {
+        "en": "Professional after-sales service team",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "icon": "Headphones",
+      "order": 6
+    }
+  ]
+}
