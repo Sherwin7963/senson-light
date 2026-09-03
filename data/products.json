@@ -136,6 +136,143 @@
     "createdAt": 1788240230349
   },
   {
+    "name": {
+      "en": "K629 DryBattery Dual lamp-head LED Sensor Light 2*4W",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "Dry Battery",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788424604178_kse1xu.jpg",
+      "/images/custom/products/1788424607800_9xt4lw.jpg",
+      "/images/custom/products/1788424610777_atojxg.jpg",
+      "/images/custom/products/1788424614880_0tw4i8.jpg",
+      "/images/custom/products/1788424618681_fhned3.jpg",
+      "/images/custom/products/1788424621720_va2o74.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "2*4W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "177*115*180MM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "Max. 8M",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788424599644_54k74b",
+    "image": "/images/custom/products/1788424604178_kse1xu.jpg",
+    "createdAt": 1788424599644
+  },
+  {
     "id": "p_1788239831935_bb5evm",
     "name": {
       "en": "K480 Solar Power Two-head LED Sensor light 2*6W",
