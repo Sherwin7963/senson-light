@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "en": "Industry Experience",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Factory",
+    "description": {
+      "en": "10+ years of professional LED lighting manufacturing experience with 20,000㎡ production facility.",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "order": 1
+  },
+  {
+    "id": "2",
+    "title": {
+      "en": "Global Certification",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "ShieldCheck",
+    "description": {
+      "en": "CE, RoHS, ISO9001, FCC certified products ensuring quality and compliance for global markets.",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "order": 2
+  },
+  {
+    "id": "3",
+    "title": {
+      "en": "OEM/ODM/JDM Customization",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Settings",
+    "description": {
+      "en": "Custom logo, housing design, packaging, and technical parameters to perfectly fit your brand identity.",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "order": 3
+  }
+]

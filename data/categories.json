@@ -1,0 +1,142 @@
+[
+  {
+    "id": "cat_ac",
+    "slug": "AC Powered",
+    "name": {
+      "en": "AC Powered Lights",
+      "zh": "AC 供电灯",
+      "es": "Luces de Corriente Alterna",
+      "ja": "AC電源ライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Zap",
+    "sortOrder": 1,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_dry",
+    "slug": "Dry Battery",
+    "name": {
+      "en": "Dry Battery Lights",
+      "zh": "干电池灯",
+      "es": "Luces de Batería Seca",
+      "ja": "乾電池式ライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Battery",
+    "sortOrder": 2,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_solar",
+    "slug": "Solar",
+    "name": {
+      "en": "Solar Lights",
+      "zh": "太阳能灯",
+      "es": "Luces Solares",
+      "ja": "ソーラーライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Sun",
+    "sortOrder": 3,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_hybrid",
+    "slug": "Hybrid",
+    "name": {
+      "en": "Hybrid Lights",
+      "zh": "混合型灯",
+      "es": "Luces Híbridas",
+      "ja": "ハイブリッドライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "RefreshCw",
+    "sortOrder": 4,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_recharge",
+    "slug": "Rechargeable",
+    "name": {
+      "en": "Rechargeable Lights",
+      "zh": "可充电灯",
+      "es": "Luces Recargables",
+      "ja": "充電式ライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "BatteryCharging",
+    "sortOrder": 5,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_table",
+    "slug": "Table Lamp",
+    "name": {
+      "en": "Table Lamps",
+      "zh": "台灯",
+      "es": "Lámparas de Mesa",
+      "ja": "テーブルランプ"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Lamp",
+    "sortOrder": 6,
+    "enabled": true,
+    "createdAt": 1788144660762
+  },
+  {
+    "id": "cat_work",
+    "slug": "Work Light",
+    "name": {
+      "en": "Work Lights",
+      "zh": "工作灯",
+      "es": "Luces de Trabajo",
+      "ja": "ワークライト"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Flashlight",
+    "sortOrder": 7,
+    "enabled": true,
+    "createdAt": 1788144660762
+  }
+]

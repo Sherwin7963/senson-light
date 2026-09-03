@@ -1,0 +1,78 @@
+[
+  {
+    "id": "4",
+    "customerName": {
+      "en": "Sarah Johnson",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "company": "GreenBuild USA",
+    "avatar": "/images/avatars/avatar-4.jpg",
+    "content": {
+      "en": "The solar sensor lights are amazing quality. Our customers love them! The technical support team is very responsive and helpful.",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "rating": 4,
+    "createdAt": 1787888757066
+  },
+  {
+    "id": "3",
+    "customerName": {
+      "en": "David Müller",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "company": "EuroLight GmbH",
+    "avatar": "/images/avatars/avatar-3.jpg",
+    "content": {
+      "en": "Fast delivery, competitive pricing, and all products passed our quality inspection. CE certification documentation was complete and professional.",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "rating": 5,
+    "createdAt": 1787456757066
+  },
+  {
+    "id": "2",
+    "customerName": {
+      "en": "Maria Garcia",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "company": "SolarTech Solutions",
+    "avatar": "/images/avatars/avatar-2.jpg",
+    "content": {
+      "en": "We have been working with OWELL for over 3 years. Their OEM service is outstanding and the product quality is consistently excellent. Great partner!",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "rating": 5,
+    "createdAt": 1786592757066
+  },
+  {
+    "id": "1",
+    "customerName": {
+      "en": "James Wilson",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "company": "BrightElectronics Co.",
+    "avatar": "/images/avatars/avatar-1.jpg",
+    "content": {
+      "en": "Excellent quality products and very professional service. The LED sensor lights have been performing perfectly in our commercial projects. Highly recommended!",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "rating": 5,
+    "createdAt": 1785728757066
+  }
+]
