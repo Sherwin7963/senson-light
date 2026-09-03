@@ -1,0 +1,628 @@
+[
+  {
+    "id": "p_1788240230349_4ae0l2",
+    "name": {
+      "en": "K430 AC Power Tri-Head LED Sensor light 3*10W",
+      "zh": "K430 交流电源三头LED感应灯 3×10W",
+      "es": "Lámpara LED con sensor de luz K430 de alimentación de CA y tres cabezales, 3 × 10 W",
+      "ja": "K430 AC電源式 3灯式LEDセンサーライト 3×10W"
+    },
+    "category": "AC Powered",
+    "image": "/images/custom/products/1788413715382_2f8695.jpg",
+    "gallery": [
+      "/images/custom/products/1788413715382_2f8695.jpg",
+      "/images/custom/products/1788413721805_1xvwgm.jpg",
+      "/images/custom/products/1788413729446_eye8oi.jpg",
+      "/images/custom/products/1788413736074_xt3osi.jpg",
+      "/images/custom/products/1788413742962_ky11ea.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "3*10W",
+          "zh": "3×10W",
+          "es": "3 × 10 W",
+          "ja": "3×10W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
+        },
+        "value": {
+          "en": "110/220V",
+          "zh": "110/220V",
+          "es": "110/220 V",
+          "ja": "110/220V"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K/6500K",
+          "zh": "3000K/6500K",
+          "es": "3000 K/6500 K",
+          "ja": "3000K／6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788240230349
+  },
+  {
+    "id": "p_1788239831935_bb5evm",
+    "name": {
+      "en": "K480 Solar Power Two-head LED Sensor light 2*6W",
+      "zh": "K480 太阳能双头LED感应灯 2×6W",
+      "es": "K480 Lámpara LED con sensor de dos cabezales y energía solar, 2 × 6 W",
+      "ja": "K480 ソーラー式 2灯式 LED センサーライト 2×6W"
+    },
+    "category": "Solar",
+    "image": "/images/custom/products/1788413750312_vo5l3n.jpg",
+    "gallery": [
+      "/images/custom/products/1788413750312_vo5l3n.jpg",
+      "/images/custom/products/1788413757996_ajpih4.jpg",
+      "/images/custom/products/1788413766377_6cn5m5.jpg",
+      "/images/custom/products/1788413773121_mmx0jj.jpg",
+      "/images/custom/products/1788413780302_j7ofum.jpg",
+      "/images/custom/products/1788413787401_31twzo.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "2*6W",
+          "zh": "2×6W",
+          "es": "2 × 6 W",
+          "ja": "2×6W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "6500K",
+          "zh": "6500K",
+          "es": "6500 K",
+          "ja": "6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788239831935
+  },
+  {
+    "id": "p_1788242004116_b6sgn2",
+    "name": {
+      "en": "H840 Outdoor/Indoor use Recharge LED Sensor Light",
+      "zh": "H840 室内外两用可充电LED感应灯",
+      "es": "H840: Lámpara LED recargable con sensor para uso en exteriores e interiores",
+      "ja": "H840 屋外・屋内兼用 充電式LEDセンサーライト"
+    },
+    "category": "Rechargeable",
+    "image": "/images/custom/products/1788413794881_vvrxfp.jpg",
+    "gallery": [
+      "/images/custom/products/1788413794881_vvrxfp.jpg",
+      "/images/custom/products/1788413800835_abctrq.jpg",
+      "/images/custom/products/1788413809935_zh063p.jpg",
+      "/images/custom/products/1788413817462_olg6pi.jpg",
+      "/images/custom/products/1788413825002_svqwcp.jpg",
+      "/images/custom/products/1788413832546_iw61ee.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "1W",
+          "zh": "1W",
+          "es": "1 W",
+          "ja": "1W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "8M",
+          "zh": "8M",
+          "es": "8M",
+          "ja": "8M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500K",
+          "es": "3000 K-6500 K",
+          "ja": "3000K～6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788242004116
+  },
+  {
+    "id": "p_1788240603948_4nkia6",
+    "name": {
+      "en": "OT01A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "OT01A LED 台灯 触控三档开关及调光功能，附Type-C数据线",
+      "es": "Lámpara de mesa LED OT01A con interruptor táctil de 3 posiciones y regulación de intensidad, con cable Type-C",
+      "ja": "OT01A LED テーブルライト タッチ式3段階スイッチ＆調光機能付き、Type-Cケーブル付属"
+    },
+    "category": "Table Lamp",
+    "image": "/images/custom/products/1788413839916_e753l5.jpg",
+    "gallery": [
+      "/images/custom/products/1788413839916_e753l5.jpg",
+      "/images/custom/products/1788413842887_523ij0.jpg",
+      "/images/custom/products/1788413849178_qfjg39.jpg",
+      "/images/custom/products/1788413856166_l0prx9.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "130LM",
+          "zh": "130LM",
+          "es": "130 LM",
+          "ja": "130LM"
+        }
+      },
+      {
+        "key": {
+          "en": "Light Source",
+          "zh": "光源",
+          "es": "Fuente de luz",
+          "ja": "光源"
+        },
+        "value": {
+          "en": "3000K-4000K-6500K",
+          "zh": "3000K-4000K-6500K",
+          "es": "3000 K-4000 K-6500 K",
+          "ja": "3000K・4000K・6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80 RA",
+          "zh": ">80 RA简体中文（大陆）",
+          "es": ">80 RA",
+          "ja": ">80 RA"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788240603948
+  },
+  {
+    "id": "p_1788241561700_d3bkis",
+    "name": {
+      "en": "Outdoor Use Solar Power LED Petal Lamp sensor light with Power Bank",
+      "zh": "户外用太阳能LED花瓣灯，带传感器和移动电源",
+      "es": "Lámpara LED con forma de pétalo y energía solar para uso en exteriores, con sensor de movimiento y batería externa",
+      "ja": "屋外用 ソーラーパワーLEDペタルランプ センサーライト（モバイルバッテリー付き）"
+    },
+    "category": "Work Light",
+    "image": "/images/custom/products/1788413864046_83mnp8.jpg",
+    "gallery": [
+      "/images/custom/products/1788413864046_83mnp8.jpg",
+      "/images/custom/products/1788413869322_vldddy.jpg",
+      "/images/custom/products/1788413874234_wma7xl.jpg",
+      "/images/custom/products/1788413879613_omhzyb.jpg",
+      "/images/custom/products/1788413884865_jx47zg.jpg",
+      "/images/custom/products/1788413890280_uzgd39.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "40W",
+          "zh": "40W",
+          "es": "40 W",
+          "ja": "40W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500K",
+          "es": "3000 K-6500 K",
+          "ja": "3000K～6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788241561700
+  }
+]
