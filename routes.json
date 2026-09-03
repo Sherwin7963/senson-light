@@ -1,0 +1,86 @@
+[
+  {
+    "path": "/"
+  },
+  {
+    "path": "/products"
+  },
+  {
+    "path": "/products/:id"
+  },
+  {
+    "path": "/about"
+  },
+  {
+    "path": "/contact"
+  },
+  {
+    "path": "/privacy-policy"
+  },
+  {
+    "path": "/news"
+  },
+  {
+    "path": "/news/:slug"
+  },
+  {
+    "path": "/admin/login"
+  },
+  {
+    "path": "/admin"
+  },
+  {
+    "path": "/admin/dashboard"
+  },
+  {
+    "path": "/admin/inquiries"
+  },
+  {
+    "path": "/admin/products"
+  },
+  {
+    "path": "/admin/categories"
+  },
+  {
+    "path": "/admin/advantages"
+  },
+  {
+    "path": "/admin/testimonials"
+  },
+  {
+    "path": "/admin/features"
+  },
+  {
+    "path": "/admin/hero-slides"
+  },
+  {
+    "path": "/admin/about"
+  },
+  {
+    "path": "/admin/translate-settings"
+  },
+  {
+    "path": "/admin/seo"
+  },
+  {
+    "path": "/admin/change-password"
+  },
+  {
+    "path": "/admin/email-settings"
+  },
+  {
+    "path": "/admin/catalog"
+  },
+  {
+    "path": "/admin/footer"
+  },
+  {
+    "path": "/admin/privacy-policy"
+  },
+  {
+    "path": "/admin/github-sync"
+  },
+  {
+    "path": "/admin/news"
+  }
+]
