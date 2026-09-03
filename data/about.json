@@ -11,7 +11,7 @@
     "es": "",
     "ja": ""
   },
-  "heroImage": "",
+  "heroImage": "/images/about-hero.jpg",
   "stats": [
     {
       "id": "s1",
@@ -475,7 +475,7 @@
     "es": "",
     "ja": ""
   },
-  "oemImage": "",
+  "oemImage": "/images/oem-odm.jpg",
   "oemServices": [
     {
       "id": "o1",
