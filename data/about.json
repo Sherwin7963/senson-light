@@ -1,26 +1,26 @@
 {
   "heroTitle": {
     "en": "24+ Years of LED Lighting Manufacturing Excellence",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "24年以上的卓越LED照明制造经验",
+    "es": "Más de 24 años de excelencia en la fabricación de iluminación LED",
+    "ja": "24年以上にわたるLED照明製造の卓越性"
   },
   "heroSubtitle": {
-    "en": "We are a professional LED infrared sensor light manufacturer based in Jiujiang, Jiangxi, China, serving global clients with high-quality security lighting solutions.",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "en": "We are a professional LED sensor light manufacturer based in Jiujiang, Jiangxi, China, serving global clients with high-quality security lighting solutions.",
+    "zh": "我们是一家总部位于中国江西省九江市的专业LED感应灯制造商，致力于为全球客户提供高品质的安防照明解决方案。",
+    "es": "Somos un fabricante profesional de luces LED con sensor con sede en Jiujiang, Jiangxi (China), que ofrece a clientes de todo el mundo soluciones de iluminación de seguridad de alta calidad.",
+    "ja": "当社は、中国江西省九江市に拠点を置くLEDセンサーライトの専門メーカーであり、世界中の顧客に高品質な防犯照明ソリューションを提供しています。"
   },
-  "heroImage": "/images/about-hero.jpg",
+  "heroImage": "/images/custom/about/1788413909108_cg9an0.jpg",
   "stats": [
     {
       "id": "s1",
       "value": "24+",
       "label": {
-        "en": "Years Experience",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "Years Manufacturer Experience",
+        "zh": "制造经验",
+        "es": "Experiencia en fabricación",
+        "ja": "製造実績"
       },
       "order": 1
     },
@@ -29,9 +29,9 @@
       "value": "36+",
       "label": {
         "en": "Years Market Experience",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "多年市场经验",
+        "es": "Años de experiencia en el mercado",
+        "ja": "長年の市場経験"
       },
       "order": 2
     },
@@ -40,9 +40,9 @@
       "value": "40K㎡",
       "label": {
         "en": "Factory Area",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "厂区总面积",
+        "es": "Área de Fábrica",
+        "ja": "工場エリア"
       },
       "order": 3
     }
@@ -50,43 +50,63 @@
   "introBadge": "OWELL Industrial",
   "introTitle": {
     "en": "Your Trusted LED Lighting Partner",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "您值得信赖的LED照明合作伙伴",
+    "es": "Su socio de iluminación LED de confianza",
+    "ja": "信頼できるLED照明パートナー"
   },
   "introParagraphs": [
     {
       "id": "ip1",
       "text": {
-        "en": "Founded in 2003, OWELL Industrial (Jiujiang Ouwei Industrial Co.LTD) has grown into a leading manufacturer of LED sensor lights and security lighting solutions. Our 40,000㎡ state-of-the-art factory in Jiujiang combines advanced production technology with rigorous quality control.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "Jiujiang Ouwei Industrial Co., Ltd. was established in 2007. The company has been engaged in the research, development, production, and sales of motion-sensor lights, including outdoor motion-sensor lights, motion-sensor lights for security cameras, dry-cell motion-sensor lights, solar-powered motion-sensor lights, hybrid motion-sensor lights, work lights, and smart streetlight systems. (The company’s products are known for their consistent quality and have held an 85% market share in Japan for 10 consecutive years.)",
+        "zh": "九江欧威实业有限公司成立于2007年， 公司一直从事感应灯的研发、 生产和销售： 户外感应灯、 摄像机感应灯、 干电池感应灯、太阳能感应灯、 混合动力感应灯、 工作灯和智能路灯系统。（产品质量稳定， 产品连续10年在日本市场市场占有率85%）。",
+        "es": "Jiujiang Ouwei Industrial Co., Ltd. se fundó en 2007. La empresa se ha dedicado desde entonces al desarrollo, la producción y la venta de luces con sensor: luces con sensor para exteriores, luces con sensor para cámaras de seguridad, luces con sensor alimentadas por pilas, luces con sensor solares, luces con sensor híbridas, luces de trabajo y sistemas de alumbrado público inteligente. (La calidad de los productos es constante y, durante 10 años consecutivos, han alcanzado una cuota de mercado del 85 % en Japón).\n\n",
+        "ja": "九江欧威実業有限公司は2007年に設立され、以来、センサーライトの研究開発、製造、販売を一貫して手掛けています。取り扱い製品には、屋外用センサーライト、防犯カメラ用センサーライト、乾電池式センサーライト、ソーラー式センサーライト、ハイブリッド式センサーライト、作業用ライト、スマート街灯システムなどがあります（製品の品質は安定しており、日本市場でのシェアは10年連続で85％を維持しています）。"
       },
       "order": 1
     },
     {
-      "id": "ip2",
+      "id": "ip_1788317068608_qyra",
       "text": {
-        "en": "We specialize in PIR motion sensor lights, solar LED lights, and commercial lighting products, serving clients in over 50 countries. Our commitment to quality, innovation, and customer satisfaction has earned us long-term partnerships with leading brands worldwide.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "The company currently occupies a site area of 3,900 square meters, with a factory building area of approximately 40,000 square meters. It employs over 400 staff members, including 30 technical personnel and 24 quality control (QC) staff. The company has a total of eight production workshops: die-casting, injection molding, metalworking, rubber, painting, assembly, and SMT.",
+        "zh": "公司现占地面积3900平方米，厂房建筑面积约40000平方， 有员工400多名，其中技术人员30人，QC24名， 公司共有8个车间：压铸车间、 注塑车间、 五金车间、 橡胶车间、喷涂车间、装配车间、SMT车间。",
+        "es": "Actualmente, la empresa ocupa una superficie total de 3.900 metros cuadrados, con una superficie de naves industriales de aproximadamente 40.000 metros cuadrados. Cuenta con más de 400 empleados, entre los que se incluyen 30 técnicos y 24 encargados del control de calidad (CC). La empresa cuenta con un total de ocho naves de producción: fundición a presión, moldeo por inyección, metalurgia, caucho, pintura, montaje y SMT.",
+        "ja": "同社は現在、敷地面積3,900平方メートル、工場建物面積約40,000平方メートルの敷地を保有しています。従業員数は400名以上で、そのうち技術者が30名、品質管理（QC）担当者が24名在籍しています。 同社には、ダイカスト、射出成形、金属加工、ゴム加工、塗装、組立、SMTの計8つの生産工場があります。"
       },
       "order": 2
+    },
+    {
+      "id": "ip_1788317095968_m0oz",
+      "text": {
+        "en": "The company has nine comprehensive departments: R&D, Technical Projects, Quality Control, Production, Purchasing, Warehousing, Administration, and Sales. The company has obtained ISO 9001:2015 international quality management system certification, and most of our products have received international safety certifications such as ETL, CE, and PSE.",
+        "zh": "公司有9个完整的体系部门： 技术研发部、 技术项目部、 品管部、生产部、采购部、仓储部、行政部和销售部。公司己通过了1509001国际品质体系认证， 我们的产品大多数获得了： ETL、CE、 PSE等国际安全认证。",
+        "es": "La empresa cuenta con nueve departamentos que abarcan todas las áreas: I+D, Proyectos Técnicos, Control de Calidad, Producción, Compras, Almacenes, Administración y Ventas. La empresa ha obtenido la certificación internacional del sistema de gestión de la calidad ISO 9001:2015, y la mayoría de nuestros productos han recibido certificaciones internacionales de seguridad como ETL, CE y PSE.",
+        "ja": "当社には、研究開発、技術プロジェクト、品質管理、生産、購買、倉庫管理、総務、営業の9つの総合部門があります。当社はISO 9001:2015の国際品質マネジメントシステム認証を取得しており、当社の製品のほとんどは、ETL、CE、PSEなどの国際的な安全認証を取得しています。"
+      },
+      "order": 3
+    },
+    {
+      "id": "ip_1788317105648_8j28",
+      "text": {
+        "en": "Adhering to the business philosophy of “Work hard, strive for excellence, pursue top-notch quality, and create a world-class brand,” the company has experienced rapid growth. As a professional manufacturer and exporter of motion-sensor lights, we export our products worldwide. Quality first and integrity-based are our core principles; your satisfaction is our ultimate goal. We welcome inquiries and cooperation from friends both at home and abroad, and we will provide you with the highest quality service!",
+        "zh": "坚持 “努力工作， 精益求精， 追求一流品质， 创造世界一流品牌” 的经营理念， 公司发展迅速， 作为专业的制造与出口的感应灯企业， 产品出口全世界， 品质第一，诚信为本是我们公司的理念，您的满意就是我们的追求， 欢迎国内外朋友垂询和合作， 我们将为您提供最优质的服务！",
+        "es": "Fiel a su filosofía empresarial de «Trabajar duro, luchar por la excelencia, buscar la máxima calidad y crear una marca de talla mundial», la empresa ha experimentado un rápido crecimiento. Como fabricante y exportador especializado en luces con sensor de movimiento, exportamos nuestros productos a todo el mundo. La calidad ante todo y la integridad son nuestros principios fundamentales; su satisfacción es nuestro objetivo principal. Agradecemos las consultas y la colaboración de amigos tanto nacionales como internacionales, ¡y le ofreceremos un servicio de la máxima calidad!",
+        "ja": "「懸命に働き、卓越を目指し、最高品質を追求し、世界クラスのブランドを築く」という経営理念を貫き、当社は急速な成長を遂げてきました。モーションセンサーライトの専門メーカーおよび輸出業者として、当社の製品は世界中へ輸出されています。 「品質第一、誠実さを基本とする」ことが当社の基本原則であり、お客様の満足こそが私たちの究極の目標です。国内外の皆様からのお問い合わせやご協力を心より歓迎いたします。最高品質のサービスをご提供いたします！"
+      },
+      "order": 4
     }
   ],
   "milestonesTitle": {
     "en": "Company Milestones",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "公司里程碑",
+    "es": "HITOS DE LA COMPAÑÍA",
+    "ja": "会社のマイルストーン"
   },
   "milestonesSubtitle": {
     "en": "Our journey of innovation and growth in the LED lighting industry.",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "我们在LED照明行业的创新和增长之旅。",
+    "es": "Nuestro viaje de innovación y crecimiento en la industria de la iluminación LED.",
+    "ja": "LED照明業界におけるイノベーションと成長の旅。"
   },
   "milestones": [
     {
@@ -94,15 +114,15 @@
       "year": "2003",
       "title": {
         "en": "Ningbo Tanjeon Founded",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "宁波唐正成立",
+        "es": "Ningbo Tanjeon Fundada",
+        "ja": "寧波唐正が設立された"
       },
       "description": {
         "en": "Tanjeon Electronics established in Ningbo, marking the beginning of our journey in sensor lighting industry.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "唐正电子在宁波成立，标志着我们在传感器照明行业的旅程的开始。",
+        "es": "Tanjeon Electronics se estableció en Ningbo, marcando el comienzo de nuestro viaje en la industria de la iluminación de sensores.",
+        "ja": "唐正電子が寧波に設立されたことは、センサー照明業界における当社の歩みの始まりを象徴するものです。"
       },
       "order": 1
     },
@@ -110,16 +130,16 @@
       "id": "m2",
       "year": "2004",
       "title": {
-        "en": "First Battery-Powered Sensor Light",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "The World's First Battery-Powered Motion-Sensor Light",
+        "zh": "全球第一台电池供电的感应灯",
+        "es": "La primera lámpara con sensor alimentada por batería del mundo",
+        "ja": "世界初の電池式センサーライト"
       },
       "description": {
-        "en": "Launched the world's first dry-cell battery powered sensor light, and the first sensor light using NICHIA LED chip — a breakthrough in low-power LED sensing technology.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "Launched the world's first dry-cell-powered sensor light, as well as the first sensor light to use Nichia LED chips—a breakthrough in low-power LED sensor technology.",
+        "zh": "推出全球首款干电池供电的传感器灯，以及首款采用日亚LED芯片的传感器灯--低功耗LED传感技术的突破。",
+        "es": "Lanzamiento de la primera lámpara con sensor alimentada por pilas secas del mundo, así como de la primera lámpara con sensor que incorpora chips LED de Nichia: un avance en la tecnología de sensores LED de bajo consumo.",
+        "ja": "世界初の乾電池駆動センサーライト、および日亜化学工業のLEDチップを採用した初のセンサーライトを発売--低消費電力LEDセンサー技術における画期的な進歩。"
       },
       "order": 2
     },
@@ -128,15 +148,15 @@
       "year": "2007",
       "title": {
         "en": "Jiujiang Ouwei Established",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "九江欧威成立",
+        "es": "Establecimiento de Jiujiang Ouwei",
+        "ja": "九江欧威の設立"
       },
       "description": {
         "en": "Jiujiang Ouwei (OWELL) Industrial Co.,LTD founded; launched the first SMD LED sensor light, advancing production efficiency and product consistency.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "九江欧威（Owell）实业有限公司成立；推出首款SMD LED传感器灯，提升生产效率和产品一致性。",
+        "es": "Jiujiang Owell Industrial Co., Ltd. was established; the company launched its first SMD LED sensor light, improving production efficiency and product consistency.",
+        "ja": "九江欧威（Owell）実業有限公司が設立された。初のSMD LEDセンサーライトを発売し、生産効率と製品の均一性を向上させた。"
       },
       "order": 3
     },
@@ -145,15 +165,15 @@
       "year": "2012",
       "title": {
         "en": "Jiujiang Tanjeon Tech Co.,LTD Founded",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "九江唐正科技有限公司成立",
+        "es": "Jiujiang Tanjeon Tech Co.,LTD FUNDADA",
+        "ja": "九江唐正科技有限公司が設立された"
       },
       "description": {
-        "en": "Jiujiang Tanjeon established, expanding manufacturing capacity and consolidating our presence in the Jiangxi production base.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "Jiujiang Tanjeon was established to expand our manufacturing capacity and strengthen our presence at our production base in Jiangxi.",
+        "zh": "九江唐正成立，扩大制造能力，巩固我们在江西生产基地的存在。",
+        "es": "Se ha constituido Jiujiang Tanjeon, lo que amplía nuestra capacidad de fabricación y consolida nuestra presencia en la base de producción de Jiangxi.",
+        "ja": "九江唐正が設立され、製造能力を拡大し、江西省の生産拠点における当社の存在感を強固なものにしました。"
       },
       "order": 4
     },
@@ -161,25 +181,25 @@
       "id": "m5",
       "year": "2015",
       "title": {
-        "en": "Triple-Head Sensor Light & Good Design Gold Award",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "The World's First Three-Head Induction Light and the Gold Award for Excellence in Design",
+        "zh": "全球第一台三头感应灯与优良设计金奖",
+        "es": "La primera lámpara inductiva de tres cabezales del mundo y el Premio de Oro al Diseño de Excelencia",
+        "ja": "世界初の3灯式誘導灯と優秀デザイン金賞"
       },
       "description": {
-        "en": "Launched the first triple-head sensor light; awarded the Japan Good Design Gold Award, recognizing our excellence in product design and innovation.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "en": "We launched the world's first three-head motion-sensor light; we were awarded the Japan Good Design Gold Award in recognition of our excellence in product design and innovation.",
+        "zh": "推出全球首款三头感应灯；荣获日本优良设计金奖，以表彰我们在产品设计和创新方面的卓越表现。",
+        "es": "Lanzamos la primera lámpara con sensor de tres cabezales del mundo; hemos sido galardonados con el Premio de Oro al Diseño de Excelencia de Japón, en reconocimiento a nuestra excelencia en el diseño e innovación de productos.",
+        "ja": "世界初の3灯式センサーライトを発売。製品デザインとイノベーションにおける卓越した実績が評価され、日本の「グッドデザイン賞」金賞を受賞しました。"
       },
       "order": 5
     }
   ],
   "galleryTitle": {
     "en": "Our Factory",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "我们的工厂",
+    "es": "Nuestra Fábrica",
+    "ja": "対応しております。"
   },
   "gallery": [
     {
@@ -187,15 +207,15 @@
       "image": "/images/factory-production.jpg",
       "title": {
         "en": "Production Line",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "产线",
+        "es": "Línea de producción",
+        "ja": "製品ライン"
       },
       "description": {
         "en": "Modern automated production line",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "现代自动化生产线",
+        "es": "Moderna línea de producción automatizada",
+        "ja": "最新の自動化された生産ライン"
       },
       "order": 1,
       "visible": true
@@ -205,15 +225,15 @@
       "image": "/images/factory-qc.jpg",
       "title": {
         "en": "QC Workshop",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "QC车间",
+        "es": "Taller de control de calidad",
+        "ja": "QCワークショップ"
       },
       "description": {
         "en": "Quality control inspection area",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "质量控制检查",
+        "es": "Servicios de control de calidad e inspección",
+        "ja": "品質管理検査"
       },
       "order": 2,
       "visible": true
@@ -223,15 +243,15 @@
       "image": "/images/factory-warehouse.jpg",
       "title": {
         "en": "Warehouse",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "【9】火车站",
+        "es": "Almacén",
+        "ja": "倉庫"
       },
       "description": {
         "en": "Finished goods warehouse",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "半成品仓",
+        "es": "almacén de productos terminados",
+        "ja": "完成品倉庫"
       },
       "order": 3,
       "visible": true
@@ -241,15 +261,15 @@
       "image": "/images/factory-rd.jpg",
       "title": {
         "en": "R&D Center",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "研发中心",
+        "es": "Centro de Desarrollo e Investigación (R&D)",
+        "ja": "研究開発センター"
       },
       "description": {
         "en": "Product research and development",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "产品研发",
+        "es": "Investigación y Desarrollo de Producto",
+        "ja": "製品の研究開発"
       },
       "order": 4,
       "visible": true
@@ -259,15 +279,15 @@
       "image": "/images/factory-assembly.jpg",
       "title": {
         "en": "Assembly Area",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "装配区",
+        "es": "Área Montaje",
+        "ja": "アセンブリエリア"
       },
       "description": {
         "en": "Manual assembly workshop",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "手工装配车间",
+        "es": "Taller DE montaje manual",
+        "ja": "手動組立ワークショップ"
       },
       "order": 5,
       "visible": true
@@ -277,15 +297,15 @@
       "image": "/images/factory-showroom.jpg",
       "title": {
         "en": "Exhibition Hall",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "展厅",
+        "es": "Salón de exposiciones",
+        "ja": "展示ホール"
       },
       "description": {
         "en": "Product showroom",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "产品陈列室",
+        "es": "SHOWROOM DE PRODUCTO",
+        "ja": "製品ショールーム"
       },
       "order": 6,
       "visible": true
@@ -293,15 +313,15 @@
   ],
   "qualityTitle": {
     "en": "Strict QC Process",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "严格的QC流程",
+    "es": "Proceso de control de calidad estricto",
+    "ja": "厳格なQCプロセス"
   },
   "qualitySubtitle": {
     "en": "4-step quality assurance ensures every product meets our high standards before shipping.",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "4步质量保证确保每件产品在发货前都符合我们的高标准。",
+    "es": "La garantía de calidad en 4 pasos garantiza que cada producto cumpla con nuestros altos estándares antes del envío.",
+    "ja": "4段階の品質保証により、すべての製品が出荷前に当社の高い基準を満たしていることを保証します。"
   },
   "qualitySteps": [
     {
@@ -309,15 +329,15 @@
       "step": 1,
       "title": {
         "en": "Raw Material Inspection",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "原材料检验",
+        "es": "Inspección de la materia prima",
+        "ja": "原材料検査"
       },
       "description": {
         "en": "Strict testing of all incoming components and materials before production.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "在生产前对所有进料部件和材料进行严格测试。",
+        "es": "Pruebas estrictas de todos los componentes y materiales entrantes antes de la producción.",
+        "ja": "生産前にすべての入荷部品と材料の厳格なテスト。"
       },
       "icon": "Package",
       "order": 1
@@ -327,15 +347,15 @@
       "step": 2,
       "title": {
         "en": "Production Monitoring",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "生产监控",
+        "es": "Monitorización de la producción",
+        "ja": "生産監視データ"
       },
       "description": {
         "en": "Real-time quality checks on the assembly line by trained QC engineers.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "由经过培训的质量控制工程师对装配线进行实时质量检查。",
+        "es": "Controles de calidad en tiempo real en la línea de montaje por parte de ingenieros de control de calidad capacitados.",
+        "ja": "訓練を受けたQCエンジニアによる組立ラインでのリアルタイムの品質チェック。"
       },
       "icon": "Eye",
       "order": 2
@@ -345,15 +365,15 @@
       "step": 3,
       "title": {
         "en": "Aging Test",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "抗老化试验",
+        "es": "ensayo de envejecimiento",
+        "ja": "エージングテスト"
       },
       "description": {
         "en": "72-hour continuous aging test for every batch to ensure long-term reliability.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "每批72小时连续老化试验，确保长期可靠。",
+        "es": "Prueba de envejecimiento continuo de 72 horas para cada lote para garantizar la fiabilidad a largo plazo.",
+        "ja": "長期的な信頼性を確保するために、すべてのバッチで72時間の連続エージングテストを実施します。"
       },
       "icon": "Clock",
       "order": 3
@@ -363,15 +383,15 @@
       "step": 4,
       "title": {
         "en": "Final Inspection",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "最终检验",
+        "es": "Inspección Final",
+        "ja": "最終検査"
       },
       "description": {
         "en": "Comprehensive appearance and function test before shipping with detailed QC report.",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "发货前进行全面的外观和功能测试，并提供详细的QC报告。",
+        "es": "Prueba completa de apariencia y funcionamiento antes del envío con un informe de control de calidad detallado.",
+        "ja": "出荷前の包括的な外観と機能テストと詳細なQCレポート。"
       },
       "icon": "CheckCircle2",
       "order": 4
@@ -379,30 +399,30 @@
   ],
   "certificationsTitle": {
     "en": "Global Certifications",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "全球认证",
+    "es": "Certificaciones Globales",
+    "ja": "グローバル認定"
   },
   "certificationsSubtitle": {
     "en": "All products comply with international standards and hold major certifications.",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "所有产品均符合国际标准，并拥有主要认证。",
+    "es": "Todos los productos cumplen con las normas internacionales y cuentan con las principales certificaciones.",
+    "ja": "すべての製品は国際規格に準拠しており、主要な認証を取得しています。"
   },
   "certifications": [
     {
       "id": "c1",
       "name": {
         "en": "CE",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "CE",
+        "es": "CE",
+        "ja": "CE"
       },
       "authority": {
         "en": "EU Safety Standard",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "安全标准 ,安全准则",
+        "es": "NORMAS DE SEGURIDAD",
+        "ja": "EU安全基準"
       },
       "image": "",
       "year": "2010",
@@ -412,15 +432,15 @@
       "id": "c2",
       "name": {
         "en": "RoHS",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "RoHS",
+        "es": "RoHS",
+        "ja": "RoHS"
       },
       "authority": {
         "en": "Environmental Compliance",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "环保合规",
+        "es": "Cumplimiento con el Medio Ambiente",
+        "ja": "環境コンプライアンス"
       },
       "image": "",
       "year": "2012",
@@ -430,15 +450,15 @@
       "id": "c3",
       "name": {
         "en": "ISO9001",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "ISO9001",
+        "es": "ISO9001",
+        "ja": "ISO 9001"
       },
       "authority": {
         "en": "Quality Management",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "质量管理",
+        "es": "Gestión de la calidad",
+        "ja": "品質管理"
       },
       "image": "",
       "year": "2015",
@@ -448,15 +468,15 @@
       "id": "c4",
       "name": {
         "en": "FCC",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "FCC",
+        "es": "FCC",
+        "ja": "FCC"
       },
       "authority": {
         "en": "EMC Compliance",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "EMC合规性",
+        "es": "Conformidad con CEM",
+        "ja": "EMCの準拠"
       },
       "image": "",
       "year": "2018",
@@ -465,15 +485,15 @@
   ],
   "oemTitle": {
     "en": "Customization Capabilities",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "定制功能",
+    "es": "Capacidades de personalización",
+    "ja": "カスタマイズ機能"
   },
   "oemDescription": {
     "en": "We offer comprehensive OEM/ODM/JDM services to meet your unique requirements. From custom logo printing to full product design, our engineering team is ready to bring your vision to life.",
-    "zh": "",
-    "es": "",
-    "ja": ""
+    "zh": "我们提供全面的OEM/ODM/JDM服务，以满足您的独特要求。从定制徽标打印到完整的产品设计，我们的工程团队随时准备将您的愿景变为现实。",
+    "es": "Ofrecemos servicios integrales de OEM/ODM/JDM para satisfacer sus necesidades únicas. Desde la impresión de logotipos personalizados hasta el diseño completo del producto, nuestro equipo de ingeniería está listo para dar vida a su visión.",
+    "ja": "お客様固有の要件を満たすために、包括的なOEM/ODM/JDMサービスを提供しています。カスタムロゴの印刷から完全な製品デザインまで、当社のエンジニアリングチームはお客様のビジョンを実現する準備ができています。"
   },
   "oemImage": "/images/oem-odm.jpg",
   "oemServices": [
@@ -481,15 +501,15 @@
       "id": "o1",
       "title": {
         "en": "Custom Logo Printing",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "自定义徽标打印",
+        "es": "Impresión de logotipos personalizados",
+        "ja": "カスタムロゴ印刷"
       },
       "description": {
         "en": "Custom logo printing on product & packaging",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "产品和包装上的自定义徽标打印",
+        "es": "Impresión de logotipos personalizados en el producto y el embalaje",
+        "ja": "製品とパッケージにカスタムロゴ印刷"
       },
       "icon": "Stamp",
       "order": 1
@@ -498,15 +518,15 @@
       "id": "o2",
       "title": {
         "en": "Custom Housing",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "定制住宅",
+        "es": "CAJA DE CARCASA PERSONALIZADA",
+        "ja": "カスタムハウジング"
       },
       "description": {
         "en": "Custom housing color & material",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "定制外壳颜色和材料",
+        "es": "Color y material de la carcasa personalizada",
+        "ja": "カスタムハウジングの色と素材"
       },
       "icon": "Palette",
       "order": 2
@@ -515,15 +535,15 @@
       "id": "o3",
       "title": {
         "en": "Packaging Design",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "包装设计组",
+        "es": "Diseño de envases",
+        "ja": "パッケージデザイン"
       },
       "description": {
         "en": "Customized packaging design",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "定制包装设计",
+        "es": "Diseño de empaque personalizado",
+        "ja": "カスタマイズされたパッケージデザイン"
       },
       "icon": "Box",
       "order": 3
@@ -532,15 +552,15 @@
       "id": "o4",
       "title": {
         "en": "Adjustable Parameters",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "可调参数",
+        "es": "Parámetros <g id=\"3414\"/><g id=\"3415\"/> ajustables",
+        "ja": "調整可能なパラメータ"
       },
       "description": {
         "en": "Adjustable technical parameters",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "可调技术参数",
+        "es": "Parámetros técnicos ajustables",
+        "ja": "調整可能な技術パラメータ"
       },
       "icon": "Settings",
       "order": 4
@@ -549,15 +569,15 @@
       "id": "o5",
       "title": {
         "en": "Private Label",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "自有品牌",
+        "es": "Marcas propias",
+        "ja": "プライベートブランド"
       },
       "description": {
         "en": "Private label & white label service",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "自有品牌和白标服务",
+        "es": "Servicio de marca blanca y marca privada",
+        "ja": "プライベートラベル＆ホワイトラベルサービス"
       },
       "icon": "Tag",
       "order": 5
@@ -566,15 +586,15 @@
       "id": "o6",
       "title": {
         "en": "Custom PCB Design",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "定制PCB设计",
+        "es": "Diseño de PCB personalizado",
+        "ja": "カスタムPCB設計"
       },
       "description": {
         "en": "Custom PCB & driver design",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "定制PCB和驱动器设计",
+        "es": "Diseño personalizado de PCB y controladores",
+        "ja": "カスタムPCB ＆ドライバデザイン"
       },
       "icon": "Cpu",
       "order": 6

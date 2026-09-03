@@ -17,7 +17,7 @@
     "icon": "Zap",
     "sortOrder": 1,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_dry",
@@ -37,7 +37,7 @@
     "icon": "Battery",
     "sortOrder": 2,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_solar",
@@ -57,7 +57,7 @@
     "icon": "Sun",
     "sortOrder": 3,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_hybrid",
@@ -77,7 +77,7 @@
     "icon": "RefreshCw",
     "sortOrder": 4,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_recharge",
@@ -97,7 +97,7 @@
     "icon": "BatteryCharging",
     "sortOrder": 5,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_table",
@@ -117,7 +117,7 @@
     "icon": "Lamp",
     "sortOrder": 6,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   },
   {
     "id": "cat_work",
@@ -137,6 +137,6 @@
     "icon": "Flashlight",
     "sortOrder": 7,
     "enabled": true,
-    "createdAt": 1788403735511
+    "createdAt": 1788144660762
   }
 ]
