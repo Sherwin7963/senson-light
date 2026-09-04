@@ -3,7 +3,7 @@
     "id": "cat_ac",
     "slug": "AC Powered",
     "name": {
-      "en": "AC Powered Lights",
+      "en": "AC Powered ",
       "zh": "AC 供电灯",
       "es": "Luces de Corriente Alterna",
       "ja": "AC電源ライト"
@@ -23,7 +23,7 @@
     "id": "cat_dry",
     "slug": "Dry Battery",
     "name": {
-      "en": "Dry Battery Lights",
+      "en": "Dry Battery ",
       "zh": "干电池灯",
       "es": "Luces de Batería Seca",
       "ja": "乾電池式ライト"
@@ -43,7 +43,7 @@
     "id": "cat_solar",
     "slug": "Solar",
     "name": {
-      "en": "Solar Lights",
+      "en": "Solar Power",
       "zh": "太阳能灯",
       "es": "Luces Solares",
       "ja": "ソーラーライト"
@@ -63,7 +63,7 @@
     "id": "cat_hybrid",
     "slug": "Hybrid",
     "name": {
-      "en": "Hybrid Lights",
+      "en": "Hybrid Power",
       "zh": "混合型灯",
       "es": "Luces Híbridas",
       "ja": "ハイブリッドライト"
@@ -138,5 +138,25 @@
     "sortOrder": 7,
     "enabled": true,
     "createdAt": 1788144660762
+  },
+  {
+    "slug": "Camera Series",
+    "name": {
+      "en": "Camera Series",
+      "zh": "相机系列",
+      "es": "Serie de cámaras",
+      "ja": "カメラシリーズ"
+    },
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "icon": "Tag",
+    "sortOrder": 8,
+    "enabled": true,
+    "id": "cat_1788490019653_mqwfvw",
+    "createdAt": 1788490019654
   }
 ]
