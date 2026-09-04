@@ -136,13 +136,137 @@
     "createdAt": 1788240230349
   },
   {
+    "id": "p_1788425834388_w9de4a",
     "name": {
-      "en": "K629 DryBattery Dual lamp-head LED Sensor Light 2*4W",
+      "en": "8030 Dry Battery Tri-Head LED Sensor Light 3*5W Outdoor Use",
       "zh": "",
       "es": "",
       "ja": ""
     },
     "category": "Dry Battery",
+    "image": "/images/custom/products/1788489265408_x24l9h.jpg",
+    "gallery": [
+      "/images/custom/products/1788489265408_x24l9h.jpg",
+      "/images/custom/products/1788489268528_qsmybv.jpg",
+      "/images/custom/products/1788489271284_q3h11e.jpg",
+      "/images/custom/products/1788489274625_ytdsoz.jpg",
+      "/images/custom/products/1788489278284_8d7os8.jpg",
+      "/images/custom/products/1788489281450_vmxe8j.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3*5W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "281*134*145",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "1500LM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
     "description": {
       "en": "",
       "zh": "",
@@ -155,13 +279,30 @@
       "es": "",
       "ja": ""
     },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788425834388
+  },
+  {
+    "id": "p_1788424599644_54k74b",
+    "name": {
+      "en": "K629 DryBattery Dual lamp-head LED Sensor Light 2*4W",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "Dry Battery",
+    "image": "/images/custom/products/1788489285050_sivetl.jpg",
     "gallery": [
-      "/images/custom/products/1788424604178_kse1xu.jpg",
-      "/images/custom/products/1788424607800_9xt4lw.jpg",
-      "/images/custom/products/1788424610777_atojxg.jpg",
-      "/images/custom/products/1788424614880_0tw4i8.jpg",
-      "/images/custom/products/1788424618681_fhned3.jpg",
-      "/images/custom/products/1788424621720_va2o74.jpg"
+      "/images/custom/products/1788489285050_sivetl.jpg",
+      "/images/custom/products/1788489287766_zvec1f.jpg",
+      "/images/custom/products/1788489290743_2dfrbd.jpg",
+      "/images/custom/products/1788489293652_e4tyvt.jpg",
+      "/images/custom/products/1788489296595_5od9ei.jpg",
+      "/images/custom/products/1788489299578_8k09pl.jpg"
     ],
     "customFields": [
       {
@@ -263,13 +404,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788424599644_54k74b",
-    "image": "/images/custom/products/1788424604178_kse1xu.jpg",
+    "sortOrder": 1,
+    "featuredOnHomepage": true,
     "createdAt": 1788424599644
   },
   {
