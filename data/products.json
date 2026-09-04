@@ -1,5 +1,6 @@
 [
   {
+    "id": "p_1788503542125_563eym",
     "name": {
       "en": "8130 AC Power Tri-lamp head  LED PIR sensor light with Remote",
       "zh": "8130 交流电三灯头 LED 被动红外传感器灯（带遥控器）",
@@ -7,23 +8,12 @@
       "ja": "8130 AC電源式 3灯ヘッドライト　LED PIRセンサーライト（リモコン付き）"
     },
     "category": "AC Powered",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "image": "/images/custom/products/1788509156390_i4oils.jpg",
     "gallery": [
-      "/images/custom/products/1788508561694_u17ked.jpg",
-      "/images/custom/products/1788508566971_fmgxsd.jpg",
-      "/images/custom/products/1788508571153_tb2sx5.jpg",
-      "/images/custom/products/1788508573958_j6hgjl.jpg"
+      "/images/custom/products/1788509156390_i4oils.jpg",
+      "/images/custom/products/1788509159347_oz5w45.jpg",
+      "/images/custom/products/1788509162594_98cgor.jpg",
+      "/images/custom/products/1788509165558_h3deex.jpg"
     ],
     "customFields": [
       {
@@ -139,13 +129,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": false,
-    "id": "p_1788503542125_563eym",
-    "image": "/images/custom/products/1788508561694_u17ked.jpg",
     "createdAt": 1788503542125
   },
   {
@@ -252,6 +252,20 @@
       },
       {
         "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "3000LM",
+          "zh": "3000LM",
+          "es": "3000 lm",
+          "ja": "3000LM"
+        }
+      },
+      {
+        "key": {
           "en": "MOQ",
           "zh": "最小起订量",
           "es": "Cantidad mínima de pedido",
@@ -280,7 +294,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 1,
     "featuredOnHomepage": true,
     "createdAt": 1788240230349
   },
@@ -447,10 +461,10 @@
     "image": "/images/custom/products/1788489555529_ig0vyt.jpg",
     "gallery": [
       "/images/custom/products/1788489555529_ig0vyt.jpg",
-      "/images/custom/products/1788508577745_gj3ob9.jpg",
+      "/images/custom/products/1788509169593_kwr622.jpg",
       "/images/custom/products/1788489555529_1s6soy.jpg",
       "/images/custom/products/1788489555529_tp0kvt.jpg",
-      "/images/custom/products/1788508585895_znigjp.jpg",
+      "/images/custom/products/1788509172475_czhoom.jpg",
       "/images/custom/products/1788489555529_1tgn8v.jpg"
     ],
     "customFields": [
@@ -573,6 +587,7 @@
     "createdAt": 1788424599644
   },
   {
+    "id": "p_1788492239381_vozgj9",
     "name": {
       "en": "8090 Solar Power  Tri-Lamp Head LED Sensor Light 3*5W Outdoor use",
       "zh": "8090 太阳能 三灯头 LED 感应灯 3×5W 户外用",
@@ -580,25 +595,14 @@
       "ja": "8090 ソーラーパワー　3灯式LEDセンサーライト 3×5W 屋外用"
     },
     "category": "Solar",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "image": "/images/custom/products/1788509175404_mzm9fq.jpg",
     "gallery": [
-      "/images/custom/products/1788508589976_qti7r0.jpg",
-      "/images/custom/products/1788508593297_p5k42i.jpg",
-      "/images/custom/products/1788508597512_usmna5.jpg",
-      "/images/custom/products/1788508600820_8sfqm2.jpg",
-      "/images/custom/products/1788508603850_8ug2ga.jpg",
-      "/images/custom/products/1788508607355_qdhv93.jpg"
+      "/images/custom/products/1788509175404_mzm9fq.jpg",
+      "/images/custom/products/1788509178029_7kluu3.jpg",
+      "/images/custom/products/1788509181092_ekzgz2.jpg",
+      "/images/custom/products/1788509184341_tk49ya.jpg",
+      "/images/custom/products/1788509187448_nszi3q.jpg",
+      "/images/custom/products/1788509190274_rj848v.jpg"
     ],
     "customFields": [
       {
@@ -714,13 +718,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": false,
-    "id": "p_1788492239381_vozgj9",
-    "image": "/images/custom/products/1788508589976_qti7r0.jpg",
     "createdAt": 1788492239381
   },
   {
@@ -842,7 +856,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 1,
     "featuredOnHomepage": true,
     "createdAt": 1788239831935
   },
@@ -855,14 +869,14 @@
       "ja": "K404 ハイブリッド電源 デュアルランプ式 LED センサーライト 2×6.5W"
     },
     "category": "Hybrid",
-    "image": "/images/custom/products/1788508611152_9frl78.jpg",
+    "image": "/images/custom/products/1788509193275_5f9sw7.jpg",
     "gallery": [
-      "/images/custom/products/1788508611152_9frl78.jpg",
-      "/images/custom/products/1788508615308_hqcp04.jpg",
-      "/images/custom/products/1788508619428_wh2sug.jpg",
-      "/images/custom/products/1788508623481_5prb3m.jpg",
-      "/images/custom/products/1788508627431_difdk6.jpg",
-      "/images/custom/products/1788508630879_wtn0d1.jpg"
+      "/images/custom/products/1788509193275_5f9sw7.jpg",
+      "/images/custom/products/1788509196057_5806yo.jpg",
+      "/images/custom/products/1788509198910_vwgci5.jpg",
+      "/images/custom/products/1788509201773_p0244t.jpg",
+      "/images/custom/products/1788509204901_8n1cc6.jpg",
+      "/images/custom/products/1788509208073_hh5m8r.jpg"
     ],
     "customFields": [
       {
@@ -1351,6 +1365,7 @@
     "createdAt": 1788241561700
   },
   {
+    "id": "p_1788508518080_oy218q",
     "name": {
       "en": "WS301 Dual lamp-head  LED Sensor Light With Camera",
       "zh": "WS301 双灯头 LED 带摄像头的感应灯",
@@ -1358,24 +1373,13 @@
       "ja": "WS301 デュアルランプヘッド LEDセンサーライト（カメラ付き）"
     },
     "category": "Camera Series",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "image": "/images/custom/products/1788509211052_ubfwib.jpg",
     "gallery": [
-      "/images/custom/products/1788508634305_cpzzu3.jpg",
-      "/images/custom/products/1788508638106_0sc9kh.jpg",
-      "/images/custom/products/1788508642005_4hj5kd.jpg",
-      "/images/custom/products/1788508645646_itdno3.jpg",
-      "/images/custom/products/1788508649611_40vzw5.jpg"
+      "/images/custom/products/1788509211052_ubfwib.jpg",
+      "/images/custom/products/1788509213750_8eljtv.jpg",
+      "/images/custom/products/1788509216677_k404z3.jpg",
+      "/images/custom/products/1788509219679_djqxir.jpg",
+      "/images/custom/products/1788509222994_xbohlx.jpg"
     ],
     "customFields": [
       {
@@ -1491,13 +1495,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": true,
-    "id": "p_1788508518080_oy218q",
-    "image": "/images/custom/products/1788508634305_cpzzu3.jpg",
     "createdAt": 1788508518080
   }
 ]
