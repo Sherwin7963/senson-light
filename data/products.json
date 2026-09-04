@@ -20,12 +20,12 @@
       "ja": ""
     },
     "gallery": [
-      "/images/custom/products/1788511577154_0tv1mo.jpg",
-      "/images/custom/products/1788511581581_rqilbz.jpg",
-      "/images/custom/products/1788511585268_whff0l.jpg",
-      "/images/custom/products/1788511588869_7p4jhz.jpg",
-      "/images/custom/products/1788511592281_ifoh6n.jpg",
-      "/images/custom/products/1788511595851_9b9mxo.jpg"
+      "/images/custom/products/1788512288881_sfof0m.jpg",
+      "/images/custom/products/1788512293073_4139a9.jpg",
+      "/images/custom/products/1788512297813_iepkkg.jpg",
+      "/images/custom/products/1788512302407_uclixs.jpg",
+      "/images/custom/products/1788512306908_n9pwwm.jpg",
+      "/images/custom/products/1788512311356_1p9z2h.jpg"
     ],
     "customFields": [
       {
@@ -161,7 +161,7 @@
     "sortOrder": 0,
     "featuredOnHomepage": false,
     "id": "p_1788511501123_45v4in",
-    "image": "/images/custom/products/1788511577154_0tv1mo.jpg",
+    "image": "/images/custom/products/1788512288881_sfof0m.jpg",
     "createdAt": 1788511501123
   },
   {
@@ -173,12 +173,12 @@
       "ja": "8130 AC電源式 3灯ヘッドライト　LED PIRセンサーライト（リモコン付き）"
     },
     "category": "AC Powered",
-    "image": "/images/custom/products/1788511599234_js7wnb.jpg",
+    "image": "/images/custom/products/1788512316133_80vd5w.jpg",
     "gallery": [
-      "/images/custom/products/1788511599234_js7wnb.jpg",
-      "/images/custom/products/1788511602632_0hfj1g.jpg",
-      "/images/custom/products/1788511606069_wrfti0.jpg",
-      "/images/custom/products/1788511609974_v8uwa1.jpg"
+      "/images/custom/products/1788512316133_80vd5w.jpg",
+      "/images/custom/products/1788512319465_cf7n6s.jpg",
+      "/images/custom/products/1788512323781_6tbjnl.jpg",
+      "/images/custom/products/1788512328275_em71kf.jpg"
     ],
     "customFields": [
       {
@@ -467,9 +467,9 @@
     "id": "p_1788425834388_w9de4a",
     "name": {
       "en": "8030 Dry Battery Tri-Head LED Sensor Light 3*5W Outdoor Use",
-      "zh": "",
-      "es": "",
-      "ja": ""
+      "zh": "8030 干电池三头 LED 感应灯 3×5W 户外用",
+      "es": "8030 Lámpara LED con sensor y tres cabezales, alimentada por pilas secas, 3 × 5 W, para uso en exteriores",
+      "ja": "8030 乾電池式 3灯式 LED センサーライト 3×5W 屋外用"
     },
     "category": "Dry Battery",
     "image": "/images/custom/products/1788489555528_kfdpcc.jpg",
@@ -485,113 +485,113 @@
       {
         "key": {
           "en": "Power",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
         },
         "value": {
           "en": "3*5W",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "3×5W",
+          "es": "3 × 5 W",
+          "ja": "3×5W"
         }
       },
       {
         "key": {
           "en": "Material",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
         },
         "value": {
           "en": "ABS",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
         }
       },
       {
         "key": {
           "en": "IP Rating",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
         },
         "value": {
           "en": "IP44",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
         }
       },
       {
         "key": {
           "en": "Size",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
         },
         "value": {
           "en": "281*134*145",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "281*134*145",
+          "es": "281 × 134 × 145",
+          "ja": "281×134×145"
         }
       },
       {
         "key": {
           "en": "Sensor Distance",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
         },
         "value": {
           "en": "Max. 12M",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
         }
       },
       {
         "key": {
           "en": "Color Temperature",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
         },
         "value": {
           "en": "3000K-6500K",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
         }
       },
       {
         "key": {
           "en": "Lumen",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
         },
         "value": {
           "en": "1500LM",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "1500LM",
+          "es": "1500 lm",
+          "ja": "1500LM"
         }
       },
       {
         "key": {
           "en": "MOQ",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
         },
         "value": {
           "en": "500",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
         }
       }
     ],
@@ -626,10 +626,10 @@
     "image": "/images/custom/products/1788489555529_ig0vyt.jpg",
     "gallery": [
       "/images/custom/products/1788489555529_ig0vyt.jpg",
-      "/images/custom/products/1788511613556_a3x28k.jpg",
+      "/images/custom/products/1788512333292_7tjm7t.jpg",
       "/images/custom/products/1788489555529_1s6soy.jpg",
       "/images/custom/products/1788489555529_tp0kvt.jpg",
-      "/images/custom/products/1788511617156_17x9bg.jpg",
+      "/images/custom/products/1788512337306_gsnko6.jpg",
       "/images/custom/products/1788489555529_1tgn8v.jpg"
     ],
     "customFields": [
@@ -760,14 +760,14 @@
       "ja": "8090 ソーラーパワー　3灯式LEDセンサーライト 3×5W 屋外用"
     },
     "category": "Solar",
-    "image": "/images/custom/products/1788511620545_rpecu1.jpg",
+    "image": "/images/custom/products/1788512341893_3g0cc5.jpg",
     "gallery": [
-      "/images/custom/products/1788511620545_rpecu1.jpg",
-      "/images/custom/products/1788511624460_2da2ff.jpg",
-      "/images/custom/products/1788511627936_xed2rt.jpg",
-      "/images/custom/products/1788511631531_kt51ix.jpg",
-      "/images/custom/products/1788511635157_yy8w4c.jpg",
-      "/images/custom/products/1788511640122_l4kbjb.jpg"
+      "/images/custom/products/1788512341893_3g0cc5.jpg",
+      "/images/custom/products/1788512345639_1kksdn.jpg",
+      "/images/custom/products/1788512350086_aqbmz2.jpg",
+      "/images/custom/products/1788512354017_oblkve.jpg",
+      "/images/custom/products/1788512359366_obisu2.jpg",
+      "/images/custom/products/1788512363753_k1nrs6.jpg"
     ],
     "customFields": [
       {
@@ -1034,14 +1034,14 @@
       "ja": "K404 ハイブリッド電源 デュアルランプ式 LED センサーライト 2×6.5W"
     },
     "category": "Hybrid",
-    "image": "/images/custom/products/1788511644073_b0f8w0.jpg",
+    "image": "/images/custom/products/1788512368919_427cyk.jpg",
     "gallery": [
-      "/images/custom/products/1788511644073_b0f8w0.jpg",
-      "/images/custom/products/1788511647415_z3c5ol.jpg",
-      "/images/custom/products/1788511650865_ll5l0x.jpg",
-      "/images/custom/products/1788511654498_5jjmxq.jpg",
-      "/images/custom/products/1788511658052_l7d72d.jpg",
-      "/images/custom/products/1788511662300_tdhg8b.jpg"
+      "/images/custom/products/1788512368919_427cyk.jpg",
+      "/images/custom/products/1788512372580_sw0n3i.jpg",
+      "/images/custom/products/1788512376402_dx4cfx.jpg",
+      "/images/custom/products/1788512380550_qllvz6.jpg",
+      "/images/custom/products/1788512385503_ccefas.jpg",
+      "/images/custom/products/1788512389631_lummxc.jpg"
     ],
     "customFields": [
       {
@@ -1538,13 +1538,13 @@
       "ja": "WS301 デュアルランプヘッド LEDセンサーライト（カメラ付き）"
     },
     "category": "Camera Series",
-    "image": "/images/custom/products/1788511668481_ydglyz.jpg",
+    "image": "/images/custom/products/1788512393627_6jt69m.jpg",
     "gallery": [
-      "/images/custom/products/1788511668481_ydglyz.jpg",
-      "/images/custom/products/1788511672161_bfmgko.jpg",
-      "/images/custom/products/1788511675163_vugnh0.jpg",
-      "/images/custom/products/1788511678989_hndbhz.jpg",
-      "/images/custom/products/1788511682621_tvinrw.jpg"
+      "/images/custom/products/1788512393627_6jt69m.jpg",
+      "/images/custom/products/1788512396982_4zvhg1.jpg",
+      "/images/custom/products/1788512400894_9hwj8c.jpg",
+      "/images/custom/products/1788512405366_to83le.jpg",
+      "/images/custom/products/1788512409150_f35bbw.jpg"
     ],
     "customFields": [
       {
