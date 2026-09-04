@@ -290,117 +290,117 @@
     "id": "p_1788424599644_54k74b",
     "name": {
       "en": "K629 DryBattery Dual lamp-head LED Sensor Light 2*4W",
-      "zh": "",
-      "es": "",
-      "ja": ""
+      "zh": "K629 DryBattery 双灯头 LED 感应灯 2×4W",
+      "es": "K629 DryBattery: Lámpara LED con sensor y doble cabezal, 2 × 4 W",
+      "ja": "K629 DryBattery デュアルランプヘッド LED センサーライト 2×4W"
     },
     "category": "Dry Battery",
     "image": "/images/custom/products/1788489555529_ig0vyt.jpg",
     "gallery": [
       "/images/custom/products/1788489555529_ig0vyt.jpg",
+      "/images/custom/products/1788493565323_sdeqz8.jpg",
       "/images/custom/products/1788489555529_1s6soy.jpg",
       "/images/custom/products/1788489555529_tp0kvt.jpg",
-      "/images/custom/products/1788489555529_31kwqg.jpg",
-      "/images/custom/products/1788489555529_1tgn8v.jpg",
-      "/images/custom/products/1788489555529_y10201.jpg"
+      "/images/custom/products/1788493568828_dmyvx4.jpg",
+      "/images/custom/products/1788489555529_1tgn8v.jpg"
     ],
     "customFields": [
       {
         "key": {
           "en": "Power",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
         },
         "value": {
           "en": "2*4W",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "2×4W",
+          "es": "2 × 4 W",
+          "ja": "2×4W"
         }
       },
       {
         "key": {
           "en": "Material",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
         },
         "value": {
           "en": "ABS",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
         }
       },
       {
         "key": {
           "en": "IP Rating",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
         },
         "value": {
           "en": "IP44",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
         }
       },
       {
         "key": {
           "en": "Size",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
         },
         "value": {
           "en": "177*115*180MM",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "177×115×180毫米",
+          "es": "177 × 115 × 180 mm",
+          "ja": "177×115×180mm"
         }
       },
       {
         "key": {
           "en": "Sensor Distance",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
         },
         "value": {
           "en": "Max. 8M",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "最大8M",
+          "es": "Máx. 8M",
+          "ja": "最大8 M"
         }
       },
       {
         "key": {
           "en": "Color Temperature",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
         },
         "value": {
           "en": "3000K-6500K",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
         }
       },
       {
         "key": {
           "en": "MOQ",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
         },
         "value": {
           "en": "500",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
         }
       }
     ],
@@ -422,6 +422,157 @@
     "sortOrder": 1,
     "featuredOnHomepage": true,
     "createdAt": 1788424599644
+  },
+  {
+    "name": {
+      "en": "8090 Solar Power  Tri-Lamp Head LED Sensor Light 3*5W Outdoor use",
+      "zh": "8090 太阳能 三灯头 LED 感应灯 3×5W 户外用",
+      "es": "8090 Energía solar  Lámpara LED con tres focos y sensor, 3 × 5 W, para uso en exteriores",
+      "ja": "8090 ソーラーパワー　3灯式LEDセンサーライト 3×5W 屋外用"
+    },
+    "category": "Solar",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788493572238_i1xvhr.jpg",
+      "/images/custom/products/1788493575562_ve68jm.jpg",
+      "/images/custom/products/1788493579455_wt72bw.jpg",
+      "/images/custom/products/1788493581911_5y2ij8.jpg",
+      "/images/custom/products/1788493585479_vae8wo.jpg",
+      "/images/custom/products/1788493588714_akyp0j.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "3*5W",
+          "zh": "3×5W",
+          "es": "3 × 5 W",
+          "ja": "3×5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "281*124*135mm",
+          "zh": "281×124×135毫米",
+          "es": "281 × 124 × 135 mm",
+          "ja": "281×124×135mm"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "140° Max. 8M",
+          "zh": "140° 最大 8M",
+          "es": "140° Máx. 8 m",
+          "ja": "140° 最大8M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "1350LM",
+          "zh": "1350LM",
+          "es": "1350 LM",
+          "ja": "1350LM"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788492239381_vozgj9",
+    "image": "/images/custom/products/1788493572238_i1xvhr.jpg",
+    "createdAt": 1788492239381
   },
   {
     "id": "p_1788239831935_bb5evm",
@@ -545,6 +696,143 @@
     "sortOrder": 0,
     "featuredOnHomepage": true,
     "createdAt": 1788239831935
+  },
+  {
+    "id": "p_1788489859903_tn54ez",
+    "name": {
+      "en": "K404 Hybrid power Dual lamp-Head LED Sensor light 2*6.5W",
+      "zh": "K404 混合动力双灯头 LED 感应灯 2×6.5W",
+      "es": "K404 Lámpara híbrida LED con doble cabezal y sensor, 2 × 6,5 W",
+      "ja": "K404 ハイブリッド電源 デュアルランプ式 LED センサーライト 2×6.5W"
+    },
+    "category": "Hybrid",
+    "image": "/images/custom/products/1788493592390_4hzphv.jpg",
+    "gallery": [
+      "/images/custom/products/1788493592390_4hzphv.jpg",
+      "/images/custom/products/1788493595499_luggjr.jpg",
+      "/images/custom/products/1788493598809_dywevu.jpg",
+      "/images/custom/products/1788493601740_o6fvm3.jpg",
+      "/images/custom/products/1788493604426_kray0y.jpg",
+      "/images/custom/products/1788493607655_egsqc7.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "2*6.5W",
+          "zh": "2×6.5W",
+          "es": "2 × 6,5 W",
+          "ja": "2×6.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "177*164*125",
+          "zh": "177*164*125",
+          "es": "177 × 164 × 125",
+          "ja": "177×164×125"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 8M",
+          "zh": "最大8M",
+          "es": "Máx. 8M",
+          "ja": "最大8 M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "createdAt": 1788489859903
   },
   {
     "id": "p_1788242004116_b6sgn2",
