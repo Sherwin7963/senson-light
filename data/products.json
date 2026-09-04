@@ -1,5 +1,154 @@
 [
   {
+    "name": {
+      "en": "8130 AC Power Tri-lamp head  LED PIR sensor light with Remote",
+      "zh": "8130 交流电三灯头 LED 被动红外传感器灯（带遥控器）",
+      "es": "8130 Cabezal de tres lámparas de alimentación de CA  Lámpara LED con sensor PIR y mando a distancia",
+      "ja": "8130 AC電源式 3灯ヘッドライト　LED PIRセンサーライト（リモコン付き）"
+    },
+    "category": "AC Powered",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788503569188_7rglfz.jpg",
+      "/images/custom/products/1788503575750_8oyr3t.jpg",
+      "/images/custom/products/1788503581273_khqowd.jpg",
+      "/images/custom/products/1788503595129_qw53z4.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "3*9W",
+          "zh": "3×9W",
+          "es": "3 × 9 W",
+          "ja": "3×9W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "230*141*126mm",
+          "zh": "230*141*126毫米",
+          "es": "230 × 141 × 126 mm",
+          "ja": "230×141×126mm"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Range",
+          "zh": "传感器测量范围",
+          "es": "Alcance del sensor",
+          "ja": "センサーの検知範囲"
+        },
+        "value": {
+          "en": "140° 2-8M",
+          "zh": "140° 2-8M",
+          "es": "140° 2-8M",
+          "ja": "140° 2～8M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "2200LM",
+          "zh": "2200LM",
+          "es": "2200 LM",
+          "ja": "2200LM"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788503542125_563eym",
+    "image": "/images/custom/products/1788503569188_7rglfz.jpg",
+    "createdAt": 1788503542125
+  },
+  {
     "id": "p_1788240230349_4ae0l2",
     "name": {
       "en": "K430 AC Power Tri-Head LED Sensor light 3*10W",
@@ -298,10 +447,10 @@
     "image": "/images/custom/products/1788489555529_ig0vyt.jpg",
     "gallery": [
       "/images/custom/products/1788489555529_ig0vyt.jpg",
-      "/images/custom/products/1788493565323_sdeqz8.jpg",
+      "/images/custom/products/1788503620499_4a8si1.jpg",
       "/images/custom/products/1788489555529_1s6soy.jpg",
       "/images/custom/products/1788489555529_tp0kvt.jpg",
-      "/images/custom/products/1788493568828_dmyvx4.jpg",
+      "/images/custom/products/1788503631251_80ew3o.jpg",
       "/images/custom/products/1788489555529_1tgn8v.jpg"
     ],
     "customFields": [
@@ -444,12 +593,12 @@
       "ja": ""
     },
     "gallery": [
-      "/images/custom/products/1788493572238_i1xvhr.jpg",
-      "/images/custom/products/1788493575562_ve68jm.jpg",
-      "/images/custom/products/1788493579455_wt72bw.jpg",
-      "/images/custom/products/1788493581911_5y2ij8.jpg",
-      "/images/custom/products/1788493585479_vae8wo.jpg",
-      "/images/custom/products/1788493588714_akyp0j.jpg"
+      "/images/custom/products/1788503650826_6u8ncq.jpg",
+      "/images/custom/products/1788503663739_46xf8e.jpg",
+      "/images/custom/products/1788503677603_zeiokg.jpg",
+      "/images/custom/products/1788503686034_aiszg0.jpg",
+      "/images/custom/products/1788503701787_25zdxs.jpg",
+      "/images/custom/products/1788503726780_57c13v.jpg"
     ],
     "customFields": [
       {
@@ -571,7 +720,7 @@
     "sortOrder": 0,
     "featuredOnHomepage": false,
     "id": "p_1788492239381_vozgj9",
-    "image": "/images/custom/products/1788493572238_i1xvhr.jpg",
+    "image": "/images/custom/products/1788503650826_6u8ncq.jpg",
     "createdAt": 1788492239381
   },
   {
@@ -706,14 +855,14 @@
       "ja": "K404 ハイブリッド電源 デュアルランプ式 LED センサーライト 2×6.5W"
     },
     "category": "Hybrid",
-    "image": "/images/custom/products/1788493592390_4hzphv.jpg",
+    "image": "/images/custom/products/1788503746749_jrd55i.jpg",
     "gallery": [
-      "/images/custom/products/1788493592390_4hzphv.jpg",
-      "/images/custom/products/1788493595499_luggjr.jpg",
-      "/images/custom/products/1788493598809_dywevu.jpg",
-      "/images/custom/products/1788493601740_o6fvm3.jpg",
-      "/images/custom/products/1788493604426_kray0y.jpg",
-      "/images/custom/products/1788493607655_egsqc7.jpg"
+      "/images/custom/products/1788503746749_jrd55i.jpg",
+      "/images/custom/products/1788503755135_l7i4om.jpg",
+      "/images/custom/products/1788503762618_ltfne5.jpg",
+      "/images/custom/products/1788503776305_cvuvp9.jpg",
+      "/images/custom/products/1788503786088_ea8dli.jpg",
+      "/images/custom/products/1788503797390_wbwc2o.jpg"
     ],
     "customFields": [
       {
