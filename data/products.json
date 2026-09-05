@@ -766,6 +766,7 @@
     "createdAt": 1788240230349
   },
   {
+    "id": "p_1788582126400_yqod43",
     "name": {
       "en": "H890 Dry Battery LED Sensor Light",
       "zh": "H890 干电池LED感应灯",
@@ -773,18 +774,7 @@
       "ja": "H890 乾電池式LEDセンサーライト"
     },
     "category": "Dry Battery",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "image": "/images/custom/products/1788582541199_u8d2jv.jpg",
     "gallery": [
       "/images/custom/products/1788582541199_u8d2jv.jpg",
       "/images/custom/products/1788582541199_1yp2ty.jpg",
@@ -907,23 +897,6 @@
         }
       }
     ],
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788582126400_yqod43",
-    "image": "/images/custom/products/1788582541199_u8d2jv.jpg",
-    "createdAt": 1788582126400
-  },
-  {
-    "name": {
-      "en": "W230 Dry Battery Portable LED Sensor Light",
-      "zh": "W230 干电池便携式LED感应灯",
-      "es": "Lámpara LED portátil con sensor y pilas secas W230",
-      "ja": "W230 乾電池式 ポータブルLEDセンサーライト"
-    },
-    "category": "Dry Battery",
     "description": {
       "en": "",
       "zh": "",
@@ -936,6 +909,23 @@
       "es": "",
       "ja": ""
     },
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "createdAt": 1788582126400
+  },
+  {
+    "id": "p_1788580683853_ega1ve",
+    "name": {
+      "en": "W230 Dry Battery Portable LED Sensor Light",
+      "zh": "W230 干电池便携式LED感应灯",
+      "es": "Lámpara LED portátil con sensor y pilas secas W230",
+      "ja": "W230 乾電池式 ポータブルLEDセンサーライト"
+    },
+    "category": "Dry Battery",
+    "image": "/images/custom/products/1788582541199_cupg38.jpg",
     "gallery": [
       "/images/custom/products/1788582541199_cupg38.jpg",
       "/images/custom/products/1788582541200_h5iabd.jpg",
@@ -1057,13 +1047,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 1,
     "featuredOnHomepage": false,
-    "id": "p_1788580683853_ega1ve",
-    "image": "/images/custom/products/1788582541199_cupg38.jpg",
     "createdAt": 1788580683853
   },
   {
@@ -1213,7 +1213,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 2,
     "featuredOnHomepage": false,
     "createdAt": 1788425834388
   },
@@ -1350,7 +1350,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 1,
+    "sortOrder": 3,
     "featuredOnHomepage": false,
     "createdAt": 1788424599644
   },
