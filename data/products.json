@@ -1,10 +1,10 @@
 [
   {
     "name": {
-      "en": "6830 AC Power Tri-lamp Head LED Sensor Light",
-      "zh": "6830 交流电三灯头 LED 感应灯",
-      "es": "Lámpara LED con sensor y tres bombillas, alimentada por corriente alterna, modelo 6830",
-      "ja": "6830 AC電源式 3灯式ヘッドLEDセンサーライト"
+      "en": "W730 AC Power High Lumen Tri-Lamp Head LED Sensor Light ",
+      "zh": "",
+      "es": "",
+      "ja": ""
     },
     "category": "AC Powered",
     "description": {
@@ -20,12 +20,302 @@
       "ja": ""
     },
     "gallery": [
-      "/images/custom/products/1788512288881_sfof0m.jpg",
-      "/images/custom/products/1788512293073_4139a9.jpg",
-      "/images/custom/products/1788512297813_iepkkg.jpg",
-      "/images/custom/products/1788512302407_uclixs.jpg",
-      "/images/custom/products/1788512306908_n9pwwm.jpg",
-      "/images/custom/products/1788512311356_1p9z2h.jpg"
+      "/images/custom/products/1788576093536_b2i902.jpg",
+      "/images/custom/products/1788576093536_6f3eo7.jpg",
+      "/images/custom/products/1788576093536_po5v1i.jpg",
+      "/images/custom/products/1788576093536_w2i82n.jpg",
+      "/images/custom/products/1788576093536_kqs8jo.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "100W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "Plasic+Aluminum",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "12000LM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Detection Angle and Distance",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "140°    2-10M",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "382*196*140MM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788576069714_08zdaf",
+    "image": "/images/custom/products/1788576093536_b2i902.jpg",
+    "createdAt": 1788576069714
+  },
+  {
+    "name": {
+      "en": "W710 AC Power High Lumen LED Sensor Light ",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "AC Powered",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788576093536_1vmnju.jpg",
+      "/images/custom/products/1788576093536_jrgwsf.jpg",
+      "/images/custom/products/1788576093537_95nq0t.jpg",
+      "/images/custom/products/1788576093537_wyf824.jpg",
+      "/images/custom/products/1788576093537_o1lkve.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "100W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "Plasic+Aluminum",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "12000LM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Detection Angle and Distance",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "140° 2-10M",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "276*247*139mm",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788575925768_rx8xej",
+    "image": "/images/custom/products/1788576093536_1vmnju.jpg",
+    "createdAt": 1788575925769
+  },
+  {
+    "id": "p_1788511501123_45v4in",
+    "name": {
+      "en": "6830 AC Power Tri-lamp Head LED Sensor Light",
+      "zh": "6830 交流电三灯头 LED 感应灯",
+      "es": "Lámpara LED con sensor y tres bombillas, alimentada por corriente alterna, modelo 6830",
+      "ja": "6830 AC電源式 3灯式ヘッドLEDセンサーライト"
+    },
+    "category": "AC Powered",
+    "image": "/images/custom/products/1788576093537_yo3s4s.jpg",
+    "gallery": [
+      "/images/custom/products/1788576093537_yo3s4s.jpg",
+      "/images/custom/products/1788576093537_y9nz0s.jpg",
+      "/images/custom/products/1788576093537_38vd8x.jpg",
+      "/images/custom/products/1788576093537_btrihm.jpg",
+      "/images/custom/products/1788576093537_q9gbsh.jpg",
+      "/images/custom/products/1788576093538_3k0rxc.jpg"
     ],
     "customFields": [
       {
@@ -155,13 +445,23 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": false,
-    "id": "p_1788511501123_45v4in",
-    "image": "/images/custom/products/1788512288881_sfof0m.jpg",
     "createdAt": 1788511501123
   },
   {
@@ -173,12 +473,12 @@
       "ja": "8130 AC電源式 3灯ヘッドライト　LED PIRセンサーライト（リモコン付き）"
     },
     "category": "AC Powered",
-    "image": "/images/custom/products/1788512316133_80vd5w.jpg",
+    "image": "/images/custom/products/1788576093538_dw9x0n.jpg",
     "gallery": [
-      "/images/custom/products/1788512316133_80vd5w.jpg",
-      "/images/custom/products/1788512319465_cf7n6s.jpg",
-      "/images/custom/products/1788512323781_6tbjnl.jpg",
-      "/images/custom/products/1788512328275_em71kf.jpg"
+      "/images/custom/products/1788576093538_dw9x0n.jpg",
+      "/images/custom/products/1788576093538_o4kdki.jpg",
+      "/images/custom/products/1788576093538_ayepme.jpg",
+      "/images/custom/products/1788576093538_lccklu.jpg"
     ],
     "customFields": [
       {
@@ -309,7 +609,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 1,
     "featuredOnHomepage": false,
     "createdAt": 1788503542125
   },
@@ -459,7 +759,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 1,
+    "sortOrder": 2,
     "featuredOnHomepage": true,
     "createdAt": 1788240230349
   },
@@ -626,10 +926,10 @@
     "image": "/images/custom/products/1788489555529_ig0vyt.jpg",
     "gallery": [
       "/images/custom/products/1788489555529_ig0vyt.jpg",
-      "/images/custom/products/1788512333292_7tjm7t.jpg",
+      "/images/custom/products/1788576093538_44t5h3.jpg",
       "/images/custom/products/1788489555529_1s6soy.jpg",
       "/images/custom/products/1788489555529_tp0kvt.jpg",
-      "/images/custom/products/1788512337306_gsnko6.jpg",
+      "/images/custom/products/1788576093538_7sd6yu.jpg",
       "/images/custom/products/1788489555529_1tgn8v.jpg"
     ],
     "customFields": [
@@ -760,14 +1060,14 @@
       "ja": "8090 ソーラーパワー　3灯式LEDセンサーライト 3×5W 屋外用"
     },
     "category": "Solar",
-    "image": "/images/custom/products/1788512341893_3g0cc5.jpg",
+    "image": "/images/custom/products/1788576093539_571qtq.jpg",
     "gallery": [
-      "/images/custom/products/1788512341893_3g0cc5.jpg",
-      "/images/custom/products/1788512345639_1kksdn.jpg",
-      "/images/custom/products/1788512350086_aqbmz2.jpg",
-      "/images/custom/products/1788512354017_oblkve.jpg",
-      "/images/custom/products/1788512359366_obisu2.jpg",
-      "/images/custom/products/1788512363753_k1nrs6.jpg"
+      "/images/custom/products/1788576093539_571qtq.jpg",
+      "/images/custom/products/1788576093539_nxmjlw.jpg",
+      "/images/custom/products/1788576093539_2o153e.jpg",
+      "/images/custom/products/1788576093539_e96ubf.jpg",
+      "/images/custom/products/1788576093539_mw0g8z.jpg",
+      "/images/custom/products/1788576093539_c2zs5o.jpg"
     ],
     "customFields": [
       {
@@ -911,9 +1211,9 @@
       "ja": "K480 ソーラー式 2灯式 LED センサーライト 2×6W"
     },
     "category": "Solar",
-    "image": "/images/custom/products/1788413750312_vo5l3n.jpg",
+    "image": "/images/custom/products/1788576093539_7d0vy2.jpg",
     "gallery": [
-      "/images/custom/products/1788413750312_vo5l3n.jpg",
+      "/images/custom/products/1788576093539_7d0vy2.jpg",
       "/images/custom/products/1788413757996_ajpih4.jpg",
       "/images/custom/products/1788413766377_6cn5m5.jpg",
       "/images/custom/products/1788413773121_mmx0jj.jpg",
@@ -1034,14 +1334,14 @@
       "ja": "K404 ハイブリッド電源 デュアルランプ式 LED センサーライト 2×6.5W"
     },
     "category": "Hybrid",
-    "image": "/images/custom/products/1788512368919_427cyk.jpg",
+    "image": "/images/custom/products/1788576093540_4hpcgs.jpg",
     "gallery": [
-      "/images/custom/products/1788512368919_427cyk.jpg",
-      "/images/custom/products/1788512372580_sw0n3i.jpg",
-      "/images/custom/products/1788512376402_dx4cfx.jpg",
-      "/images/custom/products/1788512380550_qllvz6.jpg",
-      "/images/custom/products/1788512385503_ccefas.jpg",
-      "/images/custom/products/1788512389631_lummxc.jpg"
+      "/images/custom/products/1788576093540_4hpcgs.jpg",
+      "/images/custom/products/1788576093540_s5p8qe.jpg",
+      "/images/custom/products/1788576093540_em5l8e.jpg",
+      "/images/custom/products/1788576093541_lcxu84.jpg",
+      "/images/custom/products/1788576093541_pgu1f0.jpg",
+      "/images/custom/products/1788576093541_jpqg6b.jpg"
     ],
     "customFields": [
       {
@@ -1407,6 +1707,459 @@
     "createdAt": 1788240603948
   },
   {
+    "name": {
+      "en": "W810 LED Working Light with Portable Stand",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "Work Light",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788576093541_pojur6.jpg",
+      "/images/custom/products/1788576093541_1zd1yc.jpg",
+      "/images/custom/products/1788576093541_12ovpd.jpg",
+      "/images/custom/products/1788576093541_1qqdpa.jpg",
+      "/images/custom/products/1788576093541_2ttpgr.jpg",
+      "/images/custom/products/1788576093542_hgg9wk.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "15W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "ABS Plastic",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "1500LM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "100V/220V",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "111*110*61mm",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788574252813_xft3wm",
+    "image": "/images/custom/products/1788576093541_pojur6.jpg",
+    "createdAt": 1788574252813
+  },
+  {
+    "name": {
+      "en": "W830 Tri-Lamp Head LED Working Light with Portable Stand",
+      "zh": "W830 三灯头 LED 工作灯（带便携式支架）",
+      "es": "Lámpara de trabajo LED W830 de tres lámparas con soporte portátil",
+      "ja": "W830 トリプルランプ式LED作業灯（ポータブルスタンド付き）"
+    },
+    "category": "Work Light",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788576093542_rj0rxs.jpg",
+      "/images/custom/products/1788576093542_w0awfc.jpg",
+      "/images/custom/products/1788576093542_t4461p.jpg",
+      "/images/custom/products/1788576093542_0q7sjx.jpg",
+      "/images/custom/products/1788576093542_jjg2p5.jpg",
+      "/images/custom/products/1788576093542_b6latv.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "45W",
+          "zh": "45W",
+          "es": "45 W",
+          "ja": "45W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS Plasic",
+          "zh": "ABS塑料",
+          "es": "Plástico ABS",
+          "ja": "ABS樹脂"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "4500LM",
+          "zh": "4500LM",
+          "es": "4500 LM",
+          "ja": "4500LM"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
+        },
+        "value": {
+          "en": "100V/220V",
+          "zh": "100V/220V",
+          "es": "100 V/220 V",
+          "ja": "100V/220V"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "336*110*61mm",
+          "zh": "336×110×61毫米",
+          "es": "336 × 110 × 61 mm",
+          "ja": "336×110×61mm"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 1,
+    "featuredOnHomepage": false,
+    "id": "p_1788574435940_s9hq6o",
+    "image": "/images/custom/products/1788576093542_rj0rxs.jpg",
+    "createdAt": 1788574435940
+  },
+  {
+    "name": {
+      "en": "W830 Five-Light LED Working Light with Portable Stand",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "Work Light",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "gallery": [
+      "/images/custom/products/1788576093542_6jhttb.jpg",
+      "/images/custom/products/1788576093542_8bzbrf.jpg",
+      "/images/custom/products/1788576093543_yil3p6.jpg",
+      "/images/custom/products/1788576093543_92ltx6.jpg",
+      "/images/custom/products/1788576093543_f8l1ng.jpg",
+      "/images/custom/products/1788576093543_62d1zr.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "75W",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "ABS Plastic",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "7500LM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "100V/220V",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "336*336*61MM",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        },
+        "value": {
+          "en": "500",
+          "zh": "",
+          "es": "",
+          "ja": ""
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 2,
+    "featuredOnHomepage": false,
+    "id": "p_1788574548331_1knz2d",
+    "image": "/images/custom/products/1788576093542_6jhttb.jpg",
+    "createdAt": 1788574548331
+  },
+  {
     "id": "p_1788241561700_d3bkis",
     "name": {
       "en": "Outdoor Use Solar Power LED Petal Lamp sensor light with Power Bank",
@@ -1525,7 +2278,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 3,
     "featuredOnHomepage": true,
     "createdAt": 1788241561700
   },
@@ -1538,13 +2291,14 @@
       "ja": "WS301 デュアルランプヘッド LEDセンサーライト（カメラ付き）"
     },
     "category": "Camera Series",
-    "image": "/images/custom/products/1788512393627_6jt69m.jpg",
+    "image": "/images/custom/products/1788576093543_jljjvd.jpg",
     "gallery": [
-      "/images/custom/products/1788512393627_6jt69m.jpg",
-      "/images/custom/products/1788512396982_4zvhg1.jpg",
-      "/images/custom/products/1788512400894_9hwj8c.jpg",
-      "/images/custom/products/1788512405366_to83le.jpg",
-      "/images/custom/products/1788512409150_f35bbw.jpg"
+      "/images/custom/products/1788576093543_jljjvd.jpg",
+      "/images/custom/products/1788576093543_sdoqpm.jpg",
+      "/images/custom/products/1788576093543_k6q1fk.jpg",
+      "/images/custom/products/1788576093544_g5mxfp.jpg",
+      "/images/custom/products/1788576093544_e1n7n0.jpg",
+      "/images/custom/products/1788576093544_a0uzci.jpg"
     ],
     "customFields": [
       {

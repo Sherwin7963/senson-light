@@ -3,16 +3,16 @@
     "id": "1",
     "title": {
       "en": "Industry Experience",
-      "zh": "",
-      "es": "",
-      "ja": ""
+      "zh": "行业经验",
+      "es": "Experiencia en el sector",
+      "ja": "業界での経験"
     },
     "icon": "Factory",
     "description": {
       "en": "24+ years of professional LED lighting manufacturing experience with 40,000㎡ production facility.",
-      "zh": "",
-      "es": "",
-      "ja": ""
+      "zh": "拥有24年以上专业LED照明制造经验，生产基地面积达40,000平方米。",
+      "es": "Más de 24 años de experiencia profesional en la fabricación de iluminación LED, con unas instalaciones de producción de 40 000 m².",
+      "ja": "24年以上にわたるLED照明製造の専門的な実績を持ち、40,000㎡の生産施設を擁しています。"
     },
     "order": 1
   },

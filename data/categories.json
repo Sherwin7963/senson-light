@@ -140,6 +140,7 @@
     "createdAt": 1788144660762
   },
   {
+    "id": "cat_1788490019653_mqwfvw",
     "slug": "Camera Series",
     "name": {
       "en": "Camera Series",
@@ -156,7 +157,6 @@
     "icon": "Tag",
     "sortOrder": 8,
     "enabled": true,
-    "id": "cat_1788490019653_mqwfvw",
     "createdAt": 1788490019654
   }
 ]
