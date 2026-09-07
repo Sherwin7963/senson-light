@@ -143,12 +143,177 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": true,
     "createdAt": 1788576069714
+  },
+  {
+    "id": "p_1788240230349_4ae0l2",
+    "name": {
+      "en": "K430 AC Power Tri-Head LED Sensor light 3*10W",
+      "zh": "K430 交流电源三头LED感应灯 3×10W",
+      "es": "Lámpara LED con sensor de luz K430 de alimentación de CA y tres cabezales, 3 × 10 W",
+      "ja": "K430 AC電源式 3灯式LEDセンサーライト 3×10W"
+    },
+    "category": "AC Powered",
+    "image": "/images/custom/products/1788582541198_7nx2go.jpg",
+    "gallery": [
+      "/images/custom/products/1788582541198_7nx2go.jpg",
+      "/images/custom/products/1788582541199_og7xwz.jpg",
+      "/images/custom/products/1788413721805_1xvwgm.jpg",
+      "/images/custom/products/1788413729446_eye8oi.jpg",
+      "/images/custom/products/1788413736074_xt3osi.jpg",
+      "/images/custom/products/1788413742962_ky11ea.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "3*10W",
+          "zh": "3×10W",
+          "es": "3 × 10 W",
+          "ja": "3×10W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
+        },
+        "value": {
+          "en": "110/220V",
+          "zh": "110/220V",
+          "es": "110/220 V",
+          "ja": "110/220V"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K/6500K",
+          "zh": "3000K/6500K",
+          "es": "3000 K/6500 K",
+          "ja": "3000K／6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "3000LM",
+          "zh": "3000LM",
+          "es": "3000 lm",
+          "ja": "3000LM"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 1,
+    "featuredOnHomepage": true,
+    "createdAt": 1788240230349
   },
   {
     "id": "p_1788511501123_45v4in",
@@ -308,10 +473,17 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 1,
+    "sortOrder": 2,
     "featuredOnHomepage": false,
     "createdAt": 1788511501123
   },
@@ -458,10 +630,17 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 2,
+    "sortOrder": 3,
     "featuredOnHomepage": false,
     "createdAt": 1788575925769
   },
@@ -607,163 +786,19 @@
       "es": "",
       "ja": ""
     },
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 3,
-    "featuredOnHomepage": false,
-    "createdAt": 1788503542125
-  },
-  {
-    "id": "p_1788240230349_4ae0l2",
-    "name": {
-      "en": "K430 AC Power Tri-Head LED Sensor light 3*10W",
-      "zh": "K430 交流电源三头LED感应灯 3×10W",
-      "es": "Lámpara LED con sensor de luz K430 de alimentación de CA y tres cabezales, 3 × 10 W",
-      "ja": "K430 AC電源式 3灯式LEDセンサーライト 3×10W"
-    },
-    "category": "AC Powered",
-    "image": "/images/custom/products/1788582541198_7nx2go.jpg",
-    "gallery": [
-      "/images/custom/products/1788582541198_7nx2go.jpg",
-      "/images/custom/products/1788582541199_og7xwz.jpg",
-      "/images/custom/products/1788413721805_1xvwgm.jpg",
-      "/images/custom/products/1788413729446_eye8oi.jpg",
-      "/images/custom/products/1788413736074_xt3osi.jpg",
-      "/images/custom/products/1788413742962_ky11ea.jpg"
-    ],
-    "customFields": [
-      {
-        "key": {
-          "en": "Material",
-          "zh": "材料",
-          "es": "Material",
-          "ja": "素材"
-        },
-        "value": {
-          "en": "ABS",
-          "zh": "ABS",
-          "es": "ABS",
-          "ja": "ABS"
-        }
-      },
-      {
-        "key": {
-          "en": "Power",
-          "zh": "功率",
-          "es": "Potencia",
-          "ja": "電力"
-        },
-        "value": {
-          "en": "3*10W",
-          "zh": "3×10W",
-          "es": "3 × 10 W",
-          "ja": "3×10W"
-        }
-      },
-      {
-        "key": {
-          "en": "IP Rating",
-          "zh": "IP防护等级",
-          "es": "Clasificación IP",
-          "ja": "IP等級"
-        },
-        "value": {
-          "en": "IP44",
-          "zh": "IP44",
-          "es": "IP44",
-          "ja": "IP44"
-        }
-      },
-      {
-        "key": {
-          "en": "Sensor Distance",
-          "zh": "传感器距离",
-          "es": "Distancia del sensor",
-          "ja": "センサーの距離"
-        },
-        "value": {
-          "en": "Max. 12M",
-          "zh": "最多 12M",
-          "es": "Máx. 12 M",
-          "ja": "最大12M"
-        }
-      },
-      {
-        "key": {
-          "en": "Voltage",
-          "zh": "电压",
-          "es": "Tensión",
-          "ja": "電圧"
-        },
-        "value": {
-          "en": "110/220V",
-          "zh": "110/220V",
-          "es": "110/220 V",
-          "ja": "110/220V"
-        }
-      },
-      {
-        "key": {
-          "en": "Color Temperature",
-          "zh": "色温",
-          "es": "Temperatura de color",
-          "ja": "色温度"
-        },
-        "value": {
-          "en": "3000K/6500K",
-          "zh": "3000K/6500K",
-          "es": "3000 K/6500 K",
-          "ja": "3000K／6500K"
-        }
-      },
-      {
-        "key": {
-          "en": "Lumen",
-          "zh": "Lumen",
-          "es": "Lumen",
-          "ja": "ルーメン"
-        },
-        "value": {
-          "en": "3000LM",
-          "zh": "3000LM",
-          "es": "3000 lm",
-          "ja": "3000LM"
-        }
-      },
-      {
-        "key": {
-          "en": "MOQ",
-          "zh": "最小起订量",
-          "es": "Cantidad mínima de pedido",
-          "ja": "最小発注数量（MOQ）"
-        },
-        "value": {
-          "en": "500",
-          "zh": "500",
-          "es": "500",
-          "ja": "500"
-        }
-      }
-    ],
-    "description": {
+    "richDescription": {
       "en": "",
       "zh": "",
       "es": "",
       "ja": ""
     },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 4,
-    "featuredOnHomepage": true,
-    "createdAt": 1788240230349
+    "featuredOnHomepage": false,
+    "createdAt": 1788503542125
   },
   {
     "id": "p_1788582126400_yqod43",
@@ -909,6 +944,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1059,6 +1101,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1210,6 +1259,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1347,6 +1403,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1498,6 +1561,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1621,6 +1691,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1758,6 +1835,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -1881,6 +1965,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
@@ -2002,12 +2093,307 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": true,
     "createdAt": 1788240603948
+  },
+  {
+    "id": "p_1788574548331_1knz2d",
+    "name": {
+      "en": "W850 Five-Light LED Working Light with Portable Stand",
+      "zh": "W850 五灯头 LED 工作灯（带便携式支架）",
+      "es": "Lámpara de trabajo LED W850 de cinco luces con soporte portátil",
+      "ja": "W850 5灯式LED作業灯（ポータブルスタンド付き）"
+    },
+    "category": "Work Light",
+    "image": "/images/custom/products/1788576093542_6jhttb.jpg",
+    "gallery": [
+      "/images/custom/products/1788576093542_6jhttb.jpg",
+      "/images/custom/products/1788576093542_8bzbrf.jpg",
+      "/images/custom/products/1788576093543_yil3p6.jpg",
+      "/images/custom/products/1788576093543_92ltx6.jpg",
+      "/images/custom/products/1788576093543_f8l1ng.jpg",
+      "/images/custom/products/1788576093543_62d1zr.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "75W",
+          "zh": "75W",
+          "es": "75 W",
+          "ja": "75W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS Plastic",
+          "zh": "ABS塑料",
+          "es": "Plástico ABS",
+          "ja": "ABS樹脂"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "7500LM",
+          "zh": "7500LM",
+          "es": "7500 LM",
+          "ja": "7500LM"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
+        },
+        "value": {
+          "en": "100V/220V",
+          "zh": "100V/220V",
+          "es": "100 V/220 V",
+          "ja": "100V/220V"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "336*336*61MM",
+          "zh": "336*336*61毫米",
+          "es": "336 × 336 × 61 mm",
+          "ja": "336×336×61mm"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": true,
+    "createdAt": 1788574548331
+  },
+  {
+    "id": "p_1788241561700_d3bkis",
+    "name": {
+      "en": "Outdoor Use Solar Power LED Petal Lamp sensor light with Power Bank",
+      "zh": "户外用太阳能LED花瓣灯，带传感器和移动电源",
+      "es": "Lámpara LED con forma de pétalo y energía solar para uso en exteriores, con sensor de movimiento y batería externa",
+      "ja": "屋外用 ソーラーパワーLEDペタルランプ センサーライト（モバイルバッテリー付き）"
+    },
+    "category": "Work Light",
+    "image": "/images/custom/products/1788413864046_83mnp8.jpg",
+    "gallery": [
+      "/images/custom/products/1788413864046_83mnp8.jpg",
+      "/images/custom/products/1788413869322_vldddy.jpg",
+      "/images/custom/products/1788413874234_wma7xl.jpg",
+      "/images/custom/products/1788413879613_omhzyb.jpg",
+      "/images/custom/products/1788413884865_jx47zg.jpg",
+      "/images/custom/products/1788413890280_uzgd39.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS",
+          "zh": "ABS",
+          "es": "ABS",
+          "ja": "ABS"
+        }
+      },
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "40W",
+          "zh": "40W",
+          "es": "40 W",
+          "ja": "40W"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Sensor Distance",
+          "zh": "传感器距离",
+          "es": "Distancia del sensor",
+          "ja": "センサーの距離"
+        },
+        "value": {
+          "en": "Max. 12M",
+          "zh": "最多 12M",
+          "es": "Máx. 12 M",
+          "ja": "最大12M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500K",
+          "es": "3000 K-6500 K",
+          "ja": "3000K～6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 1,
+    "featuredOnHomepage": true,
+    "createdAt": 1788241561700
   },
   {
     "id": "p_1788574252813_xft3wm",
@@ -2153,10 +2539,17 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 2,
     "featuredOnHomepage": false,
     "createdAt": 1788574252813
   },
@@ -2304,286 +2697,19 @@
       "es": "",
       "ja": ""
     },
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 1,
-    "featuredOnHomepage": false,
-    "createdAt": 1788574435940
-  },
-  {
-    "id": "p_1788574548331_1knz2d",
-    "name": {
-      "en": "W850 Five-Light LED Working Light with Portable Stand",
-      "zh": "W850 五灯头 LED 工作灯（带便携式支架）",
-      "es": "Lámpara de trabajo LED W850 de cinco luces con soporte portátil",
-      "ja": "W850 5灯式LED作業灯（ポータブルスタンド付き）"
-    },
-    "category": "Work Light",
-    "image": "/images/custom/products/1788576093542_6jhttb.jpg",
-    "gallery": [
-      "/images/custom/products/1788576093542_6jhttb.jpg",
-      "/images/custom/products/1788576093542_8bzbrf.jpg",
-      "/images/custom/products/1788576093543_yil3p6.jpg",
-      "/images/custom/products/1788576093543_92ltx6.jpg",
-      "/images/custom/products/1788576093543_f8l1ng.jpg",
-      "/images/custom/products/1788576093543_62d1zr.jpg"
-    ],
-    "customFields": [
-      {
-        "key": {
-          "en": "Power",
-          "zh": "功率",
-          "es": "Potencia",
-          "ja": "電力"
-        },
-        "value": {
-          "en": "75W",
-          "zh": "75W",
-          "es": "75 W",
-          "ja": "75W"
-        }
-      },
-      {
-        "key": {
-          "en": "Material",
-          "zh": "材料",
-          "es": "Material",
-          "ja": "素材"
-        },
-        "value": {
-          "en": "ABS Plastic",
-          "zh": "ABS塑料",
-          "es": "Plástico ABS",
-          "ja": "ABS樹脂"
-        }
-      },
-      {
-        "key": {
-          "en": "IP Rating",
-          "zh": "IP防护等级",
-          "es": "Clasificación IP",
-          "ja": "IP等級"
-        },
-        "value": {
-          "en": "IP44",
-          "zh": "IP44",
-          "es": "IP44",
-          "ja": "IP44"
-        }
-      },
-      {
-        "key": {
-          "en": "Lumen",
-          "zh": "Lumen",
-          "es": "Lumen",
-          "ja": "ルーメン"
-        },
-        "value": {
-          "en": "7500LM",
-          "zh": "7500LM",
-          "es": "7500 LM",
-          "ja": "7500LM"
-        }
-      },
-      {
-        "key": {
-          "en": "Color Temperature",
-          "zh": "色温",
-          "es": "Temperatura de color",
-          "ja": "色温度"
-        },
-        "value": {
-          "en": "3000K-6500K",
-          "zh": "3000K-6500 K",
-          "es": "3000K-6500K",
-          "ja": "3000 K -6500 K"
-        }
-      },
-      {
-        "key": {
-          "en": "Voltage",
-          "zh": "电压",
-          "es": "Tensión",
-          "ja": "電圧"
-        },
-        "value": {
-          "en": "100V/220V",
-          "zh": "100V/220V",
-          "es": "100 V/220 V",
-          "ja": "100V/220V"
-        }
-      },
-      {
-        "key": {
-          "en": "Size",
-          "zh": "尺寸",
-          "es": "Tamaño",
-          "ja": "サイズ"
-        },
-        "value": {
-          "en": "336*336*61MM",
-          "zh": "336*336*61毫米",
-          "es": "336 × 336 × 61 mm",
-          "ja": "336×336×61mm"
-        }
-      },
-      {
-        "key": {
-          "en": "MOQ",
-          "zh": "最小起订量",
-          "es": "Cantidad mínima de pedido",
-          "ja": "最小発注数量（MOQ）"
-        },
-        "value": {
-          "en": "500",
-          "zh": "500",
-          "es": "500",
-          "ja": "500"
-        }
-      }
-    ],
-    "description": {
+    "richDescription": {
       "en": "",
       "zh": "",
       "es": "",
       "ja": ""
     },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 2,
-    "featuredOnHomepage": true,
-    "createdAt": 1788574548331
-  },
-  {
-    "id": "p_1788241561700_d3bkis",
-    "name": {
-      "en": "Outdoor Use Solar Power LED Petal Lamp sensor light with Power Bank",
-      "zh": "户外用太阳能LED花瓣灯，带传感器和移动电源",
-      "es": "Lámpara LED con forma de pétalo y energía solar para uso en exteriores, con sensor de movimiento y batería externa",
-      "ja": "屋外用 ソーラーパワーLEDペタルランプ センサーライト（モバイルバッテリー付き）"
-    },
-    "category": "Work Light",
-    "image": "/images/custom/products/1788413864046_83mnp8.jpg",
-    "gallery": [
-      "/images/custom/products/1788413864046_83mnp8.jpg",
-      "/images/custom/products/1788413869322_vldddy.jpg",
-      "/images/custom/products/1788413874234_wma7xl.jpg",
-      "/images/custom/products/1788413879613_omhzyb.jpg",
-      "/images/custom/products/1788413884865_jx47zg.jpg",
-      "/images/custom/products/1788413890280_uzgd39.jpg"
-    ],
-    "customFields": [
-      {
-        "key": {
-          "en": "Material",
-          "zh": "材料",
-          "es": "Material",
-          "ja": "素材"
-        },
-        "value": {
-          "en": "ABS",
-          "zh": "ABS",
-          "es": "ABS",
-          "ja": "ABS"
-        }
-      },
-      {
-        "key": {
-          "en": "Power",
-          "zh": "功率",
-          "es": "Potencia",
-          "ja": "電力"
-        },
-        "value": {
-          "en": "40W",
-          "zh": "40W",
-          "es": "40 W",
-          "ja": "40W"
-        }
-      },
-      {
-        "key": {
-          "en": "IP Rating",
-          "zh": "IP防护等级",
-          "es": "Clasificación IP",
-          "ja": "IP等級"
-        },
-        "value": {
-          "en": "IP44",
-          "zh": "IP44",
-          "es": "IP44",
-          "ja": "IP44"
-        }
-      },
-      {
-        "key": {
-          "en": "Sensor Distance",
-          "zh": "传感器距离",
-          "es": "Distancia del sensor",
-          "ja": "センサーの距離"
-        },
-        "value": {
-          "en": "Max. 12M",
-          "zh": "最多 12M",
-          "es": "Máx. 12 M",
-          "ja": "最大12M"
-        }
-      },
-      {
-        "key": {
-          "en": "Color Temperature",
-          "zh": "色温",
-          "es": "Temperatura de color",
-          "ja": "色温度"
-        },
-        "value": {
-          "en": "3000K-6500K",
-          "zh": "3000K-6500K",
-          "es": "3000 K-6500 K",
-          "ja": "3000K～6500K"
-        }
-      },
-      {
-        "key": {
-          "en": "MOQ",
-          "zh": "最小起订量",
-          "es": "Cantidad mínima de pedido",
-          "ja": "最小発注数量（MOQ）"
-        },
-        "value": {
-          "en": "500",
-          "zh": "500",
-          "es": "500",
-          "ja": "500"
-        }
-      }
-    ],
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 3,
-    "featuredOnHomepage": true,
-    "createdAt": 1788241561700
+    "featuredOnHomepage": false,
+    "createdAt": 1788574435940
   },
   {
     "id": "p_1788508518080_oy218q",
@@ -2729,6 +2855,13 @@
       "es": "",
       "ja": ""
     },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
