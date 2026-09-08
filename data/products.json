@@ -1852,6 +1852,164 @@
     "createdAt": 1788489859903
   },
   {
+    "name": {
+      "en": "W300 LED Portable Pocket Light",
+      "zh": "W300 LED便携式口袋灯",
+      "es": "Luz de bolsillo portátil LED W300",
+      "ja": "W 300 LEDポータブルポケットライト。"
+    },
+    "category": "Rechargeable",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": false,
+    "gallery": [
+      "/images/custom/products/1788854382116_uvd4q6.jpg",
+      "/images/custom/products/1788854386043_07abd5.jpg",
+      "/images/custom/products/1788854389310_sh3mmq.jpg",
+      "/images/custom/products/1788854392305_328yj0.jpg",
+      "/images/custom/products/1788854395339_33hyxt.jpg",
+      "/images/custom/products/1788854398704_jmn17z.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "1W",
+          "zh": "1W",
+          "es": "1 W",
+          "ja": "1W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "ABS Plastic",
+          "zh": "ABS塑料",
+          "es": "Plástico ABS",
+          "ja": "ABS樹脂"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "100LM",
+          "zh": "100LM",
+          "es": "100 LM",
+          "ja": "100LM"
+        }
+      },
+      {
+        "key": {
+          "en": "Detection Angle and Distance",
+          "zh": "探测角度和距离",
+          "es": "Ángulo y distancia de detección",
+          "ja": "検知角度と検知距離"
+        },
+        "value": {
+          "en": "6M",
+          "zh": "6月",
+          "es": "6M",
+          "ja": "6ヶ月"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "38*91*23MM",
+          "zh": "38 * 91 * 23MM",
+          "es": "38*91*23 MM",
+          "ja": "38 * 91 * 23 mm"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788854380808_a92y2z",
+    "image": "/images/custom/products/1788854382116_uvd4q6.jpg",
+    "createdAt": 1788854380808
+  },
+  {
     "id": "p_1788242004116_b6sgn2",
     "name": {
       "en": "H840 Outdoor/Indoor use Recharge LED Sensor Light",
