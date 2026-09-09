@@ -1,7 +1,22 @@
 name: Inquiry Email Notification
 
 # 询盘邮件通知工作流
-# 当带有 "inquiry" 标签的 Issue 被创建时，自动发送邮件通知
+# 当新 Issue 被创建且标题包含 "[Inquiry]" 时，自动发送邮件通知
+#
+# 🔴 触发方式（双重保险）：
+#   1. issues.opened + 标题以 "[Inquiry]" 开头 → 主要触发路径
+#   2. issues.labeled + label 是 "inquiry" → 兜底触发路径
+#   为什么要双触发？
+#   - 如果 labels 创建失败（422 错误），标题前缀路径仍能触发
+#   - 如果标题前缀判断有问题（如语言切换导致标题格式变化），labels 路径仍能触发
+#   - 两种路径都触发时，workflow 会跑两次，但邮件也会发两次 → 详见下方去重说明
+#
+# 🔴 去重策略：
+#   - 因为 opened 事件触发后 labels 也会加上（如果成功的话），labeled 事件可能再触发一次
+#   - 所以 labeled 事件增加额外判断：只有 Issue 在 opened 后 30 秒内被打标签的，认为是同一个操作，跳过
+#   - 实际实现：通过 issue body 判断——同一个 Issue 只发一次邮件（用 GitHub API 标记已发送太复杂，
+#     这里用简单的"如果标题前缀已经匹配就认为 opened 事件已经触发过了"的策略，
+#     即 labeled 事件只在标题不以 [Inquiry] 开头时才触发）
 #
 # 配置步骤：
 # 1. 在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
@@ -12,30 +27,78 @@ name: Inquiry Email Notification
 #    - NOTIFY_EMAIL: 接收询盘通知的邮箱（如 sherwin@tanjeon.com）
 #    - SENDER_EMAIL: 发件人邮箱（可选，默认使用 SMTP_USERNAME）
 # 2. 确保 Personal Access Token 有 "Issues" 读写权限
-# 3. 前端提交询盘时会自动创建带 "inquiry" 标签的 Issue，触发此 workflow
+# 3. 前端提交询盘时会自动创建标题以 "[Inquiry]" 开头的 Issue，触发此 workflow
+# 4. 用后台 "Test Issue Creation" 按钮测试时，标题为 "[Inquiry] [Test] ..."，
+#    同样会触发邮件通知（这样可以验证整条链路是否通畅）
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   send-inquiry-email:
     name: Send Inquiry Email
     runs-on: ubuntu-latest
-    # 只处理带有 inquiry 标签的 Issue
-    if: contains(github.event.issue.labels.*.name, 'inquiry')
+    # 触发条件：
+    #   - opened 事件：标题以 [Inquiry] 开头（主路径）
+    #   - labeled 事件：标签是 "inquiry" 且标题不以 [Inquiry] 开头（兜底：只有标签加上了但标题没匹配时才走）
+    if: |
+      (github.event.action == 'opened' && startsWith(github.event.issue.title, '[Inquiry]')) ||
+      (github.event.action == 'labeled' && github.event.label.name == 'inquiry' && !startsWith(github.event.issue.title, '[Inquiry]'))
     steps:
-      - name: Check issue body for content
-        id: check
+      - name: Debug — issue and event info
+        id: debug
         run: |
+          echo "=== Issue Details ==="
+          echo "Event action: ${{ github.event.action }}"
           echo "Issue title: ${{ github.event.issue.title }}"
           echo "Issue number: ${{ github.event.issue.number }}"
           echo "Issue URL: ${{ github.event.issue.html_url }}"
+          echo "Issue state: ${{ github.event.issue.state }}"
+          echo "Created at: ${{ github.event.issue.created_at }}"
+          echo "Labels: ${{ join(github.event.issue.labels.*.name, ', ') }}"
+          if [ "${{ github.event.action }}" = "labeled" ]; then
+            echo "Label that triggered: ${{ github.event.label.name }}"
+          fi
+          echo "===================="
+          echo ""
+          echo "Secrets availability (length only, values are masked):"
+          echo "  SMTP_SERVER:   ${{ length(secrets.SMTP_SERVER) }} chars"
+          echo "  SMTP_PORT:     ${{ length(secrets.SMTP_PORT) }} chars"
+          echo "  SMTP_USERNAME: ${{ length(secrets.SMTP_USERNAME) }} chars"
+          echo "  SMTP_PASSWORD: ${{ length(secrets.SMTP_PASSWORD) }} chars"
+          echo "  NOTIFY_EMAIL:  ${{ length(secrets.NOTIFY_EMAIL) }} chars"
+          echo "  SENDER_EMAIL:  ${{ length(secrets.SENDER_EMAIL) }} chars"
+          echo ""
+          echo "Trigger info:"
+          echo "  action=opened, title starts with [Inquiry]: ${{ github.event.action == 'opened' && startsWith(github.event.issue.title, '[Inquiry]') }}"
+          echo "  action=labeled, label=inquiry, no title match: ${{ github.event.action == 'labeled' && github.event.label.name == 'inquiry' && !startsWith(github.event.issue.title, '[Inquiry]') }}"
+
+      - name: Validate required secrets
+        id: validate
+        run: |
+          MISSING=""
+          [ -z "${{ secrets.SMTP_SERVER }}" ]   && MISSING="$MISSING SMTP_SERVER"
+          [ -z "${{ secrets.SMTP_PORT }}" ]     && MISSING="$MISSING SMTP_PORT"
+          [ -z "${{ secrets.SMTP_USERNAME }}" ] && MISSING="$MISSING SMTP_USERNAME"
+          [ -z "${{ secrets.SMTP_PASSWORD }}" ] && MISSING="$MISSING SMTP_PASSWORD"
+          [ -z "${{ secrets.NOTIFY_EMAIL }}" ]  && MISSING="$MISSING NOTIFY_EMAIL"
+
+          if [ -n "$MISSING" ]; then
+            echo "::error::Missing required secrets:$MISSING"
+            echo "::warning::Go to Settings → Secrets and variables → Actions and add the missing secrets."
+            echo "HAS_REQUIRED_SECRETS=false" >> $GITHUB_OUTPUT
+          else
+            echo "All required secrets are configured."
+            echo "HAS_REQUIRED_SECRETS=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Send email notification
+        id: send_email
+        if: steps.validate.outputs.HAS_REQUIRED_SECRETS == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
-          # SMTP 服务器配置（从 Secrets 读取）
+          # SMTP 服务器配置
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
@@ -45,10 +108,10 @@ jobs:
           from: ${{ secrets.SENDER_EMAIL || secrets.SMTP_USERNAME }}
           to: ${{ secrets.NOTIFY_EMAIL }}
 
-          # 邮件主题和内容
+          # 邮件主题和正文
           subject: "[New Inquiry] ${{ github.event.issue.title }}"
           body: |
-            A new inquiry has been submitted on the website.
+            A new inquiry has been submitted on your website.
 
             --------------------------------------------------
 
@@ -56,16 +119,62 @@ jobs:
 
             --------------------------------------------------
 
-            View on GitHub: ${{ github.event.issue.html_url }}
-            Issue Number: #${{ github.event.issue.number }}
-            Submitted at: ${{ github.event.issue.created_at }}
+            📋 Issue Details:
+            • Title: ${{ github.event.issue.title }}
+            • Number: #${{ github.event.issue.number }}
+            • URL: ${{ github.event.issue.html_url }}
+            • Submitted at: ${{ github.event.issue.created_at }}
+            • Labels: ${{ join(github.event.issue.labels.*.name, ', ') || '(none)' }}
+            • Trigger: ${{ github.event.action }} event
 
             --
-            This is an automated notification from GitHub Actions.
+            This is an automated notification from GitHub Actions (inquiry-notification workflow).
+            To stop these emails, remove or disable the .github/workflows/inquiry-notification.yml file.
           priority: high
 
-      - name: Log email result
-        if: always()
+      - name: Success summary
+        if: success()
         run: |
-          echo "Email notification processed for Issue #${{ github.event.issue.number }}"
-          echo "Issue URL: ${{ github.event.issue.html_url }}"
+          echo "✅ Email notification sent successfully"
+          echo "Issue: #${{ github.event.issue.number }} — ${{ github.event.issue.title }}"
+          echo "URL: ${{ github.event.issue.html_url }}"
+          echo "Recipient: ${{ secrets.NOTIFY_EMAIL }}"
+
+      - name: Failure troubleshooting
+        if: failure()
+        run: |
+          echo "❌ Email notification FAILED"
+          echo "Issue: #${{ github.event.issue.number }} — ${{ github.event.issue.title }}"
+          echo ""
+          echo "===== Troubleshooting Guide ====="
+          echo ""
+          echo "1. Check all Secrets are configured in:"
+          echo "   Settings → Secrets and variables → Actions → Repository secrets"
+          echo ""
+          echo "   Required secrets:"
+          echo "   • SMTP_SERVER   - SMTP server (e.g. smtp.gmail.com)"
+          echo "   • SMTP_PORT     - SMTP port (465 for SSL, 587 for STARTTLS)"
+          echo "   • SMTP_USERNAME - SMTP login (your full email)"
+          echo "   • SMTP_PASSWORD - SMTP password or app password"
+          echo "   • NOTIFY_EMAIL  - Recipient email address"
+          echo ""
+          echo "2. Gmail users: You MUST use an 'App Password', NOT your regular password."
+          echo "   - Enable 2-Step Verification first: https://myaccount.google.com/signinoptions/two-step-verification"
+          echo "   - Create app password:       https://myaccount.google.com/apppasswords"
+          echo "   - Use that 16-character code as SMTP_PASSWORD"
+          echo ""
+          echo "3. Try different port numbers:"
+          echo "   • Port 465 — SSL/TLS (most common for dawidd6/action-send-mail)"
+          echo "   • Port 587 — STARTTLS"
+          echo ""
+          echo "4. Verify the sender email matches SMTP_USERNAME"
+          echo "   - If SENDER_EMAIL is set, make sure it matches SMTP_USERNAME"
+          echo "   - Most SMTP servers require sender = authenticated user"
+          echo ""
+          echo "5. Check if your email provider has rate limits or blocks new IPs"
+          echo "   - Gmail may flag the first send as suspicious"
+          echo "   - Check your spam folder for any bounce-back emails"
+          echo ""
+          echo "6. Secrets are case-sensitive and must not have leading/trailing spaces"
+          echo "   - SMTP_SERVER = smtp.gmail.com  ✓"
+          echo "   - SMTP_SERVER = 'smtp.gmail.com' ✗ (quotes included)"
