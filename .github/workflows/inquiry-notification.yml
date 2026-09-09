@@ -8,8 +8,15 @@ name: Inquiry Email Notification
 #   2. issues.labeled + label 是 "inquiry" → 兜底触发路径
 #   为什么要双触发？
 #   - 如果 labels 创建失败（422 错误），标题前缀路径仍能触发
-#   - 如果标题前缀判断有问题，labels 路径仍能触发
-#   - 去重：labeled 事件只在标题不以 [Inquiry] 开头时才执行，避免重复发送
+#   - 如果标题前缀判断有问题（如语言切换导致标题格式变化），labels 路径仍能触发
+#   - 两种路径都触发时，workflow 会跑两次，但邮件也会发两次 → 详见下方去重说明
+#
+# 🔴 去重策略：
+#   - 因为 opened 事件触发后 labels 也会加上（如果成功的话），labeled 事件可能再触发一次
+#   - 所以 labeled 事件增加额外判断：只有 Issue 在 opened 后 30 秒内被打标签的，认为是同一个操作，跳过
+#   - 实际实现：通过 issue body 判断——同一个 Issue 只发一次邮件（用 GitHub API 标记已发送太复杂，
+#     这里用简单的"如果标题前缀已经匹配就认为 opened 事件已经触发过了"的策略，
+#     即 labeled 事件只在标题不以 [Inquiry] 开头时才触发）
 #
 # 配置步骤：
 # 1. 在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
@@ -17,7 +24,7 @@ name: Inquiry Email Notification
 #    - SMTP_PORT: SMTP 端口（如 465 或 587）
 #    - SMTP_USERNAME: SMTP 用户名（如 your-email@gmail.com）
 #    - SMTP_PASSWORD: SMTP 密码/应用专用密码
-#    - NOTIFY_EMAIL: 接收询盘通知的邮箱
+#    - NOTIFY_EMAIL: 接收询盘通知的邮箱（如 sherwin@tanjeon.com）
 #    - SENDER_EMAIL: 发件人邮箱（可选，默认使用 SMTP_USERNAME）
 # 2. 确保 Personal Access Token 有 "Issues" 读写权限
 # 3. 前端提交询盘时会自动创建标题以 "[Inquiry]" 开头的 Issue，触发此 workflow
@@ -34,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     # 触发条件：
     #   - opened 事件：标题以 [Inquiry] 开头（主路径）
-    #   - labeled 事件：标签是 "inquiry" 且标题不以 [Inquiry] 开头（兜底）
+    #   - labeled 事件：标签是 "inquiry" 且标题不以 [Inquiry] 开头（兜底：只有标签加上了但标题没匹配时才走）
     if: |
       (github.event.action == 'opened' && startsWith(github.event.issue.title, '[Inquiry]')) ||
       (github.event.action == 'labeled' && github.event.label.name == 'inquiry' && !startsWith(github.event.issue.title, '[Inquiry]'))
@@ -91,12 +98,17 @@ jobs:
         if: steps.validate.outputs.HAS_REQUIRED_SECRETS == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
+          # SMTP 服务器配置
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
+
+          # 发件人与收件人
           from: ${{ secrets.SENDER_EMAIL || secrets.SMTP_USERNAME }}
           to: ${{ secrets.NOTIFY_EMAIL }}
+
+          # 邮件主题和正文
           subject: "[New Inquiry] ${{ github.event.issue.title }}"
           body: |
             A new inquiry has been submitted on your website.
@@ -147,8 +159,8 @@ jobs:
           echo "   • NOTIFY_EMAIL  - Recipient email address"
           echo ""
           echo "2. Gmail users: You MUST use an 'App Password', NOT your regular password."
-          echo "   - Enable 2-Step Verification first"
-          echo "   - Create app password at https://myaccount.google.com/apppasswords"
+          echo "   - Enable 2-Step Verification first: https://myaccount.google.com/signinoptions/two-step-verification"
+          echo "   - Create app password:       https://myaccount.google.com/apppasswords"
           echo "   - Use that 16-character code as SMTP_PASSWORD"
           echo ""
           echo "3. Try different port numbers:"
@@ -164,3 +176,5 @@ jobs:
           echo "   - Check your spam folder for any bounce-back emails"
           echo ""
           echo "6. Secrets are case-sensitive and must not have leading/trailing spaces"
+          echo "   - SMTP_SERVER = smtp.gmail.com  ✓"
+          echo "   - SMTP_SERVER = 'smtp.gmail.com' ✗ (quotes included)"
