@@ -1,105 +1,23 @@
-<!doctype html><html lang="en"><head><script>(function(){
-  var needsPolyfill=(function(){
-    try{
-      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
-      if(typeof Object.hasOwn!=="function")return true;
-      if(typeof[].at!=="function")return true;
-      if(typeof[].findLast!=="function")return true;
-      return false;
-    }catch(e){return true}
-  })();
-  if(needsPolyfill){
-    document.write('<script src="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/polyfills.js"><\/script>');
-  }
-})();</script><script>window.appId = "github-pages";
-    window.userId = "";
-    window.tenantId = "";
-    window.userName = "";
-    window.csrfToken = "";
-    window.ENVIRONMENT = "production";
-    window.__BASENAME__ = "";
-    const appInfo = {
-      name: "OWELL Industrial",
-      avatar: "./favicon.png",
-      description: "Your Trusted LED Infrared Sensor Light Manufacturer",
-    };
-    if (appInfo.name) {
-      window._appInfo = appInfo;
-    }</script><script>(function(g){
-  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
-  window.__slardarErrBuf=window.__slardarErrBuf||[];
-  var ref=document.referrer||'';
-  function _cap(err){
-    if(window[g]&&!window[g].q){
-      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
-    }else{
-      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
-    }
-  }
-  window.addEventListener('error',function(e){
-    if(e.error==null&&e.target instanceof Element){
-      var t=e.target,url=t.src||t.href||'';
-      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
-      return;
-    }
-    if(e.error!=null){
-      var err=e.error;
-      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
-        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
-      }
-      _cap(err);
-    }else{
-      var msg=e.message||'Script error';
-      var err=new Error(msg);
-      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
-      _cap(err);
-    }
-  },true);
-  window.addEventListener('unhandledrejection',function(e){
-    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
-  });
-})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
-    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
-    slardarScript.crossOrigin = 'anonymous';
-    slardarScript.onload = function() {
-      if (window.KSlardarWeb) {
-        window.KSlardarWeb('context.merge', {
-          tenantId: window.tenantId ?? '',
-          appId: window.appId ?? '',
-          stack_version: "0.1.0",
-        });
-        window.KSlardarWeb('init', {
-          bid: 'apaas_miaoda',
-          env: window.ENVIRONMENT || 'online',
-          userId: window.userId ?? '',
-        });
-        window.KSlardarWeb('start');
-        // Flush errors captured before the SDK finished loading
-        var buf = window.__slardarErrBuf || [];
-        window.__slardarErrBuf = [];
-        buf.forEach(function(err) {
-          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
-        });
-      }
-    };
-    slardarScript.onerror = function() {
-      console.warn('Failed to load Slardar script');
-    };
-    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.1.2/dist/performance.iife.js" crossorigin="anonymous" defer="defer"></script><script>(function (win, export_obj) {
-    win['LogAnalyticsObject'] = export_obj;
-    if (!win[export_obj]) {
-      function _collect() { _collect.q.push(arguments); }
-      _collect.q = _collect.q || [];
-      win[export_obj] = _collect;
-    }
-    win[export_obj].l = +new Date();
-  })(window, 'collectEvent');
-
-  const teaScript = document.createElement('script');
-  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
-  teaScript.crossOrigin = 'anonymous';
-  teaScript.async = true;
-  teaScript.onerror = function() {
-    console.warn('Failed to load Tea script');
-  };
-  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Your Trusted LED Infrared Sensor Light Manufacturer"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/index-BxmQKerg.js"></script><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/radix-BaBacuQF.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/toolkit-CzCVtJTR.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/card-q6VjvRHO.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/trending-up-B8ZV7xIW.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/arrow-up-B89BR9Qs.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/award-CDU5Bz24.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/undo-CskoETP0.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/zoom-in-Bn4djgK6.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/user-BbeIe1-m.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/move-up-B5mFHA8a.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/chevron-down-D4aGTkPt.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/chevron-up-Da2xtQFy.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/select-DAVhKqRE.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/chevron-left-DUc_wgxQ.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/PageBreadcrumb-BMTRhRjc.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/circle-alert-Bt9ka4eT.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/circle-check-VXzcZR4q.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/circle-question-mark-DUF3uB3B.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/RemoteDataContext-WOKfchyw.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/useFeatures-BnehLSQ6.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/textarea-CmpzO2FA.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/share-2-BWaCQQBc.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/eye-off-y-ict1yT.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/eye-DtmqxEQE.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/file-text-DteRUju6.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/rotate-ccw-g8JHrnVV.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/globe-CJHw9Q3i.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/grip-vertical-C0pB37wh.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/image-DnGQTuq0.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/key-round-C23YzjiX.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/key-DGi6YE4a.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/languages-BlthYR_z.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/zap-Dzphhcu2.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/loader-circle-ChzA_jGU.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/lock-D2VfokSs.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/mail-ANUGa_r3.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/package-B5Pgk2yi.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/pen-aREYC3wN.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/plus-Bn72Indi.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/refresh-cw-CQuhL7z6.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/save-CsinRNwd.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/search-Cr7U5NwN.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/settings-DW8LC2Qn.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/shield-check-BDqI7b7e.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/shield-Crai5jQu.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/sparkles-BI3cThFY.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/star-CLPcQbAo.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/tag-DtmpbpeU.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/target-DswK1V96.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/trash-2-Bf4yvgln.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/triangle-alert-CSsPQ_qA.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/upload-Db_sqDAy.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/wrench-CWiuOhYT.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/x-D9AioTQz.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/lucide-react-Dmol-kSF.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/input-Beh_-aZn.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/basename-BJMO1YD7.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/img-path-DDAq6ZGs.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/dist-DvCskJR-.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/github-api-CH2xNz5E.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/proxy-CYa0Z57e.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/GithubConfigContext-BQ2hAcwl.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/image-compress-7G1Sv7zJ.js"><link rel="modulepreload" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/useGithubSync-BRQTey3K.js"><link rel="stylesheet" crossorigin href="https://lf-miaoda-static.feishucdn.com/app_17cbf2gmwh9/308/client/assets/index-rde7L98o.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="Your Trusted LED Infrared Sensor Light Manufacturer"><meta property="og:image" content="./favicon.png"><link rel="icon" href="./favicon.png"></head><body><div id="root"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OWELL Industrial - Your trusted LED security light manufacturer. OEM/ODM factory specializing in infrared sensor lights, PIR motion lamps, and outdoor security lighting." />
+  <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
+  <title>OWELL Industrial - LED Infrared Sensor Light Factory</title>
+  <meta property="og:title" content="OWELL Industrial - LED Infrared Sensor Light Factory" />
+  <meta property="og:description" content="Your trusted LED security light manufacturer. OEM/ODM factory specializing in infrared sensor lights." />
+  <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+  <link rel="preconnect" href="https://miaoda.feishu.cn/fonts" />
+  <link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin />
+  <script type="module" crossorigin src="./assets/index-BSN8UnjP.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CNC7AqOf.js" />
+  <link rel="modulepreload" crossorigin href="./assets/radix-BaBacuQF.js" />
+  <link rel="modulepreload" crossorigin href="./assets/toolkit-D44wTHvI.js" />
+  <link rel="stylesheet" crossorigin href="./assets/index-C1HitONw.css" />
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
