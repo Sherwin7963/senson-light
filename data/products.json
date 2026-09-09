@@ -1,5 +1,176 @@
 [
   {
+    "name": {
+      "en": "W720 AC Power High Lumen Dual-Lamp Head LED Sensor Light",
+      "zh": "W720交流电源高流明双灯头LED传感器灯",
+      "es": "W720 Potencia de CA Luz de sensor LED de cabezal de doble lámpara de alto lumen",
+      "ja": "W 720 AC電源高ルーメンデュアルランプヘッドLEDセンサーライト"
+    },
+    "category": "AC Powered",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1788933454455_x306lo.jpg",
+      "/images/custom/products/1788933454456_g20r86.jpg",
+      "/images/custom/products/1788933454456_3pmf0t.jpg",
+      "/images/custom/products/1788933454456_tc6i6z.jpg",
+      "/images/custom/products/1788933454456_l1qvw7.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Power",
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
+        },
+        "value": {
+          "en": "100W",
+          "zh": "100W",
+          "es": "100 W",
+          "ja": "100W"
+        }
+      },
+      {
+        "key": {
+          "en": "Material",
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
+        },
+        "value": {
+          "en": "Plastic",
+          "zh": "塑料",
+          "es": "Plástico",
+          "ja": "プラスチック"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rating",
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
+        },
+        "value": {
+          "en": "IP44",
+          "zh": "IP44",
+          "es": "IP44",
+          "ja": "IP44"
+        }
+      },
+      {
+        "key": {
+          "en": "Lumen",
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
+        },
+        "value": {
+          "en": "12000LM",
+          "zh": "12000LM",
+          "es": "12 000 LM",
+          "ja": "12000LM"
+        }
+      },
+      {
+        "key": {
+          "en": "Detection Angle and Distance",
+          "zh": "探测角度和距离",
+          "es": "Ángulo y distancia de detección",
+          "ja": "検知角度と検知距離"
+        },
+        "value": {
+          "en": "Max. 8M",
+          "zh": "最大8M",
+          "es": "Máx. 8M",
+          "ja": "最大8 M"
+        }
+      },
+      {
+        "key": {
+          "en": "Color Temperature",
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
+        },
+        "value": {
+          "en": "3000K-6500K",
+          "zh": "3000K-6500 K",
+          "es": "3000K-6500K",
+          "ja": "3000 K -6500 K"
+        }
+      },
+      {
+        "key": {
+          "en": "Voltage",
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
+        },
+        "value": {
+          "en": "AC100V/220V",
+          "zh": "AC100V/220V",
+          "es": "AC100V/220V",
+          "ja": "AC 100 V/220 V"
+        }
+      },
+      {
+        "key": {
+          "en": "Size",
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
+        },
+        "value": {
+          "en": "276*247*139mm",
+          "zh": "276×247×139毫米",
+          "es": "276 × 247 × 139 mm",
+          "ja": "276×247×139mm"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
+        },
+        "value": {
+          "en": "500",
+          "zh": "500",
+          "es": "500",
+          "ja": "500"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "id": "p_1788933449190_iw7myv",
+    "image": "/images/custom/products/1788933454455_x306lo.jpg",
+    "createdAt": 1788933449190
+  },
+  {
     "id": "p_1788576069714_08zdaf",
     "name": {
       "en": "W730 AC Power High Lumen Tri-Lamp Head LED Sensor Light",
