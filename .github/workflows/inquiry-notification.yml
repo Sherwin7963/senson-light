@@ -1,0 +1,71 @@
+name: Inquiry Email Notification
+
+# 询盘邮件通知工作流
+# 当带有 "inquiry" 标签的 Issue 被创建时，自动发送邮件通知
+#
+# 配置步骤：
+# 1. 在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
+#    - SMTP_SERVER: SMTP 服务器地址（如 smtp.gmail.com）
+#    - SMTP_PORT: SMTP 端口（如 465 或 587）
+#    - SMTP_USERNAME: SMTP 用户名（如 your-email@gmail.com）
+#    - SMTP_PASSWORD: SMTP 密码/应用专用密码
+#    - NOTIFY_EMAIL: 接收询盘通知的邮箱（如 sherwin@tanjeon.com）
+#    - SENDER_EMAIL: 发件人邮箱（可选，默认使用 SMTP_USERNAME）
+# 2. 确保 Personal Access Token 有 "Issues" 读写权限
+# 3. 前端提交询盘时会自动创建带 "inquiry" 标签的 Issue，触发此 workflow
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  send-inquiry-email:
+    name: Send Inquiry Email
+    runs-on: ubuntu-latest
+    # 只处理带有 inquiry 标签的 Issue
+    if: contains(github.event.issue.labels.*.name, 'inquiry')
+    steps:
+      - name: Check issue body for content
+        id: check
+        run: |
+          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Issue URL: ${{ github.event.issue.html_url }}"
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # SMTP 服务器配置（从 Secrets 读取）
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+
+          # 发件人与收件人
+          from: ${{ secrets.SENDER_EMAIL || secrets.SMTP_USERNAME }}
+          to: ${{ secrets.NOTIFY_EMAIL }}
+
+          # 邮件主题和内容
+          subject: "[New Inquiry] ${{ github.event.issue.title }}"
+          body: |
+            A new inquiry has been submitted on the website.
+
+            --------------------------------------------------
+
+            ${{ github.event.issue.body }}
+
+            --------------------------------------------------
+
+            View on GitHub: ${{ github.event.issue.html_url }}
+            Issue Number: #${{ github.event.issue.number }}
+            Submitted at: ${{ github.event.issue.created_at }}
+
+            --
+            This is an automated notification from GitHub Actions.
+          priority: high
+
+      - name: Log email result
+        if: always()
+        run: |
+          echo "Email notification processed for Issue #${{ github.event.issue.number }}"
+          echo "Issue URL: ${{ github.event.issue.html_url }}"
