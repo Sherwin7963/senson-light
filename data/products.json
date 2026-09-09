@@ -1,5 +1,6 @@
 [
   {
+    "id": "p_1788933449190_iw7myv",
     "name": {
       "en": "W720 AC Power High Lumen Dual-Lamp Head LED Sensor Light",
       "zh": "W720交流电源高流明双灯头LED传感器灯",
@@ -7,25 +8,7 @@
       "ja": "W 720 AC電源高ルーメンデュアルランプヘッドLEDセンサーライト"
     },
     "category": "AC Powered",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "richDescription": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "showRichDescription": true,
+    "image": "/images/custom/products/1788933454455_x306lo.jpg",
     "gallery": [
       "/images/custom/products/1788933454455_x306lo.jpg",
       "/images/custom/products/1788933454456_g20r86.jpg",
@@ -161,13 +144,30 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
     "sortOrder": 0,
     "featuredOnHomepage": false,
-    "id": "p_1788933449190_iw7myv",
-    "image": "/images/custom/products/1788933454455_x306lo.jpg",
     "createdAt": 1788933449190
   },
   {
@@ -324,7 +324,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 1,
     "featuredOnHomepage": true,
     "createdAt": 1788576069714
   },
@@ -482,7 +482,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 1,
+    "sortOrder": 2,
     "featuredOnHomepage": true,
     "createdAt": 1788240230349
   },
@@ -654,7 +654,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 2,
+    "sortOrder": 3,
     "featuredOnHomepage": false,
     "createdAt": 1788511501123
   },
@@ -811,7 +811,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 3,
+    "sortOrder": 4,
     "featuredOnHomepage": false,
     "createdAt": 1788575925769
   },
@@ -969,7 +969,7 @@
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 4,
+    "sortOrder": 5,
     "featuredOnHomepage": false,
     "createdAt": 1788503542125
   },
