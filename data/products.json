@@ -2140,6 +2140,7 @@
     "createdAt": 1788242004116
   },
   {
+    "id": "p_1788918872248_ckcz57",
     "name": {
       "en": "OT15A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
       "zh": "OT02A LED台灯触摸三路开关调光带Type-C电缆",
@@ -2147,25 +2148,7 @@
       "ja": "OT 02 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
     },
     "category": "Table Lamp",
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "structureInfo": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "richDescription": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "showRichDescription": true,
+    "image": "/images/custom/products/1788919563282_ijk81e.jpg",
     "gallery": [
       "/images/custom/products/1788919563282_ijk81e.jpg",
       "/images/custom/products/1788919563282_kqu9va.jpg",
@@ -2288,23 +2271,6 @@
         }
       }
     ],
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788918872248_ckcz57",
-    "image": "/images/custom/products/1788919563282_ijk81e.jpg",
-    "createdAt": 1788918872248
-  },
-  {
-    "name": {
-      "en": "OT14A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
-      "zh": "OT14A LED台灯触摸三路开关和开关调光带Type-C电缆",
-      "es": "OT14A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
-      "ja": "OT 14 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
-    },
-    "category": "Table Lamp",
     "description": {
       "en": "",
       "zh": "",
@@ -2324,6 +2290,23 @@
       "ja": ""
     },
     "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "createdAt": 1788918872248
+  },
+  {
+    "id": "p_1788918790305_zgt81b",
+    "name": {
+      "en": "OT14A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "OT14A LED台灯触摸三路开关和开关调光带Type-C电缆",
+      "es": "OT14A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
+      "ja": "OT 14 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
+    },
+    "category": "Table Lamp",
+    "image": "/images/custom/products/1788919563282_0sv4mq.jpg",
     "gallery": [
       "/images/custom/products/1788919563282_0sv4mq.jpg",
       "/images/custom/products/1788919563282_xavrwp.jpg",
@@ -2445,23 +2428,6 @@
         }
       }
     ],
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788918790305_zgt81b",
-    "image": "/images/custom/products/1788919563282_0sv4mq.jpg",
-    "createdAt": 1788918790305
-  },
-  {
-    "name": {
-      "en": "OT03A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
-      "zh": "OT03A LED台灯触摸三路开关调光带Type-C电缆",
-      "es": "OT03A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
-      "ja": "OT 03 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
-    },
-    "category": "Table Lamp",
     "description": {
       "en": "",
       "zh": "",
@@ -2481,6 +2447,23 @@
       "ja": ""
     },
     "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 1,
+    "featuredOnHomepage": false,
+    "createdAt": 1788918790305
+  },
+  {
+    "id": "p_1788918574746_6rln9j",
+    "name": {
+      "en": "OT03A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "OT03A LED台灯触摸三路开关调光带Type-C电缆",
+      "es": "OT03A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
+      "ja": "OT 03 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
+    },
+    "category": "Table Lamp",
+    "image": "/images/custom/products/1788919563283_0mww7p.jpg",
     "gallery": [
       "/images/custom/products/1788919563283_0mww7p.jpg",
       "/images/custom/products/1788919563283_tjyyhp.jpg",
@@ -2602,23 +2585,6 @@
         }
       }
     ],
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788918574746_6rln9j",
-    "image": "/images/custom/products/1788919563283_0mww7p.jpg",
-    "createdAt": 1788918574746
-  },
-  {
-    "name": {
-      "en": "OT01A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
-      "zh": "OT01A LED台灯触摸三路开关调光带Type-C电缆",
-      "es": "OT01A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
-      "ja": "OT 01 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
-    },
-    "category": "Table Lamp",
     "description": {
       "en": "",
       "zh": "",
@@ -2638,6 +2604,23 @@
       "ja": ""
     },
     "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 2,
+    "featuredOnHomepage": false,
+    "createdAt": 1788918574746
+  },
+  {
+    "id": "p_1788918464898_mieebm",
+    "name": {
+      "en": "OT01A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "OT01A LED台灯触摸三路开关调光带Type-C电缆",
+      "es": "OT01A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
+      "ja": "OT 01 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
+    },
+    "category": "Table Lamp",
+    "image": "/images/custom/products/1788919563284_8ytr04.jpg",
     "gallery": [
       "/images/custom/products/1788919563284_8ytr04.jpg",
       "/images/custom/products/1788919563284_30cntn.jpg",
@@ -2759,23 +2742,6 @@
         }
       }
     ],
-    "features": [],
-    "applicationScenes": [],
-    "oemSupported": true,
-    "sortOrder": 0,
-    "featuredOnHomepage": false,
-    "id": "p_1788918464898_mieebm",
-    "image": "/images/custom/products/1788919563284_8ytr04.jpg",
-    "createdAt": 1788918464898
-  },
-  {
-    "name": {
-      "en": "OT02A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "category": "Table Lamp",
     "description": {
       "en": "",
       "zh": "",
@@ -2795,6 +2761,23 @@
       "ja": ""
     },
     "showRichDescription": true,
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 3,
+    "featuredOnHomepage": false,
+    "createdAt": 1788918464898
+  },
+  {
+    "id": "p_1788918336233_hpthy1",
+    "name": {
+      "en": "OT02A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "category": "Table Lamp",
+    "image": "/images/custom/products/1788919563284_1gnu5l.jpg",
     "gallery": [
       "/images/custom/products/1788919563284_1gnu5l.jpg",
       "/images/custom/products/1788919563284_kbc237.jpg",
@@ -2916,13 +2899,30 @@
         }
       }
     ],
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
     "features": [],
     "applicationScenes": [],
     "oemSupported": true,
-    "sortOrder": 0,
+    "sortOrder": 4,
     "featuredOnHomepage": true,
-    "id": "p_1788918336233_hpthy1",
-    "image": "/images/custom/products/1788919563284_1gnu5l.jpg",
     "createdAt": 1788918336233
   },
   {
