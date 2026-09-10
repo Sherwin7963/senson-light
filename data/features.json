@@ -89,15 +89,15 @@
       "id": "6",
       "title": {
         "en": "24/7 Support",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "全天候支持",
+        "es": "Asistencia 24 horas, 7 días a la semana",
+        "ja": "365日24時間サポート"
       },
       "description": {
         "en": "Professional after-sales service team",
-        "zh": "",
-        "es": "",
-        "ja": ""
+        "zh": "专业的售后服务团队",
+        "es": "Equipo profesional de atención posventa",
+        "ja": "専門のアフターサービスチーム"
       },
       "icon": "Headphones",
       "order": 6
