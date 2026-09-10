@@ -3263,14 +3263,14 @@
       "ja": "屋外用 ソーラーパワーLEDペタルランプ センサーライト（モバイルバッテリー付き）"
     },
     "category": "Work Light",
-    "image": "/images/custom/products/1788413864046_83mnp8.jpg",
+    "image": "/images/custom/products/1789005993962_hit3qq.jpg",
     "gallery": [
-      "/images/custom/products/1788413864046_83mnp8.jpg",
-      "/images/custom/products/1788413869322_vldddy.jpg",
-      "/images/custom/products/1788413874234_wma7xl.jpg",
-      "/images/custom/products/1788413879613_omhzyb.jpg",
-      "/images/custom/products/1788413884865_jx47zg.jpg",
-      "/images/custom/products/1788413890280_uzgd39.jpg"
+      "/images/custom/products/1789005993962_hit3qq.jpg",
+      "/images/custom/products/1789005998077_tfwib7.jpg",
+      "/images/custom/products/1789006001267_64rmlu.jpg",
+      "/images/custom/products/1789006004684_85she6.jpg",
+      "/images/custom/products/1789006007565_9x47vj.jpg",
+      "/images/custom/products/1789006011241_3xta61.jpg"
     ],
     "customFields": [
       {
@@ -3281,32 +3281,46 @@
           "ja": "素材"
         },
         "value": {
-          "en": "ABS",
-          "zh": "ABS",
-          "es": "ABS",
-          "ja": "ABS"
+          "en": "ABS Plastic",
+          "zh": "ABS塑料",
+          "es": "Plástico ABS",
+          "ja": "ABS樹脂"
         }
       },
       {
         "key": {
-          "en": "Power",
-          "zh": "功率",
-          "es": "Potencia",
-          "ja": "電力"
+          "en": "Luminous flux",
+          "zh": "光通量",
+          "es": "Flujo luminoso",
+          "ja": "光束"
         },
         "value": {
-          "en": "40W",
-          "zh": "40W",
-          "es": "40 W",
-          "ja": "40W"
+          "en": "10000LM",
+          "zh": "10000流明",
+          "es": "10 000 lúmenes",
+          "ja": "10,000ルーメン"
+        }
+      },
+      {
+        "key": {
+          "en": "Battery",
+          "zh": "电池容量",
+          "es": "Capacidad de la batería",
+          "ja": "バッテリー容量"
+        },
+        "value": {
+          "en": "32400mAh",
+          "zh": "32400mAh",
+          "es": "32400mAh",
+          "ja": "32400mAh"
         }
       },
       {
         "key": {
           "en": "IP Rating",
           "zh": "IP防护等级",
-          "es": "Clasificación IP",
-          "ja": "IP等級"
+          "es": "Índice de protección IP",
+          "ja": "IP保護等級"
         },
         "value": {
           "en": "IP44",
@@ -3323,10 +3337,10 @@
           "ja": "センサーの距離"
         },
         "value": {
-          "en": "Max. 12M",
-          "zh": "最多 12M",
-          "es": "Máx. 12 M",
-          "ja": "最大12M"
+          "en": "Horizontal 360°, 6–8 meters",
+          "zh": "水平方向360°，6–8米",
+          "es": "Horizontal 360°, 6-8 metros",
+          "ja": "水平方向360°、6～8メートル"
         }
       },
       {
@@ -3339,8 +3353,8 @@
         "value": {
           "en": "3000K-6500K",
           "zh": "3000K-6500K",
-          "es": "3000 K-6500 K",
-          "ja": "3000K～6500K"
+          "es": "3000K-6500K",
+          "ja": "3000K-6500K"
         }
       },
       {
@@ -3351,10 +3365,10 @@
           "ja": "最小発注数量（MOQ）"
         },
         "value": {
-          "en": "500",
-          "zh": "500",
-          "es": "500",
-          "ja": "500"
+          "en": "1000",
+          "zh": "1000",
+          "es": "1.000",
+          "ja": "1000"
         }
       }
     ],
