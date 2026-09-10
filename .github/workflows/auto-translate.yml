@@ -319,11 +319,10 @@ jobs:
           SUMMARY=$(cat /tmp/translation-summary.json)
           TRANSLATED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/translation-summary.json','utf8')).translatedFields)")
           FAILED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/translation-summary.json','utf8')).failedFields)")
+          CONTENT="${{ github.event.inputs.content || 'all' }}"
+          MODE="${{ github.event.inputs.mode || 'incremental' }}"
+          LANGS="${{ github.event.inputs.targetLangs || 'zh,es,ja' }}"
 
-          git commit -m "Auto-translate: ${TRANSLATED} fields translated, ${FAILED} failed
-
-Content: ${{ github.event.inputs.content || 'all' }}
-Mode: ${{ github.event.inputs.mode || 'incremental' }}
-Languages: ${{ github.event.inputs.targetLangs || 'zh,es,ja' }}" || echo "Nothing to commit"
+          git commit -m "Auto-translate: ${TRANSLATED} fields translated, ${FAILED} failed (${CONTENT}/${MODE}/${LANGS})" || echo "Nothing to commit"
 
           git push || echo "Push failed - this might be a fork or protected branch"
