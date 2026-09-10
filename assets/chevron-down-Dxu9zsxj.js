@@ -1,0 +1,1 @@
+import{d as e}from"./card-B9K_e33H.js";var t=e(`chevron-down`,[[`path`,{d:`m6 9 6 6 6-6`,key:`qrunsl`}]]);export{t};
