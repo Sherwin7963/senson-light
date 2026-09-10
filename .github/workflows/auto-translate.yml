@@ -1,0 +1,329 @@
+name: Auto Translate
+
+# 全站批量翻译工作流
+# 触发方式：workflow_dispatch（手动或通过 GitHub API 从后台触发）
+# 功能：读取 data/ 目录下所有 JSON 文件，识别需要翻译的字段，调用 DeepL API 批量翻译，翻译完成后提交结果回仓库
+#
+# 环境变量（从 GitHub Secrets 读取）：
+#   DEEPL_API_KEY  - DeepL API Key（必需）
+#   DEEPL_PLAN     - free 或 pro（默认 free）
+#
+# inputs:
+#   mode:        incremental（增量，只翻译未翻译的）或 full（全量，全部重新翻译）
+#   content:     products / news / pages / all（翻译内容范围）
+#   targetLangs: zh,es,ja 的逗号分隔（目标语言）
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Translation mode'
+        required: false
+        default: 'incremental'
+        type: choice
+        options:
+          - incremental
+          - full
+      content:
+        description: 'Content to translate'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - products
+          - news
+          - pages
+      targetLangs:
+        description: 'Target languages (comma-separated: zh,es,ja)'
+        required: false
+        default: 'zh,es,ja'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm install node-fetch --no-save 2>/dev/null || true
+          fi
+
+      - name: Run translation script
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          DEEPL_PLAN: ${{ vars.DEEPL_PLAN || 'free' }}
+          TRANSLATE_MODE: ${{ github.event.inputs.mode || 'incremental' }}
+          TRANSLATE_CONTENT: ${{ github.event.inputs.content || 'all' }}
+          TARGET_LANGS: ${{ github.event.inputs.targetLangs || 'zh,es,ja' }}
+        run: |
+          cat > /tmp/translate-all.js << 'TRANSLATE_SCRIPT_EOF'
+          const fs = require('fs');
+          const path = require('path');
+          const https = require('https');
+
+          const apiKey = process.env.DEEPL_API_KEY;
+          const plan = process.env.DEEPL_PLAN || 'free';
+          const mode = process.env.TRANSLATE_MODE || 'incremental';
+          const content = process.env.TRANSLATE_CONTENT || 'all';
+          const targetLangs = (process.env.TARGET_LANGS || 'zh,es,ja').split(',').map(l => l.trim());
+
+          const base = plan === 'free'
+            ? 'https://api-free.deepl.com/v2/translate'
+            : 'https://api.deepl.com/v2/translate';
+
+          const DEEPL_LANG_MAP = { en: 'EN', zh: 'ZH', es: 'ES', ja: 'JA' };
+
+          if (!apiKey) {
+            console.error('ERROR: DEEPL_API_KEY is not set. Please add it to GitHub Secrets.');
+            process.exit(1);
+          }
+
+          // DeepL 翻译调用
+          function translate(text, from, to) {
+            return new Promise((resolve, reject) => {
+              const params = new URLSearchParams({
+                text,
+                source_lang: DEEPL_LANG_MAP[from] || from.toUpperCase(),
+                target_lang: DEEPL_LANG_MAP[to] || to.toUpperCase(),
+              });
+
+              const url = new URL(base);
+              const options = {
+                hostname: url.hostname,
+                path: url.pathname,
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+                  'Authorization': `DeepL-Auth-Key ${apiKey}`,
+                  'Content-Length': Buffer.byteLength(params.toString()),
+                },
+              };
+
+              const req = https.request(options, (res) => {
+                let body = '';
+                res.on('data', (chunk) => body += chunk);
+                res.on('end', () => {
+                  try {
+                    const data = JSON.parse(body);
+                    const translated = data?.translations?.[0]?.text;
+                    if (translated) {
+                      resolve(translated);
+                    } else {
+                      reject(new Error(`Empty result: ${body.slice(0, 200)}`));
+                    }
+                  } catch (e) {
+                    reject(new Error(`Parse error (HTTP ${res.status}): ${body.slice(0, 200)}`));
+                  }
+                });
+              });
+
+              req.on('error', reject);
+              req.write(params.toString());
+              req.end();
+            });
+          }
+
+          // 延迟
+          const delay = ms => new Promise(r => setTimeout(r, ms));
+
+          // 递归遍历对象，找需要翻译的 I18nText 字段
+          // I18nText = { en, zh, es, ja }
+          function isI18nText(obj) {
+            return obj && typeof obj === 'object' && 'en' in obj && 'zh' in obj && 'es' in obj && 'ja' in obj
+              && typeof obj.en === 'string';
+          }
+
+          let totalFields = 0;
+          let translatedFields = 0;
+          let skippedFields = 0;
+          let failedFields = 0;
+          const errors = [];
+
+          async function translateI18nTexts(obj, pathStr = '') {
+            if (!obj || typeof obj !== 'object') return;
+
+            if (Array.isArray(obj)) {
+              for (let i = 0; i < obj.length; i++) {
+                await translateI18nTexts(obj[i], `${pathStr}[${i}]`);
+              }
+              return;
+            }
+
+            if (isI18nText(obj)) {
+              totalFields++;
+              const enText = (obj.en || '').trim();
+              if (!enText) {
+                skippedFields++;
+                return;
+              }
+
+              let needsTranslate = false;
+              for (const lang of targetLangs) {
+                if (!obj[lang] || !obj[lang].trim()) {
+                  needsTranslate = true;
+                  break;
+                }
+              }
+
+              if (mode === 'incremental' && !needsTranslate) {
+                skippedFields++;
+                return;
+              }
+
+              try {
+                for (const lang of targetLangs) {
+                  if (mode === 'full' || !obj[lang] || !obj[lang].trim()) {
+                    const result = await translate(enText, 'en', lang);
+                    obj[lang] = result;
+                    await delay(200); // rate limit protection
+                  }
+                }
+                translatedFields++;
+              } catch (e) {
+                failedFields++;
+                errors.push(`${pathStr}: ${e.message}`);
+              }
+              return;
+            }
+
+            for (const key of Object.keys(obj)) {
+              await translateI18nTexts(obj[key], `${pathStr}.${key}`);
+            }
+          }
+
+          // 找到所有 JSON 文件
+          function findJsonFiles(dir, fileList = []) {
+            if (!fs.existsSync(dir)) return fileList;
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory()) {
+                findJsonFiles(fullPath, fileList);
+              } else if (file.endsWith('.json')) {
+                fileList.push(fullPath);
+              }
+            }
+            return fileList;
+          }
+
+          async function main() {
+            const dataDir = path.join(process.cwd(), 'data');
+            const files = findJsonFiles(dataDir);
+            console.log(`Found ${files.length} JSON files in data/ directory`);
+
+            // 根据 content 过滤
+            let filtered = files;
+            if (content !== 'all') {
+              const keywordMap = {
+                products: ['product', 'products'],
+                news: ['news', 'article', 'articles', 'blog'],
+                pages: ['about', 'hero', 'feature', 'advantage', 'testimonial', 'footer', 'seo'],
+              };
+              const keywords = keywordMap[content] || [];
+              filtered = files.filter(f => {
+                const lower = f.toLowerCase();
+                return keywords.some(kw => lower.includes(kw));
+              });
+            }
+
+            console.log(`Processing ${filtered.length} files (mode=${mode}, content=${content}, langs=${targetLangs.join(',')})`);
+
+            const changedFiles = [];
+
+            for (const file of filtered) {
+              console.log(`\nProcessing: ${path.relative(process.cwd(), file)}`);
+              try {
+                const raw = fs.readFileSync(file, 'utf-8');
+                const data = JSON.parse(raw);
+
+                const beforeHash = raw.length;
+                await translateI18nTexts(data);
+                const after = JSON.stringify(data, null, 2) + '\n';
+
+                if (after.length !== beforeHash || raw.trim() !== after.trim()) {
+                  fs.writeFileSync(file, after);
+                  changedFiles.push(file);
+                  console.log(`  ✓ Updated (fields so far: ${translatedFields} translated, ${skippedFields} skipped, ${failedFields} failed)`);
+                } else {
+                  console.log(`  - No changes needed`);
+                }
+              } catch (e) {
+                console.error(`  ✗ Error: ${e.message}`);
+                errors.push(`${file}: ${e.message}`);
+              }
+            }
+
+            // 输出统计
+            console.log('\n========== Translation Summary ==========');
+            console.log(`Total fields:      ${totalFields}`);
+            console.log(`Translated:        ${translatedFields}`);
+            console.log(`Skipped:           ${skippedFields}`);
+            console.log(`Failed:            ${failedFields}`);
+            console.log(`Files changed:     ${changedFiles.length}`);
+
+            if (errors.length > 0) {
+              console.log('\nErrors:');
+              errors.slice(0, 20).forEach(e => console.log(`  - ${e}`));
+              if (errors.length > 20) console.log(`  ... and ${errors.length - 20} more`);
+            }
+
+            // 保存变更文件列表供下一步用
+            fs.writeFileSync('/tmp/changed-files.txt', changedFiles.join('\n'));
+            fs.writeFileSync('/tmp/translation-summary.json', JSON.stringify({
+              totalFields, translatedFields, skippedFields, failedFields, changedFiles, errors,
+            }, null, 2));
+          }
+
+          main().catch(e => {
+            console.error('Fatal error:', e);
+            process.exit(1);
+          });
+          TRANSLATE_SCRIPT_EOF
+
+          node /tmp/translate-all.js
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [ -s /tmp/changed-files.txt ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Files changed:"
+            cat /tmp/changed-files.txt
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No files were modified."
+          fi
+
+      - name: Commit and push translations
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "Auto Translate Bot"
+          git config user.email "translate-bot@users.noreply.github.com"
+
+          # 只添加 data/ 目录下的变更
+          git add data/*.json data/**/*.json 2>/dev/null || git add data/
+
+          CHANGED_COUNT=$(cat /tmp/changed-files.txt | wc -l)
+          SUMMARY=$(cat /tmp/translation-summary.json)
+          TRANSLATED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/translation-summary.json','utf8')).translatedFields)")
+          FAILED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/translation-summary.json','utf8')).failedFields)")
+
+          git commit -m "Auto-translate: ${TRANSLATED} fields translated, ${FAILED} failed
+
+Content: ${{ github.event.inputs.content || 'all' }}
+Mode: ${{ github.event.inputs.mode || 'incremental' }}
+Languages: ${{ github.event.inputs.targetLangs || 'zh,es,ja' }}" || echo "Nothing to commit"
+
+          git push || echo "Push failed - this might be a fork or protected branch"
