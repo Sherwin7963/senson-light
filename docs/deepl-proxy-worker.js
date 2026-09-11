@@ -150,10 +150,16 @@ async function getAccessToken(clientEmail, privateKeyPem) {
     iat: now,
   };
 
-  // base64url 编码
+  // base64url 编码（兼容 Unicode，替代已废弃的 unescape）
   const encodeB64Url = (obj) => {
     const jsonStr = JSON.stringify(obj);
-    const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+    // 使用 Uint8Array + btoa 安全编码 Unicode 字符串
+    const bytes = new TextEncoder().encode(jsonStr);
+    let binary = '';
+    for (let i = 0; i < bytes.length; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    const b64 = btoa(binary);
     return b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   };
 
@@ -497,64 +503,103 @@ async function handleDeepl(request) {
 
 // ==================== GA4 路由处理 ====================
 async function handleGa4Request(pathname, env) {
-  const propertyId = env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID;
-  const clientEmail = env?.GA4_CLIENT_EMAIL || globalThis.GA4_CLIENT_EMAIL;
-  const privateKey = env?.GA4_PRIVATE_KEY || globalThis.GA4_PRIVATE_KEY;
-
-  if (!propertyId || !clientEmail || !privateKey) {
-    return jsonResponse(
-      { error: 'GA4 not configured. Please set GA4_PROPERTY_ID, GA4_CLIENT_EMAIL, GA4_PRIVATE_KEY in Worker secrets.' },
-      500,
-    );
-  }
+  // keyInfo 提到 try 外面，避免 catch 中访问时报 ReferenceError
+  let keyInfo = 'unavailable';
 
   try {
+    const propertyId = env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID;
+    const clientEmail = env?.GA4_CLIENT_EMAIL || globalThis.GA4_CLIENT_EMAIL;
+    const privateKey = env?.GA4_PRIVATE_KEY || globalThis.GA4_PRIVATE_KEY;
+
+    if (!propertyId || !clientEmail || !privateKey) {
+      return jsonResponse(
+        { error: 'GA4 not configured', stage: 'config', details: 'Please set GA4_PROPERTY_ID, GA4_CLIENT_EMAIL, GA4_PRIVATE_KEY in Worker secrets.' },
+        500,
+      );
+    }
+
     // 调试：检查私钥解析状态（不输出完整私钥，只输出长度和前几字符）
-    let keyInfo = '';
     try {
       const parsed = parsePrivateKey(privateKey);
       keyInfo = `parsed key length=${parsed.length}, starts with=${parsed.slice(0, 6)}...`;
     } catch (parseErr) {
       return jsonResponse(
-        { error: 'GA4 private key parse error', details: parseErr instanceof Error ? parseErr.message : String(parseErr) },
+        {
+          error: 'GA4 private key parse error',
+          stage: 'key-parse',
+          details: parseErr instanceof Error ? parseErr.message : String(parseErr),
+        },
         500,
       );
     }
 
-    const accessToken = await getAccessToken(clientEmail, privateKey);
+    // 获取 access_token
+    let accessToken;
+    try {
+      accessToken = await getAccessToken(clientEmail, privateKey);
+    } catch (tokenErr) {
+      const msg = tokenErr instanceof Error ? tokenErr.message : String(tokenErr);
+      return jsonResponse(
+        {
+          error: 'Failed to get GA4 access token',
+          stage: 'token-fetch',
+          details: msg,
+          keyInfo,
+        },
+        500,
+      );
+    }
+
+    // 路由分发 — 每个端点都包 try/catch，精确定位错误阶段
+    let handlerFn = null;
+    let handlerName = 'unknown';
 
     if (pathname === '/api/ga4/overview') {
-      const data = await handleGa4Overview(propertyId, accessToken);
-      return jsonResponse({ success: true, data });
-    }
-    if (pathname === '/api/ga4/top-pages') {
-      const data = await handleGa4TopPages(propertyId, accessToken);
-      return jsonResponse({ success: true, data });
-    }
-    if (pathname === '/api/ga4/sources') {
-      const data = await handleGa4Sources(propertyId, accessToken);
-      return jsonResponse({ success: true, data });
-    }
-    if (pathname === '/api/ga4/countries') {
-      const data = await handleGa4Countries(propertyId, accessToken);
-      return jsonResponse({ success: true, data });
-    }
-    if (pathname === '/api/ga4/devices') {
-      const data = await handleGa4Devices(propertyId, accessToken);
-      return jsonResponse({ success: true, data });
+      handlerFn = handleGa4Overview;
+      handlerName = 'overview';
+    } else if (pathname === '/api/ga4/top-pages') {
+      handlerFn = handleGa4TopPages;
+      handlerName = 'top-pages';
+    } else if (pathname === '/api/ga4/sources') {
+      handlerFn = handleGa4Sources;
+      handlerName = 'sources';
+    } else if (pathname === '/api/ga4/countries') {
+      handlerFn = handleGa4Countries;
+      handlerName = 'countries';
+    } else if (pathname === '/api/ga4/devices') {
+      handlerFn = handleGa4Devices;
+      handlerName = 'devices';
     }
 
-    return jsonResponse({ error: 'Not found' }, 404);
-  } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    const stack = err instanceof Error ? err.stack : '';
+    if (!handlerFn) {
+      return jsonResponse({ error: 'Not found', stage: 'routing' }, 404);
+    }
+
+    try {
+      const data = await handlerFn(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    } catch (apiErr) {
+      const msg = apiErr instanceof Error ? apiErr.message : String(apiErr);
+      return jsonResponse(
+        {
+          error: `GA4 ${handlerName} API error`,
+          stage: 'api-call',
+          endpoint: handlerName,
+          details: msg,
+          keyInfo,
+        },
+        500,
+      );
+    }
+  } catch (outerErr) {
+    // 最外层兜底：捕获任何意料之外的异常，确保 Worker 不会崩溃（Error 1101）
+    const message = outerErr instanceof Error ? outerErr.message : String(outerErr);
     return jsonResponse(
       {
-        error: 'GA4 API error',
+        error: 'GA4 unexpected error',
+        stage: 'unknown',
         details: message,
-        // 调试信息：定位是 JWT 生成阶段还是 API 调用阶段
-        stage: message.includes('access token') ? 'token-fetch' : message.includes('importKey') || message.includes('atob') || message.includes('base64') ? 'key-parse' : 'api-call',
-        keyInfo: keyInfo || 'unavailable',
+        keyInfo,
       },
       500,
     );
@@ -564,37 +609,56 @@ async function handleGa4Request(pathname, env) {
 // ==================== 主入口 ====================
 export default {
   async fetch(request, env) {
-    // 处理 CORS 预检
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: CORS_HEADERS });
-    }
-
-    const url = new URL(request.url);
-    const pathname = url.pathname;
-
-    // 路由：GA4 API
-    if (pathname.startsWith('/api/ga4/')) {
-      if (request.method === 'GET') {
-        return handleGa4Request(pathname, env);
+    // 🔴 最外层 try/catch 兜底：捕获任何未处理异常，防止 Worker 抛 Error 1101
+    try {
+      // 处理 CORS 预检
+      if (request.method === 'OPTIONS') {
+        return new Response(null, { status: 204, headers: CORS_HEADERS });
       }
-      return jsonResponse({ error: 'Method not allowed. Use GET.' }, 405);
-    }
 
-    // 路由：DeepL 代理（POST）
-    if (request.method === 'POST') {
-      return handleDeepl(request);
-    }
+      let url;
+      try {
+        url = new URL(request.url);
+      } catch (urlErr) {
+        return jsonResponse({ error: 'Invalid URL', stage: 'request' }, 400);
+      }
+      const pathname = url.pathname;
 
-    // 健康检查
-    if (pathname === '/' || pathname === '/health') {
-      return jsonResponse({
-        status: 'ok',
-        worker: 'deepl-ga4-proxy',
-        ga4Configured: !!(env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID),
-        deeplConfigured: !!(env?.DEEPL_AUTH_KEY || globalThis.DEEPL_AUTH_KEY),
-      });
-    }
+      // 路由：GA4 API
+      if (pathname.startsWith('/api/ga4/')) {
+        if (request.method === 'GET') {
+          return await handleGa4Request(pathname, env);
+        }
+        return jsonResponse({ error: 'Method not allowed. Use GET.' }, 405);
+      }
 
-    return jsonResponse({ error: 'Not found' }, 404);
+      // 路由：DeepL 代理（POST）
+      if (request.method === 'POST') {
+        return handleDeepl(request);
+      }
+
+      // 健康检查
+      if (pathname === '/' || pathname === '/health') {
+        return jsonResponse({
+          status: 'ok',
+          worker: 'deepl-ga4-proxy',
+          ga4Configured: !!(env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID),
+          deeplConfigured: !!(env?.DEEPL_AUTH_KEY || globalThis.DEEPL_AUTH_KEY),
+        });
+      }
+
+      return jsonResponse({ error: 'Not found' }, 404);
+    } catch (fatalErr) {
+      // 终极兜底：任何未被内部 catch 的错误都在这里捕获，绝不返回 Error 1101
+      const message = fatalErr instanceof Error ? fatalErr.message : String(fatalErr);
+      return jsonResponse(
+        {
+          error: 'Worker internal error',
+          stage: 'fatal',
+          details: message,
+        },
+        500,
+      );
+    }
   },
 };
