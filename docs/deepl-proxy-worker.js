@@ -269,13 +269,21 @@ async function handleGa4Overview(propertyId, accessToken) {
   const today = new Date();
   const thirtyDaysAgo = new Date(today);
   thirtyDaysAgo.setDate(today.getDate() - 30);
-  const fmt = (d) => d.toISOString().slice(0, 10).replace(/-/g, '');
+
+  // GA4 Data API 要求日期格式为 YYYY-MM-DD（带横线）
+  // 或使用相对日期：today / yesterday / NdaysAgo
+  const fmtDate = (d) => {
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
 
   // 并行调用多个 report
   const [totalData, todayData, trendData, bounceData, durationData] = await Promise.all([
     // 总访问量（30 天）
     callGa4RunReport(propertyId, accessToken, {
-      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
       metrics: [{ name: 'sessions' }, { name: 'activeUsers' }],
     }),
     // 今日访问量
@@ -292,12 +300,12 @@ async function handleGa4Overview(propertyId, accessToken) {
     }),
     // 跳出率（30 天）
     callGa4RunReport(propertyId, accessToken, {
-      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
       metrics: [{ name: 'bounceRate' }],
     }),
     // 平均停留时长（30 天）
     callGa4RunReport(propertyId, accessToken, {
-      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
       metrics: [{ name: 'userEngagementDuration' }, { name: 'activeUsers' }],
     }),
   ]);
@@ -313,19 +321,22 @@ async function handleGa4Overview(propertyId, accessToken) {
     parseFloat(durRow.userEngagementDuration || '0') / Math.max(1, parseFloat(durRow.activeUsers || '1'));
 
   // 构造 7 天趋势数组（按日期排序，补零）
+  // GA4 date dimension 返回格式为 YYYYMMDD（无横线），需要转为 YYYY-MM-DD
   const trendMap = {};
   trendRows.forEach((r) => {
-    // GA4 date 格式: YYYYMMDD → YYYY-MM-DD
-    const d = r.date;
-    const formatted = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
-    trendMap[formatted] = parseInt(r.sessions || '0', 10);
+    const d = r.date || '';
+    if (d.length === 8) {
+      // YYYYMMDD → YYYY-MM-DD
+      const formatted = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
+      trendMap[formatted] = parseInt(r.sessions || '0', 10);
+    }
   });
 
   const dailyTrend = [];
   for (let i = 6; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    const dateKey = d.toISOString().slice(0, 10);
+    const dateKey = fmtDate(d);
     dailyTrend.push({
       date: dateKey,
       sessions: trendMap[dateKey] || 0,
