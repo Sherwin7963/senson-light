@@ -72,14 +72,59 @@ function b64urlToBuffer(b64url) {
 }
 
 /**
- * 从 PEM 格式私钥中提取 base64 部分
+ * 解析 PEM 格式私钥，提取 base64 编码部分
+ * 处理场景：
+ *   - JSON 转义的 \n （环境变量常见）
+ *   - PEM 标记行（BEGIN / END）
+ *   - 换行符、回车符、空格
+ *   - base64 填充缺失（长度不是 4 的倍数）
+ */
+function parsePrivateKey(pemKey) {
+  if (!pemKey || typeof pemKey !== 'string') {
+    throw new Error('Private key is empty or not a string');
+  }
+
+  let key = pemKey;
+
+  // 1. 处理 JSON 转义符（\n → \n，\r → \r，\\ → \）
+  key = key.replace(/\\n/g, '\n');
+  key = key.replace(/\\r/g, '\r');
+  key = key.replace(/\\\\/g, '\\');
+
+  // 2. 去除 PEM 标记行
+  key = key.replace(/-----BEGIN [A-Z0-9 ]*KEY-----/g, '');
+  key = key.replace(/-----END [A-Z0-9 ]*KEY-----/g, '');
+
+  // 3. 去除所有空白字符（换行、回车、空格、制表符）
+  key = key.replace(/[\s\r\n\t]+/g, '');
+
+  // 4. 去除可能存在的引号（环境变量被包裹）
+  key = key.replace(/^["']|["']$/g, '');
+
+  // 5. 验证 base64 字符合法性
+  if (!/^[A-Za-z0-9+/=]+$/.test(key)) {
+    const invalidChars = key.replace(/[A-Za-z0-9+/=]/g, '');
+    throw new Error(
+      `Private key contains invalid base64 characters: "${invalidChars.slice(0, 20)}"` +
+      (invalidChars.length > 20 ? '...' : ''),
+    );
+  }
+
+  // 6. 移除尾部填充后重新补齐（保证恰好是 4 的倍数）
+  key = key.replace(/=+$/g, '');
+  while (key.length % 4 !== 0) {
+    key += '=';
+  }
+
+  return key;
+}
+
+/**
+ * 从 PEM 格式私钥中提取 base64 并转为 ArrayBuffer
  */
 function extractPrivateKeyBytes(pemKey) {
-  const cleaned = pemKey
-    .replace(/-----BEGIN PRIVATE KEY-----/, '')
-    .replace(/-----END PRIVATE KEY-----/, '')
-    .replace(/\s+/g, '');
-  return b64urlToBuffer(cleaned);
+  const b64 = parsePrivateKey(pemKey);
+  return b64urlToBuffer(b64);
 }
 
 /**
@@ -464,6 +509,18 @@ async function handleGa4Request(pathname, env) {
   }
 
   try {
+    // 调试：检查私钥解析状态（不输出完整私钥，只输出长度和前几字符）
+    let keyInfo = '';
+    try {
+      const parsed = parsePrivateKey(privateKey);
+      keyInfo = `parsed key length=${parsed.length}, starts with=${parsed.slice(0, 6)}...`;
+    } catch (parseErr) {
+      return jsonResponse(
+        { error: 'GA4 private key parse error', details: parseErr instanceof Error ? parseErr.message : String(parseErr) },
+        500,
+      );
+    }
+
     const accessToken = await getAccessToken(clientEmail, privateKey);
 
     if (pathname === '/api/ga4/overview') {
@@ -490,7 +547,17 @@ async function handleGa4Request(pathname, env) {
     return jsonResponse({ error: 'Not found' }, 404);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    return jsonResponse({ error: 'GA4 API error', details: message }, 500);
+    const stack = err instanceof Error ? err.stack : '';
+    return jsonResponse(
+      {
+        error: 'GA4 API error',
+        details: message,
+        // 调试信息：定位是 JWT 生成阶段还是 API 调用阶段
+        stage: message.includes('access token') ? 'token-fetch' : message.includes('importKey') || message.includes('atob') || message.includes('base64') ? 'key-parse' : 'api-call',
+        keyInfo: keyInfo || 'unavailable',
+      },
+      500,
+    );
   }
 }
 
