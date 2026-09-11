@@ -1,141 +1,533 @@
 /**
- * Cloudflare Worker — DeepL API 代理
+ * Cloudflare Worker — DeepL 翻译代理 + GA4 数据代理
  *
  * 功能：
- * - 将浏览器端的 DeepL 翻译请求转发到真实的 DeepL API
- * - 解决浏览器 CORS 限制问题
- * - 支持 Free Plan 和 Pro Plan（通过请求头 X-Deepl-Plan 或路径 /free / /pro 区分）
- * - 正确透传 Authorization 头
- * - 处理预检请求（OPTIONS）
- * - 简单的速率限制和错误处理
+ * 1. DeepL API 代理 — 解决浏览器 CORS 限制，透传翻译请求
+ * 2. GA4 Data API 代理 — 使用 Service Account JWT 认证，代理 GA4 数据分析接口
+ *
+ * ============================================================
+ * 环境变量（Worker Secrets）配置：
+ * ============================================================
+ *
+ * # DeepL（可选，推荐硬编码在 Worker 中更安全）
+ * DEEPL_AUTH_KEY=12345678-1234-1234-1234-123456789abc:fx
+ *
+ * # GA4（必需）
+ * GA4_PROPERTY_ID=553493228
+ * GA4_CLIENT_EMAIL=ga4-proxy@your-project.iam.gserviceaccount.com
+ * GA4_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n
+ *
+ * ============================================================
+ * GA4 API 端点：
+ * ============================================================
+ *
+ * GET /api/ga4/overview   → 概览数据（总访问量、今日访问、7天趋势、跳出率、平均停留时长）
+ * GET /api/ga4/top-pages  → 热门页面 Top10
+ * GET /api/ga4/sources    → 访客来源分布
+ * GET /api/ga4/countries  → 访客地区 Top10
+ * GET /api/ga4/devices    → 设备类型分布
  *
  * 部署步骤：
  * 1. 登录 Cloudflare Dashboard → Workers & Pages → Create → Create Worker
  * 2. 粘贴此代码 → 保存并部署
- * 3. 获取 Worker URL（如 https://deepl-proxy.yourname.workers.dev）
- * 4. 在网站后台「翻译设置」→「自定义代理 URL」中填入该 URL
- *
- * 安全提示：
- * - 此 Worker 本身不存储 API Key，Key 由浏览器端传入并透传到 DeepL
- * - 如希望在服务端保存 API Key（更安全），可修改代码把 AUTH_KEY 硬编码在 Worker 中
- *   并移除对 Authorization 头的透传
+ * 3. 在 Settings → Variables 中配置上述 Secrets
+ * 4. 获取 Worker URL（如 https://your-worker.yourname.workers.dev）
+ * 5. 在网站后台「网站统计」→「GA4 API 代理地址」中填入该 URL
  */
 
+// ==================== CORS 头 ====================
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Deepl-Plan',
   'Access-Control-Max-Age': '86400',
 };
 
-// ============================================================
-// 可选：在此处硬编码 DeepL API Key（推荐方案，更安全）
-// 如果设置了此值，浏览器端无需传入 API Key，Worker 会自动加上
-// ============================================================
-// const DEEPL_AUTH_KEY = ''; // 例如：'12345678-1234-1234-1234-123456789abc:fx'
+function jsonResponse(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      ...CORS_HEADERS,
+      'Content-Type': 'application/json',
+    },
+  });
+}
 
+// ==================== GA4 JWT 认证 ====================
+// Google OAuth2 token endpoint
+const TOKEN_ENDPOINT = 'https://oauth2.googleapis.com/token';
+const GA4_SCOPE = 'https://www.googleapis.com/auth/analytics.readonly';
+
+/**
+ * 将 base64url 编码转换为 ArrayBuffer（用于 Web Crypto）
+ */
+function b64urlToBuffer(b64url) {
+  const b64 = b64url.replace(/-/g, '+').replace(/_/g, '/');
+  const binary = atob(b64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes.buffer;
+}
+
+/**
+ * 从 PEM 格式私钥中提取 base64 部分
+ */
+function extractPrivateKeyBytes(pemKey) {
+  const cleaned = pemKey
+    .replace(/-----BEGIN PRIVATE KEY-----/, '')
+    .replace(/-----END PRIVATE KEY-----/, '')
+    .replace(/\s+/g, '');
+  return b64urlToBuffer(cleaned);
+}
+
+/**
+ * 使用 Service Account 私钥生成 JWT 并换取 access_token
+ * - token 缓存 55 分钟（实际有效期 60 分钟）
+ */
+let cachedToken = null;
+let cachedTokenExpiry = 0;
+
+async function getAccessToken(clientEmail, privateKeyPem) {
+  const now = Math.floor(Date.now() / 1000);
+  if (cachedToken && now < cachedTokenExpiry) {
+    return cachedToken;
+  }
+
+  // 构造 JWT header & payload
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const payload = {
+    iss: clientEmail,
+    scope: GA4_SCOPE,
+    aud: TOKEN_ENDPOINT,
+    exp: now + 3600,
+    iat: now,
+  };
+
+  // base64url 编码
+  const encodeB64Url = (obj) => {
+    const jsonStr = JSON.stringify(obj);
+    const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+    return b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  };
+
+  const headerB64 = encodeB64Url(header);
+  const payloadB64 = encodeB64Url(payload);
+  const signingInput = `${headerB64}.${payloadB64}`;
+
+  // 使用 Web Crypto API 签名
+  const keyBytes = extractPrivateKeyBytes(privateKeyPem);
+  const cryptoKey = await crypto.subtle.importKey(
+    'pkcs8',
+    keyBytes,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false,
+    ['sign'],
+  );
+  const signatureBuffer = await crypto.subtle.sign(
+    'RSASSA-PKCS1-v1_5',
+    cryptoKey,
+    new TextEncoder().encode(signingInput),
+  );
+
+  // 将签名转为 base64url
+  const sigBytes = new Uint8Array(signatureBuffer);
+  let sigBinary = '';
+  for (let i = 0; i < sigBytes.length; i++) {
+    sigBinary += String.fromCharCode(sigBytes[i]);
+  }
+  const signatureB64 = btoa(sigBinary)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+
+  const jwt = `${signingInput}.${signatureB64}`;
+
+  // 换取 access_token
+  const formBody = new URLSearchParams({
+    grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+    assertion: jwt,
+  });
+
+  const resp = await fetch(TOKEN_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formBody.toString(),
+  });
+
+  const data = await resp.json();
+  if (!resp.ok || !data.access_token) {
+    throw new Error(
+      `Failed to get access token: ${resp.status} ${data.error || data.error_description || ''}`,
+    );
+  }
+
+  cachedToken = data.access_token;
+  cachedTokenExpiry = now + 3300; // 55 分钟
+  return cachedToken;
+}
+
+// ==================== GA4 Data API 调用 ====================
+const GA4_API_ENDPOINT = 'https://analyticsdata.googleapis.com/v1beta';
+
+async function callGa4RunReport(propertyId, accessToken, body) {
+  const url = `${GA4_API_ENDPOINT}/properties/${propertyId}:runReport`;
+  const resp = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify(body),
+  });
+
+  const data = await resp.json();
+  if (!resp.ok) {
+    throw new Error(
+      `GA4 API error (${resp.status}): ${data.error?.message || JSON.stringify(data)}`,
+    );
+  }
+  return data;
+}
+
+// 辅助：从 GA4 响应中提取行数据
+function extractRows(data) {
+  const rows = data.rows || [];
+  const dimensionHeaders = (data.dimensionHeaders || []).map((h) => h.name);
+  const metricHeaders = (data.metricHeaders || []).map((h) => h.name);
+
+  return rows.map((row) => {
+    const obj = {};
+    dimensionHeaders.forEach((name, i) => {
+      obj[name] = row.dimensionValues?.[i]?.value ?? '';
+    });
+    metricHeaders.forEach((name, i) => {
+      obj[name] = row.metricValues?.[i]?.value ?? '0';
+    });
+    return obj;
+  });
+}
+
+// ==================== 各 GA4 端点处理 ====================
+
+/**
+ * 概览数据：总访问量(30天)、今日访问量、7天趋势、跳出率、平均停留时长
+ */
+async function handleGa4Overview(propertyId, accessToken) {
+  const today = new Date();
+  const thirtyDaysAgo = new Date(today);
+  thirtyDaysAgo.setDate(today.getDate() - 30);
+  const fmt = (d) => d.toISOString().slice(0, 10).replace(/-/g, '');
+
+  // 并行调用多个 report
+  const [totalData, todayData, trendData, bounceData, durationData] = await Promise.all([
+    // 总访问量（30 天）
+    callGa4RunReport(propertyId, accessToken, {
+      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      metrics: [{ name: 'sessions' }, { name: 'activeUsers' }],
+    }),
+    // 今日访问量
+    callGa4RunReport(propertyId, accessToken, {
+      dateRanges: [{ startDate: 'today', endDate: 'today' }],
+      metrics: [{ name: 'sessions' }, { name: 'activeUsers' }],
+    }),
+    // 7 天趋势
+    callGa4RunReport(propertyId, accessToken, {
+      dateRanges: [{ startDate: '7daysAgo', endDate: 'yesterday' }],
+      dimensions: [{ name: 'date' }],
+      metrics: [{ name: 'sessions' }],
+      orderBys: [{ dimension: { dimensionName: 'date' } }],
+    }),
+    // 跳出率（30 天）
+    callGa4RunReport(propertyId, accessToken, {
+      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      metrics: [{ name: 'bounceRate' }],
+    }),
+    // 平均停留时长（30 天）
+    callGa4RunReport(propertyId, accessToken, {
+      dateRanges: [{ startDate: fmt(thirtyDaysAgo), endDate: 'today' }],
+      metrics: [{ name: 'userEngagementDuration' }, { name: 'activeUsers' }],
+    }),
+  ]);
+
+  const total = extractRows(totalData)[0] || { sessions: '0', activeUsers: '0' };
+  const todayRow = extractRows(todayData)[0] || { sessions: '0', activeUsers: '0' };
+  const trendRows = extractRows(trendData);
+  const bounceRow = extractRows(bounceData)[0] || { bounceRate: '0' };
+  const durRow = extractRows(durationData)[0] || { userEngagementDuration: '0', activeUsers: '1' };
+
+  // 计算平均停留时长（秒）
+  const avgDuration =
+    parseFloat(durRow.userEngagementDuration || '0') / Math.max(1, parseFloat(durRow.activeUsers || '1'));
+
+  // 构造 7 天趋势数组（按日期排序，补零）
+  const trendMap = {};
+  trendRows.forEach((r) => {
+    // GA4 date 格式: YYYYMMDD → YYYY-MM-DD
+    const d = r.date;
+    const formatted = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
+    trendMap[formatted] = parseInt(r.sessions || '0', 10);
+  });
+
+  const dailyTrend = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateKey = d.toISOString().slice(0, 10);
+    dailyTrend.push({
+      date: dateKey,
+      sessions: trendMap[dateKey] || 0,
+    });
+  }
+
+  return {
+    totalSessions: parseInt(total.sessions || '0', 10),
+    totalUsers: parseInt(total.activeUsers || '0', 10),
+    todaySessions: parseInt(todayRow.sessions || '0', 10),
+    todayUsers: parseInt(todayRow.activeUsers || '0', 10),
+    bounceRate: parseFloat(bounceRow.bounceRate || '0').toFixed(1),
+    avgDurationSeconds: Math.round(avgDuration),
+    dailyTrend,
+  };
+}
+
+/**
+ * 热门页面 Top10
+ */
+async function handleGa4TopPages(propertyId, accessToken) {
+  const data = await callGa4RunReport(propertyId, accessToken, {
+    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+    dimensions: [{ name: 'pagePath' }],
+    metrics: [{ name: 'screenPageViews' }],
+    orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+    limit: 10,
+  });
+
+  const rows = extractRows(data);
+  const total = rows.reduce((sum, r) => sum + parseInt(r.screenPageViews || '0', 10), 0);
+
+  return {
+    pages: rows.map((r) => ({
+      path: r.pagePath || '/',
+      views: parseInt(r.screenPageViews || '0', 10),
+      percent: total > 0 ? ((parseInt(r.screenPageViews || '0', 10) / total) * 100).toFixed(1) : '0',
+    })),
+    total,
+  };
+}
+
+/**
+ * 访客来源
+ */
+async function handleGa4Sources(propertyId, accessToken) {
+  const data = await callGa4RunReport(propertyId, accessToken, {
+    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+    dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+    metrics: [{ name: 'sessions' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 10,
+  });
+
+  const rows = extractRows(data);
+  const total = rows.reduce((sum, r) => sum + parseInt(r.sessions || '0', 10), 0);
+
+  return {
+    sources: rows.map((r) => ({
+      name: r.sessionDefaultChannelGroup || 'Direct',
+      sessions: parseInt(r.sessions || '0', 10),
+      percent: total > 0 ? ((parseInt(r.sessions || '0', 10) / total) * 100).toFixed(1) : '0',
+    })),
+    total,
+  };
+}
+
+/**
+ * 访客地区 Top10
+ */
+async function handleGa4Countries(propertyId, accessToken) {
+  const data = await callGa4RunReport(propertyId, accessToken, {
+    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+    dimensions: [{ name: 'country' }],
+    metrics: [{ name: 'activeUsers' }],
+    orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+    limit: 10,
+  });
+
+  const rows = extractRows(data);
+  const total = rows.reduce((sum, r) => sum + parseInt(r.activeUsers || '0', 10), 0);
+
+  return {
+    countries: rows.map((r) => ({
+      country: r.country || 'Unknown',
+      users: parseInt(r.activeUsers || '0', 10),
+      percent: total > 0 ? ((parseInt(r.activeUsers || '0', 10) / total) * 100).toFixed(1) : '0',
+    })),
+    total,
+  };
+}
+
+/**
+ * 设备类型分布
+ */
+async function handleGa4Devices(propertyId, accessToken) {
+  const data = await callGa4RunReport(propertyId, accessToken, {
+    dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
+    dimensions: [{ name: 'deviceCategory' }],
+    metrics: [{ name: 'sessions' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+  });
+
+  const rows = extractRows(data);
+  const total = rows.reduce((sum, r) => sum + parseInt(r.sessions || '0', 10), 0);
+
+  return {
+    devices: rows.map((r) => ({
+      category: r.deviceCategory || 'desktop',
+      sessions: parseInt(r.sessions || '0', 10),
+      percent: total > 0 ? ((parseInt(r.sessions || '0', 10) / total) * 100).toFixed(1) : '0',
+    })),
+    total,
+  };
+}
+
+// ==================== DeepL 代理 ====================
+async function handleDeepl(request) {
+  try {
+    const url = new URL(request.url);
+
+    let plan = 'free';
+    const planHeader = request.headers.get('X-Deepl-Plan');
+    if (planHeader === 'pro' || planHeader === 'free') {
+      plan = planHeader;
+    } else if (url.pathname.includes('/pro')) {
+      plan = 'pro';
+    } else if (url.pathname.includes('/free')) {
+      plan = 'free';
+    }
+
+    const targetBase =
+      plan === 'free'
+        ? 'https://api-free.deepl.com/v2/translate'
+        : 'https://api.deepl.com/v2/translate';
+
+    const bodyText = await request.text();
+    const forwardHeaders = new Headers();
+    forwardHeaders.set('Content-Type', 'application/x-www-form-urlencoded');
+
+    const hardcodedKey = globalThis.DEEPL_AUTH_KEY || '';
+    if (hardcodedKey) {
+      forwardHeaders.set('Authorization', `DeepL-Auth-Key ${hardcodedKey}`);
+    } else {
+      const authHeader = request.headers.get('Authorization');
+      if (authHeader) forwardHeaders.set('Authorization', authHeader);
+    }
+
+    const deeplResponse = await fetch(targetBase, {
+      method: 'POST',
+      headers: forwardHeaders,
+      body: bodyText,
+    });
+
+    const responseBody = await deeplResponse.text();
+    const responseHeaders = new Headers({
+      ...CORS_HEADERS,
+      'Content-Type': deeplResponse.headers.get('content-type') || 'application/json',
+    });
+
+    for (const h of ['x-ratelimit-limit', 'x-ratelimit-remaining', 'x-character-count']) {
+      const val = deeplResponse.headers.get(h);
+      if (val) responseHeaders.set(h, val);
+    }
+
+    return new Response(responseBody, {
+      status: deeplResponse.status,
+      headers: responseHeaders,
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    return jsonResponse({ error: 'Proxy error', details: message }, 502);
+  }
+}
+
+// ==================== GA4 路由处理 ====================
+async function handleGa4Request(pathname, env) {
+  const propertyId = env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID;
+  const clientEmail = env?.GA4_CLIENT_EMAIL || globalThis.GA4_CLIENT_EMAIL;
+  const privateKey = env?.GA4_PRIVATE_KEY || globalThis.GA4_PRIVATE_KEY;
+
+  if (!propertyId || !clientEmail || !privateKey) {
+    return jsonResponse(
+      { error: 'GA4 not configured. Please set GA4_PROPERTY_ID, GA4_CLIENT_EMAIL, GA4_PRIVATE_KEY in Worker secrets.' },
+      500,
+    );
+  }
+
+  try {
+    const accessToken = await getAccessToken(clientEmail, privateKey);
+
+    if (pathname === '/api/ga4/overview') {
+      const data = await handleGa4Overview(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    }
+    if (pathname === '/api/ga4/top-pages') {
+      const data = await handleGa4TopPages(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    }
+    if (pathname === '/api/ga4/sources') {
+      const data = await handleGa4Sources(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    }
+    if (pathname === '/api/ga4/countries') {
+      const data = await handleGa4Countries(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    }
+    if (pathname === '/api/ga4/devices') {
+      const data = await handleGa4Devices(propertyId, accessToken);
+      return jsonResponse({ success: true, data });
+    }
+
+    return jsonResponse({ error: 'Not found' }, 404);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    return jsonResponse({ error: 'GA4 API error', details: message }, 500);
+  }
+}
+
+// ==================== 主入口 ====================
 export default {
-  async fetch(request) {
-    // 处理 CORS 预检请求
+  async fetch(request, env) {
+    // 处理 CORS 预检
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        status: 204,
-        headers: CORS_HEADERS,
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
+
+    const url = new URL(request.url);
+    const pathname = url.pathname;
+
+    // 路由：GA4 API
+    if (pathname.startsWith('/api/ga4/')) {
+      if (request.method === 'GET') {
+        return handleGa4Request(pathname, env);
+      }
+      return jsonResponse({ error: 'Method not allowed. Use GET.' }, 405);
+    }
+
+    // 路由：DeepL 代理（POST）
+    if (request.method === 'POST') {
+      return handleDeepl(request);
+    }
+
+    // 健康检查
+    if (pathname === '/' || pathname === '/health') {
+      return jsonResponse({
+        status: 'ok',
+        worker: 'deepl-ga4-proxy',
+        ga4Configured: !!(env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID),
+        deeplConfigured: !!(env?.DEEPL_AUTH_KEY || globalThis.DEEPL_AUTH_KEY),
       });
     }
 
-    // 只允许 POST
-    if (request.method !== 'POST') {
-      return new Response(JSON.stringify({ error: 'Method not allowed. Use POST.' }), {
-        status: 405,
-        headers: {
-          ...CORS_HEADERS,
-          'Content-Type': 'application/json',
-        },
-      });
-    }
-
-    try {
-      const url = new URL(request.url);
-
-      // 确定使用 Free 还是 Pro 端点
-      // 优先级：X-Deepl-Plan 请求头 > URL 路径 > 默认 free
-      let plan = 'free';
-      const planHeader = request.headers.get('X-Deepl-Plan');
-      if (planHeader === 'pro' || planHeader === 'free') {
-        plan = planHeader;
-      } else if (url.pathname.includes('/pro')) {
-        plan = 'pro';
-      } else if (url.pathname.includes('/free')) {
-        plan = 'free';
-      }
-
-      const targetBase =
-        plan === 'free'
-          ? 'https://api-free.deepl.com/v2/translate'
-          : 'https://api.deepl.com/v2/translate';
-
-      // 读取请求体
-      const bodyText = await request.text();
-
-      // 构建转发请求头
-      const forwardHeaders = new Headers();
-      forwardHeaders.set('Content-Type', 'application/x-www-form-urlencoded');
-
-      // Authorization 头：优先使用 Worker 硬编码的 Key，否则透传浏览器端传入的
-      const hardcodedKey = globalThis.DEEPL_AUTH_KEY || '';
-      if (hardcodedKey) {
-        forwardHeaders.set('Authorization', `DeepL-Auth-Key ${hardcodedKey}`);
-      } else {
-        const authHeader = request.headers.get('Authorization');
-        if (authHeader) {
-          forwardHeaders.set('Authorization', authHeader);
-        }
-      }
-
-      // 转发请求到 DeepL
-      const deeplResponse = await fetch(targetBase, {
-        method: 'POST',
-        headers: forwardHeaders,
-        body: bodyText,
-      });
-
-      // 读取响应
-      const responseBody = await deeplResponse.text();
-
-      // 返回响应（附加 CORS 头）
-      const responseHeaders = new Headers({
-        ...CORS_HEADERS,
-        'Content-Type': deeplResponse.headers.get('content-type') || 'application/json',
-      });
-
-      // 透传一些有用的响应头
-      const rateLimitHeaders = [
-        'x-ratelimit-limit',
-        'x-ratelimit-remaining',
-        'x-character-count',
-      ];
-      for (const h of rateLimitHeaders) {
-        const val = deeplResponse.headers.get(h);
-        if (val) responseHeaders.set(h, val);
-      }
-
-      return new Response(responseBody, {
-        status: deeplResponse.status,
-        headers: responseHeaders,
-      });
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      return new Response(
-        JSON.stringify({ error: 'Proxy error', details: message }),
-        {
-          status: 502,
-          headers: {
-            ...CORS_HEADERS,
-            'Content-Type': 'application/json',
-          },
-        },
-      );
-    }
+    return jsonResponse({ error: 'Not found' }, 404);
   },
 };
