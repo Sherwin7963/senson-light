@@ -1,38 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | OWELL Industrial</title>
-    <script>
-      // GitHub Pages SPA fallback for BrowserRouter (History API)
-      // 原理：把 404 时的完整路径存入 sessionStorage，然后重定向到站点根 index.html
-      // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
-      // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
-      //
-      // 修复 v52：
-      // - 根域名部署（如 example.com/products）和子路径部署
-      //   （如 example.com/repo-name/products）都能正确回到 index.html
-      // - 使用相对路径 './'，重定向到当前 404.html 所在目录（即站点根）
-      // - 在子路径部署下，404.html 始终在仓库根目录，所以 './' 就是仓库根
-      (function () {
-        var path = window.location.pathname + window.location.search + window.location.hash;
-        try {
-          sessionStorage.setItem('spa-redirect', path);
-        } catch (e) {
-          // sessionStorage 不可用时降级为 hash 方式
-          window.location.replace('./#' + path);
-          return;
-        }
-        // 相对路径：回到 404.html 所在目录（即站点/仓库根），命中 index.html
-        // 根域名部署 → './' = '/'
-        // 子路径部署 → './' = '/repo-name/'
-        window.location.replace('./');
-      })();
-    </script>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LED Sensor Light - OWELL Industrial Co., Ltd.">
+<meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China">
+<title>OWELL Industrial</title>
+<style>
+/* Watermark & Branding Removal - MUST be first style in head */
+[class*="apaas" i],
+[class*="built-with" i],
+[class*="built_with" i],
+[class*="builtwith" i],
+[class*="doubao" i],
+[class*="lark-watermark" i],
+[class*="miaoda" i],
+[class*="powered-by" i],
+[class*="powered_by" i],
+[class*="poweredby" i],
+[class*="watermark" i],
+[data-custom-element*="doubao" i],
+[data-custom-element*="miaoda" i],
+[data-custom-element*="watermark" i],
+[data-custom-element="doubao-watermark-mobile"],
+[data-custom-element="doubao-watermark"],
+[id*="apaas-watermark" i],
+[id*="doubao" i],
+[id*="miaoda" i],
+[id*="watermark" i],
+apaas-watermark,
+doubao-watermark,
+doubao-watermark-mobile,
+lark-watermark,
+miaoda-watermark {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  z-index: -999999 !important;
+  position: absolute !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: 0 0 !important;
+  box-shadow: none !important;
+  text-indent: -9999px !important;
+  white-space: nowrap !important;
+}
+iframe[src*="doubao" i],
+iframe[src*="miaoda" i],
+iframe[src*="watermark" i] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+body > div[style*="position: fixed"][style*="bottom"],
+body > div[style*="position:fixed"][style*="bottom"],
+body > span[style*="position: fixed"][style*="bottom"],
+body > span[style*="position:fixed"][style*="bottom"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+</style>
+<meta property="og:title" content="OWELL Industrial">
+<meta property="og:description" content="LED Sensor Light - OWELL Industrial Co., Ltd.">
+<meta property="og:image" content="./images/owell-logo.png">
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="stylesheet" href="./assets/index-Cnm-28T2.css">
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="./assets/index-DxMdmu5H.js"></script>
+</body>
 </html>
