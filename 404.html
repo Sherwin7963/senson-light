@@ -1,56 +1,243 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="OWELL Industrial - Your Trusted LED Sensor Lighting Manufacturer. High-quality industrial LED lights with CE, RoHS, ISO9001 certifications. OEM/ODM customization available." />
-  <meta name="keywords" content="LED sensor light, industrial LED lighting, LED floodlight, motion sensor light, LED manufacturer, OEM LED, OWLIGHTING, OWELL Industrial" />
-  <title>OWELL Industrial</title>
-  <link rel="icon" type="image/png" href="./favicon.png" />
-  <!-- Watermark & Branding Removal (v108) -->
-<style>
-  /* 隐藏所有水印元素 */
-  .watermark,
-  .watermark-container,
-  .brand-watermark,
-  [class*="watermark"],
-  [class*="Watermark"],
-  [class*="brand-logo"],
-  [class*="BrandLogo"],
-  .powered-by,
-  .footer-branding,
-  .built-with {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    height: 0 !important;
-    width: 0 !important;
-    position: absolute !important;
-    left: -9999px !important;
-  }
+  <head>
+    <style>
+      /* ============================================
+         水印/平台署名隐藏 - 最高优先级
+         必须在所有样式之前加载，确保首屏无闪烁
+         ============================================ */
+      
+      /* 1. 已知自定义元素 */
+      doubao-watermark,
+      doubao-watermark-mobile,
+      miaoda-watermark,
+      apaas-watermark,
+      lark-watermark,
+      [data-custom-element="doubao-watermark"],
+      [data-custom-element="doubao-watermark-mobile"],
+      [data-custom-element*="watermark" i],
+      [data-custom-element*="miaoda" i],
+      [data-custom-element*="doubao" i],
+      
+      /* 2. 类名包含关键词 */
+      [class*="watermark" i],
+      [class*="miaoda" i],
+      [class*="doubao" i],
+      [class*="powered-by" i],
+      [class*="powered_by" i],
+      [class*="built-with" i],
+      [class*="built_with" i],
+      [class*="poweredby" i],
+      [class*="builtwith" i],
+      [class*="apaas" i],
+      [class*="lark-watermark" i],
+      
+      /* 3. ID包含关键词 */
+      [id*="watermark" i],
+      [id*="miaoda" i],
+      [id*="doubao" i],
+      [id*="apaas-watermark" i],
+      
+      /* 4. 内联样式底部固定的小元素（平台常见注入方式） */
+      body > div[style*="position: fixed"][style*="bottom"],
+      body > div[style*="position:fixed"][style*="bottom"],
+      body > span[style*="position: fixed"][style*="bottom"],
+      body > span[style*="position:fixed"][style*="bottom"],
+      
+      /* 5. Shadow DOM 宿主元素 */
+      doubao-watermark::shadow,
+      doubao-watermark /deep/,
+      
+      /* 6. iframe 兜底（如果平台用iframe注水印） */
+      iframe[src*="watermark" i],
+      iframe[src*="miaoda" i],
+      iframe[src*="doubao" i] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+        z-index: -999999 !important;
+        position: absolute !important;
+        clip: rect(0 0 0 0) !important;
+        clip-path: inset(50%) !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-indent: -9999px !important;
+        white-space: nowrap !important;
+      }
+      
+      /* 7. 额外兜底：body 直接子级中所有固定定位的极小元素 */
+      body > [style*="position:fixed"] {
+        /* 只有非常小的元素才隐藏，避免误伤正常内容 */
+        max-height: 120px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OWELL Industrial - Your Trusted LED Infrared Sensor Light Manufacturer from China. OEM/ODM custom LED security lighting factory." />
+    <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
+    <title>OWELL Industrial - LED Sensor Light Manufacture</title>
+    <!-- V109: Inject platform globals for toolkit-lite compatibility -->
+    <script>
+      (function() {
+        var w = window;
+        w.appId = w.appId || "static-deploy";
+        w.userId = w.userId || "";
+        w.tenantId = w.tenantId || "";
+        w.userName = w.userName || "";
+        w.csrfToken = w.csrfToken || "";
+        w.ENVIRONMENT = w.ENVIRONMENT || "production";
+        w.__BASENAME__ = w.__BASENAME__ || "./";
+        w._appInfo = w._appInfo || {
+          name: "OWELL Industrial",
+          avatar: "./favicon.png",
+          description: "OWELL Industrial - LED Sensor Light Manufacturer"
+        };
+        w.__FEATURE_FLAGS__ = w.__FEATURE_FLAGS__ || {};
+      })();
+    </script>
 
-  /* 隐藏 canvas 水印 */
-  canvas.watermark,
-  canvas[class*="watermark"] {
-    display: none !important;
-  }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" crossorigin src="./assets/index-Bd573Gcg.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/dist-BtCR2FgS.js">
+    <link rel="modulepreload" crossorigin href="./assets/card-DTcT-QaL.js">
+    <link rel="modulepreload" crossorigin href="./assets/users-BI-pzn-0.js">
+    <link rel="modulepreload" crossorigin href="./assets/arrow-up-kg_kdBHQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/award-Ci_UZ6ru.js">
+    <link rel="modulepreload" crossorigin href="./assets/undo-TZ3jJAdW.js">
+    <link rel="modulepreload" crossorigin href="./assets/book-open-CKx4miGH.js">
+    <link rel="modulepreload" crossorigin href="./assets/user-DrOZYR5i.js">
+    <link rel="modulepreload" crossorigin href="./assets/info-Ct4H8oLh.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-down-CO0Lv8di.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-up-Dv3pWR8s.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Dn3DXhIc.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-ClIlZ0sT.js">
+    <link rel="modulepreload" crossorigin href="./assets/select-BllQ8FhT.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-left-B5LFChW3.js">
+    <link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-BsfOiF2S.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-alert-M3NHoVwI.js">
+    <link rel="modulepreload" crossorigin href="./assets/loader-circle-DfwYmIOz.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-question-mark-deGYhkw-.js">
+    <link rel="modulepreload" crossorigin href="./assets/github-C_WJr4Cb.js">
+    <link rel="modulepreload" crossorigin href="./assets/clock-CFG20Bux.js">
+    <link rel="modulepreload" crossorigin href="./assets/textarea-Bqo2q_g_.js">
+    <link rel="modulepreload" crossorigin href="./assets/RemoteDataContext-DrtQ8RP6.js">
+    <link rel="modulepreload" crossorigin href="./assets/i18n-text-DRRyQM3F.js">
+    <link rel="modulepreload" crossorigin href="./assets/useFeatures-gLno_D5j.js">
+    <link rel="modulepreload" crossorigin href="./assets/key-B8f1EGDd.js">
+    <link rel="modulepreload" crossorigin href="./assets/share-2-DB-ids5j.js">
+    <link rel="modulepreload" crossorigin href="./assets/zoom-in-u7De3hCI.js">
+    <link rel="modulepreload" crossorigin href="./assets/external-link-BM52CU8Z.js">
+    <link rel="modulepreload" crossorigin href="./assets/eye-off-5dfv_BX0.js">
+    <link rel="modulepreload" crossorigin href="./assets/eye-1coHj6oF.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-text-DOhf-goR.js">
+    <link rel="modulepreload" crossorigin href="./assets/rotate-ccw-CcXyv3vW.js">
+    <link rel="modulepreload" crossorigin href="./assets/globe-B5QelNcn.js">
+    <link rel="modulepreload" crossorigin href="./assets/grip-vertical-vKK4PXGQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/tablet-LiTL5uxq.js">
+    <link rel="modulepreload" crossorigin href="./assets/move-up-BtM4ymU5.js">
+    <link rel="modulepreload" crossorigin href="./assets/image-DSe9Fv-z.js">
+    <link rel="modulepreload" crossorigin href="./assets/key-round-XVfOvOlI.js">
+    <link rel="modulepreload" crossorigin href="./assets/languages-BX061NNt.js">
+    <link rel="modulepreload" crossorigin href="./assets/zap-mUeVn3-2.js">
+    <link rel="modulepreload" crossorigin href="./assets/lock-iFlNR7Tg.js">
+    <link rel="modulepreload" crossorigin href="./assets/mail-DIomGyXK.js">
+    <link rel="modulepreload" crossorigin href="./assets/package-CiMc0Q0Y.js">
+    <link rel="modulepreload" crossorigin href="./assets/pen-DdmPRrH6.js">
+    <link rel="modulepreload" crossorigin href="./assets/play-CFIbj7p8.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-CHGppylv.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-cw-B8PpLS56.js">
+    <link rel="modulepreload" crossorigin href="./assets/save-BdzATC2x.js">
+    <link rel="modulepreload" crossorigin href="./assets/search-BQFJ1QoA.js">
+    <link rel="modulepreload" crossorigin href="./assets/server-BbA3ou3s.js">
+    <link rel="modulepreload" crossorigin href="./assets/settings-vz0DFbCk.js">
+    <link rel="modulepreload" crossorigin href="./assets/shield-check-BtdujhNv.js">
+    <link rel="modulepreload" crossorigin href="./assets/shield-rFq2obLD.js">
+    <link rel="modulepreload" crossorigin href="./assets/sparkles-B-DDVxns.js">
+    <link rel="modulepreload" crossorigin href="./assets/star-CXTMqK1j.js">
+    <link rel="modulepreload" crossorigin href="./assets/tag-CqH62on6.js">
+    <link rel="modulepreload" crossorigin href="./assets/target-Bgu2M6g4.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-2-B341xUeV.js">
+    <link rel="modulepreload" crossorigin href="./assets/triangle-alert-B3j0eOk_.js">
+    <link rel="modulepreload" crossorigin href="./assets/upload-DAthPEba.js">
+    <link rel="modulepreload" crossorigin href="./assets/wrench-DQGGXCRz.js">
+    <link rel="modulepreload" crossorigin href="./assets/x-BnK36O_D.js">
+    <link rel="modulepreload" crossorigin href="./assets/lucide-react-BepwduvT.js">
+    <link rel="modulepreload" crossorigin href="./assets/basename-CPjY4DDc.js">
+    <link rel="modulepreload" crossorigin href="./assets/img-path-BsZ1QEks.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Dps5s8mG.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CT1v1ctr.js">
+    <link rel="modulepreload" crossorigin href="./assets/github-api-Bu-Qc2vR.js">
+    <link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-CBb7P6N4.js">
+    <link rel="modulepreload" crossorigin href="./assets/useGithubSync-CJOU_qCc.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-DVoh8LqJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/format-BcGSa_Z5.js">
+    <link rel="modulepreload" crossorigin href="./assets/proxy-ehnS4vDi.js">
+    <link rel="modulepreload" crossorigin href="./assets/image-compress-7G1Sv7zJ.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-B4ILJwaH.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- V109: Global error fallback - prevents blank black screen -->
+    <div id="app-error-fallback" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#ffffff;z-index:99999;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;">
+      <div style="max-width:480px;width:100%;padding:32px;margin:16px;">
+        <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
+          <h2 style="margin:0 0 12px;font-size:20px;font-weight:600;color:#dc2626;">Page Load Error</h2>
+          <p style="margin:0 0 16px;font-size:14px;color:#64748b;line-height:1.6;">Sorry, something went wrong while loading the page. Please try refreshing.</p>
+          <div id="app-error-detail" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px;margin-bottom:20px;font-size:13px;color:#991b1b;font-family:monospace;white-space:pre-wrap;word-break:break-word;max-height:200px;overflow:auto;"></div>
+          <button onclick="location.reload()" style="width:100%;padding:10px 16px;font-size:14px;font-weight:500;color:#fff;background:#dc2626;border:none;border-radius:8px;cursor:pointer;">Refresh Page</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function() {
+        var hasError = false;
+        function showError(msg) {
+          if (hasError) return;
+          hasError = true;
+          var root = document.getElementById("root");
+          if (root) root.innerHTML = "";
+          var fb = document.getElementById("app-error-fallback");
+          if (fb) {
+            fb.style.display = "flex";
+            var detail = document.getElementById("app-error-detail");
+            if (detail) detail.textContent = msg || "Unknown error";
+          }
+          document.body.style.background = "#ffffff";
+          document.body.style.backgroundColor = "#ffffff";
+        }
+        window.addEventListener("error", function(e) {
+          var msg = e.message || (e.error && e.error.message) || String(e);
+          if (msg.indexOf("ResizeObserver") >= 0) return;
+          showError(msg);
+        }, true);
+        window.addEventListener("unhandledrejection", function(e) {
+          var reason = e.reason;
+          var msg = (reason && (reason.message || String(reason))) || String(e);
+          showError("Unhandled Promise rejection: " + msg);
+        });
+        setTimeout(function() {
+          var root = document.getElementById("root");
+          if (root && root.children.length === 0 && root.innerHTML.trim() === "") {
+            showError("App failed to mount within 5 seconds. Check browser console for details.");
+          }
+        }, 5000);
+      })();
+    </script>
 
-  /* 隐藏可能的固定定位水印 */
-  .fixed-watermark,
-  .absolute-watermark {
-    display: none !important;
-  }
-
-  /* 隐藏妙搭平台注入的水印容器 */
-  [style*="z-index: 2147483647"] {
-    display: none !important;
-  }
-</style>
-  <link rel="stylesheet" href="./assets/index-Cnm-28T2.css" />
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="./assets/index-DP38tfWh.js"></script>
-</body>
+  </body>
 </html>

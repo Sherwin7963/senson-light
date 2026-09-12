@@ -1,0 +1,1 @@
+import{B as e,ot as t,tt as n}from"./dist-BtCR2FgS.js";var r=t(n(),1),i=e(),a=(0,r.createContext)(null);function o({children:e}){return(0,i.jsx)(a.Provider,{value:null,children:e})}function s(e){return(0,r.useContext)(a)?.modules[e]??null}export{s as n,o as t};
