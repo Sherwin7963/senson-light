@@ -90,154 +90,352 @@
     <meta name="description" content="OWELL Industrial - Your Trusted LED Infrared Sensor Light Manufacturer from China. OEM/ODM custom LED security lighting factory." />
     <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
     <title>OWELL Industrial - LED Sensor Light Manufacture</title>
-    <!-- V109: Inject platform globals for toolkit-lite compatibility -->
+    <!-- V110: Platform globals & safety patches (must load BEFORE entry JS) -->
     <script>
-      (function() {
-        var w = window;
-        w.appId = w.appId || "static-deploy";
-        w.userId = w.userId || "";
-        w.tenantId = w.tenantId || "";
-        w.userName = w.userName || "";
-        w.csrfToken = w.csrfToken || "";
-        w.ENVIRONMENT = w.ENVIRONMENT || "production";
-        w.__BASENAME__ = w.__BASENAME__ || "./";
-        w._appInfo = w._appInfo || {
-          name: "OWELL Industrial",
-          avatar: "./favicon.png",
-          description: "OWELL Industrial - LED Sensor Light Manufacturer"
-        };
-        w.__FEATURE_FLAGS__ = w.__FEATURE_FLAGS__ || {};
-      })();
+    (function() {
+      var w = window;
+      var g = globalThis;
+
+      // ===== Core platform identifiers =====
+      w.appId = w.appId || "static-deploy";
+      g.appId = w.appId;
+      w.userId = w.userId || "";
+      w.tenantId = w.tenantId || "";
+      w.userName = w.userName || "";
+      w.csrfToken = w.csrfToken || "";
+      g.ENVIRONMENT = g.ENVIRONMENT || "production";
+      w.ENVIRONMENT = g.ENVIRONMENT;
+
+      // ===== Basename / base path =====
+      w.__BASENAME__ = w.__BASENAME__ || "./";
+
+      // ===== App info (used by toolkit-lite's useAppInfo) =====
+      w._appInfo = w._appInfo || {
+        name: "OWELL Industrial",
+        avatar: "./favicon.png",
+        description: "OWELL Industrial - LED Sensor Light Manufacturer"
+      };
+      w.__APP_INFO__ = w._appInfo;
+
+      // ===== Feature flags =====
+      w.__FEATURE_FLAGS__ = w.__FEATURE_FLAGS__ || {};
+
+      // ===== Error tracking =====
+      w.__v110_errors = [];
+      w.__error_has_crashed = false;
+
+      // ===== Patch: ensure scopedStorage works even with unusual appId =====
+      // toolkit-lite's scopedStorage uses getAppId() which returns window.appId
+      // We already set it above.
+
+      // ===== Patch: console safety =====
+      if (!w.console) w.console = { log: function(){}, warn: function(){}, error: function(){}, info: function(){} };
+
+      // ===== Patch: prevent ResizeObserver errors from breaking things =====
+      // (These are harmless but trigger onerror)
+      var _roErrorCount = 0;
+
+      // ===== Patch: make sure document.title has a sane default =====
+      if (!document.title || document.title.length < 3) {
+        document.title = "OWELL Industrial - LED Sensor Light Manufacturer";
+      }
+    })();
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script type="module" crossorigin src="./assets/index-Bd573Gcg.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/dist-BtCR2FgS.js">
-    <link rel="modulepreload" crossorigin href="./assets/card-DTcT-QaL.js">
-    <link rel="modulepreload" crossorigin href="./assets/users-BI-pzn-0.js">
-    <link rel="modulepreload" crossorigin href="./assets/arrow-up-kg_kdBHQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/award-Ci_UZ6ru.js">
-    <link rel="modulepreload" crossorigin href="./assets/undo-TZ3jJAdW.js">
-    <link rel="modulepreload" crossorigin href="./assets/book-open-CKx4miGH.js">
-    <link rel="modulepreload" crossorigin href="./assets/user-DrOZYR5i.js">
-    <link rel="modulepreload" crossorigin href="./assets/info-Ct4H8oLh.js">
-    <link rel="modulepreload" crossorigin href="./assets/chevron-down-CO0Lv8di.js">
-    <link rel="modulepreload" crossorigin href="./assets/chevron-up-Dv3pWR8s.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-Dn3DXhIc.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-ClIlZ0sT.js">
-    <link rel="modulepreload" crossorigin href="./assets/select-BllQ8FhT.js">
-    <link rel="modulepreload" crossorigin href="./assets/chevron-left-B5LFChW3.js">
-    <link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-BsfOiF2S.js">
-    <link rel="modulepreload" crossorigin href="./assets/circle-alert-M3NHoVwI.js">
-    <link rel="modulepreload" crossorigin href="./assets/loader-circle-DfwYmIOz.js">
-    <link rel="modulepreload" crossorigin href="./assets/circle-question-mark-deGYhkw-.js">
-    <link rel="modulepreload" crossorigin href="./assets/github-C_WJr4Cb.js">
-    <link rel="modulepreload" crossorigin href="./assets/clock-CFG20Bux.js">
-    <link rel="modulepreload" crossorigin href="./assets/textarea-Bqo2q_g_.js">
-    <link rel="modulepreload" crossorigin href="./assets/RemoteDataContext-DrtQ8RP6.js">
-    <link rel="modulepreload" crossorigin href="./assets/i18n-text-DRRyQM3F.js">
-    <link rel="modulepreload" crossorigin href="./assets/useFeatures-gLno_D5j.js">
-    <link rel="modulepreload" crossorigin href="./assets/key-B8f1EGDd.js">
-    <link rel="modulepreload" crossorigin href="./assets/share-2-DB-ids5j.js">
-    <link rel="modulepreload" crossorigin href="./assets/zoom-in-u7De3hCI.js">
-    <link rel="modulepreload" crossorigin href="./assets/external-link-BM52CU8Z.js">
-    <link rel="modulepreload" crossorigin href="./assets/eye-off-5dfv_BX0.js">
-    <link rel="modulepreload" crossorigin href="./assets/eye-1coHj6oF.js">
-    <link rel="modulepreload" crossorigin href="./assets/file-text-DOhf-goR.js">
-    <link rel="modulepreload" crossorigin href="./assets/rotate-ccw-CcXyv3vW.js">
-    <link rel="modulepreload" crossorigin href="./assets/globe-B5QelNcn.js">
-    <link rel="modulepreload" crossorigin href="./assets/grip-vertical-vKK4PXGQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/tablet-LiTL5uxq.js">
-    <link rel="modulepreload" crossorigin href="./assets/move-up-BtM4ymU5.js">
-    <link rel="modulepreload" crossorigin href="./assets/image-DSe9Fv-z.js">
-    <link rel="modulepreload" crossorigin href="./assets/key-round-XVfOvOlI.js">
-    <link rel="modulepreload" crossorigin href="./assets/languages-BX061NNt.js">
-    <link rel="modulepreload" crossorigin href="./assets/zap-mUeVn3-2.js">
-    <link rel="modulepreload" crossorigin href="./assets/lock-iFlNR7Tg.js">
-    <link rel="modulepreload" crossorigin href="./assets/mail-DIomGyXK.js">
-    <link rel="modulepreload" crossorigin href="./assets/package-CiMc0Q0Y.js">
-    <link rel="modulepreload" crossorigin href="./assets/pen-DdmPRrH6.js">
-    <link rel="modulepreload" crossorigin href="./assets/play-CFIbj7p8.js">
-    <link rel="modulepreload" crossorigin href="./assets/plus-CHGppylv.js">
-    <link rel="modulepreload" crossorigin href="./assets/refresh-cw-B8PpLS56.js">
-    <link rel="modulepreload" crossorigin href="./assets/save-BdzATC2x.js">
-    <link rel="modulepreload" crossorigin href="./assets/search-BQFJ1QoA.js">
-    <link rel="modulepreload" crossorigin href="./assets/server-BbA3ou3s.js">
-    <link rel="modulepreload" crossorigin href="./assets/settings-vz0DFbCk.js">
-    <link rel="modulepreload" crossorigin href="./assets/shield-check-BtdujhNv.js">
-    <link rel="modulepreload" crossorigin href="./assets/shield-rFq2obLD.js">
-    <link rel="modulepreload" crossorigin href="./assets/sparkles-B-DDVxns.js">
-    <link rel="modulepreload" crossorigin href="./assets/star-CXTMqK1j.js">
-    <link rel="modulepreload" crossorigin href="./assets/tag-CqH62on6.js">
-    <link rel="modulepreload" crossorigin href="./assets/target-Bgu2M6g4.js">
-    <link rel="modulepreload" crossorigin href="./assets/trash-2-B341xUeV.js">
-    <link rel="modulepreload" crossorigin href="./assets/triangle-alert-B3j0eOk_.js">
-    <link rel="modulepreload" crossorigin href="./assets/upload-DAthPEba.js">
-    <link rel="modulepreload" crossorigin href="./assets/wrench-DQGGXCRz.js">
-    <link rel="modulepreload" crossorigin href="./assets/x-BnK36O_D.js">
-    <link rel="modulepreload" crossorigin href="./assets/lucide-react-BepwduvT.js">
-    <link rel="modulepreload" crossorigin href="./assets/basename-CPjY4DDc.js">
-    <link rel="modulepreload" crossorigin href="./assets/img-path-BsZ1QEks.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-Dps5s8mG.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-CT1v1ctr.js">
-    <link rel="modulepreload" crossorigin href="./assets/github-api-Bu-Qc2vR.js">
-    <link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-CBb7P6N4.js">
-    <link rel="modulepreload" crossorigin href="./assets/useGithubSync-CJOU_qCc.js">
-    <link rel="modulepreload" crossorigin href="./assets/input-DVoh8LqJ.js">
-    <link rel="modulepreload" crossorigin href="./assets/format-BcGSa_Z5.js">
-    <link rel="modulepreload" crossorigin href="./assets/proxy-ehnS4vDi.js">
-    <link rel="modulepreload" crossorigin href="./assets/image-compress-7G1Sv7zJ.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-B4ILJwaH.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script type="module" src="./assets/index-Bd573Gcg.js"></script>
+    <link rel="modulepreload" href="./assets/dist-BtCR2FgS.js">
+    <link rel="modulepreload" href="./assets/card-DTcT-QaL.js">
+    <link rel="modulepreload" href="./assets/users-BI-pzn-0.js">
+    <link rel="modulepreload" href="./assets/arrow-up-kg_kdBHQ.js">
+    <link rel="modulepreload" href="./assets/award-Ci_UZ6ru.js">
+    <link rel="modulepreload" href="./assets/undo-TZ3jJAdW.js">
+    <link rel="modulepreload" href="./assets/book-open-CKx4miGH.js">
+    <link rel="modulepreload" href="./assets/user-DrOZYR5i.js">
+    <link rel="modulepreload" href="./assets/info-Ct4H8oLh.js">
+    <link rel="modulepreload" href="./assets/chevron-down-CO0Lv8di.js">
+    <link rel="modulepreload" href="./assets/chevron-up-Dv3pWR8s.js">
+    <link rel="modulepreload" href="./assets/dist-Dn3DXhIc.js">
+    <link rel="modulepreload" href="./assets/dist-ClIlZ0sT.js">
+    <link rel="modulepreload" href="./assets/select-BllQ8FhT.js">
+    <link rel="modulepreload" href="./assets/chevron-left-B5LFChW3.js">
+    <link rel="modulepreload" href="./assets/PageBreadcrumb-BsfOiF2S.js">
+    <link rel="modulepreload" href="./assets/circle-alert-M3NHoVwI.js">
+    <link rel="modulepreload" href="./assets/loader-circle-DfwYmIOz.js">
+    <link rel="modulepreload" href="./assets/circle-question-mark-deGYhkw-.js">
+    <link rel="modulepreload" href="./assets/github-C_WJr4Cb.js">
+    <link rel="modulepreload" href="./assets/clock-CFG20Bux.js">
+    <link rel="modulepreload" href="./assets/textarea-Bqo2q_g_.js">
+    <link rel="modulepreload" href="./assets/RemoteDataContext-DrtQ8RP6.js">
+    <link rel="modulepreload" href="./assets/i18n-text-DRRyQM3F.js">
+    <link rel="modulepreload" href="./assets/useFeatures-gLno_D5j.js">
+    <link rel="modulepreload" href="./assets/key-B8f1EGDd.js">
+    <link rel="modulepreload" href="./assets/share-2-DB-ids5j.js">
+    <link rel="modulepreload" href="./assets/zoom-in-u7De3hCI.js">
+    <link rel="modulepreload" href="./assets/external-link-BM52CU8Z.js">
+    <link rel="modulepreload" href="./assets/eye-off-5dfv_BX0.js">
+    <link rel="modulepreload" href="./assets/eye-1coHj6oF.js">
+    <link rel="modulepreload" href="./assets/file-text-DOhf-goR.js">
+    <link rel="modulepreload" href="./assets/rotate-ccw-CcXyv3vW.js">
+    <link rel="modulepreload" href="./assets/globe-B5QelNcn.js">
+    <link rel="modulepreload" href="./assets/grip-vertical-vKK4PXGQ.js">
+    <link rel="modulepreload" href="./assets/tablet-LiTL5uxq.js">
+    <link rel="modulepreload" href="./assets/move-up-BtM4ymU5.js">
+    <link rel="modulepreload" href="./assets/image-DSe9Fv-z.js">
+    <link rel="modulepreload" href="./assets/key-round-XVfOvOlI.js">
+    <link rel="modulepreload" href="./assets/languages-BX061NNt.js">
+    <link rel="modulepreload" href="./assets/zap-mUeVn3-2.js">
+    <link rel="modulepreload" href="./assets/lock-iFlNR7Tg.js">
+    <link rel="modulepreload" href="./assets/mail-DIomGyXK.js">
+    <link rel="modulepreload" href="./assets/package-CiMc0Q0Y.js">
+    <link rel="modulepreload" href="./assets/pen-DdmPRrH6.js">
+    <link rel="modulepreload" href="./assets/play-CFIbj7p8.js">
+    <link rel="modulepreload" href="./assets/plus-CHGppylv.js">
+    <link rel="modulepreload" href="./assets/refresh-cw-B8PpLS56.js">
+    <link rel="modulepreload" href="./assets/save-BdzATC2x.js">
+    <link rel="modulepreload" href="./assets/search-BQFJ1QoA.js">
+    <link rel="modulepreload" href="./assets/server-BbA3ou3s.js">
+    <link rel="modulepreload" href="./assets/settings-vz0DFbCk.js">
+    <link rel="modulepreload" href="./assets/shield-check-BtdujhNv.js">
+    <link rel="modulepreload" href="./assets/shield-rFq2obLD.js">
+    <link rel="modulepreload" href="./assets/sparkles-B-DDVxns.js">
+    <link rel="modulepreload" href="./assets/star-CXTMqK1j.js">
+    <link rel="modulepreload" href="./assets/tag-CqH62on6.js">
+    <link rel="modulepreload" href="./assets/target-Bgu2M6g4.js">
+    <link rel="modulepreload" href="./assets/trash-2-B341xUeV.js">
+    <link rel="modulepreload" href="./assets/triangle-alert-B3j0eOk_.js">
+    <link rel="modulepreload" href="./assets/upload-DAthPEba.js">
+    <link rel="modulepreload" href="./assets/wrench-DQGGXCRz.js">
+    <link rel="modulepreload" href="./assets/x-BnK36O_D.js">
+    <link rel="modulepreload" href="./assets/lucide-react-BepwduvT.js">
+    <link rel="modulepreload" href="./assets/basename-CPjY4DDc.js">
+    <link rel="modulepreload" href="./assets/img-path-BsZ1QEks.js">
+    <link rel="modulepreload" href="./assets/dist-Dps5s8mG.js">
+    <link rel="modulepreload" href="./assets/dist-CT1v1ctr.js">
+    <link rel="modulepreload" href="./assets/github-api-Bu-Qc2vR.js">
+    <link rel="modulepreload" href="./assets/GithubConfigContext-CBb7P6N4.js">
+    <link rel="modulepreload" href="./assets/useGithubSync-CJOU_qCc.js">
+    <link rel="modulepreload" href="./assets/input-DVoh8LqJ.js">
+    <link rel="modulepreload" href="./assets/format-BcGSa_Z5.js">
+    <link rel="modulepreload" href="./assets/proxy-ehnS4vDi.js">
+    <link rel="modulepreload" href="./assets/image-compress-7G1Sv7zJ.js">
+    <link rel="stylesheet" href="./assets/index-B4ILJwaH.css">
+  
+    <!-- V110: Hide platform watermark elements -->
+    <style>
+      /* Hide platform-injected watermark and floating elements */
+      .water-mark,
+      .watermark,
+      [class*="watermark"],
+      [class*="water-mark"],
+      [id*="watermark"],
+      [style*="watermark"] {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      /* Hide fixed-position floating logos/badges from the platform */
+      [class*="float-badge"],
+      [class*="floating-badge"] {
+        display: none !important;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- V109: Global error fallback - prevents blank black screen -->
-    <div id="app-error-fallback" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#ffffff;z-index:99999;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;">
-      <div style="max-width:480px;width:100%;padding:32px;margin:16px;">
-        <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
-          <h2 style="margin:0 0 12px;font-size:20px;font-weight:600;color:#dc2626;">Page Load Error</h2>
-          <p style="margin:0 0 16px;font-size:14px;color:#64748b;line-height:1.6;">Sorry, something went wrong while loading the page. Please try refreshing.</p>
-          <div id="app-error-detail" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px;margin-bottom:20px;font-size:13px;color:#991b1b;font-family:monospace;white-space:pre-wrap;word-break:break-word;max-height:200px;overflow:auto;"></div>
-          <button onclick="location.reload()" style="width:100%;padding:10px 16px;font-size:14px;font-weight:500;color:#fff;background:#dc2626;border:none;border-radius:8px;cursor:pointer;">Refresh Page</button>
+    
+    <!-- V110: Robust error fallback - shows detailed error info -->
+    <div id="app-error-fallback" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f8fafc;z-index:99999;align-items:center;justify-content:center;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;overflow-y:auto;">
+      <div style="max-width:720px;width:100%;padding:24px;margin:16px;">
+        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:#fef2f2;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <h2 style="margin:0;font-size:18px;font-weight:600;color:#dc2626;">Page Load Error</h2>
+              <p style="margin:2px 0 0;font-size:13px;color:#64748b;">Something went wrong. Details below.</p>
+            </div>
+          </div>
+          <div id="app-error-detail" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:14px;margin-bottom:20px;font-size:12px;color:#991b1b;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-all;max-height:320px;overflow:auto;line-height:1.6;"></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button onclick="location.reload()" style="flex:1;min-width:140px;padding:10px 16px;font-size:14px;font-weight:500;color:#fff;background:#dc2626;border:none;border-radius:6px;cursor:pointer;">Refresh Page</button>
+            <button onclick="var d=document.getElementById('app-error-detail');d.style.maxHeight=d.style.maxHeight==='600px'?'320px':'600px';" style="padding:10px 16px;font-size:14px;font-weight:500;color:#334155;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;cursor:pointer;">Toggle Details</button>
+            <button onclick="var d=document.getElementById('app-error-detail');navigator.clipboard&&navigator.clipboard.writeText(d.textContent);this.textContent='Copied!';var t=this;setTimeout(function(){t.textContent='Copy Error';},2000);" style="padding:10px 16px;font-size:14px;font-weight:500;color:#334155;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;cursor:pointer;">Copy Error</button>
+          </div>
         </div>
+        <p style="text-align:center;font-size:11px;color:#94a3b8;margin-top:16px;">V110 Error Handler | Static Deploy</p>
       </div>
     </div>
     <script>
-      (function() {
-        var hasError = false;
-        function showError(msg) {
-          if (hasError) return;
-          hasError = true;
-          var root = document.getElementById("root");
-          if (root) root.innerHTML = "";
-          var fb = document.getElementById("app-error-fallback");
-          if (fb) {
-            fb.style.display = "flex";
-            var detail = document.getElementById("app-error-detail");
-            if (detail) detail.textContent = msg || "Unknown error";
+    (function() {
+      var hasError = false;
+      var errorLog = [];
+
+      function addError(type, detail) {
+        var ts = new Date().toISOString();
+        var entry = "[" + ts + "] [" + type + "]\n" + detail;
+        errorLog.push(entry);
+        if (errorLog.length > 30) errorLog.shift();
+      }
+
+      function formatError(err) {
+        if (!err) return "(no error object)";
+        if (typeof err === "string") return err;
+        var parts = [];
+        try {
+          if (err.name) parts.push("Name: " + err.name);
+          if (err.message) parts.push("Message: " + err.message);
+          if (err.filename) parts.push("File: " + err.filename);
+          else if (err.fileName) parts.push("File: " + err.fileName);
+          if (err.lineno !== undefined) parts.push("Line: " + err.lineno);
+          else if (err.lineNumber !== undefined) parts.push("Line: " + err.lineNumber);
+          if (err.colno !== undefined) parts.push("Column: " + err.colno);
+          else if (err.columnNumber !== undefined) parts.push("Column: " + err.columnNumber);
+          if (err.stack) parts.push("Stack:\n" + err.stack);
+          if (parts.length === 0) {
+            try { return JSON.stringify(err); } catch(e) { return String(err); }
           }
-          document.body.style.background = "#ffffff";
-          document.body.style.backgroundColor = "#ffffff";
+        } catch(e) {
+          return String(err);
         }
-        window.addEventListener("error", function(e) {
-          var msg = e.message || (e.error && e.error.message) || String(e);
-          if (msg.indexOf("ResizeObserver") >= 0) return;
-          showError(msg);
-        }, true);
-        window.addEventListener("unhandledrejection", function(e) {
-          var reason = e.reason;
-          var msg = (reason && (reason.message || String(reason))) || String(e);
-          showError("Unhandled Promise rejection: " + msg);
-        });
-        setTimeout(function() {
-          var root = document.getElementById("root");
-          if (root && root.children.length === 0 && root.innerHTML.trim() === "") {
-            showError("App failed to mount within 5 seconds. Check browser console for details.");
+        return parts.join("\n");
+      }
+
+      function showErrorUI() {
+        if (hasError) return;
+        hasError = true;
+        window.__error_has_crashed = true;
+
+        // Clear root to stop any further rendering
+        var root = document.getElementById("root");
+        if (root) { root.innerHTML = ""; }
+
+        var fb = document.getElementById("app-error-fallback");
+        if (fb) {
+          fb.style.display = "flex";
+          var detail = document.getElementById("app-error-detail");
+          if (detail) {
+            var text = errorLog.join("\n\n---\n\n");
+            detail.textContent = text || "Unknown error occurred (no details available).";
           }
-        }, 5000);
-      })();
+        }
+
+        // Force light background
+        document.body.style.background = "#f8fafc";
+        document.body.style.backgroundColor = "#f8fafc";
+        document.documentElement.style.background = "#f8fafc";
+      }
+
+      // ===== 1. window.onerror (most reliable for JS runtime errors) =====
+      var originalOnerror = window.onerror;
+      window.onerror = function(msg, url, lineNo, columnNo, error) {
+        // Ignore harmless ResizeObserver loop errors
+        if (typeof msg === "string" && msg.indexOf("ResizeObserver") >= 0) return false;
+        if (typeof msg === "string" && msg.indexOf("Script error.") >= 0 && !error) {
+          // Cross-origin script error - we can't get details, but don't show full error
+          addError("CrossOriginScriptError", "A script from another origin threw an error but details are unavailable (CORS).\nURL: " + url);
+          return false;
+        }
+
+        var detail = "Message: " + msg + "\nFile: " + url + "\nLine: " + lineNo + ":" + columnNo;
+        if (error) {
+          detail = formatError(error) + "\n\n--- from onerror ---\n" + detail;
+        }
+        addError("RuntimeError", detail);
+        showErrorUI();
+
+        if (originalOnerror) {
+          try { return originalOnerror.apply(this, arguments); } catch(e) {}
+        }
+        return false;
+      };
+
+      // ===== 2. addEventListener error (captures resource load errors) =====
+      window.addEventListener("error", function(e) {
+        // If it has e.error, it's a JS ErrorEvent - already handled by onerror
+        if (e.error) return;
+
+        // Resource load error
+        var target = e.target;
+        if (!target) return;
+
+        var tag = target.tagName || "UNKNOWN";
+        var src = target.src || target.href || target.getAttribute("data-src") || "(unknown source)";
+
+        // Only log, don't show full page error for non-critical resources
+        addError("ResourceLoadError", "Failed to load " + tag + ": " + src);
+
+        // Only show fatal error for critical resources
+        var isCritical = false;
+        if (tag === "SCRIPT") {
+          // Check if it's the main entry or a critical chunk
+          if (src.indexOf("index-") >= 0 || src.indexOf("dist-") >= 0 || src.indexOf("main") >= 0) {
+            isCritical = true;
+          } else {
+            // Lazy-loaded chunks might be non-critical if not on current page
+            isCritical = true; // Be safe - show error for any script failure
+          }
+        }
+        if (tag === "LINK" && target.rel === "stylesheet") {
+          // CSS failure is critical
+          isCritical = true;
+        }
+
+        if (isCritical) {
+          showErrorUI();
+        }
+      }, true);
+
+      // ===== 3. unhandledrejection (promise errors) =====
+      window.addEventListener("unhandledrejection", function(e) {
+        var reason = e.reason;
+        var detail = formatError(reason);
+        addError("UnhandledPromiseRejection", detail);
+        showErrorUI();
+      });
+
+      // ===== 4. Mount timeout checker =====
+      function checkMount() {
+        if (hasError) return;
+        var root = document.getElementById("root");
+        if (!root) return;
+
+        var hasContent = false;
+        try {
+          hasContent = root.children.length > 0 || root.innerHTML.trim().length > 20;
+        } catch(e) {}
+
+        if (!hasContent) {
+          addError("MountTimeout",
+            "Root element is still empty after page load.\n" +
+            "React likely crashed during the initial render.\n\n" +
+            "Check the errors above for the actual cause.\n" +
+            "Common causes:\n" +
+            "  - Missing dependency or module\n" +
+            "  - Context provider value mismatch\n" +
+            "  - Hook called outside component\n" +
+            "  - Invalid prop type");
+          showErrorUI();
+        }
+      }
+
+      if (document.readyState === "complete") {
+        setTimeout(checkMount, 4000);
+      } else {
+        window.addEventListener("load", function() {
+          setTimeout(checkMount, 4000);
+        });
+      }
+      setTimeout(checkMount, 10000); // Final safety net
+
+      // Expose for debugging
+      window.__app_error_log = errorLog;
+      window.__app_show_error = showErrorUI;
+    })();
     </script>
 
+    <div id="root"></div>
   </body>
 </html>
