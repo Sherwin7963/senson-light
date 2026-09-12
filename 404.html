@@ -1,38 +1,286 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | OWELL Industrial</title>
-    <script>
-      // GitHub Pages SPA fallback for BrowserRouter (History API)
-      // 原理：把 404 时的完整路径存入 sessionStorage，然后重定向到站点根 index.html
-      // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
-      // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
-      //
-      // 修复 v52：
-      // - 根域名部署（如 example.com/products）和子路径部署
-      //   （如 example.com/repo-name/products）都能正确回到 index.html
-      // - 使用相对路径 './'，重定向到当前 404.html 所在目录（即站点根）
-      // - 在子路径部署下，404.html 始终在仓库根目录，所以 './' 就是仓库根
-      (function () {
-        var path = window.location.pathname + window.location.search + window.location.hash;
-        try {
-          sessionStorage.setItem('spa-redirect', path);
-        } catch (e) {
-          // sessionStorage 不可用时降级为 hash 方式
-          window.location.replace('./#' + path);
-          return;
-        }
-        // 相对路径：回到 404.html 所在目录（即站点/仓库根），命中 index.html
-        // 根域名部署 → './' = '/'
-        // 子路径部署 → './' = '/repo-name/'
-        window.location.replace('./');
-      })();
-    </script>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
-</html>
+<!doctype html><html lang="en"><head><style>
+  #error-overlay { position: fixed; inset: 0; z-index: 999999; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-family: system-ui, -apple-system, sans-serif; padding: 20px; }
+  #error-card { background: #fff; border-radius: 16px; padding: 32px; max-width: 560px; width: 100%; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+  #error-title { color: #dc2626; font-size: 24px; font-weight: 700; margin: 0 0 8px 0; display: flex; align-items: center; gap: 12px; }
+  #error-icon { width: 40px; height: 40px; border-radius: 50%; background: #fee2e2; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #error-subtitle { color: #64748b; font-size: 16px; margin: 0 0 20px 0; }
+  #error-details-wrapper { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; max-height: 200px; overflow-y: auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; color: #991b1b; white-space: pre-wrap; word-break: break-all; }
+  #error-more-info { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #fecaca; font-size: 11px; color: #b91c1c; }
+  #error-more-info.visible { display: block; }
+  #error-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  #error-refresh { flex: 1; min-width: 140px; background: #dc2626; color: #fff; border: none; padding: 14px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  #error-refresh:hover { background: #b91c1c; }
+  #error-toggle, #error-copy { padding: 14px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+  #error-toggle:hover, #error-copy:hover { background: #e2e8f0; }
+  #error-footer { margin-top: 20px; text-align: center; color: #94a3b8; font-size: 12px; }
+</style>
+<script>(function(){
+  var needsPolyfill=(function(){
+    try{
+      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
+      if(typeof Object.hasOwn!=="function")return true;
+      if(typeof[].at!=="function")return true;
+      if(typeof[].findLast!=="function")return true;
+      return false;
+    }catch(e){return true}
+  })();
+  if(needsPolyfill){
+    document.write('<script src="./assets/polyfills.js"><\/script>');
+  }
+})();</script><script>window.appId = "{{appId}}";
+    window.userId = "{{userId}}";
+    window.tenantId = "{{tenantId}}";
+    window.userName = "{{userName}}";
+    window.csrfToken = "{{csrfToken}}";
+    window.ENVIRONMENT = "{{environment}}";
+    window.__BASENAME__ = "{{basename}}";
+    const appInfo = {
+      name: "{{appName}}",
+      avatar: "{{{appAvatar}}}",
+      description: "{{appDescription}}",
+    };
+    if (appInfo.name) {
+      window._appInfo = appInfo;
+    }</script><script>(function(g){
+  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
+  window.__slardarErrBuf=window.__slardarErrBuf||[];
+  var ref=document.referrer||'';
+  function _cap(err){
+    if(window[g]&&!window[g].q){
+      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
+    }else{
+      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
+    }
+  }
+  window.addEventListener('error',function(e){
+    if(e.error==null&&e.target instanceof Element){
+      var t=e.target,url=t.src||t.href||'';
+      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
+      return;
+    }
+    if(e.error!=null){
+      var err=e.error;
+      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
+        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
+      }
+      _cap(err);
+    }else{
+      var msg=e.message||'Script error';
+      var err=new Error(msg);
+      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
+      _cap(err);
+    }
+  },true);
+  window.addEventListener('unhandledrejection',function(e){
+    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
+  });
+})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
+    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
+    slardarScript.crossOrigin = 'anonymous';
+    slardarScript.onload = function() {
+      if (window.KSlardarWeb) {
+        window.KSlardarWeb('context.merge', {
+          tenantId: window.tenantId ?? '',
+          appId: window.appId ?? '',
+          stack_version: "0.1.0",
+        });
+        window.KSlardarWeb('init', {
+          bid: 'apaas_miaoda',
+          env: window.ENVIRONMENT || 'online',
+          userId: window.userId ?? '',
+        });
+        window.KSlardarWeb('start');
+        // Flush errors captured before the SDK finished loading
+        var buf = window.__slardarErrBuf || [];
+        window.__slardarErrBuf = [];
+        buf.forEach(function(err) {
+          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
+        });
+      }
+    };
+    slardarScript.onerror = function() {
+      console.warn('Failed to load Slardar script');
+    };
+    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" defer="defer"></script><script>(function (win, export_obj) {
+    win['LogAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+      function _collect() { _collect.q.push(arguments); }
+      _collect.q = _collect.q || [];
+      win[export_obj] = _collect;
+    }
+    win[export_obj].l = +new Date();
+  })(window, 'collectEvent');
+
+  const teaScript = document.createElement('script');
+  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
+  teaScript.crossOrigin = 'anonymous';
+  teaScript.async = true;
+  teaScript.onerror = function() {
+    console.warn('Failed to load Tea script');
+  };
+  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*="position:fixed"][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*="position:fixed"][style*=bottom],doubao-watermark,doubao-watermark /deep/,doubao-watermark-mobile,doubao-watermark::shadow,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;z-index:-999999!important;position:absolute!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;font-size:0!important;line-height:0!important;padding:0!important;margin:0!important;border:none!important;background:0 0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important}body>[style*="position:fixed"]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{{appDescription}}"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>{{appName}}</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><script type="module" src="./assets/index-BV7IQIvB.js"></script><link rel="modulepreload" href="./assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" href="./assets/radix-28cIy9iH.js"><link rel="modulepreload" href="./assets/toolkit-BwrVjikB.js"><link rel="modulepreload" href="./assets/card-D8ED-kOa.js"><link rel="modulepreload" href="./assets/users-B2b07puh.js"><link rel="modulepreload" href="./assets/arrow-up-ELW_Diqi.js"><link rel="modulepreload" href="./assets/award-Bke-6a7S.js"><link rel="modulepreload" href="./assets/undo-C0v5Z57H.js"><link rel="modulepreload" href="./assets/book-open-CeQpQHsF.js"><link rel="modulepreload" href="./assets/user-CwuWBnpy.js"><link rel="modulepreload" href="./assets/info-WL3kSGgS.js"><link rel="modulepreload" href="./assets/chevron-down-CtQRp1jJ.js"><link rel="modulepreload" href="./assets/chevron-up-CjawEejQ.js"><link rel="modulepreload" href="./assets/select-C5qXRLB4.js"><link rel="modulepreload" href="./assets/chevron-left-D-jpCR4O.js"><link rel="modulepreload" href="./assets/PageBreadcrumb-Cw9ydOl0.js"><link rel="modulepreload" href="./assets/circle-alert-C05loS8I.js"><link rel="modulepreload" href="./assets/loader-circle-C44IcRyq.js"><link rel="modulepreload" href="./assets/circle-question-mark-BEUfUJMB.js"><link rel="modulepreload" href="./assets/github-BAuJROJQ.js"><link rel="modulepreload" href="./assets/clock-wuxsE4aX.js"><link rel="modulepreload" href="./assets/textarea-6nFfWRPf.js"><link rel="modulepreload" href="./assets/RemoteDataContext-Sku6yO7E.js"><link rel="modulepreload" href="./assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" href="./assets/useFeatures-HuPLPqvI.js"><link rel="modulepreload" href="./assets/key-EVeUrqYU.js"><link rel="modulepreload" href="./assets/share-2-u9XDxxNG.js"><link rel="modulepreload" href="./assets/zoom-in-1r_WdwAj.js"><link rel="modulepreload" href="./assets/external-link-B6J4fC8f.js"><link rel="modulepreload" href="./assets/eye-off-KbW8sP1U.js"><link rel="modulepreload" href="./assets/eye-DhpkcehM.js"><link rel="modulepreload" href="./assets/file-text-DJuhzSRb.js"><link rel="modulepreload" href="./assets/rotate-ccw-CwxoC21R.js"><link rel="modulepreload" href="./assets/globe-DwTN6iUb.js"><link rel="modulepreload" href="./assets/grip-vertical-D5jdWwx-.js"><link rel="modulepreload" href="./assets/tablet-B4f8lST6.js"><link rel="modulepreload" href="./assets/move-up-ayR4yplQ.js"><link rel="modulepreload" href="./assets/image-DReiM4AH.js"><link rel="modulepreload" href="./assets/key-round-BNqya8mF.js"><link rel="modulepreload" href="./assets/languages-CUIIb4Ls.js"><link rel="modulepreload" href="./assets/zap-DqV5eOIo.js"><link rel="modulepreload" href="./assets/lock-DFaG0ZcU.js"><link rel="modulepreload" href="./assets/mail-B2mtQsI2.js"><link rel="modulepreload" href="./assets/package-Blqytj8s.js"><link rel="modulepreload" href="./assets/pen-tqXrwGoo.js"><link rel="modulepreload" href="./assets/play-CStUPDnQ.js"><link rel="modulepreload" href="./assets/plus-DbG07_E0.js"><link rel="modulepreload" href="./assets/refresh-cw-becidt6A.js"><link rel="modulepreload" href="./assets/save-CopPfzJN.js"><link rel="modulepreload" href="./assets/search-CpoaAfrU.js"><link rel="modulepreload" href="./assets/server-Bq8r6sER.js"><link rel="modulepreload" href="./assets/settings-D5h5jjO2.js"><link rel="modulepreload" href="./assets/shield-check-C2_wKTcp.js"><link rel="modulepreload" href="./assets/shield-B_OwYFXX.js"><link rel="modulepreload" href="./assets/sparkles-CSDgrecz.js"><link rel="modulepreload" href="./assets/star-Il-hoVEG.js"><link rel="modulepreload" href="./assets/tag-CQGr3kw1.js"><link rel="modulepreload" href="./assets/target-C91lf4WH.js"><link rel="modulepreload" href="./assets/trash-2-DHfS4WUz.js"><link rel="modulepreload" href="./assets/triangle-alert-CFaF9ejJ.js"><link rel="modulepreload" href="./assets/upload-BPlzZGkv.js"><link rel="modulepreload" href="./assets/wrench-Bs898cBD.js"><link rel="modulepreload" href="./assets/x-CnwLC9dV.js"><link rel="modulepreload" href="./assets/lucide-react-CJb9JNa_.js"><link rel="modulepreload" href="./assets/basename-KmowKf_t.js"><link rel="modulepreload" href="./assets/img-path-CMqzE45O.js"><link rel="modulepreload" href="./assets/dist-eZM4RrNa.js"><link rel="modulepreload" href="./assets/github-api-DWc6FSHg.js"><link rel="modulepreload" href="./assets/GithubConfigContext-SmzAOztc.js"><link rel="modulepreload" href="./assets/useGithubSync-4fv1yVIW.js"><link rel="modulepreload" href="./assets/input-1SWs2P4e.js"><link rel="modulepreload" href="./assets/format-BcGSa_Z5.js"><link rel="modulepreload" href="./assets/proxy-DKjAXhfD.js"><link rel="modulepreload" href="./assets/image-compress-7G1Sv7zJ.js"><link rel="stylesheet" href="./assets/index-DXOR7U-a.css"><meta property="og:title" content="{{appName}}"><meta property="og:description" content="{{appDescription}}"><meta property="og:image" content="{{appAvatar}}"><link rel="icon" href="{{appAvatar}}">
+<script>
+  // Platform global variables (static deploy)
+  window.appId = "app_static_deploy";
+  window.userId = "static_user";
+  window.tenantId = "static_tenant";
+  window.userName = "Guest";
+  window.csrfToken = "";
+  window.ENVIRONMENT = "production";
+  window.__BASENAME__ = "";
+  window._appInfo = {
+    name: "LED Sensor Light",
+    description: "B2B LED Infrared Sensor Light Website",
+  };
+  window.staticDeploy = true;
+</script>
+
+<style>
+  /* Watermark hide for static deploy */
+  [class*="watermark"],
+  [id*="watermark"],
+  [style*="watermark"],
+  .mx-watermark,
+  .lark-watermark,
+  [data-watermark] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  body::before,
+  body::after { content: none !important; }
+</style>
+</head><body><div id="root"></div><script>
+(function() {
+  var errors = [];
+  var maxErrors = 30;
+  var mountTimer = null;
+  var hasMounted = false;
+  var startTime = Date.now();
+  var VERSION = "V111";
+
+  function formatError(type, msg, url, line, col, stack) {
+    var ts = new Date().toISOString();
+    var parts = ["[" + ts + "] [" + type + "]"];
+    if (msg) parts.push(msg);
+    if (url) parts.push("URL: " + url);
+    if (line != null) parts.push("Line: " + line + (col != null ? ":" + col : ""));
+    if (stack) parts.push("Stack: " + stack);
+    return parts.join("\n");
+  }
+
+  function addError(type, msg, url, line, col, stack) {
+    if (errors.length >= maxErrors) errors.shift();
+    errors.push(formatError(type, msg, url, line, col, stack));
+    showError();
+  }
+
+  window.addEventListener("error", function(e) {
+    e.preventDefault();
+    if (e.target && (e.target.tagName === "SCRIPT" || e.target.tagName === "LINK" || e.target.tagName === "IMG" || e.target.tagName === "SOURCE")) {
+      var tagName = e.target.tagName;
+      var src = e.target.src || e.target.href || "unknown";
+      addError("ResourceLoadError", "Failed to load " + tagName + ": " + src, src, null, null, null);
+      return;
+    }
+    var msg = e.message ? String(e.message) : (e.error && e.error.message ? e.error.message : "Unknown error");
+    var stack = e.error && e.error.stack ? String(e.error.stack) : null;
+    addError("RuntimeError", msg, e.filename, e.lineno, e.colno, stack);
+  }, true);
+
+  window.addEventListener("unhandledrejection", function(e) {
+    e.preventDefault();
+    var reason = e.reason;
+    var msg = "Unhandled Promise Rejection";
+    var stack = null;
+    if (reason) {
+      if (typeof reason === "string") msg = reason;
+      else if (reason.message) { msg = String(reason.message); stack = reason.stack ? String(reason.stack) : null; }
+      else { try { msg = JSON.stringify(reason); } catch(_) { msg = String(reason); } }
+    }
+    addError("PromiseRejection", msg, null, null, null, stack);
+  });
+
+  function checkMount() {
+    if (hasMounted) return;
+    var root = document.getElementById("root");
+    if (root && root.children.length > 0) { hasMounted = true; if (mountTimer) clearInterval(mountTimer); return; }
+    var elapsed = Date.now() - startTime;
+    if (elapsed > 10000 && !hasMounted) {
+      addError("MountTimeout", "App failed to mount within 10 seconds.",
+        null, null, null,
+        "Elapsed: " + elapsed + "ms\nErrors captured: " + errors.length + "\nRoot element: " + (root ? "found" : "not found"));
+    }
+  }
+  mountTimer = setInterval(checkMount, 500);
+
+  if (typeof MutationObserver !== "undefined") {
+    var observer = new MutationObserver(function() {
+      var root = document.getElementById("root");
+      if (root && root.children.length > 0) {
+        hasMounted = true;
+        if (mountTimer) { clearInterval(mountTimer); mountTimer = null; }
+        var overlay = document.getElementById("error-overlay");
+        var realErrors = errors.filter(function(e) { return e.indexOf("[MountTimeout]") === -1; });
+        if (overlay && realErrors.length === 0) overlay.style.display = "none";
+        observer.disconnect();
+      }
+    });
+    if (document.body) observer.observe(document.body, { childList: true, subtree: true });
+    else document.addEventListener("DOMContentLoaded", function() { observer.observe(document.body, { childList: true, subtree: true }); });
+  }
+
+  function showError() {
+    var old = document.getElementById("error-overlay");
+    if (old) old.remove();
+    var overlay = document.createElement("div");
+    overlay.id = "error-overlay";
+    var latestError = errors[errors.length - 1] || "";
+    var moreErrors = errors.length > 1
+      ? "\n\n--- Additional errors (" + (errors.length - 1) + " more) ---\n" + errors.slice(0, -1).join("\n\n")
+      : "";
+    overlay.innerHTML =
+      '<div id="error-card">' +
+        '<div id="error-title"><div id="error-icon">!</div><span>Page Load Error</span></div>' +
+        '<p id="error-subtitle">Something went wrong. Details below.</p>' +
+        '<div id="error-details-wrapper">' +
+          '<div id="error-details">' + escapeHtml(latestError) + '</div>' +
+          '<div id="error-more-info">' + escapeHtml(moreErrors) + '</div>' +
+        '</div>' +
+        '<div id="error-actions">' +
+          '<button id="error-refresh">Refresh Page</button>' +
+          '<button id="error-toggle">Toggle Details</button>' +
+          '<button id="error-copy">Copy Error</button>' +
+        '</div>' +
+        '<div id="error-footer">' + VERSION + ' Error Handler | Static Deploy</div>' +
+      '</div>';
+    if (document.body) document.body.appendChild(overlay);
+    else document.addEventListener("DOMContentLoaded", function() { document.body.appendChild(overlay); });
+
+    document.getElementById("error-refresh").addEventListener("click", function() { location.reload(); });
+    document.getElementById("error-toggle").addEventListener("click", function() {
+      document.getElementById("error-more-info").classList.toggle("visible");
+    });
+    document.getElementById("error-copy").addEventListener("click", function() {
+      var text = errors.join("\n\n");
+      var btn = document.getElementById("error-copy");
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() { btn.textContent = "Copied!"; setTimeout(function() { btn.textContent = "Copy Error"; }, 2000); }).catch(function() { fallbackCopy(text); });
+      } else fallbackCopy(text);
+      function fallbackCopy(t) {
+        var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); btn.textContent = "Copied!"; } catch(e) { btn.textContent = "Copy failed"; }
+        document.body.removeChild(ta); setTimeout(function() { btn.textContent = "Copy Error"; }, 2000);
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+})();
+</script>
+</body></html>

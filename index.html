@@ -1,441 +1,286 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <style>
-      /* ============================================
-         水印/平台署名隐藏 - 最高优先级
-         必须在所有样式之前加载，确保首屏无闪烁
-         ============================================ */
-      
-      /* 1. 已知自定义元素 */
-      doubao-watermark,
-      doubao-watermark-mobile,
-      miaoda-watermark,
-      apaas-watermark,
-      lark-watermark,
-      [data-custom-element="doubao-watermark"],
-      [data-custom-element="doubao-watermark-mobile"],
-      [data-custom-element*="watermark" i],
-      [data-custom-element*="miaoda" i],
-      [data-custom-element*="doubao" i],
-      
-      /* 2. 类名包含关键词 */
-      [class*="watermark" i],
-      [class*="miaoda" i],
-      [class*="doubao" i],
-      [class*="powered-by" i],
-      [class*="powered_by" i],
-      [class*="built-with" i],
-      [class*="built_with" i],
-      [class*="poweredby" i],
-      [class*="builtwith" i],
-      [class*="apaas" i],
-      [class*="lark-watermark" i],
-      
-      /* 3. ID包含关键词 */
-      [id*="watermark" i],
-      [id*="miaoda" i],
-      [id*="doubao" i],
-      [id*="apaas-watermark" i],
-      
-      /* 4. 内联样式底部固定的小元素（平台常见注入方式） */
-      body > div[style*="position: fixed"][style*="bottom"],
-      body > div[style*="position:fixed"][style*="bottom"],
-      body > span[style*="position: fixed"][style*="bottom"],
-      body > span[style*="position:fixed"][style*="bottom"],
-      
-      /* 5. Shadow DOM 宿主元素 */
-      doubao-watermark::shadow,
-      doubao-watermark /deep/,
-      
-      /* 6. iframe 兜底（如果平台用iframe注水印） */
-      iframe[src*="watermark" i],
-      iframe[src*="miaoda" i],
-      iframe[src*="doubao" i] {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        width: 0 !important;
-        height: 0 !important;
-        max-width: 0 !important;
-        max-height: 0 !important;
-        overflow: hidden !important;
-        pointer-events: none !important;
-        z-index: -999999 !important;
-        position: absolute !important;
-        clip: rect(0 0 0 0) !important;
-        clip-path: inset(50%) !important;
-        font-size: 0 !important;
-        line-height: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        text-indent: -9999px !important;
-        white-space: nowrap !important;
+<!doctype html><html lang="en"><head><style>
+  #error-overlay { position: fixed; inset: 0; z-index: 999999; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-family: system-ui, -apple-system, sans-serif; padding: 20px; }
+  #error-card { background: #fff; border-radius: 16px; padding: 32px; max-width: 560px; width: 100%; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+  #error-title { color: #dc2626; font-size: 24px; font-weight: 700; margin: 0 0 8px 0; display: flex; align-items: center; gap: 12px; }
+  #error-icon { width: 40px; height: 40px; border-radius: 50%; background: #fee2e2; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #error-subtitle { color: #64748b; font-size: 16px; margin: 0 0 20px 0; }
+  #error-details-wrapper { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; max-height: 200px; overflow-y: auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; color: #991b1b; white-space: pre-wrap; word-break: break-all; }
+  #error-more-info { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #fecaca; font-size: 11px; color: #b91c1c; }
+  #error-more-info.visible { display: block; }
+  #error-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  #error-refresh { flex: 1; min-width: 140px; background: #dc2626; color: #fff; border: none; padding: 14px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  #error-refresh:hover { background: #b91c1c; }
+  #error-toggle, #error-copy { padding: 14px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+  #error-toggle:hover, #error-copy:hover { background: #e2e8f0; }
+  #error-footer { margin-top: 20px; text-align: center; color: #94a3b8; font-size: 12px; }
+</style>
+<script>(function(){
+  var needsPolyfill=(function(){
+    try{
+      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
+      if(typeof Object.hasOwn!=="function")return true;
+      if(typeof[].at!=="function")return true;
+      if(typeof[].findLast!=="function")return true;
+      return false;
+    }catch(e){return true}
+  })();
+  if(needsPolyfill){
+    document.write('<script src="./assets/polyfills.js"><\/script>');
+  }
+})();</script><script>window.appId = "{{appId}}";
+    window.userId = "{{userId}}";
+    window.tenantId = "{{tenantId}}";
+    window.userName = "{{userName}}";
+    window.csrfToken = "{{csrfToken}}";
+    window.ENVIRONMENT = "{{environment}}";
+    window.__BASENAME__ = "{{basename}}";
+    const appInfo = {
+      name: "{{appName}}",
+      avatar: "{{{appAvatar}}}",
+      description: "{{appDescription}}",
+    };
+    if (appInfo.name) {
+      window._appInfo = appInfo;
+    }</script><script>(function(g){
+  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
+  window.__slardarErrBuf=window.__slardarErrBuf||[];
+  var ref=document.referrer||'';
+  function _cap(err){
+    if(window[g]&&!window[g].q){
+      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
+    }else{
+      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
+    }
+  }
+  window.addEventListener('error',function(e){
+    if(e.error==null&&e.target instanceof Element){
+      var t=e.target,url=t.src||t.href||'';
+      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
+      return;
+    }
+    if(e.error!=null){
+      var err=e.error;
+      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
+        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
       }
-      
-      /* 7. 额外兜底：body 直接子级中所有固定定位的极小元素 */
-      body > [style*="position:fixed"] {
-        /* 只有非常小的元素才隐藏，避免误伤正常内容 */
-        max-height: 120px;
-      }
-    </style>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="OWELL Industrial - Your Trusted LED Infrared Sensor Light Manufacturer from China. OEM/ODM custom LED security lighting factory." />
-    <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
-    <title>OWELL Industrial - LED Sensor Light Manufacture</title>
-    <!-- V110: Platform globals & safety patches (must load BEFORE entry JS) -->
-    <script>
-    (function() {
-      var w = window;
-      var g = globalThis;
-
-      // ===== Core platform identifiers =====
-      w.appId = w.appId || "static-deploy";
-      g.appId = w.appId;
-      w.userId = w.userId || "";
-      w.tenantId = w.tenantId || "";
-      w.userName = w.userName || "";
-      w.csrfToken = w.csrfToken || "";
-      g.ENVIRONMENT = g.ENVIRONMENT || "production";
-      w.ENVIRONMENT = g.ENVIRONMENT;
-
-      // ===== Basename / base path =====
-      w.__BASENAME__ = w.__BASENAME__ || "./";
-
-      // ===== App info (used by toolkit-lite's useAppInfo) =====
-      w._appInfo = w._appInfo || {
-        name: "OWELL Industrial",
-        avatar: "./favicon.png",
-        description: "OWELL Industrial - LED Sensor Light Manufacturer"
-      };
-      w.__APP_INFO__ = w._appInfo;
-
-      // ===== Feature flags =====
-      w.__FEATURE_FLAGS__ = w.__FEATURE_FLAGS__ || {};
-
-      // ===== Error tracking =====
-      w.__v110_errors = [];
-      w.__error_has_crashed = false;
-
-      // ===== Patch: ensure scopedStorage works even with unusual appId =====
-      // toolkit-lite's scopedStorage uses getAppId() which returns window.appId
-      // We already set it above.
-
-      // ===== Patch: console safety =====
-      if (!w.console) w.console = { log: function(){}, warn: function(){}, error: function(){}, info: function(){} };
-
-      // ===== Patch: prevent ResizeObserver errors from breaking things =====
-      // (These are harmless but trigger onerror)
-      var _roErrorCount = 0;
-
-      // ===== Patch: make sure document.title has a sane default =====
-      if (!document.title || document.title.length < 3) {
-        document.title = "OWELL Industrial - LED Sensor Light Manufacturer";
-      }
-    })();
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <script type="module" src="./assets/index-Bd573Gcg.js"></script>
-    <link rel="modulepreload" href="./assets/dist-BtCR2FgS.js">
-    <link rel="modulepreload" href="./assets/card-DTcT-QaL.js">
-    <link rel="modulepreload" href="./assets/users-BI-pzn-0.js">
-    <link rel="modulepreload" href="./assets/arrow-up-kg_kdBHQ.js">
-    <link rel="modulepreload" href="./assets/award-Ci_UZ6ru.js">
-    <link rel="modulepreload" href="./assets/undo-TZ3jJAdW.js">
-    <link rel="modulepreload" href="./assets/book-open-CKx4miGH.js">
-    <link rel="modulepreload" href="./assets/user-DrOZYR5i.js">
-    <link rel="modulepreload" href="./assets/info-Ct4H8oLh.js">
-    <link rel="modulepreload" href="./assets/chevron-down-CO0Lv8di.js">
-    <link rel="modulepreload" href="./assets/chevron-up-Dv3pWR8s.js">
-    <link rel="modulepreload" href="./assets/dist-Dn3DXhIc.js">
-    <link rel="modulepreload" href="./assets/dist-ClIlZ0sT.js">
-    <link rel="modulepreload" href="./assets/select-BllQ8FhT.js">
-    <link rel="modulepreload" href="./assets/chevron-left-B5LFChW3.js">
-    <link rel="modulepreload" href="./assets/PageBreadcrumb-BsfOiF2S.js">
-    <link rel="modulepreload" href="./assets/circle-alert-M3NHoVwI.js">
-    <link rel="modulepreload" href="./assets/loader-circle-DfwYmIOz.js">
-    <link rel="modulepreload" href="./assets/circle-question-mark-deGYhkw-.js">
-    <link rel="modulepreload" href="./assets/github-C_WJr4Cb.js">
-    <link rel="modulepreload" href="./assets/clock-CFG20Bux.js">
-    <link rel="modulepreload" href="./assets/textarea-Bqo2q_g_.js">
-    <link rel="modulepreload" href="./assets/RemoteDataContext-DrtQ8RP6.js">
-    <link rel="modulepreload" href="./assets/i18n-text-DRRyQM3F.js">
-    <link rel="modulepreload" href="./assets/useFeatures-gLno_D5j.js">
-    <link rel="modulepreload" href="./assets/key-B8f1EGDd.js">
-    <link rel="modulepreload" href="./assets/share-2-DB-ids5j.js">
-    <link rel="modulepreload" href="./assets/zoom-in-u7De3hCI.js">
-    <link rel="modulepreload" href="./assets/external-link-BM52CU8Z.js">
-    <link rel="modulepreload" href="./assets/eye-off-5dfv_BX0.js">
-    <link rel="modulepreload" href="./assets/eye-1coHj6oF.js">
-    <link rel="modulepreload" href="./assets/file-text-DOhf-goR.js">
-    <link rel="modulepreload" href="./assets/rotate-ccw-CcXyv3vW.js">
-    <link rel="modulepreload" href="./assets/globe-B5QelNcn.js">
-    <link rel="modulepreload" href="./assets/grip-vertical-vKK4PXGQ.js">
-    <link rel="modulepreload" href="./assets/tablet-LiTL5uxq.js">
-    <link rel="modulepreload" href="./assets/move-up-BtM4ymU5.js">
-    <link rel="modulepreload" href="./assets/image-DSe9Fv-z.js">
-    <link rel="modulepreload" href="./assets/key-round-XVfOvOlI.js">
-    <link rel="modulepreload" href="./assets/languages-BX061NNt.js">
-    <link rel="modulepreload" href="./assets/zap-mUeVn3-2.js">
-    <link rel="modulepreload" href="./assets/lock-iFlNR7Tg.js">
-    <link rel="modulepreload" href="./assets/mail-DIomGyXK.js">
-    <link rel="modulepreload" href="./assets/package-CiMc0Q0Y.js">
-    <link rel="modulepreload" href="./assets/pen-DdmPRrH6.js">
-    <link rel="modulepreload" href="./assets/play-CFIbj7p8.js">
-    <link rel="modulepreload" href="./assets/plus-CHGppylv.js">
-    <link rel="modulepreload" href="./assets/refresh-cw-B8PpLS56.js">
-    <link rel="modulepreload" href="./assets/save-BdzATC2x.js">
-    <link rel="modulepreload" href="./assets/search-BQFJ1QoA.js">
-    <link rel="modulepreload" href="./assets/server-BbA3ou3s.js">
-    <link rel="modulepreload" href="./assets/settings-vz0DFbCk.js">
-    <link rel="modulepreload" href="./assets/shield-check-BtdujhNv.js">
-    <link rel="modulepreload" href="./assets/shield-rFq2obLD.js">
-    <link rel="modulepreload" href="./assets/sparkles-B-DDVxns.js">
-    <link rel="modulepreload" href="./assets/star-CXTMqK1j.js">
-    <link rel="modulepreload" href="./assets/tag-CqH62on6.js">
-    <link rel="modulepreload" href="./assets/target-Bgu2M6g4.js">
-    <link rel="modulepreload" href="./assets/trash-2-B341xUeV.js">
-    <link rel="modulepreload" href="./assets/triangle-alert-B3j0eOk_.js">
-    <link rel="modulepreload" href="./assets/upload-DAthPEba.js">
-    <link rel="modulepreload" href="./assets/wrench-DQGGXCRz.js">
-    <link rel="modulepreload" href="./assets/x-BnK36O_D.js">
-    <link rel="modulepreload" href="./assets/lucide-react-BepwduvT.js">
-    <link rel="modulepreload" href="./assets/basename-CPjY4DDc.js">
-    <link rel="modulepreload" href="./assets/img-path-BsZ1QEks.js">
-    <link rel="modulepreload" href="./assets/dist-Dps5s8mG.js">
-    <link rel="modulepreload" href="./assets/dist-CT1v1ctr.js">
-    <link rel="modulepreload" href="./assets/github-api-Bu-Qc2vR.js">
-    <link rel="modulepreload" href="./assets/GithubConfigContext-CBb7P6N4.js">
-    <link rel="modulepreload" href="./assets/useGithubSync-CJOU_qCc.js">
-    <link rel="modulepreload" href="./assets/input-DVoh8LqJ.js">
-    <link rel="modulepreload" href="./assets/format-BcGSa_Z5.js">
-    <link rel="modulepreload" href="./assets/proxy-ehnS4vDi.js">
-    <link rel="modulepreload" href="./assets/image-compress-7G1Sv7zJ.js">
-    <link rel="stylesheet" href="./assets/index-B4ILJwaH.css">
-  
-    <!-- V110: Hide platform watermark elements -->
-    <style>
-      /* Hide platform-injected watermark and floating elements */
-      .water-mark,
-      .watermark,
-      [class*="watermark"],
-      [class*="water-mark"],
-      [id*="watermark"],
-      [style*="watermark"] {
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-      }
-      /* Hide fixed-position floating logos/badges from the platform */
-      [class*="float-badge"],
-      [class*="floating-badge"] {
-        display: none !important;
-      }
-    </style>
-  </head>
-  <body>
-    
-    <!-- V110: Robust error fallback - shows detailed error info -->
-    <div id="app-error-fallback" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f8fafc;z-index:99999;align-items:center;justify-content:center;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;overflow-y:auto;">
-      <div style="max-width:720px;width:100%;padding:24px;margin:16px;">
-        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;border-radius:10px;background:#fef2f2;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div>
-              <h2 style="margin:0;font-size:18px;font-weight:600;color:#dc2626;">Page Load Error</h2>
-              <p style="margin:2px 0 0;font-size:13px;color:#64748b;">Something went wrong. Details below.</p>
-            </div>
-          </div>
-          <div id="app-error-detail" style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:14px;margin-bottom:20px;font-size:12px;color:#991b1b;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-all;max-height:320px;overflow:auto;line-height:1.6;"></div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <button onclick="location.reload()" style="flex:1;min-width:140px;padding:10px 16px;font-size:14px;font-weight:500;color:#fff;background:#dc2626;border:none;border-radius:6px;cursor:pointer;">Refresh Page</button>
-            <button onclick="var d=document.getElementById('app-error-detail');d.style.maxHeight=d.style.maxHeight==='600px'?'320px':'600px';" style="padding:10px 16px;font-size:14px;font-weight:500;color:#334155;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;cursor:pointer;">Toggle Details</button>
-            <button onclick="var d=document.getElementById('app-error-detail');navigator.clipboard&&navigator.clipboard.writeText(d.textContent);this.textContent='Copied!';var t=this;setTimeout(function(){t.textContent='Copy Error';},2000);" style="padding:10px 16px;font-size:14px;font-weight:500;color:#334155;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;cursor:pointer;">Copy Error</button>
-          </div>
-        </div>
-        <p style="text-align:center;font-size:11px;color:#94a3b8;margin-top:16px;">V110 Error Handler | Static Deploy</p>
-      </div>
-    </div>
-    <script>
-    (function() {
-      var hasError = false;
-      var errorLog = [];
-
-      function addError(type, detail) {
-        var ts = new Date().toISOString();
-        var entry = "[" + ts + "] [" + type + "]\n" + detail;
-        errorLog.push(entry);
-        if (errorLog.length > 30) errorLog.shift();
-      }
-
-      function formatError(err) {
-        if (!err) return "(no error object)";
-        if (typeof err === "string") return err;
-        var parts = [];
-        try {
-          if (err.name) parts.push("Name: " + err.name);
-          if (err.message) parts.push("Message: " + err.message);
-          if (err.filename) parts.push("File: " + err.filename);
-          else if (err.fileName) parts.push("File: " + err.fileName);
-          if (err.lineno !== undefined) parts.push("Line: " + err.lineno);
-          else if (err.lineNumber !== undefined) parts.push("Line: " + err.lineNumber);
-          if (err.colno !== undefined) parts.push("Column: " + err.colno);
-          else if (err.columnNumber !== undefined) parts.push("Column: " + err.columnNumber);
-          if (err.stack) parts.push("Stack:\n" + err.stack);
-          if (parts.length === 0) {
-            try { return JSON.stringify(err); } catch(e) { return String(err); }
-          }
-        } catch(e) {
-          return String(err);
-        }
-        return parts.join("\n");
-      }
-
-      function showErrorUI() {
-        if (hasError) return;
-        hasError = true;
-        window.__error_has_crashed = true;
-
-        // Clear root to stop any further rendering
-        var root = document.getElementById("root");
-        if (root) { root.innerHTML = ""; }
-
-        var fb = document.getElementById("app-error-fallback");
-        if (fb) {
-          fb.style.display = "flex";
-          var detail = document.getElementById("app-error-detail");
-          if (detail) {
-            var text = errorLog.join("\n\n---\n\n");
-            detail.textContent = text || "Unknown error occurred (no details available).";
-          }
-        }
-
-        // Force light background
-        document.body.style.background = "#f8fafc";
-        document.body.style.backgroundColor = "#f8fafc";
-        document.documentElement.style.background = "#f8fafc";
-      }
-
-      // ===== 1. window.onerror (most reliable for JS runtime errors) =====
-      var originalOnerror = window.onerror;
-      window.onerror = function(msg, url, lineNo, columnNo, error) {
-        // Ignore harmless ResizeObserver loop errors
-        if (typeof msg === "string" && msg.indexOf("ResizeObserver") >= 0) return false;
-        if (typeof msg === "string" && msg.indexOf("Script error.") >= 0 && !error) {
-          // Cross-origin script error - we can't get details, but don't show full error
-          addError("CrossOriginScriptError", "A script from another origin threw an error but details are unavailable (CORS).\nURL: " + url);
-          return false;
-        }
-
-        var detail = "Message: " + msg + "\nFile: " + url + "\nLine: " + lineNo + ":" + columnNo;
-        if (error) {
-          detail = formatError(error) + "\n\n--- from onerror ---\n" + detail;
-        }
-        addError("RuntimeError", detail);
-        showErrorUI();
-
-        if (originalOnerror) {
-          try { return originalOnerror.apply(this, arguments); } catch(e) {}
-        }
-        return false;
-      };
-
-      // ===== 2. addEventListener error (captures resource load errors) =====
-      window.addEventListener("error", function(e) {
-        // If it has e.error, it's a JS ErrorEvent - already handled by onerror
-        if (e.error) return;
-
-        // Resource load error
-        var target = e.target;
-        if (!target) return;
-
-        var tag = target.tagName || "UNKNOWN";
-        var src = target.src || target.href || target.getAttribute("data-src") || "(unknown source)";
-
-        // Only log, don't show full page error for non-critical resources
-        addError("ResourceLoadError", "Failed to load " + tag + ": " + src);
-
-        // Only show fatal error for critical resources
-        var isCritical = false;
-        if (tag === "SCRIPT") {
-          // Check if it's the main entry or a critical chunk
-          if (src.indexOf("index-") >= 0 || src.indexOf("dist-") >= 0 || src.indexOf("main") >= 0) {
-            isCritical = true;
-          } else {
-            // Lazy-loaded chunks might be non-critical if not on current page
-            isCritical = true; // Be safe - show error for any script failure
-          }
-        }
-        if (tag === "LINK" && target.rel === "stylesheet") {
-          // CSS failure is critical
-          isCritical = true;
-        }
-
-        if (isCritical) {
-          showErrorUI();
-        }
-      }, true);
-
-      // ===== 3. unhandledrejection (promise errors) =====
-      window.addEventListener("unhandledrejection", function(e) {
-        var reason = e.reason;
-        var detail = formatError(reason);
-        addError("UnhandledPromiseRejection", detail);
-        showErrorUI();
-      });
-
-      // ===== 4. Mount timeout checker =====
-      function checkMount() {
-        if (hasError) return;
-        var root = document.getElementById("root");
-        if (!root) return;
-
-        var hasContent = false;
-        try {
-          hasContent = root.children.length > 0 || root.innerHTML.trim().length > 20;
-        } catch(e) {}
-
-        if (!hasContent) {
-          addError("MountTimeout",
-            "Root element is still empty after page load.\n" +
-            "React likely crashed during the initial render.\n\n" +
-            "Check the errors above for the actual cause.\n" +
-            "Common causes:\n" +
-            "  - Missing dependency or module\n" +
-            "  - Context provider value mismatch\n" +
-            "  - Hook called outside component\n" +
-            "  - Invalid prop type");
-          showErrorUI();
-        }
-      }
-
-      if (document.readyState === "complete") {
-        setTimeout(checkMount, 4000);
-      } else {
-        window.addEventListener("load", function() {
-          setTimeout(checkMount, 4000);
+      _cap(err);
+    }else{
+      var msg=e.message||'Script error';
+      var err=new Error(msg);
+      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
+      _cap(err);
+    }
+  },true);
+  window.addEventListener('unhandledrejection',function(e){
+    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
+  });
+})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
+    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
+    slardarScript.crossOrigin = 'anonymous';
+    slardarScript.onload = function() {
+      if (window.KSlardarWeb) {
+        window.KSlardarWeb('context.merge', {
+          tenantId: window.tenantId ?? '',
+          appId: window.appId ?? '',
+          stack_version: "0.1.0",
+        });
+        window.KSlardarWeb('init', {
+          bid: 'apaas_miaoda',
+          env: window.ENVIRONMENT || 'online',
+          userId: window.userId ?? '',
+        });
+        window.KSlardarWeb('start');
+        // Flush errors captured before the SDK finished loading
+        var buf = window.__slardarErrBuf || [];
+        window.__slardarErrBuf = [];
+        buf.forEach(function(err) {
+          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
         });
       }
-      setTimeout(checkMount, 10000); // Final safety net
+    };
+    slardarScript.onerror = function() {
+      console.warn('Failed to load Slardar script');
+    };
+    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" defer="defer"></script><script>(function (win, export_obj) {
+    win['LogAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+      function _collect() { _collect.q.push(arguments); }
+      _collect.q = _collect.q || [];
+      win[export_obj] = _collect;
+    }
+    win[export_obj].l = +new Date();
+  })(window, 'collectEvent');
 
-      // Expose for debugging
-      window.__app_error_log = errorLog;
-      window.__app_show_error = showErrorUI;
-    })();
-    </script>
+  const teaScript = document.createElement('script');
+  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
+  teaScript.crossOrigin = 'anonymous';
+  teaScript.async = true;
+  teaScript.onerror = function() {
+    console.warn('Failed to load Tea script');
+  };
+  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*="position:fixed"][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*="position:fixed"][style*=bottom],doubao-watermark,doubao-watermark /deep/,doubao-watermark-mobile,doubao-watermark::shadow,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;z-index:-999999!important;position:absolute!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;font-size:0!important;line-height:0!important;padding:0!important;margin:0!important;border:none!important;background:0 0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important}body>[style*="position:fixed"]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{{appDescription}}"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>{{appName}}</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><script type="module" src="./assets/index-BV7IQIvB.js"></script><link rel="modulepreload" href="./assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" href="./assets/radix-28cIy9iH.js"><link rel="modulepreload" href="./assets/toolkit-BwrVjikB.js"><link rel="modulepreload" href="./assets/card-D8ED-kOa.js"><link rel="modulepreload" href="./assets/users-B2b07puh.js"><link rel="modulepreload" href="./assets/arrow-up-ELW_Diqi.js"><link rel="modulepreload" href="./assets/award-Bke-6a7S.js"><link rel="modulepreload" href="./assets/undo-C0v5Z57H.js"><link rel="modulepreload" href="./assets/book-open-CeQpQHsF.js"><link rel="modulepreload" href="./assets/user-CwuWBnpy.js"><link rel="modulepreload" href="./assets/info-WL3kSGgS.js"><link rel="modulepreload" href="./assets/chevron-down-CtQRp1jJ.js"><link rel="modulepreload" href="./assets/chevron-up-CjawEejQ.js"><link rel="modulepreload" href="./assets/select-C5qXRLB4.js"><link rel="modulepreload" href="./assets/chevron-left-D-jpCR4O.js"><link rel="modulepreload" href="./assets/PageBreadcrumb-Cw9ydOl0.js"><link rel="modulepreload" href="./assets/circle-alert-C05loS8I.js"><link rel="modulepreload" href="./assets/loader-circle-C44IcRyq.js"><link rel="modulepreload" href="./assets/circle-question-mark-BEUfUJMB.js"><link rel="modulepreload" href="./assets/github-BAuJROJQ.js"><link rel="modulepreload" href="./assets/clock-wuxsE4aX.js"><link rel="modulepreload" href="./assets/textarea-6nFfWRPf.js"><link rel="modulepreload" href="./assets/RemoteDataContext-Sku6yO7E.js"><link rel="modulepreload" href="./assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" href="./assets/useFeatures-HuPLPqvI.js"><link rel="modulepreload" href="./assets/key-EVeUrqYU.js"><link rel="modulepreload" href="./assets/share-2-u9XDxxNG.js"><link rel="modulepreload" href="./assets/zoom-in-1r_WdwAj.js"><link rel="modulepreload" href="./assets/external-link-B6J4fC8f.js"><link rel="modulepreload" href="./assets/eye-off-KbW8sP1U.js"><link rel="modulepreload" href="./assets/eye-DhpkcehM.js"><link rel="modulepreload" href="./assets/file-text-DJuhzSRb.js"><link rel="modulepreload" href="./assets/rotate-ccw-CwxoC21R.js"><link rel="modulepreload" href="./assets/globe-DwTN6iUb.js"><link rel="modulepreload" href="./assets/grip-vertical-D5jdWwx-.js"><link rel="modulepreload" href="./assets/tablet-B4f8lST6.js"><link rel="modulepreload" href="./assets/move-up-ayR4yplQ.js"><link rel="modulepreload" href="./assets/image-DReiM4AH.js"><link rel="modulepreload" href="./assets/key-round-BNqya8mF.js"><link rel="modulepreload" href="./assets/languages-CUIIb4Ls.js"><link rel="modulepreload" href="./assets/zap-DqV5eOIo.js"><link rel="modulepreload" href="./assets/lock-DFaG0ZcU.js"><link rel="modulepreload" href="./assets/mail-B2mtQsI2.js"><link rel="modulepreload" href="./assets/package-Blqytj8s.js"><link rel="modulepreload" href="./assets/pen-tqXrwGoo.js"><link rel="modulepreload" href="./assets/play-CStUPDnQ.js"><link rel="modulepreload" href="./assets/plus-DbG07_E0.js"><link rel="modulepreload" href="./assets/refresh-cw-becidt6A.js"><link rel="modulepreload" href="./assets/save-CopPfzJN.js"><link rel="modulepreload" href="./assets/search-CpoaAfrU.js"><link rel="modulepreload" href="./assets/server-Bq8r6sER.js"><link rel="modulepreload" href="./assets/settings-D5h5jjO2.js"><link rel="modulepreload" href="./assets/shield-check-C2_wKTcp.js"><link rel="modulepreload" href="./assets/shield-B_OwYFXX.js"><link rel="modulepreload" href="./assets/sparkles-CSDgrecz.js"><link rel="modulepreload" href="./assets/star-Il-hoVEG.js"><link rel="modulepreload" href="./assets/tag-CQGr3kw1.js"><link rel="modulepreload" href="./assets/target-C91lf4WH.js"><link rel="modulepreload" href="./assets/trash-2-DHfS4WUz.js"><link rel="modulepreload" href="./assets/triangle-alert-CFaF9ejJ.js"><link rel="modulepreload" href="./assets/upload-BPlzZGkv.js"><link rel="modulepreload" href="./assets/wrench-Bs898cBD.js"><link rel="modulepreload" href="./assets/x-CnwLC9dV.js"><link rel="modulepreload" href="./assets/lucide-react-CJb9JNa_.js"><link rel="modulepreload" href="./assets/basename-KmowKf_t.js"><link rel="modulepreload" href="./assets/img-path-CMqzE45O.js"><link rel="modulepreload" href="./assets/dist-eZM4RrNa.js"><link rel="modulepreload" href="./assets/github-api-DWc6FSHg.js"><link rel="modulepreload" href="./assets/GithubConfigContext-SmzAOztc.js"><link rel="modulepreload" href="./assets/useGithubSync-4fv1yVIW.js"><link rel="modulepreload" href="./assets/input-1SWs2P4e.js"><link rel="modulepreload" href="./assets/format-BcGSa_Z5.js"><link rel="modulepreload" href="./assets/proxy-DKjAXhfD.js"><link rel="modulepreload" href="./assets/image-compress-7G1Sv7zJ.js"><link rel="stylesheet" href="./assets/index-DXOR7U-a.css"><meta property="og:title" content="{{appName}}"><meta property="og:description" content="{{appDescription}}"><meta property="og:image" content="{{appAvatar}}"><link rel="icon" href="{{appAvatar}}">
+<script>
+  // Platform global variables (static deploy)
+  window.appId = "app_static_deploy";
+  window.userId = "static_user";
+  window.tenantId = "static_tenant";
+  window.userName = "Guest";
+  window.csrfToken = "";
+  window.ENVIRONMENT = "production";
+  window.__BASENAME__ = "";
+  window._appInfo = {
+    name: "LED Sensor Light",
+    description: "B2B LED Infrared Sensor Light Website",
+  };
+  window.staticDeploy = true;
+</script>
 
-    <div id="root"></div>
-  </body>
-</html>
+<style>
+  /* Watermark hide for static deploy */
+  [class*="watermark"],
+  [id*="watermark"],
+  [style*="watermark"],
+  .mx-watermark,
+  .lark-watermark,
+  [data-watermark] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  body::before,
+  body::after { content: none !important; }
+</style>
+</head><body><div id="root"></div><script>
+(function() {
+  var errors = [];
+  var maxErrors = 30;
+  var mountTimer = null;
+  var hasMounted = false;
+  var startTime = Date.now();
+  var VERSION = "V111";
+
+  function formatError(type, msg, url, line, col, stack) {
+    var ts = new Date().toISOString();
+    var parts = ["[" + ts + "] [" + type + "]"];
+    if (msg) parts.push(msg);
+    if (url) parts.push("URL: " + url);
+    if (line != null) parts.push("Line: " + line + (col != null ? ":" + col : ""));
+    if (stack) parts.push("Stack: " + stack);
+    return parts.join("\n");
+  }
+
+  function addError(type, msg, url, line, col, stack) {
+    if (errors.length >= maxErrors) errors.shift();
+    errors.push(formatError(type, msg, url, line, col, stack));
+    showError();
+  }
+
+  window.addEventListener("error", function(e) {
+    e.preventDefault();
+    if (e.target && (e.target.tagName === "SCRIPT" || e.target.tagName === "LINK" || e.target.tagName === "IMG" || e.target.tagName === "SOURCE")) {
+      var tagName = e.target.tagName;
+      var src = e.target.src || e.target.href || "unknown";
+      addError("ResourceLoadError", "Failed to load " + tagName + ": " + src, src, null, null, null);
+      return;
+    }
+    var msg = e.message ? String(e.message) : (e.error && e.error.message ? e.error.message : "Unknown error");
+    var stack = e.error && e.error.stack ? String(e.error.stack) : null;
+    addError("RuntimeError", msg, e.filename, e.lineno, e.colno, stack);
+  }, true);
+
+  window.addEventListener("unhandledrejection", function(e) {
+    e.preventDefault();
+    var reason = e.reason;
+    var msg = "Unhandled Promise Rejection";
+    var stack = null;
+    if (reason) {
+      if (typeof reason === "string") msg = reason;
+      else if (reason.message) { msg = String(reason.message); stack = reason.stack ? String(reason.stack) : null; }
+      else { try { msg = JSON.stringify(reason); } catch(_) { msg = String(reason); } }
+    }
+    addError("PromiseRejection", msg, null, null, null, stack);
+  });
+
+  function checkMount() {
+    if (hasMounted) return;
+    var root = document.getElementById("root");
+    if (root && root.children.length > 0) { hasMounted = true; if (mountTimer) clearInterval(mountTimer); return; }
+    var elapsed = Date.now() - startTime;
+    if (elapsed > 10000 && !hasMounted) {
+      addError("MountTimeout", "App failed to mount within 10 seconds.",
+        null, null, null,
+        "Elapsed: " + elapsed + "ms\nErrors captured: " + errors.length + "\nRoot element: " + (root ? "found" : "not found"));
+    }
+  }
+  mountTimer = setInterval(checkMount, 500);
+
+  if (typeof MutationObserver !== "undefined") {
+    var observer = new MutationObserver(function() {
+      var root = document.getElementById("root");
+      if (root && root.children.length > 0) {
+        hasMounted = true;
+        if (mountTimer) { clearInterval(mountTimer); mountTimer = null; }
+        var overlay = document.getElementById("error-overlay");
+        var realErrors = errors.filter(function(e) { return e.indexOf("[MountTimeout]") === -1; });
+        if (overlay && realErrors.length === 0) overlay.style.display = "none";
+        observer.disconnect();
+      }
+    });
+    if (document.body) observer.observe(document.body, { childList: true, subtree: true });
+    else document.addEventListener("DOMContentLoaded", function() { observer.observe(document.body, { childList: true, subtree: true }); });
+  }
+
+  function showError() {
+    var old = document.getElementById("error-overlay");
+    if (old) old.remove();
+    var overlay = document.createElement("div");
+    overlay.id = "error-overlay";
+    var latestError = errors[errors.length - 1] || "";
+    var moreErrors = errors.length > 1
+      ? "\n\n--- Additional errors (" + (errors.length - 1) + " more) ---\n" + errors.slice(0, -1).join("\n\n")
+      : "";
+    overlay.innerHTML =
+      '<div id="error-card">' +
+        '<div id="error-title"><div id="error-icon">!</div><span>Page Load Error</span></div>' +
+        '<p id="error-subtitle">Something went wrong. Details below.</p>' +
+        '<div id="error-details-wrapper">' +
+          '<div id="error-details">' + escapeHtml(latestError) + '</div>' +
+          '<div id="error-more-info">' + escapeHtml(moreErrors) + '</div>' +
+        '</div>' +
+        '<div id="error-actions">' +
+          '<button id="error-refresh">Refresh Page</button>' +
+          '<button id="error-toggle">Toggle Details</button>' +
+          '<button id="error-copy">Copy Error</button>' +
+        '</div>' +
+        '<div id="error-footer">' + VERSION + ' Error Handler | Static Deploy</div>' +
+      '</div>';
+    if (document.body) document.body.appendChild(overlay);
+    else document.addEventListener("DOMContentLoaded", function() { document.body.appendChild(overlay); });
+
+    document.getElementById("error-refresh").addEventListener("click", function() { location.reload(); });
+    document.getElementById("error-toggle").addEventListener("click", function() {
+      document.getElementById("error-more-info").classList.toggle("visible");
+    });
+    document.getElementById("error-copy").addEventListener("click", function() {
+      var text = errors.join("\n\n");
+      var btn = document.getElementById("error-copy");
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() { btn.textContent = "Copied!"; setTimeout(function() { btn.textContent = "Copy Error"; }, 2000); }).catch(function() { fallbackCopy(text); });
+      } else fallbackCopy(text);
+      function fallbackCopy(t) {
+        var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); btn.textContent = "Copied!"; } catch(e) { btn.textContent = "Copy failed"; }
+        document.body.removeChild(ta); setTimeout(function() { btn.textContent = "Copy Error"; }, 2000);
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+})();
+</script>
+</body></html>
