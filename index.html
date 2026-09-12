@@ -1,4 +1,44 @@
-<!doctype html><html lang="en"><head><script>(function(){
+<!doctype html><html lang="en"><head>
+<style>
+/* ========================================
+   水印隐藏 - CSS 层（首屏即生效，零闪烁）
+   ======================================== */
+[class*="watermark"],
+[class*="Watermark"],
+[class*="miaoda"],
+[class*="Miaoda"],
+[class*="doubao"],
+[class*="Doubao"],
+[class*="miaodo"],
+[id*="watermark"],
+[id*="Watermark"],
+[id*="miaoda"],
+[id*="Miaoda"],
+[id*="doubao"],
+[data-custom-element*="watermark"],
+[data-custom-element*="Watermark"],
+[data-custom-element*="miaoda"],
+[data-custom-element*="Miaoda"],
+[data-slot*="watermark"],
+[part*="watermark"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -99999px !important;
+  top: -99999px !important;
+  z-index: -999999 !important;
+  transform: scale(0) !important;
+}
+</style><script>(function(){
   var needsPolyfill=(function(){
     try{
       if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
@@ -102,48 +142,11 @@
   teaScript.onerror = function() {
     console.warn('Failed to load Tea script');
   };
-  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial - LED Sensor Light Manufacturer</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="/app/app_17cbf2gmwh9/assets/index-5r76_v8w.js"></script><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/radix-CjF-H1R2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/toolkit-Cbyid0LJ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/card-dLq3qIkM.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/users-BxHFGZV6.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/arrow-up-9Y2nQ_Jc.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/award-CSJvhJ93.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/undo-LxmhPGvA.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/book-open-BzMvQJUo.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/user-D0cDt3Vr.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/info-D35tP-yC.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-down-DizXtxQa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-up-9RJV_2GP.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/select-Ce_ENLaa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-left-BVmCjAND.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/PageBreadcrumb-DhUHHTH7.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/circle-alert-CBIqoe9H.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/loader-circle-BDplaKd_.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/circle-question-mark-BPLScqGS.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/github-0wxpWL_Y.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/clock-0_X9I1eH.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/textarea-DldHDYzx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/RemoteDataContext-DFly5gV3.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/useFeatures-C05X34i_.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/key-GOGPMYmT.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/share-2-W7eyPqWY.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/zoom-in-n2hRitQz.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/external-link-hsQUDR3I.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/eye-off-CzPSVXPK.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/eye-CxwU1i-v.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/file-text-B5ZeJ0FB.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/rotate-ccw-Cd82IASL.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/globe-D9ca6-ud.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/grip-vertical-QOguLwHI.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/tablet-ChW8Jk-J.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/move-up-BOcCMqhO.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/image-BDaWVDmQ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/key-round-DAZ3_94C.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/languages-Yuuu1fCO.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/zap-D0nxFdF8.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/lock-GxRVe-9l.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/mail-BPHmazxU.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/package-BZEKc8Dd.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/pen-CVDQi4VY.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/play-DHkyYIAa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/plus-BpxLAc9Z.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/refresh-cw-jFpfmSOx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/save-DXCIM3bK.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/search-C4dIDT8n.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/server-CDocvmty.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/settings-oLoFWVjk.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/shield-check-DviMxby1.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/shield-uLoc8LXx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/sparkles-D-UewtO2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/star-AgBgfKC2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/tag-3-qaqZ24.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/target-BI2zDGmb.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/trash-2-DU3fI7uy.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/triangle-alert-qEZ-KbJw.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/upload-CEkQz-tD.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/wrench-8YZo1jJC.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/x-B81ztk5q.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/lucide-react-ZI1KSZu2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/basename-ktRBNa2n.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/img-path-BhMbCQTt.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/input-26vP6i9c.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/dist-BkUjgK-G.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/github-api-DiZ2yDO6.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/proxy-CivobT0k.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/GithubConfigContext-K-pziT_4.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/image-compress-7G1Sv7zJ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/useGithubSync-DdMagoL5.js"><link rel="stylesheet" crossorigin href="/app/app_17cbf2gmwh9/assets/index-C1KY9vmH.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta property="og:image" content="/favicon.png"><link rel="icon" href="/favicon.png"><style>
-/* 水印隐藏 - Light DOM 部分 */
-[class*="watermark"],
-[class*="Watermark"],
-[class*="miaoda"],
-[class*="Miaoda"],
-[class*="doubao"],
-[class*="Doubao"],
-[class*="miaodo"],
-[id*="watermark"],
-[id*="Watermark"],
-[id*="miaoda"],
-[id*="Miaoda"],
-[id*="doubao"],
-[data-custom-element*="watermark"],
-[data-custom-element*="Watermark"],
-[data-custom-element*="miaoda"],
-[data-custom-element*="Miaoda"],
-[data-slot*="watermark"],
-[part*="watermark"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  width: 0 !important;
-  min-height: 0 !important;
-  min-width: 0 !important;
-  max-height: 0 !important;
-  max-width: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  left: -9999px !important;
-  top: -9999px !important;
-  z-index: -999999 !important;
-  transform: scale(0) !important;
-}
-</style>
-</head><body><div id="root"></div><script>
+  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial - LED Sensor Light Manufacturer</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="/app/app_17cbf2gmwh9/assets/index-5r76_v8w.js"></script><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/radix-CjF-H1R2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/toolkit-Cbyid0LJ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/card-dLq3qIkM.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/users-BxHFGZV6.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/arrow-up-9Y2nQ_Jc.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/award-CSJvhJ93.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/undo-LxmhPGvA.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/book-open-BzMvQJUo.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/user-D0cDt3Vr.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/info-D35tP-yC.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-down-DizXtxQa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-up-9RJV_2GP.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/select-Ce_ENLaa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/chevron-left-BVmCjAND.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/PageBreadcrumb-DhUHHTH7.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/circle-alert-CBIqoe9H.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/loader-circle-BDplaKd_.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/circle-question-mark-BPLScqGS.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/github-0wxpWL_Y.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/clock-0_X9I1eH.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/textarea-DldHDYzx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/RemoteDataContext-DFly5gV3.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/useFeatures-C05X34i_.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/key-GOGPMYmT.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/share-2-W7eyPqWY.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/zoom-in-n2hRitQz.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/external-link-hsQUDR3I.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/eye-off-CzPSVXPK.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/eye-CxwU1i-v.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/file-text-B5ZeJ0FB.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/rotate-ccw-Cd82IASL.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/globe-D9ca6-ud.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/grip-vertical-QOguLwHI.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/tablet-ChW8Jk-J.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/move-up-BOcCMqhO.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/image-BDaWVDmQ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/key-round-DAZ3_94C.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/languages-Yuuu1fCO.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/zap-D0nxFdF8.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/lock-GxRVe-9l.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/mail-BPHmazxU.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/package-BZEKc8Dd.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/pen-CVDQi4VY.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/play-DHkyYIAa.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/plus-BpxLAc9Z.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/refresh-cw-jFpfmSOx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/save-DXCIM3bK.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/search-C4dIDT8n.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/server-CDocvmty.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/settings-oLoFWVjk.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/shield-check-DviMxby1.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/shield-uLoc8LXx.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/sparkles-D-UewtO2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/star-AgBgfKC2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/tag-3-qaqZ24.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/target-BI2zDGmb.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/trash-2-DU3fI7uy.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/triangle-alert-qEZ-KbJw.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/upload-CEkQz-tD.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/wrench-8YZo1jJC.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/x-B81ztk5q.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/lucide-react-ZI1KSZu2.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/basename-ktRBNa2n.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/img-path-BhMbCQTt.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/input-26vP6i9c.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/dist-BkUjgK-G.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/github-api-DiZ2yDO6.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/proxy-CivobT0k.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/GithubConfigContext-K-pziT_4.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/image-compress-7G1Sv7zJ.js"><link rel="modulepreload" crossorigin href="/app/app_17cbf2gmwh9/assets/useGithubSync-DdMagoL5.js"><link rel="stylesheet" crossorigin href="/app/app_17cbf2gmwh9/assets/index-C1KY9vmH.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta property="og:image" content="/favicon.png"><link rel="icon" href="/favicon.png"></head><body><div id="root"></div><script>
 (function() {
   'use strict';
 
+  // 水印关键词列表
   var WM_SELECTORS = [
     '[class*="watermark"]',
     '[class*="Watermark"]',
@@ -162,11 +165,18 @@
     '[part*="watermark"]'
   ];
 
-  var WM_TEXTS = ['豆包工作生成', '妙搭生成', '了解妙搭', '投诉与举报', 'Powered by Miaoda', 'Generated by Miaoda'];
+  var WM_TEXTS = [
+    '豆包工作生成', '妙搭生成', '了解妙搭', '投诉与举报',
+    'Powered by Miaoda', 'Generated by Miaoda', 'Doubao Work'
+  ];
+
+  var removedCount = 0;
+  var maxRuns = 3;
+  var currentRun = 0;
 
   function hasWatermarkText(el) {
     var txt = (el.textContent || '').trim();
-    if (!txt || txt.length > 50) return false;
+    if (!txt || txt.length > 60) return false;
     for (var i = 0; i < WM_TEXTS.length; i++) {
       if (txt.indexOf(WM_TEXTS[i]) !== -1) return true;
     }
@@ -174,74 +184,70 @@
   }
 
   function removeFromRoot(root) {
-    if (!root || !root.querySelectorAll) return;
+    if (!root || !root.querySelectorAll) return 0;
+    var count = 0;
 
+    // 1. 选择器匹配移除
     for (var i = 0; i < WM_SELECTORS.length; i++) {
       try {
         var nodes = root.querySelectorAll(WM_SELECTORS[i]);
         for (var j = 0; j < nodes.length; j++) {
           if (nodes[j] && nodes[j].parentNode) {
             nodes[j].parentNode.removeChild(nodes[j]);
+            count++;
           }
         }
       } catch(e) {}
     }
 
+    // 2. 文字匹配移除（仅限浅层元素，防误删）
     try {
-      var all = root.querySelectorAll('div, span, a, p, button');
+      var all = root.querySelectorAll('div, span, a, p');
       for (var k = 0; k < all.length; k++) {
         var el = all[k];
         if (!el || !el.parentNode) continue;
         if (el.children && el.children.length <= 3 && hasWatermarkText(el)) {
           el.parentNode.removeChild(el);
+          count++;
         }
       }
     } catch(e) {}
 
+    // 3. 穿透 Shadow DOM
     try {
       var allEls = root.querySelectorAll('*');
       for (var m = 0; m < allEls.length; m++) {
         if (allEls[m].shadowRoot) {
-          removeFromRoot(allEls[m].shadowRoot);
+          count += removeFromRoot(allEls[m].shadowRoot);
         }
       }
     } catch(e) {}
+
+    return count;
   }
 
   function removeWatermark() {
-    removeFromRoot(document.body);
+    currentRun++;
+    if (currentRun > maxRuns) return; // 运行次数用完就停止，绝不多跑
+
+    if (!document.body) return;
+
+    var n = removeFromRoot(document.body);
+    removedCount += n;
   }
 
-  if (document.body) {
-    removeWatermark();
+  // 运行时机：DOM 就绪后立即跑 1 次，然后 1s、3s 各补 1 次（覆盖延迟注入）
+  // 3 次后彻底停止，绝不干扰 React 渲染循环
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      removeWatermark();
+      setTimeout(removeWatermark, 1000);
+      setTimeout(removeWatermark, 3000);
+    });
   } else {
-    document.addEventListener('DOMContentLoaded', removeWatermark);
-  }
-
-  var observer = new MutationObserver(function() {
     removeWatermark();
-  });
-
-  function startObserver() {
-    if (document.body) {
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        characterData: true
-      });
-    }
-  }
-
-  if (document.body) {
-    startObserver();
-  } else {
-    document.addEventListener('DOMContentLoaded', startObserver);
-  }
-
-  var delays = [500, 1000, 2000, 3000, 5000, 10000, 20000];
-  for (var d = 0; d < delays.length; d++) {
-    setTimeout(removeWatermark, delays[d]);
+    setTimeout(removeWatermark, 1000);
+    setTimeout(removeWatermark, 3000);
   }
 })();
 </script>
