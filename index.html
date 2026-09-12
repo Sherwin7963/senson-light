@@ -1,70 +1,4 @@
-<!doctype html><html lang="en"><head>
-<style>
-/* ==========================================================
-   Watermark / Badge hiding - CSS only, zero runtime cost
-   覆盖所有可能的水印/底部标签元素（妙搭/豆包/工作生成等）
-   ========================================================== */
-
-/* 1. 基于 class / id 的水印元素 */
-[class*="watermark"],[class*="Watermark"],[class*="WATERMARK"],
-[class*="miaoda"],[class*="Miaoda"],[class*="MIAODA"],[class*="miaodo"],
-[class*="doubao"],[class*="Doubao"],[class*="DOUBAO"],
-[class*="doubaocdn"],[class*="DouBaoCdn"],
-[id*="watermark"],[id*="Watermark"],[id*="WATERMARK"],
-[id*="miaoda"],[id*="Miaoda"],[id*="MIAODA"],
-[id*="doubao"],[id*="Doubao"],[id*="DOUBAO"]
-{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;min-width:0!important;min-height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;top:-99999px!important;z-index:-999999!important;transform:scale(0)!important}
-
-/* 2. 基于 data 属性的自定义元素 */
-[data-custom-element*="watermark"],[data-custom-element*="Watermark"],
-[data-custom-element*="miaoda"],[data-custom-element*="Miaoda"],
-[data-custom-element*="doubao"],[data-custom-element*="Doubao"],
-[data-slot*="watermark"],[data-slot*="Watermark"],
-[data-oid*="watermark"],[data-oid*="miaoda"],[data-oid*="doubao"],
-[part*="watermark"],[part*="Watermark"]
-{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;top:-99999px!important;z-index:-999999!important;transform:scale(0)!important}
-
-/* 3. 右下角固定定位的水印（内联样式定位，常见于注入式水印） */
-div[style*="position: fixed"][style*="bottom"],
-div[style*="position:fixed"][style*="bottom"],
-div[style*="position: fixed"][style*="right"],
-div[style*="position:fixed"][style*="right"]
-{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;transform:scale(0)!important}
-
-/* 4. body 直接子级的固定定位元素（水印通常挂在 body 下） */
-body > div[style*="position: fixed"],
-body > div[style*="position:fixed"]
-{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;transform:scale(0)!important}
-
-/* 5. 包含特定文本的元素（豆包/妙搭/工作生成 等关键词）—— 注意不影响正常内容，只作用于固定定位小元素 */
-div[style*="position:fixed"][style*="font-size"],
-div[style*="position: fixed"][style*="font-size"]
-{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important}
-</style>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="OWELL Industrial - LED Sensor Light Manufacturer">
-  <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China">
-
-  <!-- Favicon - Multiple formats for browser compatibility (in images/ folder) -->
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="./images/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="./images/favicon-64x64.png">
-  <link rel="icon" type="image/png" sizes="128x128" href="./images/favicon-128x128.png">
-  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
-  <link rel="shortcut icon" href="./images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="OWELL Industrial - LED Sensor Light Manufacturer">
-  <meta property="og:description" content="Your trusted LED sensor light manufacturer and supplier from China. OEM/ODM available.">
-  <meta property="og:image" content="./images/favicon-128x128.png">
-
-  <title>OWELL Industrial - LED Sensor Light Manufacturer</title>
-<script>(function(){
+<!doctype html><html lang="en"><head><script>(function(){
   var needsPolyfill=(function(){
     try{
       if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
@@ -83,11 +17,11 @@ div[style*="position: fixed"][style*="font-size"]
     window.userName = "";
     window.csrfToken = "";
     window.ENVIRONMENT = "production";
-    window.__BASENAME__ = "";
+    window.__BASENAME__ = "./";
     const appInfo = {
       name: "OWELL Industrial",
-      avatar: "{./images/favicon-64x64.png}",
-      description: "OWELL Industrial - LED Sensor Light Manufacturer",
+      avatar: "{./images/owell-logo.png}",
+      description: "LED Sensor Light - OWELL Industrial Co., Ltd.",
     };
     if (appInfo.name) {
       window._appInfo = appInfo;
@@ -151,7 +85,7 @@ div[style*="position: fixed"][style*="font-size"]
     slardarScript.onerror = function() {
       console.warn('Failed to load Slardar script');
     };
-    document.head.appendChild(slardarScript);</script><script>(function (win, export_obj) {
+    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" crossorigin="anonymous" defer="defer"></script><script>(function (win, export_obj) {
     win['LogAnalyticsObject'] = export_obj;
     if (!win[export_obj]) {
       function _collect() { _collect.q.push(arguments); }
@@ -168,4 +102,4 @@ div[style*="position: fixed"][style*="font-size"]
   teaScript.onerror = function() {
     console.warn('Failed to load Tea script');
   };
-  document.head.appendChild(teaScript);</script><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="./assets/index-CA06-7Ih.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="./assets/radix-CjF-H1R2.js"><link rel="modulepreload" crossorigin href="./assets/toolkit-Cbyid0LJ.js"><link rel="modulepreload" crossorigin href="./assets/card-dLq3qIkM.js"><link rel="modulepreload" crossorigin href="./assets/users-BxHFGZV6.js"><link rel="modulepreload" crossorigin href="./assets/arrow-up-9Y2nQ_Jc.js"><link rel="modulepreload" crossorigin href="./assets/award-CSJvhJ93.js"><link rel="modulepreload" crossorigin href="./assets/undo-LxmhPGvA.js"><link rel="modulepreload" crossorigin href="./assets/book-open-BzMvQJUo.js"><link rel="modulepreload" crossorigin href="./assets/user-D0cDt3Vr.js"><link rel="modulepreload" crossorigin href="./assets/info-D35tP-yC.js"><link rel="modulepreload" crossorigin href="./assets/chevron-down-DizXtxQa.js"><link rel="modulepreload" crossorigin href="./assets/chevron-up-9RJV_2GP.js"><link rel="modulepreload" crossorigin href="./assets/select-Ce_ENLaa.js"><link rel="modulepreload" crossorigin href="./assets/chevron-left-BVmCjAND.js"><link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-DhUHHTH7.js"><link rel="modulepreload" crossorigin href="./assets/circle-alert-CBIqoe9H.js"><link rel="modulepreload" crossorigin href="./assets/loader-circle-BDplaKd_.js"><link rel="modulepreload" crossorigin href="./assets/circle-question-mark-BPLScqGS.js"><link rel="modulepreload" crossorigin href="./assets/github-0wxpWL_Y.js"><link rel="modulepreload" crossorigin href="./assets/clock-0_X9I1eH.js"><link rel="modulepreload" crossorigin href="./assets/textarea-DldHDYzx.js"><link rel="modulepreload" crossorigin href="./assets/RemoteDataContext-DFly5gV3.js"><link rel="modulepreload" crossorigin href="./assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="./assets/useFeatures-C05X34i_.js"><link rel="modulepreload" crossorigin href="./assets/key-GOGPMYmT.js"><link rel="modulepreload" crossorigin href="./assets/share-2-W7eyPqWY.js"><link rel="modulepreload" crossorigin href="./assets/zoom-in-n2hRitQz.js"><link rel="modulepreload" crossorigin href="./assets/external-link-hsQUDR3I.js"><link rel="modulepreload" crossorigin href="./assets/eye-off-CzPSVXPK.js"><link rel="modulepreload" crossorigin href="./assets/eye-CxwU1i-v.js"><link rel="modulepreload" crossorigin href="./assets/file-text-B5ZeJ0FB.js"><link rel="modulepreload" crossorigin href="./assets/rotate-ccw-Cd82IASL.js"><link rel="modulepreload" crossorigin href="./assets/globe-D9ca6-ud.js"><link rel="modulepreload" crossorigin href="./assets/grip-vertical-QOguLwHI.js"><link rel="modulepreload" crossorigin href="./assets/tablet-ChW8Jk-J.js"><link rel="modulepreload" crossorigin href="./assets/move-up-BOcCMqhO.js"><link rel="modulepreload" crossorigin href="./assets/image-BDaWVDmQ.js"><link rel="modulepreload" crossorigin href="./assets/key-round-DAZ3_94C.js"><link rel="modulepreload" crossorigin href="./assets/languages-Yuuu1fCO.js"><link rel="modulepreload" crossorigin href="./assets/zap-D0nxFdF8.js"><link rel="modulepreload" crossorigin href="./assets/lock-GxRVe-9l.js"><link rel="modulepreload" crossorigin href="./assets/mail-BPHmazxU.js"><link rel="modulepreload" crossorigin href="./assets/package-BZEKc8Dd.js"><link rel="modulepreload" crossorigin href="./assets/pen-CVDQi4VY.js"><link rel="modulepreload" crossorigin href="./assets/play-DHkyYIAa.js"><link rel="modulepreload" crossorigin href="./assets/plus-BpxLAc9Z.js"><link rel="modulepreload" crossorigin href="./assets/refresh-cw-jFpfmSOx.js"><link rel="modulepreload" crossorigin href="./assets/save-DXCIM3bK.js"><link rel="modulepreload" crossorigin href="./assets/search-C4dIDT8n.js"><link rel="modulepreload" crossorigin href="./assets/server-CDocvmty.js"><link rel="modulepreload" crossorigin href="./assets/settings-oLoFWVjk.js"><link rel="modulepreload" crossorigin href="./assets/shield-check-DviMxby1.js"><link rel="modulepreload" crossorigin href="./assets/shield-uLoc8LXx.js"><link rel="modulepreload" crossorigin href="./assets/sparkles-D-UewtO2.js"><link rel="modulepreload" crossorigin href="./assets/star-AgBgfKC2.js"><link rel="modulepreload" crossorigin href="./assets/tag-3-qaqZ24.js"><link rel="modulepreload" crossorigin href="./assets/target-BI2zDGmb.js"><link rel="modulepreload" crossorigin href="./assets/trash-2-DU3fI7uy.js"><link rel="modulepreload" crossorigin href="./assets/triangle-alert-qEZ-KbJw.js"><link rel="modulepreload" crossorigin href="./assets/upload-CEkQz-tD.js"><link rel="modulepreload" crossorigin href="./assets/wrench-8YZo1jJC.js"><link rel="modulepreload" crossorigin href="./assets/x-B81ztk5q.js"><link rel="modulepreload" crossorigin href="./assets/lucide-react-ZI1KSZu2.js"><link rel="modulepreload" crossorigin href="./assets/basename-ktRBNa2n.js"><link rel="modulepreload" crossorigin href="./assets/img-path-BhMbCQTt.js"><link rel="modulepreload" crossorigin href="./assets/dist-BkUjgK-G.js"><link rel="modulepreload" crossorigin href="./assets/github-api-DiZ2yDO6.js"><link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-K-pziT_4.js"><link rel="modulepreload" crossorigin href="./assets/useGithubSync-DdMagoL5.js"><link rel="modulepreload" crossorigin href="./assets/input-26vP6i9c.js"><link rel="modulepreload" crossorigin href="./assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="./assets/proxy-Dzr7v0dG.js"><link rel="modulepreload" crossorigin href="./assets/image-compress-7G1Sv7zJ.js"><link rel="stylesheet" crossorigin href="./assets/index-CALEVK49.css"></head><body><div id="root"></div></body></html>
+  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*="position:fixed"][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*="position:fixed"][style*=bottom],doubao-watermark,doubao-watermark /deep/,doubao-watermark-mobile,doubao-watermark::shadow,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;z-index:-999999!important;position:absolute!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;font-size:0!important;line-height:0!important;padding:0!important;margin:0!important;border:none!important;background:0 0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important}body>[style*="position:fixed"]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LED Sensor Light - OWELL Industrial Co., Ltd."><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="./assets/index-CBsI-kMt.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="./assets/radix-CjF-H1R2.js"><link rel="modulepreload" crossorigin href="./assets/toolkit-Cbyid0LJ.js"><link rel="modulepreload" crossorigin href="./assets/card-dLq3qIkM.js"><link rel="modulepreload" crossorigin href="./assets/users-BxHFGZV6.js"><link rel="modulepreload" crossorigin href="./assets/arrow-up-9Y2nQ_Jc.js"><link rel="modulepreload" crossorigin href="./assets/award-CSJvhJ93.js"><link rel="modulepreload" crossorigin href="./assets/undo-LxmhPGvA.js"><link rel="modulepreload" crossorigin href="./assets/book-open-BzMvQJUo.js"><link rel="modulepreload" crossorigin href="./assets/user-D0cDt3Vr.js"><link rel="modulepreload" crossorigin href="./assets/info-D35tP-yC.js"><link rel="modulepreload" crossorigin href="./assets/chevron-down-DizXtxQa.js"><link rel="modulepreload" crossorigin href="./assets/chevron-up-9RJV_2GP.js"><link rel="modulepreload" crossorigin href="./assets/select-Ce_ENLaa.js"><link rel="modulepreload" crossorigin href="./assets/chevron-left-BVmCjAND.js"><link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-DhUHHTH7.js"><link rel="modulepreload" crossorigin href="./assets/circle-alert-CBIqoe9H.js"><link rel="modulepreload" crossorigin href="./assets/loader-circle-BDplaKd_.js"><link rel="modulepreload" crossorigin href="./assets/circle-question-mark-BPLScqGS.js"><link rel="modulepreload" crossorigin href="./assets/github-0wxpWL_Y.js"><link rel="modulepreload" crossorigin href="./assets/clock-0_X9I1eH.js"><link rel="modulepreload" crossorigin href="./assets/textarea-DldHDYzx.js"><link rel="modulepreload" crossorigin href="./assets/RemoteDataContext-DFly5gV3.js"><link rel="modulepreload" crossorigin href="./assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="./assets/useFeatures-C05X34i_.js"><link rel="modulepreload" crossorigin href="./assets/key-GOGPMYmT.js"><link rel="modulepreload" crossorigin href="./assets/share-2-W7eyPqWY.js"><link rel="modulepreload" crossorigin href="./assets/zoom-in-n2hRitQz.js"><link rel="modulepreload" crossorigin href="./assets/external-link-hsQUDR3I.js"><link rel="modulepreload" crossorigin href="./assets/eye-off-CzPSVXPK.js"><link rel="modulepreload" crossorigin href="./assets/eye-CxwU1i-v.js"><link rel="modulepreload" crossorigin href="./assets/file-text-B5ZeJ0FB.js"><link rel="modulepreload" crossorigin href="./assets/rotate-ccw-Cd82IASL.js"><link rel="modulepreload" crossorigin href="./assets/globe-D9ca6-ud.js"><link rel="modulepreload" crossorigin href="./assets/grip-vertical-QOguLwHI.js"><link rel="modulepreload" crossorigin href="./assets/tablet-ChW8Jk-J.js"><link rel="modulepreload" crossorigin href="./assets/move-up-BOcCMqhO.js"><link rel="modulepreload" crossorigin href="./assets/image-BDaWVDmQ.js"><link rel="modulepreload" crossorigin href="./assets/key-round-DAZ3_94C.js"><link rel="modulepreload" crossorigin href="./assets/languages-Yuuu1fCO.js"><link rel="modulepreload" crossorigin href="./assets/zap-D0nxFdF8.js"><link rel="modulepreload" crossorigin href="./assets/lock-GxRVe-9l.js"><link rel="modulepreload" crossorigin href="./assets/mail-BPHmazxU.js"><link rel="modulepreload" crossorigin href="./assets/package-BZEKc8Dd.js"><link rel="modulepreload" crossorigin href="./assets/pen-CVDQi4VY.js"><link rel="modulepreload" crossorigin href="./assets/play-DHkyYIAa.js"><link rel="modulepreload" crossorigin href="./assets/plus-BpxLAc9Z.js"><link rel="modulepreload" crossorigin href="./assets/refresh-cw-jFpfmSOx.js"><link rel="modulepreload" crossorigin href="./assets/save-DXCIM3bK.js"><link rel="modulepreload" crossorigin href="./assets/search-C4dIDT8n.js"><link rel="modulepreload" crossorigin href="./assets/server-CDocvmty.js"><link rel="modulepreload" crossorigin href="./assets/settings-oLoFWVjk.js"><link rel="modulepreload" crossorigin href="./assets/shield-check-DviMxby1.js"><link rel="modulepreload" crossorigin href="./assets/shield-uLoc8LXx.js"><link rel="modulepreload" crossorigin href="./assets/sparkles-D-UewtO2.js"><link rel="modulepreload" crossorigin href="./assets/star-AgBgfKC2.js"><link rel="modulepreload" crossorigin href="./assets/tag-3-qaqZ24.js"><link rel="modulepreload" crossorigin href="./assets/target-BI2zDGmb.js"><link rel="modulepreload" crossorigin href="./assets/trash-2-DU3fI7uy.js"><link rel="modulepreload" crossorigin href="./assets/triangle-alert-qEZ-KbJw.js"><link rel="modulepreload" crossorigin href="./assets/upload-CEkQz-tD.js"><link rel="modulepreload" crossorigin href="./assets/wrench-8YZo1jJC.js"><link rel="modulepreload" crossorigin href="./assets/x-B81ztk5q.js"><link rel="modulepreload" crossorigin href="./assets/lucide-react-ZI1KSZu2.js"><link rel="modulepreload" crossorigin href="./assets/basename-ktRBNa2n.js"><link rel="modulepreload" crossorigin href="./assets/img-path-BhMbCQTt.js"><link rel="modulepreload" crossorigin href="./assets/dist-BkUjgK-G.js"><link rel="modulepreload" crossorigin href="./assets/github-api-DiZ2yDO6.js"><link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-nKbkS5V1.js"><link rel="modulepreload" crossorigin href="./assets/useGithubSync-DdMagoL5.js"><link rel="modulepreload" crossorigin href="./assets/input-26vP6i9c.js"><link rel="modulepreload" crossorigin href="./assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="./assets/proxy-Dzr7v0dG.js"><link rel="modulepreload" crossorigin href="./assets/indexed-db-BZ-bJ55N.js"><link rel="modulepreload" crossorigin href="./assets/image-compress-7G1Sv7zJ.js"><link rel="stylesheet" crossorigin href="./assets/index-CALEVK49.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="LED Sensor Light - OWELL Industrial Co., Ltd."><meta property="og:image" content="./images/owell-logo.png"><link rel="icon" href="./images/owell-logo.png"></head><body><div id="root"></div></body></html>
