@@ -5,34 +5,34 @@
     "imageKey": "hero_slide_1",
     "badge": {
       "en": "LED Security Light Manufacturer",
-      "zh": "LED安全灯制造商",
-      "es": "Fabricante de LUCES de seguridad LED",
+      "zh": "LED 感应灯制造商",
+      "es": "Fabricante de Luces LED con Sensor",
       "ja": "LEDセキュリティライトメーカー"
     },
     "title": {
       "en": "Your Trusted Lighting Supplier",
       "zh": "您值得信赖的照明供应商",
-      "es": "Su proveedor de iluminación de confianza",
-      "ja": "信頼できる照明サプライヤー"
+      "es": "Su Proveedor de Iluminación de Confianza",
+      "ja": "信頼の照明サプライヤー"
     },
     "subtitle": {
       "en": "Professional LED infrared sensor light manufacturer from China",
-      "zh": "来自中国的专业LED红外传感器灯制造商",
-      "es": "Fabricante profesional de luz de sensor infrarrojo LED de China",
-      "ja": "中国のプロフェッショナルLED赤外線センサーライトメーカー"
+      "zh": "专业的中国 LED 红外感应灯制造商",
+      "es": "Fabricante profesional de luces LED con sensor infrarrojo de China",
+      "ja": "中国発のプロフェッショナルLED赤外線センサーライトメーカー"
     },
     "ctaText": {
       "en": "Get Quote",
       "zh": "获取报价",
-      "es": "Recibir cuota",
-      "ja": "見積もりを取得する"
+      "es": "Solicitar Presupuesto",
+      "ja": "お見積もり"
     },
     "ctaLink": "/contact",
     "secondCtaText": {
       "en": "View Products",
       "zh": "查看产品",
-      "es": "Ver productos",
-      "ja": "商品を表示"
+      "es": "Ver Productos",
+      "ja": "製品を見る"
     },
     "secondCtaLink": "/products",
     "order": 1
@@ -43,34 +43,34 @@
     "imageKey": "hero_slide_2",
     "badge": {
       "en": "OEM & ODM Customization",
-      "zh": "OEM和ODM定制",
-      "es": "Personalización de OEM y ODM",
-      "ja": "OEM & ODMカスタマイズ"
+      "zh": "OEM & ODM 定制服务",
+      "es": "Personalización OEM y ODM",
+      "ja": "OEM＆ODMカスタマイズ"
     },
     "title": {
       "en": "OEM & ODM Customization",
-      "zh": "OEM和ODM定制",
-      "es": "Personalización de OEM y ODM",
-      "ja": "OEM & ODMカスタマイズ"
+      "zh": "OEM & ODM 定制服务",
+      "es": "Personalización OEM y ODM",
+      "ja": "OEM＆ODMカスタマイズ"
     },
     "subtitle": {
       "en": "Tailored lighting solutions for your brand and market",
-      "zh": "为您的品牌和市场量身定制的照明解决方案",
+      "zh": "为您的品牌和市场定制照明解决方案",
       "es": "Soluciones de iluminación a medida para su marca y mercado",
       "ja": "ブランドと市場に合わせた照明ソリューション"
     },
     "ctaText": {
       "en": "Explore Products",
-      "zh": "产品查询",
-      "es": "EXPLORA NUESTROS PRODUCTOS",
-      "ja": "製品を見る"
+      "zh": "探索产品",
+      "es": "Explorar Productos",
+      "ja": "製品を探す"
     },
     "ctaLink": "/products",
     "secondCtaText": {
       "en": "View Products",
       "zh": "查看产品",
-      "es": "Ver productos",
-      "ja": "商品を表示"
+      "es": "Ver Productos",
+      "ja": "製品を見る"
     },
     "secondCtaLink": "/products",
     "order": 2
@@ -81,34 +81,34 @@
     "imageKey": "hero_slide_3",
     "badge": {
       "en": "Global Certification & Quality",
-      "zh": "全球认证和质量",
-      "es": "Certificación y calidad global",
+      "zh": "全球认证与品质",
+      "es": "Certificación Global y Calidad",
       "ja": "グローバル認証と品質"
     },
     "title": {
       "en": "Global Certification & Quality",
-      "zh": "全球认证和质量",
-      "es": "Certificación y calidad global",
+      "zh": "全球认证与品质保障",
+      "es": "Certificación Global y Calidad",
       "ja": "グローバル認証と品質"
     },
     "subtitle": {
       "en": "CE, RoHS, ISO9001 certified factory with strict QC process",
-      "zh": "CE、ROHS、ISO9001认证工厂，具有严格的质量控制流程",
-      "es": "Fábrica con certificación CE, RoHS, ISO9001 con estricto proceso de control de calidad",
-      "ja": "CE、RoHS、厳格なQCプロセスを備えたISO 9001認証工場"
+      "zh": "CE、RoHS、ISO9001 认证工厂，严格品控流程",
+      "es": "Fábrica certificada CE, RoHS, ISO9001 con estricto proceso de control de calidad",
+      "ja": "CE、RoHS、ISO9001認証取得工場、厳格な品質管理プロセス"
     },
     "ctaText": {
       "en": "Learn More",
-      "zh": "了解详情",
-      "es": "Descubre más",
-      "ja": "詳しく知る"
+      "zh": "了解更多",
+      "es": "Saber Más",
+      "ja": "詳しく見る"
     },
     "ctaLink": "/about",
     "secondCtaText": {
       "en": "View Products",
       "zh": "查看产品",
-      "es": "Ver productos",
-      "ja": "商品を表示"
+      "es": "Ver Productos",
+      "ja": "製品を見る"
     },
     "secondCtaLink": "/products",
     "order": 3

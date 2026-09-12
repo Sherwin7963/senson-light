@@ -2,7 +2,7 @@
   {
     "id": "news_1",
     "slug": "how-led-motion-sensor-lights-improve-factory-energy-efficiency",
-    "coverImage": "/images/custom/news/1789014986347_fxt3yf.jpg",
+    "coverImage": "/images/news/news-1-cover.jpg",
     "title": {
       "en": "How LED Motion Sensor Lights Improve Factory Energy Efficiency",
       "zh": "LED人体感应灯如何提升工厂能源效率",
@@ -37,7 +37,7 @@
     "published": true,
     "order": 1,
     "createdAt": 1718409600000,
-    "updatedAt": 1788238936136
+    "updatedAt": 1718409600000
   },
   {
     "id": "news_2",
