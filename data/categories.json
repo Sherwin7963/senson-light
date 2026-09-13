@@ -3,7 +3,7 @@
     "id": "cat_ac",
     "slug": "AC Powered",
     "name": {
-      "en": "AC Powered ",
+      "en": "AC Powered Lights",
       "zh": "AC 供电灯",
       "es": "Luces de Corriente Alterna",
       "ja": "AC電源ライト"
@@ -17,13 +17,13 @@
     "icon": "Zap",
     "sortOrder": 1,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_dry",
     "slug": "Dry Battery",
     "name": {
-      "en": "Dry Battery ",
+      "en": "Dry Battery Lights",
       "zh": "干电池灯",
       "es": "Luces de Batería Seca",
       "ja": "乾電池式ライト"
@@ -37,13 +37,13 @@
     "icon": "Battery",
     "sortOrder": 2,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_solar",
     "slug": "Solar",
     "name": {
-      "en": "Solar Power",
+      "en": "Solar Lights",
       "zh": "太阳能灯",
       "es": "Luces Solares",
       "ja": "ソーラーライト"
@@ -57,13 +57,13 @@
     "icon": "Sun",
     "sortOrder": 3,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_hybrid",
     "slug": "Hybrid",
     "name": {
-      "en": "Hybrid Power",
+      "en": "Hybrid Lights",
       "zh": "混合型灯",
       "es": "Luces Híbridas",
       "ja": "ハイブリッドライト"
@@ -77,7 +77,7 @@
     "icon": "RefreshCw",
     "sortOrder": 4,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_recharge",
@@ -97,7 +97,7 @@
     "icon": "BatteryCharging",
     "sortOrder": 5,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_table",
@@ -117,7 +117,7 @@
     "icon": "Lamp",
     "sortOrder": 6,
     "enabled": true,
-    "createdAt": 1788144660762
+    "createdAt": 1789205075489
   },
   {
     "id": "cat_work",
@@ -137,26 +137,6 @@
     "icon": "Flashlight",
     "sortOrder": 7,
     "enabled": true,
-    "createdAt": 1788144660762
-  },
-  {
-    "id": "cat_1788490019653_mqwfvw",
-    "slug": "Camera Series",
-    "name": {
-      "en": "Camera Series",
-      "zh": "相机系列",
-      "es": "Serie de cámaras",
-      "ja": "カメラシリーズ"
-    },
-    "description": {
-      "en": "",
-      "zh": "",
-      "es": "",
-      "ja": ""
-    },
-    "icon": "Tag",
-    "sortOrder": 8,
-    "enabled": true,
-    "createdAt": 1788490019654
+    "createdAt": 1789205075489
   }
 ]
