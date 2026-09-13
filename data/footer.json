@@ -19,11 +19,11 @@
   "twitterHandle": "@owell_lighting",
   "twitterEnabled": true,
   "instagramUrl": "https://www.instagram.com/owell.industrial",
-  "instagramEnabled": true,
+  "instagramEnabled": false,
   "wechatUrl": "https://mp.weixin.qq.com/",
   "wechatEnabled": true,
   "wechatQrImage": "",
   "headerLogo": "",
   "footerLogo": "",
-  "updatedAt": 1789277529812
+  "updatedAt": 1789278896732
 }
