@@ -58,7 +58,7 @@
     {
       "id": "ip1",
       "text": {
-        "en": "Founded in 2003, OWELL Industrial (Jiujiang Ouwei Industrial Co.LTD) has grown into a leading manufacturer of LED sensor lights and security lighting solutions. Our 40,000㎡ state-of-the-art factory in Jiujiang combines advanced production technology with rigorous quality control.",
+        "en": "Jiujiang Ouwei Industrial Co., Ltd. was established in 2012. The company has been engaged in the research, development, production, and sales of motion-sensor lights, including outdoor motion-sensor lights, motion-sensor lights for security cameras, dry-cell motion-sensor lights, solar-powered motion-sensor lights, hybrid motion-sensor lights, work lights, and smart streetlight systems. (The company’s products are known for their consistent quality and have held an 85% market share in Japan for 10 consecutive years.)",
         "zh": "",
         "es": "",
         "ja": ""
@@ -68,12 +68,32 @@
     {
       "id": "ip2",
       "text": {
-        "en": "We specialize in PIR motion sensor lights, solar LED lights, and commercial lighting products, serving clients in over 50 countries. Our commitment to quality, innovation, and customer satisfaction has earned us long-term partnerships with leading brands worldwide.",
+        "en": "The company currently occupies a site area of 3,900 square meters, with a factory building area of approximately 40,000 square meters. It employs over 400 staff members, including 30 technical personnel and 24 quality control (QC) staff. The company has a total of eight production workshops: die-casting, injection molding, metalworking, rubber, painting, assembly, and SMT.",
         "zh": "",
         "es": "",
         "ja": ""
       },
       "order": 2
+    },
+    {
+      "id": "ip_1789277459423_7msv",
+      "text": {
+        "en": "The company has nine comprehensive departments: R&D, Technical Projects, Quality Control, Production, Purchasing, Warehousing, Administration, and Sales. The company has obtained ISO 9001:2015 international quality management system certification, and most of our products have received international safety certifications such as ETL, CE, and PSE.",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 3
+    },
+    {
+      "id": "ip_1789277468255_ov91",
+      "text": {
+        "en": "Adhering to the business philosophy of “Work hard, strive for excellence, pursue top-notch quality, and create a world-class brand,” the company has experienced rapid growth. As a professional manufacturer and exporter of motion-sensor lights, we export our products worldwide. Quality first and integrity-based are our core principles; your satisfaction is our ultimate goal. We welcome inquiries and cooperation from partners both domestically and internationally, and we are committed to providing you with the highest quality service!",
+        "zh": "",
+        "es": "",
+        "ja": ""
+      },
+      "order": 4
     }
   ],
   "milestonesTitle": {
