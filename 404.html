@@ -11,11 +11,14 @@
       // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
       // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
       //
-      // 修复 v52：
-      // - 根域名部署（如 example.com/products）和子路径部署
-      //   （如 example.com/repo-name/products）都能正确回到 index.html
-      // - 使用相对路径 './'，重定向到当前 404.html 所在目录（即站点根）
-      // - 在子路径部署下，404.html 始终在仓库根目录，所以 './' 就是仓库根
+      // 修复 v133：
+      // - 深层路径（如 /admin/dashboard）下，相对路径 './' 会解析到父目录 /admin/
+      //   而不是站点根，导致二次 404、sessionStorage 被覆盖、路径丢失、反复跳转
+      // - 改为：根据当前路径深度动态计算返回站点根所需的 ../ 层数
+      //   /products → 0 层 ../ → ./
+      //   /admin/dashboard → 1 层 ../ → ../
+      //   /repo-name/admin/dashboard → 2 层 ../ → ../../
+      // - 根域名部署和子路径部署（GitHub Pages 项目页）都能正确回到 index.html
       (function () {
         var path = window.location.pathname + window.location.search + window.location.hash;
         try {
@@ -25,10 +28,29 @@
           window.location.replace('./#' + path);
           return;
         }
-        // 相对路径：回到 404.html 所在目录（即站点/仓库根），命中 index.html
-        // 根域名部署 → './' = '/'
-        // 子路径部署 → './' = '/repo-name/'
-        window.location.replace('./');
+
+        // 根据路径深度计算返回站点根的相对路径
+        // 浏览器解析相对路径时，以「最后一个 / 之前的部分」为基准目录
+        //   /products → 基准目录 / → 深度 0 → ./
+        //   /admin/dashboard → 基准目录 /admin/ → 深度 1 → ../
+        //   /admin/ → 基准目录 /admin/ → 深度 1 → ../
+        //   /repo/admin/dashboard → 基准目录 /repo/admin/ → 深度 2 → ../../
+        var pathname = window.location.pathname;
+        var lastSlashIdx = pathname.lastIndexOf('/');
+        var baseDir = pathname.substring(0, lastSlashIdx + 1);
+        var depth = baseDir.split('/').filter(Boolean).length;
+
+        var rootPath;
+        if (depth === 0) {
+          rootPath = './';
+        } else {
+          rootPath = '';
+          for (var i = 0; i < depth; i++) {
+            rootPath += '../';
+          }
+        }
+
+        window.location.replace(rootPath);
       })();
     </script>
   </head>
