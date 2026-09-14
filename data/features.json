@@ -1,10 +1,10 @@
 {
-  "features": [
+  "data": [
     {
       "id": "1",
       "title": {
         "en": "Direct Factory",
-        "zh": "直接工厂",
+        "zh": "源头工厂",
         "es": "Fábrica directa",
         "ja": "ダイレクトファクトリー"
       },
@@ -102,5 +102,6 @@
       "icon": "Headphones",
       "order": 6
     }
-  ]
+  ],
+  "sectionImage": ""
 }
