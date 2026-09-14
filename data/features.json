@@ -1,5 +1,5 @@
 {
-  "data": [
+  "features": [
     {
       "id": "1",
       "title": {
@@ -61,9 +61,9 @@
       },
       "description": {
         "en": "35 days standard lead time",
-        "zh": "35天标准提前期",
+        "zh": "35天的标准交货期",
         "es": "Plazo de entrega estándar de 35 días",
-        "ja": "標準リードタイム7〜35日"
+        "ja": "標準納期は35日間"
       },
       "icon": "Clock",
       "order": 4
@@ -102,6 +102,5 @@
       "icon": "Headphones",
       "order": 6
     }
-  ],
-  "sectionImage": ""
+  ]
 }
