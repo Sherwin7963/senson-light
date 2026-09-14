@@ -2943,9 +2943,9 @@
     "id": "p_1788918336233_hpthy1",
     "name": {
       "en": "OT02A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
-      "zh": "",
-      "es": "",
-      "ja": ""
+      "zh": "OT02A LED台灯 触控三档开关及调光功能，附Type-C数据线",
+      "es": "Lámpara de mesa LED OT02A con interruptor táctil de 3 posiciones y regulador de intensidad, con cable tipo C",
+      "ja": "OT02A LEDテーブルランプ（タッチ式3段階スイッチ＆スイッチ調光機能付き、Type-Cケーブル付属）"
     },
     "category": "Table Lamp",
     "image": "/images/custom/products/1788919563284_1gnu5l.jpg",
@@ -2960,113 +2960,113 @@
       {
         "key": {
           "en": "Power",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "功率",
+          "es": "Potencia",
+          "ja": "電力"
         },
         "value": {
           "en": "2.5W",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
         }
       },
       {
         "key": {
           "en": "Material",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "材料",
+          "es": "Material",
+          "ja": "素材"
         },
         "value": {
           "en": "Plasitc",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "塑料",
+          "es": "Plástico",
+          "ja": "プラスチック"
         }
       },
       {
         "key": {
           "en": "IP Rating",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP防护等级",
+          "es": "Clasificación IP",
+          "ja": "IP等級"
         },
         "value": {
           "en": "IP54",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
         }
       },
       {
         "key": {
           "en": "Lumen",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "Lumen",
+          "es": "Lumen",
+          "ja": "ルーメン"
         },
         "value": {
           "en": "130LM",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "130LM",
+          "es": "130 LM",
+          "ja": "130LM"
         }
       },
       {
         "key": {
           "en": "Color Temperature",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "色温",
+          "es": "Temperatura de color",
+          "ja": "色温度"
         },
         "value": {
           "en": "3000K-4000K-6500K",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "3000K-4000K-6500K",
+          "es": "3000 K-4000 K-6500 K",
+          "ja": "3000K・4000K・6500K"
         }
       },
       {
         "key": {
           "en": "Voltage",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "电压",
+          "es": "Tensión",
+          "ja": "電圧"
         },
         "value": {
           "en": "DC 5V1A",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
         }
       },
       {
         "key": {
           "en": "Size",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "尺寸",
+          "es": "Tamaño",
+          "ja": "サイズ"
         },
         "value": {
           "en": "⌀107*206mm",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "⌀107×206毫米",
+          "es": "⌀107 × 206 mm",
+          "ja": "⌀107×206mm"
         }
       },
       {
         "key": {
           "en": "MOQ",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小発注数量（MOQ）"
         },
         "value": {
           "en": "1000",
-          "zh": "",
-          "es": "",
-          "ja": ""
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
         }
       }
     ],
