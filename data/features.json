@@ -1,5 +1,5 @@
 {
-  "data": [
+  "features": [
     {
       "id": "1",
       "title": {
@@ -102,6 +102,5 @@
       "icon": "Headphones",
       "order": 6
     }
-  ],
-  "sectionImage": ""
+  ]
 }
