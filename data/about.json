@@ -17,10 +17,10 @@
       "id": "s1",
       "value": "24+",
       "label": {
-        "en": "Years Experience",
-        "zh": "工作年限",
-        "es": "Años de experiencia",
-        "ja": "実務経験年数"
+        "en": "Manufacturing Experience",
+        "zh": "生产经验",
+        "es": "Experiencia en producción",
+        "ja": "生産経験"
       },
       "order": 1
     },
@@ -39,10 +39,10 @@
       "id": "s3",
       "value": "40K㎡",
       "label": {
-        "en": "Factory Area",
-        "zh": "厂区",
-        "es": "Área de la fábrica",
-        "ja": "工場エリア"
+        "en": "Factory Floor Area",
+        "zh": "厂房面积",
+        "es": "Superficie de la nave industrial",
+        "ja": "工場面積"
       },
       "order": 3
     }
