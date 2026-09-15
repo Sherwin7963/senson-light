@@ -522,16 +522,16 @@
     {
       "id": "o2",
       "title": {
-        "en": "Custom Housing",
-        "zh": "定制住宅",
-        "es": "Viviendas a medida",
-        "ja": "注文住宅"
+        "en": "Custom Shape",
+        "zh": "定制外形",
+        "es": "Diseño personalizado",
+        "ja": "形状のカスタマイズ"
       },
       "description": {
-        "en": "Custom housing color & material",
-        "zh": "定制房屋颜色与材质",
-        "es": "Color y material personalizados de la carcasa",
-        "ja": "住宅のカラー・素材のカスタマイズ"
+        "en": "Customize the Color and Material of the Light Fixture",
+        "zh": "定制灯体颜色与材质",
+        "es": "Personalización del color y el material de la luminaria",
+        "ja": "照明器具の色と素材のカスタマイズ"
       },
       "icon": "Palette",
       "order": 2
