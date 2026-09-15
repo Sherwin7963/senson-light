@@ -505,10 +505,10 @@
     {
       "id": "o1",
       "title": {
-        "en": "Custom Logo Printing",
-        "zh": "定制徽标印刷",
-        "es": "Impresión de logotipos personalizados",
-        "ja": "オリジナルロゴの印刷"
+        "en": "Custom Brand Logo Printing",
+        "zh": "定制品牌LOGO印刷",
+        "es": "Impresión personalizada del logotipo de la marca",
+        "ja": "ブランドロゴのオリジナル印刷"
       },
       "description": {
         "en": "Custom logo printing on product & packaging",
