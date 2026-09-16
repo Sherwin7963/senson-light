@@ -1,0 +1,11 @@
+{
+  "adminPassword": "tanjeon2026",
+  "analytics": {
+    "gaEnabled": false,
+    "gaMeasurementId": "",
+    "ga4ApiProxyUrl": "",
+    "clarityEnabled": false,
+    "clarityProjectId": ""
+  },
+  "updatedAt": 1789550708395
+}
