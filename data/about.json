@@ -17,10 +17,10 @@
       "id": "s1",
       "value": "25+",
       "label": {
-        "en": "Manufacturing Experience",
-        "zh": "生产经验",
-        "es": "Experiencia en producción",
-        "ja": "生産経験"
+        "en": "Years of Production Experience",
+        "zh": "生产经验年限",
+        "es": "Años de experiencia en producción",
+        "ja": "生産経験年数"
       },
       "order": 1
     },
@@ -28,7 +28,7 @@
       "id": "s2",
       "value": "36+",
       "label": {
-        "en": "Years Market Experience",
+        "en": "Years of Market Experience",
         "zh": "市场经验年限",
         "es": "Años de experiencia en el mercado",
         "ja": "市場での実務経験年数"
