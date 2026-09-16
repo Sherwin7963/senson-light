@@ -1,7 +1,7 @@
 {
   "brandText": "Professional LED sensor light manufacturer from Jiujiang, China",
   "email": "sherwin@tanjeon.com",
-  "phone": "+86 7928276258",
+  "phone": "+86 79 28276258",
   "address": "NO.16 Jiuyuan Road, Automobile Industrial Park, Jiujiang City, Jiangxi Province, China",
   "copyright": "Jiujiang Ouwei Industrial Co.LTD",
   "certifications": [
@@ -19,13 +19,13 @@
   "twitterHandle": "@owell_lightimg",
   "twitterEnabled": true,
   "instagramUrl": "https://www.instagram.com/owell.industrial",
-  "instagramEnabled": true,
+  "instagramEnabled": false,
   "wechatUrl": "https://mp.weixin.qq.com/",
   "wechatEnabled": true,
   "wechatQrImage": "",
   "headerLogo": "",
   "footerLogo": "",
-  "updatedAt": 0,
+  "updatedAt": 1789550889416,
   "__version": 1,
   "data": {
     "brandText": "Professional LED sensor light manufacturer from Jiujiang, China",
