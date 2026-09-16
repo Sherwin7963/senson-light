@@ -36,10 +36,17 @@
  */
 
 // ==================== CORS 头 ====================
+// V135: 增强 CORS 配置，确保浏览器 preflight 100% 通过
+// 关键原则：
+//   1. Allow-Headers 必须包含前端可能发送的所有自定义 header
+//   2. Allow-Methods 必须包含所有使用的 HTTP 方法
+//   3. Expose-Headers 必须包含前端需要读取的响应头
+//   4. OPTIONS 预检响应必须是 204 No Content，无 body
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Deepl-Plan',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Deepl-Plan, X-Custom-Header, Accept, Accept-Language, Content-Language, Origin',
+  'Access-Control-Expose-Headers': 'Content-Type, Content-Length, X-RateLimit-Limit, X-RateLimit-Remaining, X-Character-Count',
   'Access-Control-Max-Age': '86400',
 };
 
@@ -454,7 +461,7 @@ async function handleGa4Devices(propertyId, accessToken) {
 }
 
 // ==================== DeepL 代理 ====================
-async function handleDeepl(request) {
+async function handleDeepl(request, env) {
   try {
     const url = new URL(request.url);
 
@@ -477,10 +484,13 @@ async function handleDeepl(request) {
     const forwardHeaders = new Headers();
     forwardHeaders.set('Content-Type', 'application/x-www-form-urlencoded');
 
-    const hardcodedKey = globalThis.DEEPL_AUTH_KEY || '';
+    // V135: 同时支持 env.secrets（Worker 配置）和 globalThis（旧兼容）
+    // Cloudflare Workers 的 Secrets 通过 env 参数传入，不是 globalThis
+    const hardcodedKey = env?.DEEPL_AUTH_KEY || globalThis.DEEPL_AUTH_KEY || '';
     if (hardcodedKey) {
       forwardHeaders.set('Authorization', `DeepL-Auth-Key ${hardcodedKey}`);
     } else {
+      // 没有硬编码 key → 从前端请求的 Authorization header 透传
       const authHeader = request.headers.get('Authorization');
       if (authHeader) forwardHeaders.set('Authorization', authHeader);
     }
@@ -645,7 +655,7 @@ export default {
 
       // 路由：DeepL 代理（POST）
       if (request.method === 'POST') {
-        return handleDeepl(request);
+        return handleDeepl(request, env);
       }
 
       // 健康检查
