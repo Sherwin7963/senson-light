@@ -1,0 +1,1 @@
+import{d as e}from"./card-CLk6_aDH.js";var t=e(`chevron-up`,[[`path`,{d:`m18 15-6-6-6 6`,key:`153udz`}]]);export{t};
