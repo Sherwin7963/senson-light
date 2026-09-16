@@ -1,0 +1,1 @@
+import{d as e}from"./card-Bj4BC_Q3.js";var t=e(`chevron-left`,[[`path`,{d:`m15 18-6-6 6-6`,key:`1wnfg3`}]]);export{t};
