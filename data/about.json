@@ -17,10 +17,10 @@
       "id": "s1",
       "value": "24+",
       "label": {
-        "en": "Years of Production Experience",
-        "zh": "生产经验年限",
-        "es": "Años de experiencia en producción",
-        "ja": "生産経験年数"
+        "en": "Years Experience",
+        "zh": "工作年限",
+        "es": "Años de experiencia",
+        "ja": "実務経験年数"
       },
       "order": 1
     },
@@ -28,7 +28,7 @@
       "id": "s2",
       "value": "36+",
       "label": {
-        "en": "Years of Market Experience",
+        "en": "Years Market Experience",
         "zh": "市场经验年限",
         "es": "Años de experiencia en el mercado",
         "ja": "市場での実務経験年数"
@@ -39,10 +39,10 @@
       "id": "s3",
       "value": "40K㎡",
       "label": {
-        "en": "Factory Floor Area",
-        "zh": "厂房面积",
-        "es": "Superficie de la nave industrial",
-        "ja": "工場面積"
+        "en": "Factory Area",
+        "zh": "厂区",
+        "es": "Área de la fábrica",
+        "ja": "工場エリア"
       },
       "order": 3
     }
@@ -505,10 +505,10 @@
     {
       "id": "o1",
       "title": {
-        "en": "Custom Brand Logo Printing",
-        "zh": "定制品牌LOGO印刷",
-        "es": "Impresión personalizada del logotipo de la marca",
-        "ja": "ブランドロゴのオリジナル印刷"
+        "en": "Custom Logo Printing",
+        "zh": "定制徽标印刷",
+        "es": "Impresión de logotipos personalizados",
+        "ja": "オリジナルロゴの印刷"
       },
       "description": {
         "en": "Custom logo printing on product & packaging",
@@ -522,16 +522,16 @@
     {
       "id": "o2",
       "title": {
-        "en": "Custom Shape",
-        "zh": "定制外形",
-        "es": "Diseño personalizado",
-        "ja": "形状のカスタマイズ"
+        "en": "Custom Housing",
+        "zh": "定制住宅",
+        "es": "Viviendas a medida",
+        "ja": "注文住宅"
       },
       "description": {
-        "en": "Customize the Color and Material of the Light Fixture",
-        "zh": "定制灯体颜色与材质",
-        "es": "Personalización del color y el material de la luminaria",
-        "ja": "照明器具の色と素材のカスタマイズ"
+        "en": "Custom housing color & material",
+        "zh": "定制房屋颜色与材质",
+        "es": "Color y material personalizados de la carcasa",
+        "ja": "住宅のカラー・素材のカスタマイズ"
       },
       "icon": "Palette",
       "order": 2

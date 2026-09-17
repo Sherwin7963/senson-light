@@ -1,8 +1,8 @@
 {
-  "brandText": "Professional LED sensor light manufacturer from Jiujiang, China",
+  "brandText": "Professional LED sensor light manufacturer from Jiujiang, China. Your trusted partner for security lighting solutions.",
   "email": "sherwin@tanjeon.com",
-  "phone": "+86 792 8276258",
-  "address": "NO.16 Jiuyuan Road, Automobile Industrial Park, Jiujiang City, Jiangxi Province, China",
+  "phone": "+86 792 8276756",
+  "address": "NO.16 Jiuyuan Road ,Automobile Industrial Park,Jiujiang City,Jiangxi Province, China",
   "copyright": "Jiujiang Ouwei Industrial Co.LTD",
   "certifications": [
     "CE",
@@ -10,13 +10,13 @@
     "ISO9001",
     "FCC"
   ],
-  "whatsappUrl": "https://wa.me/8617879860145?text=Hello%2C%20I%20am%20interested%20in%20your%20LED%20sensor%20lights",
+  "whatsappUrl": "https://wa.me/8617879860145?text=Hello%2C%20I%20am%20interested%20in%20your%20LED%20products",
   "whatsappEnabled": true,
-  "facebookUrl": "https://www.facebook.com/owelllightimg",
+  "facebookUrl": "https://www.facebook.com/owelllighting",
   "facebookEnabled": true,
   "linkedinUrl": "https://www.linkedin.com/company/owell-industrial",
   "linkedinEnabled": true,
-  "twitterHandle": "@owell_lightimg",
+  "twitterHandle": "@owell_lighting",
   "twitterEnabled": true,
   "instagramUrl": "https://www.instagram.com/owell.industrial",
   "instagramEnabled": false,
@@ -25,35 +25,5 @@
   "wechatQrImage": "",
   "headerLogo": "",
   "footerLogo": "",
-  "updatedAt": 1789551093479,
-  "__version": 1,
-  "data": {
-    "brandText": "Professional LED sensor light manufacturer from Jiujiang, China",
-    "email": "sherwin@tanjeon.com",
-    "phone": "+86 7928276258",
-    "address": "NO.16 Jiuyuan Road, Automobile Industrial Park, Jiujiang City, Jiangxi Province, China",
-    "copyright": "Jiujiang Ouwei Industrial Co.LTD",
-    "certifications": [
-      "CE",
-      "RoHS",
-      "ISO9001",
-      "FCC"
-    ],
-    "whatsappUrl": "https://wa.me/8617879860145?text=Hello%2C%20I%20am%20interested%20in%20your%20LED%20sensor%20lights",
-    "whatsappEnabled": true,
-    "facebookUrl": "https://www.facebook.com/owelllightimg",
-    "facebookEnabled": true,
-    "linkedinUrl": "https://www.linkedin.com/company/owell-industrial",
-    "linkedinEnabled": true,
-    "twitterHandle": "@owell_lightimg",
-    "twitterEnabled": true,
-    "instagramUrl": "https://www.instagram.com/owell.industrial",
-    "instagramEnabled": true,
-    "wechatUrl": "https://mp.weixin.qq.com/",
-    "wechatEnabled": true,
-    "wechatQrImage": "",
-    "headerLogo": "",
-    "footerLogo": "",
-    "updatedAt": 1789524334666
-  }
+  "updatedAt": 1789368106570
 }

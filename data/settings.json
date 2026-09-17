@@ -1,11 +1,24 @@
 {
-  "adminPassword": "tanjeon2026",
   "analytics": {
-    "gaEnabled": false,
-    "gaMeasurementId": "",
-    "ga4ApiProxyUrl": "",
-    "clarityEnabled": false,
-    "clarityProjectId": ""
+    "gaEnabled": true,
+    "gaMeasurementId": "G-VR4Y1M20GC",
+    "ga4ApiProxyUrl": "https://deepl-proxy.sherwin7963.workers.dev",
+    "clarityEnabled": true,
+    "clarityProjectId": "yfvrrml68k"
   },
-  "updatedAt": 1789550708395
+  "translation": {
+    "provider": "deepl",
+    "deeplPlan": "free",
+    "useCorsProxy": true,
+    "customProxyUrl": "https://deepl-proxy.sherwin7963.workers.dev"
+  },
+  "githubSync": {
+    "owner": "sherwin7963",
+    "repo": "senson-light",
+    "branch": "main",
+    "basePath": "",
+    "enabled": true,
+    "workerUrl": "https://deepl-proxy.sherwin7963.workers.dev"
+  },
+  "updatedAt": 1789636629383
 }
