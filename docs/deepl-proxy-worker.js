@@ -1,9 +1,10 @@
 /**
- * Cloudflare Worker — DeepL 翻译代理 + GA4 数据代理
+ * Cloudflare Worker — DeepL 翻译代理 + GA4 数据代理 + GitHub API 代理
  *
  * 功能：
- * 1. DeepL API 代理 — 解决浏览器 CORS 限制，透传翻译请求
+ * 1. DeepL API 代理 — 解决浏览器 CORS 限制，API Key 存在 Worker Secrets
  * 2. GA4 Data API 代理 — 使用 Service Account JWT 认证，代理 GA4 数据分析接口
+ * 3. GitHub API 代理 — Token 存在 Worker Secrets，前端不存敏感信息
  *
  * ============================================================
  * 环境变量（Worker Secrets）配置：
@@ -12,27 +13,41 @@
  * # DeepL（可选，推荐硬编码在 Worker 中更安全）
  * DEEPL_AUTH_KEY=12345678-1234-1234-1234-123456789abc:fx
  *
- * # GA4（必需）
+ * # GA4（可选）
  * GA4_PROPERTY_ID=553493228
  * GA4_CLIENT_EMAIL=ga4-proxy@your-project.iam.gserviceaccount.com
  * GA4_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n
  *
+ * # GitHub（可选，推荐配置以获得更好的安全性）
+ * GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
+ * GITHUB_OWNER=your-username
+ * GITHUB_REPO=your-repo
+ * GITHUB_BRANCH=main
+ *
  * ============================================================
- * GA4 API 端点：
+ * GitHub API 端点（前端通过 Worker 代理调用）：
  * ============================================================
  *
- * GET /api/ga4/overview   → 概览数据（总访问量、今日访问、7天趋势、跳出率、平均停留时长）
- * GET /api/ga4/top-pages  → 热门页面 Top10
- * GET /api/ga4/sources    → 访客来源分布
- * GET /api/ga4/countries  → 访客地区 Top10
- * GET /api/ga4/devices    → 设备类型分布
+ * POST   /api/github/contents/:path     → 创建/更新文件（body: {content, message, branch?, sha?}）
+ * GET    /api/github/contents/:path     → 获取文件内容（query: ref=branch）
+ * DELETE /api/github/contents/:path     → 删除文件（body: {message, sha, branch?}）
+ * POST   /api/github/issues             → 创建 Issue（body: {title, body, labels?}）
+ * POST   /api/github/blobs              → 创建 blob（body: {content, encoding}）
+ * POST   /api/github/trees              → 创建 tree（body: {base_tree, tree}）
+ * POST   /api/github/commits            → 创建 commit（body: {message, tree, parents}）
+ * PATCH  /api/github/git/refs/:ref      → 更新 ref（body: {sha, force?}）
+ * GET    /api/github/git/ref/:ref       → 获取 ref
+ * GET    /api/github/commits/:sha/tree  → 获取 commit 的 tree
+ * GET    /api/github/actions/workflows/:workflow_id/dispatches → 触发 workflow (POST)
+ * GET    /api/github/actions/workflows/:workflow_id/runs → 获取最近运行
+ * GET    /api/github/repo               → 获取仓库信息
  *
  * 部署步骤：
  * 1. 登录 Cloudflare Dashboard → Workers & Pages → Create → Create Worker
  * 2. 粘贴此代码 → 保存并部署
  * 3. 在 Settings → Variables 中配置上述 Secrets
  * 4. 获取 Worker URL（如 https://your-worker.yourname.workers.dev）
- * 5. 在网站后台「网站统计」→「GA4 API 代理地址」中填入该 URL
+ * 5. 在网站后台填写对应配置
  */
 
 // ==================== CORS 头 ====================
@@ -44,9 +59,9 @@
 //   4. OPTIONS 预检响应必须是 204 No Content，无 body
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Deepl-Plan, X-Custom-Header, Accept, Accept-Language, Content-Language, Origin',
-  'Access-Control-Expose-Headers': 'Content-Type, Content-Length, X-RateLimit-Limit, X-RateLimit-Remaining, X-Character-Count',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Deepl-Plan, X-Custom-Header, Accept, Accept-Language, Content-Language, Origin, X-Github-Owner, X-Github-Repo, X-Github-Branch, X-GitHub-Api-Version, X-RateLimit-Limit, X-RateLimit-Remaining',
+  'Access-Control-Expose-Headers': 'Content-Type, Content-Length, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-Oauth-Scopes, Location, X-Character-Count',
   'Access-Control-Max-Age': '86400',
 };
 
@@ -627,6 +642,287 @@ async function handleGa4Request(pathname, env) {
   }
 }
 
+// ==================== GitHub API 代理 ====================
+// 将前端的 GitHub API 请求转发到 api.github.com，Token 从 Secrets 读取
+// 前端永远看不到 Token，敏感信息只在 Worker 里
+
+const GITHUB_API_BASE = 'https://api.github.com';
+
+function getGithubHeaders(env) {
+  const token = env?.GITHUB_TOKEN || globalThis.GITHUB_TOKEN || '';
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'Content-Type': 'application/json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'User-Agent': 'OWELL-Website-Sync-Worker',
+  };
+  if (token) {
+    // GitHub API 同时支持 Bearer 和 token 两种格式
+    // Fine-grained PAT 推荐用 Bearer，classic PAT 两种都支持
+    // 使用 token 格式兼容性最好（GitHub 文档标准写法）
+    headers.Authorization = `token ${token}`;
+  }
+  return headers;
+}
+
+function getGithubConfig(env) {
+  return {
+    owner: env?.GITHUB_OWNER || globalThis.GITHUB_OWNER || '',
+    repo: env?.GITHUB_REPO || globalThis.GITHUB_REPO || '',
+    branch: env?.GITHUB_BRANCH || globalThis.GITHUB_BRANCH || 'main',
+    token: env?.GITHUB_TOKEN || globalThis.GITHUB_TOKEN || '',
+  };
+}
+
+/**
+ * 转发 GitHub API 请求
+ * @param {Request} request
+ * @param {*} env
+ * @param {string} apiPath GitHub API 路径（如 /repos/owner/repo/contents/path）
+ * @param {string} method HTTP 方法
+ * @param {*} body 请求体（JSON 对象，可选）
+ */
+async function proxyGithubRequest(request, env, apiPath, method, body) {
+  const url = `${GITHUB_API_BASE}${apiPath}`;
+  const headers = { ...getGithubHeaders(env) };
+
+  // 透传客户端的 Accept 头（如有）
+  const clientAccept = request.headers.get('Accept');
+  if (clientAccept && clientAccept !== 'application/json') {
+    headers.Accept = clientAccept;
+  }
+
+  const init = { method, headers };
+  if (body !== undefined && body !== null) {
+    init.body = typeof body === 'string' ? body : JSON.stringify(body);
+  }
+
+  const response = await fetch(url, init);
+  const responseBody = await response.text();
+
+  // 403 时额外返回 GitHub 的完整错误信息，方便排查
+  if (response.status === 403) {
+    const rateRemaining = response.headers.get('x-ratelimit-remaining');
+    const rateLimit = response.headers.get('x-ratelimit-limit');
+    const bodySnippet = responseBody.slice(0, 500);
+    console.warn(`[GitHub Proxy] 403 Forbidden: ${method} ${apiPath}`);
+    console.warn(`[GitHub Proxy] Rate limit: ${rateRemaining}/${rateLimit}`);
+    console.warn(`[GitHub Proxy] Response body: ${bodySnippet}`);
+  }
+
+  // 透传需要的响应头
+  const responseHeaders = new Headers({ ...CORS_HEADERS });
+  const contentType = response.headers.get('content-type');
+  if (contentType) responseHeaders.set('Content-Type', contentType);
+
+  // 透传速率限制头
+  for (const h of [
+    'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset',
+    'x-ratelimit-used', 'x-oauth-scopes', 'location',
+  ]) {
+    const val = response.headers.get(h);
+    if (val) responseHeaders.set(h, val);
+  }
+
+  return new Response(responseBody, {
+    status: response.status,
+    headers: responseHeaders,
+  });
+}
+
+/**
+ * 处理 GitHub 代理请求
+ * 路由：/api/github/*
+ */
+async function handleGithubProxy(request, env) {
+  try {
+    const config = getGithubConfig(env);
+    const url = new URL(request.url);
+    const method = request.method;
+
+    // 去掉 /api/github/ 前缀
+    const prefix = '/api/github/';
+    const subPath = url.pathname.slice(prefix.length);
+
+    // 读取请求体（需要时）
+    let body = null;
+    if (method !== 'GET' && method !== 'HEAD') {
+      const contentType = request.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        body = await request.text();
+      } else {
+        body = await request.text();
+      }
+    }
+
+    // 仓库所有者和仓库名：优先用 Worker Secrets 里的值
+    // 也支持前端通过 header 指定（多仓库场景），但 Token 始终来自 Secrets
+    let owner = config.owner;
+    let repo = config.repo;
+    let branch = config.branch;
+
+    // 支持通过自定义 header 覆盖 owner/repo（多仓库场景）
+    const headerOwner = request.headers.get('X-Github-Owner');
+    const headerRepo = request.headers.get('X-Github-Repo');
+    const headerBranch = request.headers.get('X-Github-Branch');
+    if (headerOwner) owner = headerOwner;
+    if (headerRepo) repo = headerRepo;
+    if (headerBranch) branch = headerBranch;
+
+    if (!owner || !repo) {
+      return jsonResponse(
+        { error: 'GitHub not configured', details: 'Set GITHUB_OWNER and GITHUB_REPO in Worker secrets, or pass X-Github-Owner and X-Github-Repo headers.' },
+        400,
+      );
+    }
+
+    // 路由分发
+    // GET /api/github/repo → 获取仓库信息
+    if (subPath === 'repo' && method === 'GET') {
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}`,
+        'GET'
+      );
+    }
+
+    // GET /api/github/contents/:path → 获取文件
+    // POST /api/github/contents/:path → 创建/更新文件
+    // DELETE /api/github/contents/:path → 删除文件
+    if (subPath.startsWith('contents/')) {
+      const path = subPath.slice('contents/'.length);
+      const ref = url.searchParams.get('ref') || branch;
+      const encodedPath = encodeURIComponent(path);
+      const apiBase = `/repos/${owner}/${repo}/contents/${encodedPath}`;
+
+      if (method === 'GET') {
+        const apiPath = `${apiBase}?ref=${encodeURIComponent(ref)}`;
+        return proxyGithubRequest(request, env, apiPath, 'GET');
+      }
+
+      if (method === 'POST' || method === 'PUT') {
+        // body: {content, message, branch?, sha?}
+        let bodyObj = {};
+        try { bodyObj = JSON.parse(body || '{}'); } catch { /* ignore */ }
+        // 确保 branch 存在
+        if (!bodyObj.branch) bodyObj.branch = branch;
+        return proxyGithubRequest(request, env, apiBase, 'PUT', bodyObj);
+      }
+
+      if (method === 'DELETE') {
+        let bodyObj = {};
+        try { bodyObj = JSON.parse(body || '{}'); } catch { /* ignore */ }
+        if (!bodyObj.branch) bodyObj.branch = branch;
+        return proxyGithubRequest(request, env, apiBase, 'DELETE', bodyObj);
+      }
+
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    // POST /api/github/issues → 创建 Issue
+    if (subPath === 'issues' && method === 'POST') {
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/issues`,
+        'POST',
+        body
+      );
+    }
+
+    // POST /api/github/blobs → 创建 blob
+    if (subPath === 'blobs' && method === 'POST') {
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/blobs`,
+        'POST',
+        body
+      );
+    }
+
+    // POST /api/github/trees → 创建 tree
+    if (subPath === 'trees' && method === 'POST') {
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/trees`,
+        'POST',
+        body
+      );
+    }
+
+    // POST /api/github/commits → 创建 commit
+    if (subPath === 'commits' && method === 'POST') {
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/commits`,
+        'POST',
+        body
+      );
+    }
+
+    // GET /api/github/git/ref/:ref → 获取 ref
+    if (subPath.startsWith('git/ref/') && method === 'GET') {
+      const ref = subPath.slice('git/ref/'.length);
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/ref/${encodeURIComponent(ref)}`,
+        'GET'
+      );
+    }
+
+    // PATCH /api/github/git/refs/:ref → 更新 ref
+    if (subPath.startsWith('git/refs/') && method === 'PATCH') {
+      const ref = subPath.slice('git/refs/'.length);
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/refs/${encodeURIComponent(ref)}`,
+        'PATCH',
+        body
+      );
+    }
+
+    // GET /api/github/commits/:sha/tree → 获取 commit tree
+    if (subPath.match(/^commits\/[a-f0-9]+\/tree$/) && method === 'GET') {
+      const sha = subPath.split('/')[1];
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/git/commits/${sha}/tree`,
+        'GET'
+      );
+    }
+
+    // POST /api/github/actions/workflows/:workflow_id/dispatches → 触发 workflow
+    if (subPath.startsWith('actions/workflows/') && subPath.endsWith('/dispatches') && method === 'POST') {
+      const workflowId = subPath.slice('actions/workflows/'.length, -'/dispatches'.length);
+      return proxyGithubRequest(
+        request, env,
+        `/repos/${owner}/${repo}/actions/workflows/${encodeURIComponent(workflowId)}/dispatches`,
+        'POST',
+        body
+      );
+    }
+
+    // GET /api/github/actions/workflows/:workflow_id/runs → 获取最近运行
+    if (subPath.match(/^actions\/workflows\/[^/]+\/runs$/) && method === 'GET') {
+      const workflowId = subPath.split('/')[2];
+      const apiPath = `/repos/${owner}/${repo}/actions/workflows/${encodeURIComponent(workflowId)}/runs?per_page=${url.searchParams.get('per_page') || '1'}`;
+      return proxyGithubRequest(request, env, apiPath, 'GET');
+    }
+
+    // 通用透传：/api/github/* → 直接转发到 api.github.com/*
+    // 兜底：任何未明确匹配的路径都直接透传
+    // 如果路径不是以 /repos/ 开头，说明前端去掉了 owner/repo 前缀，需要补回去
+    let finalSubPath = subPath;
+    if (!finalSubPath.startsWith('repos/') && !finalSubPath.startsWith('user') && !finalSubPath.startsWith('search/') && !finalSubPath.startsWith('rate_limit')) {
+      finalSubPath = `repos/${owner}/${repo}/${finalSubPath}`;
+    }
+    return proxyGithubRequest(request, env, `/${finalSubPath}`, method, body || undefined);
+
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    return jsonResponse({ error: 'GitHub proxy error', details: message }, 502);
+  }
+}
+
 // ==================== 主入口 ====================
 export default {
   async fetch(request, env) {
@@ -645,6 +941,11 @@ export default {
       }
       const pathname = url.pathname;
 
+      // 路由：GitHub API 代理
+      if (pathname.startsWith('/api/github/')) {
+        return await handleGithubProxy(request, env);
+      }
+
       // 路由：GA4 API
       if (pathname.startsWith('/api/ga4/')) {
         if (request.method === 'GET') {
@@ -662,9 +963,11 @@ export default {
       if (pathname === '/' || pathname === '/health') {
         return jsonResponse({
           status: 'ok',
-          worker: 'deepl-ga4-proxy',
+          worker: 'deepl-ga4-github-proxy',
           ga4Configured: !!(env?.GA4_PROPERTY_ID || globalThis.GA4_PROPERTY_ID),
           deeplConfigured: !!(env?.DEEPL_AUTH_KEY || globalThis.DEEPL_AUTH_KEY),
+          githubConfigured: !!(env?.GITHUB_TOKEN || globalThis.GITHUB_TOKEN),
+          githubRepo: (env?.GITHUB_OWNER && env?.GITHUB_REPO) ? `${env.GITHUB_OWNER}/${env.GITHUB_REPO}` : null,
         });
       }
 
