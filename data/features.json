@@ -4,15 +4,15 @@
       "id": "1",
       "title": {
         "en": "Direct Factory",
-        "zh": "源头工厂",
-        "es": "Fábrica directa",
-        "ja": "ダイレクトファクトリー"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
         "en": "Own manufacturing base with full production lines",
-        "zh": "拥有完整生产线的自有制造基地",
-        "es": "Base de fabricación propia con líneas de producción completas",
-        "ja": "本格的な生産ラインを備えた独自の製造拠点"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "Factory",
       "order": 1
@@ -21,15 +21,15 @@
       "id": "2",
       "title": {
         "en": "Quality Assured",
-        "zh": "质量有保证",
-        "es": "Calidad asegurada",
-        "ja": "品質保証"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
         "en": "100% QC inspection before shipment",
-        "zh": "出货前100% QC检查",
-        "es": "Inspección de control de calidad del 100% antes del envío",
-        "ja": "出荷前の100 ％ QC検査"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "ShieldCheck",
       "order": 2
@@ -38,15 +38,15 @@
       "id": "3",
       "title": {
         "en": "Global Export",
-        "zh": "全球出口",
-        "es": "Ver exportación global",
-        "ja": "グローバルエクスポート"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
         "en": "Export to 50+ countries worldwide",
-        "zh": "出口到全球50多个国家/地区",
-        "es": "La exportación a más de 50 países en todo el mundo",
-        "ja": "世界50か国以上に輸出"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "Globe",
       "order": 3
@@ -55,15 +55,15 @@
       "id": "4",
       "title": {
         "en": "Fast Delivery",
-        "zh": "闪电发货",
-        "es": "Entrega rápida",
-        "ja": "迅速な納品"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
-        "en": "35 days standard lead time",
-        "zh": "35天的标准交货期",
-        "es": "Plazo de entrega estándar de 35 días",
-        "ja": "標準納期は35日間"
+        "en": "7-15 days standard lead time",
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "Clock",
       "order": 4
@@ -72,15 +72,15 @@
       "id": "5",
       "title": {
         "en": "Custom OEM",
-        "zh": "定制OEM",
-        "es": "personalizado OEM ODM",
-        "ja": "カスタムOEM"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
         "en": "Custom logo, packaging & parameters",
-        "zh": "自定义徽标、包装和参数",
-        "es": "Logotipo, embalaje y parámetros personalizados",
-        "ja": "カスタムロゴ、パッケージ、パラメータ"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "Settings",
       "order": 5
@@ -89,15 +89,15 @@
       "id": "6",
       "title": {
         "en": "24/7 Support",
-        "zh": "全天候支持",
-        "es": "Asistencia 24 horas, 7 días a la semana",
-        "ja": "365日24時間サポート"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "description": {
         "en": "Professional after-sales service team",
-        "zh": "专业的售后服务团队",
-        "es": "• Servicio profesional de posventa.",
-        "ja": "プロフェッショナルなアフターサービスチーム"
+        "zh": "",
+        "es": "",
+        "ja": ""
       },
       "icon": "Headphones",
       "order": 6

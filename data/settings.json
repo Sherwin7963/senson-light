@@ -1,17 +1,17 @@
 {
   "adminPassword": "GAQKRwkGCVpEH1c=",
   "analytics": {
-    "gaEnabled": true,
-    "gaMeasurementId": "G-VR4Y1M20GC",
-    "ga4ApiProxyUrl": "https://deepl-proxy.sherwin7963.workers.dev",
-    "clarityEnabled": true,
-    "clarityProjectId": "yfvrrml68k"
+    "gaEnabled": false,
+    "gaMeasurementId": "",
+    "ga4ApiProxyUrl": "",
+    "clarityEnabled": false,
+    "clarityProjectId": ""
   },
   "translation": {
-    "provider": "deepl",
+    "provider": "mymemory",
     "deeplPlan": "free",
     "useCorsProxy": true,
-    "customProxyUrl": "https://deepl-proxy.sherwin7963.workers.dev"
+    "customProxyUrl": ""
   },
   "githubSync": {
     "owner": "sherwin7963",
@@ -19,7 +19,7 @@
     "branch": "main",
     "basePath": "",
     "enabled": true,
-    "workerUrl": "https://deepl-proxy.sherwin7963.workers.dev"
+    "workerUrl": ""
   },
-  "updatedAt": 1789700133390
+  "updatedAt": 1789782729470
 }
