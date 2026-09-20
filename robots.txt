@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /admin
 
 # Sitemap
-Sitemap: /sitemap.xml
+Sitemap: https://tanjeon.com/sitemap.xml
