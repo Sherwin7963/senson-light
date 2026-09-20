@@ -1,1 +1,0 @@
-import{d as e}from"./card-DY2V4Fps.js";var t=e(`chevron-down`,[[`path`,{d:`m6 9 6 6 6-6`,key:`qrunsl`}]]);export{t};
