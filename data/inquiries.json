@@ -1,36 +1,20 @@
 [
   {
-    "name": "sadf",
-    "company": "sdaf",
-    "email": "56423@qq.com",
+    "name": "sdf",
+    "company": "sdf",
+    "email": "sdaf@qq.com",
     "country": "",
     "product": "",
     "productName": "",
     "category": "all",
     "categoryName": "All Categories",
     "message": "sdf",
-    "source": "contact",
-    "createdAt": 1789780357397,
-    "id": "inq_1789780357397_j479z5",
+    "source": "home",
+    "createdAt": 1789890751641,
+    "id": "inq_1789890751641_pmne34",
     "status": "unread",
-    "githubSyncStatus": "failed",
-    "githubSyncError": "Authentication failed: Bad credentials"
-  },
-  {
-    "name": "sdf",
-    "company": "dfs",
-    "email": "221@qq.com",
-    "country": "",
-    "product": "",
-    "productName": "",
-    "category": "all",
-    "categoryName": "All Categories",
-    "message": "dfs",
-    "source": "contact",
-    "createdAt": 1789725511573,
-    "id": "inq_1789725511573_x45v4o",
-    "status": "unread",
-    "githubSyncStatus": "failed",
-    "githubSyncError": "Authentication failed: Bad credentials"
+    "githubSyncStatus": "success",
+    "githubIssueUrl": "https://github.com/Sherwin7963/senson-light/issues/33",
+    "githubIssueNumber": 33
   }
 ]

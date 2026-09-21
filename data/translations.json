@@ -4,6 +4,7 @@
       "home": "Home",
       "products": "Products",
       "news": "News",
+      "faq": "FAQ",
       "about": "About Us",
       "contact": "Contact",
       "getQuote": "Get Quote"
@@ -119,6 +120,12 @@
       "articleNotFoundDesc": "The article you are looking for does not exist or has been removed.",
       "backToNews": "Back to News",
       "noImage": "No image"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about LED sensor lights, our products and services",
+      "ctaTitle": "Still have questions?",
+      "ctaSubtitle": "Contact our team for personalized support and quick quotes"
     },
     "contact": {
       "title": "Contact Us",
@@ -383,12 +390,20 @@
         "subtitle": "Management"
       },
       "catalog": "Product Catalog",
+      "factoryVideo": "Factory Video",
       "changePasswordLabel": "Change Password",
       "githubSyncLabel": "GitHub Sync",
       "footerSettings": "Footer Settings",
       "footerSettingsDesc": "Manage footer content including contact info, certifications, and copyright",
       "privacyPolicy": "Privacy Policy",
       "privacyPolicyDesc": "Manage privacy policy content sections. Last updated:",
+      "faqs": "FAQs",
+      "faqsDesc": "Manage frequently asked questions with multi-language support",
+      "faqList": "FAQ List",
+      "addFaq": "Add FAQ",
+      "editFaq": "Edit FAQ",
+      "faqQuestion": "Question",
+      "faqAnswer": "Answer",
       "news": "News Management",
       "logout": "Logout",
       "loggedOut": "Logged out successfully",
@@ -845,7 +860,10 @@
       "privacyKeywords": "privacy policy, data protection, GDPR, LED lighting privacy, personal data",
       "newsTitle": "LED Lighting News & Industry Insights - OWELL Lighting",
       "newsDescription": "Stay updated with the latest news, product launches, and industry insights on LED motion sensor lights, solar lighting, and OEM solutions from OWELL Lighting.",
-      "newsKeywords": "LED lighting news, LED sensor light blog, industry insights, product launches, OEM lighting solutions, solar lighting news"
+      "newsKeywords": "LED lighting news, LED sensor light blog, industry insights, product launches, OEM lighting solutions, solar lighting news",
+      "faqTitle": "FAQ - LED Sensor Light Questions & Answers | OWELL Lighting",
+      "faqDescription": "Frequently asked questions about LED sensor lights, motion sensors, energy savings, OEM/ODM services and certifications. Get expert answers from OWELL Lighting.",
+      "faqKeywords": "LED sensor light FAQ, motion sensor light questions, PIR sensor FAQ, LED lighting Q&A, OEM LED FAQ, sensor light benefits"
     }
   },
   "zh": {
@@ -853,6 +871,7 @@
       "home": "首页",
       "products": "产品中心",
       "news": "新闻中心",
+      "faq": "常见问题",
       "about": "关于我们",
       "contact": "联系我们",
       "getQuote": "获取报价"
@@ -968,6 +987,12 @@
       "articleNotFoundDesc": "您正在查找的文章不存在或已被删除。",
       "backToNews": "返回新闻列表",
       "noImage": "暂无图片"
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "关于LED感应灯、产品和服务的常见问题解答",
+      "ctaTitle": "还有其他问题？",
+      "ctaSubtitle": "联系我们的团队获取专业支持和快速报价"
     },
     "contact": {
       "title": "联系我们",
@@ -1232,12 +1257,20 @@
         "subtitle": "管理后台"
       },
       "catalog": "产品目录",
+      "factoryVideo": "工厂视频",
       "changePasswordLabel": "修改密码",
       "githubSyncLabel": "GitHub同步",
       "footerSettings": "页脚设置",
       "footerSettingsDesc": "管理页脚内容，包括联系方式、认证和版权信息",
       "privacyPolicy": "隐私政策",
       "privacyPolicyDesc": "管理隐私政策内容章节。最后更新：",
+      "faqs": "常见问题",
+      "faqsDesc": "管理多语言常见问题解答内容",
+      "faqList": "问题列表",
+      "addFaq": "添加问题",
+      "editFaq": "编辑问题",
+      "faqQuestion": "问题",
+      "faqAnswer": "答案",
       "news": "新闻管理",
       "logout": "退出登录",
       "loggedOut": "已退出登录",
@@ -1693,7 +1726,10 @@
       "privacyKeywords": "隐私政策, 数据保护, GDPR, LED照明隐私, 个人数据",
       "newsTitle": "LED照明新闻与行业资讯 - OWELL照明",
       "newsDescription": "获取LED人体感应灯、太阳能照明、OEM定制等最新行业动态、产品发布和技术文章，来自OWELL照明。",
-      "newsKeywords": "LED照明新闻, LED感应灯资讯, 行业洞察, 新品发布, OEM照明方案, 太阳能照明资讯"
+      "newsKeywords": "LED照明新闻, LED感应灯资讯, 行业洞察, 新品发布, OEM照明方案, 太阳能照明资讯",
+      "faqTitle": "常见问题 - LED感应灯问答 | OWELL照明",
+      "faqDescription": "关于LED感应灯、人体传感器、节能效果、OEM/ODM服务和认证的常见问题解答。来自OWELL照明的专业解答。",
+      "faqKeywords": "LED感应灯常见问题, 人体感应灯问答, PIR传感器FAQ, LED照明问答, OEM LED常见问题, 感应灯优势"
     }
   },
   "es": {
@@ -1701,6 +1737,7 @@
       "home": "Inicio",
       "products": "Productos",
       "news": "Noticias",
+      "faq": "FAQ",
       "about": "Nosotros",
       "contact": "Contacto",
       "getQuote": "Presupuesto"
@@ -1816,6 +1853,12 @@
       "articleNotFoundDesc": "El artículo que buscas no existe o ha sido eliminado.",
       "backToNews": "Volver a noticias",
       "noImage": "Sin imagen"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Encuentra respuestas a las preguntas comunes sobre luces LED con sensor, nuestros productos y servicios",
+      "ctaTitle": "¿Aún tienes preguntas?",
+      "ctaSubtitle": "Contacta a nuestro equipo para soporte personalizado y cotizaciones rápidas"
     },
     "contact": {
       "title": "Contáctenos",
@@ -2175,6 +2218,13 @@
       "footerSettingsDesc": "Gestiona el contenido del pie de página incluyendo información de contacto, certificaciones y derechos de autor",
       "privacyPolicy": "Política de Privacidad",
       "privacyPolicyDesc": "Gestiona las secciones de contenido de la política de privacidad. Última actualización:",
+      "faqs": "Preguntas Frecuentes",
+      "faqsDesc": "Gestionar preguntas frecuentes con soporte multilingüe",
+      "faqList": "Lista de FAQs",
+      "addFaq": "Agregar FAQ",
+      "editFaq": "Editar FAQ",
+      "faqQuestion": "Pregunta",
+      "faqAnswer": "Respuesta",
       "news": "Gestión de Noticias",
       "deleteMainImageDesc": "Esta es la imagen principal. Al eliminarla, la siguiente imagen se convertirá en la nueva imagen principal. ¿Está seguro?",
       "productsManagement": "Gestión de Productos",
@@ -2520,7 +2570,10 @@
       "privacyKeywords": "política de privacidad, protección de datos, GDPR, privacidad iluminación LED, datos personales",
       "newsTitle": "Noticias de Iluminación LED y Perspectivas de la Industria - OWELL Lighting",
       "newsDescription": "Manténgase al día con las últimas noticias, lanzamientos de productos y conocimientos de la industria sobre luces LED con sensor de movimiento, iluminación solar y soluciones OEM de OWELL Lighting.",
-      "newsKeywords": "noticias iluminación LED, blog luz LED sensor, perspectivas industriales, lanzamientos de productos, soluciones de iluminación OEM, noticias de iluminación solar"
+      "newsKeywords": "noticias iluminación LED, blog luz LED sensor, perspectivas industriales, lanzamientos de productos, soluciones de iluminación OEM, noticias de iluminación solar",
+      "faqTitle": "FAQ - Preguntas y Respuestas de Luces LED con Sensor | OWELL Lighting",
+      "faqDescription": "Preguntas frecuentes sobre luces LED con sensor, sensores de movimiento, ahorro de energía, servicios OEM/ODM y certificaciones. Obtenga respuestas expertas de OWELL Lighting.",
+      "faqKeywords": "FAQ luces LED sensor, preguntas luz sensor movimiento, FAQ sensor PIR, preguntas y respuestas LED, FAQ LED OEM, beneficios luz con sensor"
     },
     "privacy": {
       "title": "Política de Privacidad",
@@ -2549,6 +2602,7 @@
       "home": "ホーム",
       "products": "製品",
       "news": "ニュース",
+      "faq": "よくある質問",
       "about": "会社情報",
       "contact": "お問い合わせ",
       "getQuote": "見積もり"
@@ -2664,6 +2718,12 @@
       "articleNotFoundDesc": "お探しの記事は存在しないか、削除されました。",
       "backToNews": "ニュースに戻る",
       "noImage": "画像なし"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "subtitle": "LEDセンサーライト、製品、サービスに関するよくあるご質問への回答",
+      "ctaTitle": "ご質問はありますか？",
+      "ctaSubtitle": "専門チームにお問い合わせください。迅速にお見積もりいたします"
     },
     "contact": {
       "title": "お問い合わせ",
@@ -3023,6 +3083,13 @@
       "footerSettingsDesc": "連絡先情報、認定、著作権を含むフッターコンテンツを管理します",
       "privacyPolicy": "プライバシーポリシー",
       "privacyPolicyDesc": "プライバシーポリシーのコンテンツセクションを管理します。最終更新日：",
+      "faqs": "よくある質問",
+      "faqsDesc": "多言語対応のFAQコンテンツを管理",
+      "faqList": "FAQリスト",
+      "addFaq": "FAQを追加",
+      "editFaq": "FAQを編集",
+      "faqQuestion": "質問",
+      "faqAnswer": "回答",
       "news": "ニュース管理",
       "deleteMainImageDesc": "これはメイン画像です。削除すると次の画像が新しいメイン画像になります。よろしいですか？",
       "productsManagement": "製品管理",
@@ -3389,7 +3456,10 @@
       "privacyKeywords": "プライバシーポリシー, データ保護, GDPR, LED照明プライバシー, 個人データ",
       "newsTitle": "LED照明ニュース & 業界インサイト - OWELL Lighting",
       "newsDescription": "LED人感センサーライト、ソーラー照明、OEMソリューションに関する最新ニュース、製品発売、業界の洞察をOWELL Lightingからお届けします。",
-      "newsKeywords": "LED照明ニュース, LEDセンサーライトブログ, 業界インサイト, 製品発売, OEM照明ソリューション, ソーラー照明ニュース"
+      "newsKeywords": "LED照明ニュース, LEDセンサーライトブログ, 業界インサイト, 製品発売, OEM照明ソリューション, ソーラー照明ニュース",
+      "faqTitle": "よくある質問 - LEDセンサーライトQ&A | OWELL Lighting",
+      "faqDescription": "LEDセンサーライト、人感センサー、省エネ効果、OEM/ODMサービス、認証に関するよくある質問。OWELL Lightingからの専門的な回答をご覧ください。",
+      "faqKeywords": "LEDセンサーライトFAQ, 人感センサーライト質問, PIRセンサーFAQ, LED照明Q&A, OEM LED FAQ, センサーライトの利点"
     }
   }
 }
