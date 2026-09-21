@@ -1,60 +1,107 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | OWELL Industrial</title>
-    <script>
-      // GitHub Pages SPA fallback for BrowserRouter (History API)
-      // 原理：把 404 时的完整路径存入 sessionStorage，然后重定向到站点根 index.html
-      // React 应用启动后从 sessionStorage 读取路径并通过 history.replaceState 恢复
-      // 这样 URL 保持干净（没有 #），BrowserRouter 能正确识别路由
-      //
-      // 修复 v133：
-      // - 深层路径（如 /admin/dashboard）下，相对路径 './' 会解析到父目录 /admin/
-      //   而不是站点根，导致二次 404、sessionStorage 被覆盖、路径丢失、反复跳转
-      // - 改为：根据当前路径深度动态计算返回站点根所需的 ../ 层数
-      //   /products → 0 层 ../ → ./
-      //   /admin/dashboard → 1 层 ../ → ../
-      //   /repo-name/admin/dashboard → 2 层 ../ → ../../
-      // - 根域名部署和子路径部署（GitHub Pages 项目页）都能正确回到 index.html
-      (function () {
-        var path = window.location.pathname + window.location.search + window.location.hash;
-        try {
-          sessionStorage.setItem('spa-redirect', path);
-        } catch (e) {
-          // sessionStorage 不可用时降级为 hash 方式
-          window.location.replace('./#' + path);
-          return;
-        }
+<!doctype html><html lang="en"><head><script>(function(){
+  var needsPolyfill=(function(){
+    try{
+      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
+      if(typeof Object.hasOwn!=="function")return true;
+      if(typeof[].at!=="function")return true;
+      if(typeof[].findLast!=="function")return true;
+      return false;
+    }catch(e){return true}
+  })();
+  if(needsPolyfill){
+    document.write('<script src="./assets/polyfills.js"><\/script>');
+  }
+})();</script><script>window.appId = "";
+    window.userId = "";
+    window.tenantId = "";
+    window.userName = "";
+    window.csrfToken = "";
+    window.ENVIRONMENT = "production";
+    window.__BASENAME__ = "/";
+    const appInfo = {
+      name: "OWELL Industrial",
+      avatar: "./favicon.png",
+      description: "OWELL Industrial - LED Sensor Light Manufacturer",
+    };
+    if (appInfo.name) {
+      window._appInfo = appInfo;
+    }</script><script>(function(g){
+  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
+  window.__slardarErrBuf=window.__slardarErrBuf||[];
+  var ref=document.referrer||'';
+  function _cap(err){
+    if(window[g]&&!window[g].q){
+      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
+    }else{
+      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
+    }
+  }
+  window.addEventListener('error',function(e){
+    if(e.error==null&&e.target instanceof Element){
+      var t=e.target,url=t.src||t.href||'';
+      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
+      return;
+    }
+    if(e.error!=null){
+      var err=e.error;
+      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
+        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
+      }
+      _cap(err);
+    }else{
+      var msg=e.message||'Script error';
+      var err=new Error(msg);
+      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
+      _cap(err);
+    }
+  },true);
+  window.addEventListener('unhandledrejection',function(e){
+    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
+  });
+})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
+    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
+    slardarScript.crossOrigin = 'anonymous';
+    slardarScript.onload = function() {
+      if (window.KSlardarWeb) {
+        window.KSlardarWeb('context.merge', {
+          tenantId: window.tenantId ?? '',
+          appId: window.appId ?? '',
+          stack_version: "0.1.0",
+          app_type: 6,
+          arch_type: 2,
+        });
+        window.KSlardarWeb('init', {
+          bid: 'apaas_miaoda',
+          env: window.ENVIRONMENT || 'online',
+          userId: window.userId ?? '',
+        });
+        window.KSlardarWeb('start');
+        // Flush errors captured before the SDK finished loading
+        var buf = window.__slardarErrBuf || [];
+        window.__slardarErrBuf = [];
+        buf.forEach(function(err) {
+          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
+        });
+      }
+    };
+    slardarScript.onerror = function() {
+      console.warn('Failed to load Slardar script');
+    };
+    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" crossorigin="anonymous" defer="defer"></script><script>(function (win, export_obj) {
+    win['LogAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+      function _collect() { _collect.q.push(arguments); }
+      _collect.q = _collect.q || [];
+      win[export_obj] = _collect;
+    }
+    win[export_obj].l = +new Date();
+  })(window, 'collectEvent');
 
-        // 根据路径深度计算返回站点根的相对路径
-        // 浏览器解析相对路径时，以「最后一个 / 之前的部分」为基准目录
-        //   /products → 基准目录 / → 深度 0 → ./
-        //   /admin/dashboard → 基准目录 /admin/ → 深度 1 → ../
-        //   /admin/ → 基准目录 /admin/ → 深度 1 → ../
-        //   /repo/admin/dashboard → 基准目录 /repo/admin/ → 深度 2 → ../../
-        var pathname = window.location.pathname;
-        var lastSlashIdx = pathname.lastIndexOf('/');
-        var baseDir = pathname.substring(0, lastSlashIdx + 1);
-        var depth = baseDir.split('/').filter(Boolean).length;
-
-        var rootPath;
-        if (depth === 0) {
-          rootPath = './';
-        } else {
-          rootPath = '';
-          for (var i = 0; i < depth; i++) {
-            rootPath += '../';
-          }
-        }
-
-        window.location.replace(rootPath);
-      })();
-    </script>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
-</html>
+  const teaScript = document.createElement('script');
+  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
+  teaScript.crossOrigin = 'anonymous';
+  teaScript.async = true;
+  teaScript.onerror = function() {
+    console.warn('Failed to load Tea script');
+  };
+  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*="position:fixed"][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*="position:fixed"][style*=bottom],doubao-watermark,doubao-watermark /deep/,doubao-watermark-mobile,doubao-watermark::shadow,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;z-index:-999999!important;position:absolute!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;font-size:0!important;line-height:0!important;padding:0!important;margin:0!important;border:none!important;background:0 0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important}body>[style*="position:fixed"]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><script type="module" crossorigin src="./assets/index-CTRSLNAm.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" crossorigin href="./assets/radix-CZyrmWVq.js"><link rel="modulepreload" crossorigin href="./assets/toolkit-BR6i9DFh.js"><link rel="modulepreload" crossorigin href="./assets/card-CptAvMQu.js"><link rel="modulepreload" crossorigin href="./assets/users-hZk1N_S_.js"><link rel="modulepreload" crossorigin href="./assets/dist-CdQjqD3X.js"><link rel="modulepreload" crossorigin href="./assets/github-api-DdJpMbJX.js"><link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-7hvOuJ0u.js"><link rel="modulepreload" crossorigin href="./assets/useGithubConfig-DfWjyb1L.js"><link rel="modulepreload" crossorigin href="./assets/i18n-text-DXaoBAix.js"><link rel="modulepreload" crossorigin href="./assets/remote-data-safe-Bfsqz-6x.js"><link rel="modulepreload" crossorigin href="./assets/useFeatures-DVZPV0Or.js"><link rel="modulepreload" crossorigin href="./assets/arrow-up-C-DdcWnp.js"><link rel="modulepreload" crossorigin href="./assets/award-Cm2qdYHj.js"><link rel="modulepreload" crossorigin href="./assets/undo-noUgpwAU.js"><link rel="modulepreload" crossorigin href="./assets/book-open-LayVvHam.js"><link rel="modulepreload" crossorigin href="./assets/building-2-UBG3uaFq.js"><link rel="modulepreload" crossorigin href="./assets/user-C8PAEIC_.js"><link rel="modulepreload" crossorigin href="./assets/info-DGDEFB6p.js"><link rel="modulepreload" crossorigin href="./assets/chevron-down-B_jOB6IT.js"><link rel="modulepreload" crossorigin href="./assets/chevron-up-Dc0nb5uZ.js"><link rel="modulepreload" crossorigin href="./assets/select-BoHd-vea.js"><link rel="modulepreload" crossorigin href="./assets/chevron-left-Bvzw2rzo.js"><link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-BkX_1aX8.js"><link rel="modulepreload" crossorigin href="./assets/circle-alert-CJtXaBko.js"><link rel="modulepreload" crossorigin href="./assets/circle-check-czHK5mb3.js"><link rel="modulepreload" crossorigin href="./assets/circle-question-mark-B7RKzt_e.js"><link rel="modulepreload" crossorigin href="./assets/github-pKfJcj7O.js"><link rel="modulepreload" crossorigin href="./assets/clock-gI010R58.js"><link rel="modulepreload" crossorigin href="./assets/textarea-tnghOsi9.js"><link rel="modulepreload" crossorigin href="./assets/key-D9UPHVoZ.js"><link rel="modulepreload" crossorigin href="./assets/share-2-DOUXy2tX.js"><link rel="modulepreload" crossorigin href="./assets/zoom-in-D189-V-5.js"><link rel="modulepreload" crossorigin href="./assets/external-link-BF2l0Y18.js"><link rel="modulepreload" crossorigin href="./assets/eye-off-CoRy9TIk.js"><link rel="modulepreload" crossorigin href="./assets/eye-D1No756c.js"><link rel="modulepreload" crossorigin href="./assets/file-text-1Mwqd_n8.js"><link rel="modulepreload" crossorigin href="./assets/volume-x-qWgIewiM.js"><link rel="modulepreload" crossorigin href="./assets/rotate-ccw-BwKd04Md.js"><link rel="modulepreload" crossorigin href="./assets/globe-QWxIBlPv.js"><link rel="modulepreload" crossorigin href="./assets/grip-vertical-Dqxr-Vr_.js"><link rel="modulepreload" crossorigin href="./assets/tablet-5X_3ROEM.js"><link rel="modulepreload" crossorigin href="./assets/move-up-C5kgCb8P.js"><link rel="modulepreload" crossorigin href="./assets/image-CoH4ktTt.js"><link rel="modulepreload" crossorigin href="./assets/key-round-CltkkCa7.js"><link rel="modulepreload" crossorigin href="./assets/languages-BjGyEkZ-.js"><link rel="modulepreload" crossorigin href="./assets/zap-Dw_vg2-j.js"><link rel="modulepreload" crossorigin href="./assets/loader-circle-BO99KuOC.js"><link rel="modulepreload" crossorigin href="./assets/lock-CLKCOPaD.js"><link rel="modulepreload" crossorigin href="./assets/mail-DifRgIR5.js"><link rel="modulepreload" crossorigin href="./assets/package-CSrzkko9.js"><link rel="modulepreload" crossorigin href="./assets/pen-BS-vnVCW.js"><link rel="modulepreload" crossorigin href="./assets/play-DDyM4quc.js"><link rel="modulepreload" crossorigin href="./assets/plus-CGrEo0uS.js"><link rel="modulepreload" crossorigin href="./assets/refresh-cw-CQ_Kovu9.js"><link rel="modulepreload" crossorigin href="./assets/save-3Cl-Efz1.js"><link rel="modulepreload" crossorigin href="./assets/search-CbzjBULm.js"><link rel="modulepreload" crossorigin href="./assets/server-BE_XYw3j.js"><link rel="modulepreload" crossorigin href="./assets/settings-BKWb3hKQ.js"><link rel="modulepreload" crossorigin href="./assets/shield-check-er6eIvyO.js"><link rel="modulepreload" crossorigin href="./assets/shield-9y5tfD8d.js"><link rel="modulepreload" crossorigin href="./assets/sparkles-BxSkP5QD.js"><link rel="modulepreload" crossorigin href="./assets/star-Dhfnbjxd.js"><link rel="modulepreload" crossorigin href="./assets/tag-DsRfEqdM.js"><link rel="modulepreload" crossorigin href="./assets/target-DoCfi4sF.js"><link rel="modulepreload" crossorigin href="./assets/trash-2-DmMLB6aW.js"><link rel="modulepreload" crossorigin href="./assets/triangle-alert-DZNoLec5.js"><link rel="modulepreload" crossorigin href="./assets/upload-C0C0nLdx.js"><link rel="modulepreload" crossorigin href="./assets/wrench-DPoaVvA_.js"><link rel="modulepreload" crossorigin href="./assets/x-DinGIPaX.js"><link rel="modulepreload" crossorigin href="./assets/lucide-react-nAV0BuNA.js"><link rel="modulepreload" crossorigin href="./assets/basename-Dt-pei6p.js"><link rel="modulepreload" crossorigin href="./assets/img-path-SfVdijr5.js"><link rel="modulepreload" crossorigin href="./assets/useGithubSync-DT8Q9lf2.js"><link rel="modulepreload" crossorigin href="./assets/input-CXHEb8Lf.js"><link rel="modulepreload" crossorigin href="./assets/format-BcGSa_Z5.js"><link rel="modulepreload" crossorigin href="./assets/proxy-CCbD-08D.js"><link rel="modulepreload" crossorigin href="./assets/indexed-db-BZ-bJ55N.js"><link rel="modulepreload" crossorigin href="./assets/useProducts-CCTsqOLB.js"><link rel="modulepreload" crossorigin href="./assets/useCategories-B-vIRI_H.js"><link rel="modulepreload" crossorigin href="./assets/image-compress-7G1Sv7zJ.js"><link rel="modulepreload" crossorigin href="./assets/useFactoryVideo-CsD0kR28.js"><link rel="stylesheet" crossorigin href="./assets/index-BC-CqYMR.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta property="og:image" content=""><link rel="icon" href=""></head><body><div id="root"></div></body></html>
