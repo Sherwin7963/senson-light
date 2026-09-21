@@ -1,0 +1,186 @@
+{
+  "global": {
+    "siteName": {
+      "en": "OWELL Industrial - LED Sensor Light Manufacturer",
+      "zh": "OWELL实业 - LED感应灯制造商",
+      "es": "OWELL Industrial - Fabricante de Luces LED con Sensor",
+      "ja": "OWELL Industrial - LEDセンサーライトメーカー"
+    },
+    "metaDescription": {
+      "en": "Professional LED sensor light manufacturer in China. Factory direct supply of AC, solar, battery, and hybrid LED motion sensor lights for commercial and industrial use.",
+      "zh": "中国专业LED感应灯制造商。工厂直供交流、太阳能、电池和混合式LED人体感应灯，适用于商业和工业用途。",
+      "es": "Fabricante profesional de luces LED con sensor en China. Suministro directo de fábrica de luces LED con sensor de movimiento de CA, solar, batería e híbridas para uso comercial e industrial.",
+      "ja": "中国のプロフェッショナルLEDセンサーライトメーカー。商業・産業用AC、ソーラー、電池、ハイブリッドLEDモーションセンサーライトの工場直送。"
+    },
+    "metaKeywords": {
+      "en": "LED sensor light, PIR motion sensor, solar LED light, LED flood light, outdoor lighting, LED manufacturer China",
+      "zh": "LED感应灯, PIR人体感应, 太阳能LED灯, LED投光灯, 户外照明, 中国LED制造商",
+      "es": "luz LED con sensor, sensor de movimiento PIR, luz LED solar, foco LED, iluminación exterior, fabricante LED China",
+      "ja": "LEDセンサーライト, PIRモーションセンサー, ソーラーLEDライト, LED投光器, 屋外照明, 中国LEDメーカー"
+    },
+    "ogImage": "/images/factory-assembly.jpg",
+    "twitterImage": "/images/factory-assembly.jpg"
+  },
+  "pages": {
+    "home": {
+      "title": {
+        "en": "OWELL Industrial - Professional LED Sensor Light Manufacturer",
+        "zh": "OWELL实业 - 专业LED感应灯制造商",
+        "es": "OWELL Industrial - Fabricante Profesional de Luces LED con Sensor",
+        "ja": "OWELL Industrial - プロフェッショナルLEDセンサーライトメーカー"
+      },
+      "description": {
+        "en": "High quality LED sensor lights direct from factory. Solar, AC, battery and hybrid options. CE & RoHS certified. 10+ years manufacturing experience.",
+        "zh": "工厂直供高品质LED感应灯。太阳能、交流、电池和混合式可选。CE & RoHS认证。10年以上制造经验。",
+        "es": "Luces LED con sensor de alta calidad directamente de fábrica. Opciones solar, CA, batería e híbrida. Certificadas CE y RoHS. Más de 10 años de experiencia en fabricación.",
+        "ja": "工場直送の高品質LEDセンサーライト。ソーラー、AC、電池、ハイブリッドから選べます。CE & RoHS認証。10年以上の製造経験。"
+      },
+      "keywords": {
+        "en": "LED sensor light, motion sensor LED, solar sensor light, outdoor LED lighting, China LED factory",
+        "zh": "LED感应灯, 人体感应LED, 太阳能感应灯, 户外LED照明, 中国LED工厂",
+        "es": "luz LED con sensor, LED con sensor de movimiento, luz solar con sensor, iluminación LED exterior, fábrica LED China",
+        "ja": "LEDセンサーライト, モーションセンサーLED, ソーラーセンサーライト, 屋外LED照明, 中国LED工場"
+      }
+    },
+    "products": {
+      "title": {
+        "en": "Products - LED Sensor Light Series | OWELL Industrial",
+        "zh": "产品中心 - LED感应灯系列 | OWELL实业",
+        "es": "Productos - Serie de Luces LED con Sensor | OWELL Industrial",
+        "ja": "製品 - LEDセンサーライトシリーズ | OWELL Industrial"
+      },
+      "description": {
+        "en": "Browse our complete range of LED sensor lights: AC powered, solar, battery operated, rechargeable, hybrid and work light series. Factory direct pricing.",
+        "zh": "浏览我们全系列LED感应灯：交流电、太阳能、电池式、可充电、混合式和工作灯系列。工厂直销价。",
+        "es": "Explore nuestra gama completa de luces LED con sensor: corriente alterna, solar, a batería, recargable, híbrida y serie de luces de trabajo. Precios directos de fábrica.",
+        "ja": "AC電源、ソーラー、電池式、充電式、ハイブリッド、ワークライトシリーズのフルラインナップをご覧ください。工場直送価格。"
+      },
+      "keywords": {
+        "en": "LED sensor light products, solar LED light, PIR sensor light, outdoor security lighting, wholesale LED lights",
+        "zh": "LED感应灯产品, 太阳能LED灯, PIR感应灯, 户外安防照明, LED灯批发",
+        "es": "productos de luz LED con sensor, luz LED solar, luz con sensor PIR, iluminación de seguridad exterior, luces LED al por mayor",
+        "ja": "LEDセンサーライト製品, ソーラーLEDライト, PIRセンサーライト, 屋外防犯照明, LEDライト卸売"
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Us - OWELL Industrial LED Lighting Manufacturer",
+        "zh": "关于我们 - OWELL实业LED照明制造商",
+        "es": "Sobre Nosotros - OWELL Industrial Fabricante de Iluminación LED",
+        "ja": "会社概要 - OWELL Industrial LED照明メーカー"
+      },
+      "description": {
+        "en": "Learn about OWELL Industrial - 10+ years LED sensor light manufacturing experience, 20000㎡ factory, CE/RoHS certified, OEM/ODM services available.",
+        "zh": "了解OWELL实业 - 10年以上LED感应灯制造经验，20000㎡工厂，CE/RoHS认证，提供OEM/ODM服务。",
+        "es": "Conozca OWELL Industrial - más de 10 años de experiencia en fabricación de luces LED con sensor, fábrica de 20000㎡, certificada CE/RoHS, servicios OEM/ODM disponibles.",
+        "ja": "OWELL Industrialについて - 10年以上のLEDセンサーライト製造経験、20,000㎡の工場、CE/RoHS認証、OEM/ODMサービス対応。"
+      },
+      "keywords": {
+        "en": "LED manufacturer China, LED factory, OEM LED lighting, about OWELL, industrial lighting company",
+        "zh": "中国LED制造商, LED工厂, OEM LED照明, OWELL简介, 工业照明公司",
+        "es": "fabricante LED China, fábrica LED, iluminación LED OEM, sobre OWELL, empresa de iluminación industrial",
+        "ja": "中国LEDメーカー, LED工場, OEM LED照明, OWELLについて, 産業用照明会社"
+      }
+    },
+    "contact": {
+      "title": {
+        "en": "Contact Us - Get a Quote | OWELL Industrial",
+        "zh": "联系我们 - 获取报价 | OWELL实业",
+        "es": "Contáctenos - Solicite una Cotización | OWELL Industrial",
+        "ja": "お問い合わせ - 見積もり依頼 | OWELL Industrial"
+      },
+      "description": {
+        "en": "Contact OWELL Industrial for LED sensor light quotations, OEM customization, or any product inquiries. Fast response within 12 hours.",
+        "zh": "联系OWELL实业获取LED感应灯报价、OEM定制或任何产品咨询。12小时内快速回复。",
+        "es": "Contacte a OWELL Industrial para cotizaciones de luces LED con sensor, personalización OEM o cualquier consulta de producto. Respuesta rápida en 12 horas.",
+        "ja": "LEDセンサーライトの見積もり、OEMカスタマイズ、製品に関するお問い合わせはOWELL Industrialまで。12時間以内に迅速対応。"
+      },
+      "keywords": {
+        "en": "contact LED supplier, LED light quote, OEM LED inquiry, China LED factory contact",
+        "zh": "联系LED供应商, LED灯报价, OEM LED询价, 中国LED工厂联系",
+        "es": "contactar proveedor LED, cotización de luz LED, consulta LED OEM, contacto fábrica LED China",
+        "ja": "LEDサプライヤー連絡先, LEDライト見積もり, OEM LED問い合わせ, 中国LED工場連絡先"
+      }
+    },
+    "privacy": {
+      "title": {
+        "en": "Privacy Policy | OWELL Industrial",
+        "zh": "隐私政策 | OWELL实业",
+        "es": "Política de Privacidad | OWELL Industrial",
+        "ja": "プライバシーポリシー | OWELL Industrial"
+      },
+      "description": {
+        "en": "Read our privacy policy to understand how we collect, use, and protect your personal data at OWELL Industrial.",
+        "zh": "阅读我们的隐私政策，了解OWELL实业如何收集、使用和保护您的个人数据。",
+        "es": "Lea nuestra política de privacidad para entender cómo recopilamos, usamos y protegemos sus datos personales en OWELL Industrial.",
+        "ja": "OWELL Industrialにおける個人データの収集、使用、保護方法については、プライバシーポリシーをご覧ください。"
+      },
+      "keywords": {
+        "en": "privacy policy, data protection, GDPR, personal data LED company",
+        "zh": "隐私政策, 数据保护, GDPR, LED公司个人数据",
+        "es": "política de privacidad, protección de datos, GDPR, datos personales empresa LED",
+        "ja": "プライバシーポリシー, データ保護, GDPR, 個人データ LED会社"
+      }
+    },
+    "product-detail": {
+      "title": {
+        "en": "LED Sensor Light Product Details | OWELL Industrial",
+        "zh": "LED感应灯产品详情 | OWELL实业",
+        "es": "Detalles del Producto de Luz LED con Sensor | OWELL Industrial",
+        "ja": "LEDセンサーライト 製品詳細 | OWELL Industrial"
+      },
+      "description": {
+        "en": "Detailed specifications, features and applications of our professional LED infrared sensor lights. View product images, technical parameters and OEM customization options.",
+        "zh": "专业LED红外感应灯的详细规格、功能和应用。查看产品图片、技术参数和OEM定制选项。",
+        "es": "Especificaciones detalladas, características y aplicaciones de nuestras luces LED con sensor infrarrojo profesionales. Vea imágenes del producto, parámetros técnicos y opciones de personalización OEM.",
+        "ja": "プロフェッショナルLED赤外線センサーライトの詳細仕様、機能、用途。製品画像、技術パラメータ、OEMカスタマイズオプションをご覧ください。"
+      },
+      "keywords": {
+        "en": "LED sensor light specs, PIR motion light details, technical specifications, LED product datasheet, infrared sensor lamp",
+        "zh": "LED感应灯参数, PIR感应灯详情, 技术规格, LED产品规格书, 红外感应灯",
+        "es": "especificaciones luz LED sensor, detalles luz sensor PIR, especificaciones técnicas, ficha técnica LED, lámpara sensor infrarrojo",
+        "ja": "LEDセンサーライト仕様, PIRモーションライト詳細, 技術仕様, LED製品データシート, 赤外線センサーランプ"
+      }
+    },
+    "news": {
+      "title": {
+        "en": "News & Blog - LED Lighting Industry Insights | OWELL Industrial",
+        "zh": "新闻与博客 - LED照明行业资讯 | OWELL实业",
+        "es": "Noticias y Blog - Tendencias de la Industria LED | OWELL Industrial",
+        "ja": "ニュース & ブログ - LED照明業界インサイト | OWELL Industrial"
+      },
+      "description": {
+        "en": "Latest news and updates from OWELL Industrial. LED lighting industry insights, product launches, technology articles, and OEM manufacturing knowledge.",
+        "zh": "OWELL实业最新新闻和动态。LED照明行业洞察、产品发布、技术文章和OEM制造知识。",
+        "es": "Últimas noticias y actualizaciones de OWELL Industrial. Tendencias de la industria LED, lanzamientos de productos, artículos tecnológicos y conocimientos de fabricación OEM.",
+        "ja": "OWELL Industrialからの最新ニュースとアップデート。LED照明業界の洞察、製品発売、技術記事、OEM製造知識。"
+      },
+      "keywords": {
+        "en": "LED news, lighting industry, LED technology blog, product updates, solar lighting news, OEM LED manufacturing",
+        "zh": "LED新闻, 照明行业, LED技术博客, 产品更新, 太阳能照明新闻, OEM LED制造",
+        "es": "noticias LED, industria iluminación, blog tecnología LED, actualizaciones productos, noticias iluminación solar, fabricación LED OEM",
+        "ja": "LEDニュース, 照明業界, LED技術ブログ, 製品アップデート, ソーラー照明ニュース, OEM LED製造"
+      }
+    },
+    "news-detail": {
+      "title": {
+        "en": "Article | OWELL Industrial LED Lighting Blog",
+        "zh": "文章 | OWELL实业LED照明博客",
+        "es": "Artículo | Blog de Iluminación LED OWELL Industrial",
+        "ja": "記事 | OWELL Industrial LED照明ブログ"
+      },
+      "description": {
+        "en": "Read the latest articles on LED sensor lighting technology, industry trends, solar lighting solutions and OEM manufacturing insights from OWELL Industrial.",
+        "zh": "阅读OWELL实业关于LED感应灯技术、行业趋势、太阳能照明方案和OEM制造洞察的最新文章。",
+        "es": "Lea los últimos artículos sobre tecnología de iluminación LED con sensor, tendencias de la industria, soluciones de iluminación solar y conocimientos de fabricación OEM de OWELL Industrial.",
+        "ja": "OWELL IndustrialのLEDセンサー照明技術、業界動向、ソーラー照明ソリューション、OEM製造インサイトに関する最新記事をお読みください。"
+      },
+      "keywords": {
+        "en": "LED lighting article, sensor light technology, industry news, LED blog post",
+        "zh": "LED照明文章, 感应灯技术, 行业新闻, LED博客文章",
+        "es": "artículo iluminación LED, tecnología luz sensor, noticias industria, entrada blog LED",
+        "ja": "LED照明記事, センサーライト技術, 業界ニュース, LEDブログ記事"
+      }
+    }
+  }
+}

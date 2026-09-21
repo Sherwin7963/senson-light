@@ -1,0 +1,321 @@
+[
+  {
+    "id": "prod_1",
+    "slug": "solar-led-sensor-flood-light-50w",
+    "model": "OWL-SF-50W",
+    "productCode": "OWL-SF-50W",
+    "categoryId": "cat_solar",
+    "name": {
+      "en": "50W Solar LED Sensor Flood Light",
+      "zh": "50W太阳能LED感应投光灯",
+      "es": "Foco LED Solar con Sensor de 50W",
+      "ja": "50WソーラーLEDセンサー投光器"
+    },
+    "shortDescription": {
+      "en": "High brightness 50W solar flood light with PIR motion sensor, IP66 waterproof, 20000mAh battery.",
+      "zh": "高亮度50W太阳能投光灯，带PIR人体感应，IP66防水，20000mAh电池。",
+      "es": "Foco solar de alto brillo de 50W con sensor de movimiento PIR, impermeable IP66, batería de 20000mAh.",
+      "ja": "高輝度50Wソーラー投光器、PIRモーションセンサー付き、IP66防水、20000mAhバッテリー。"
+    },
+    "description": {
+      "en": "The OWL-SF-50W is a high-performance solar-powered LED flood light equipped with an advanced PIR motion sensor. Featuring 50W high-brightness LED output, a 6V 10W monocrystalline solar panel, and a large capacity 20000mAh LiFePO4 battery, this light provides reliable outdoor security lighting with zero electricity cost.\n\nWith IP66 waterproof rating, it can withstand various weather conditions including heavy rain and snow. The adjustable mounting bracket allows for flexible installation on walls, poles, or ceilings. Three working modes (auto/dim/always-on) meet different usage scenarios.",
+      "zh": "OWL-SF-50W是一款高性能太阳能LED投光灯，配备先进的PIR人体感应传感器。具有50W高亮度LED输出、6V 10W单晶硅太阳能板和大容量20000mAh磷酸铁锂电池，提供可靠的户外安防照明，零电费成本。\n\nIP66防水等级，可承受暴雨、大雪等各种天气条件。可调节安装支架支持墙壁、灯杆或天花板等多种灵活安装方式。三种工作模式（自动/微亮/常亮）满足不同使用场景。",
+      "es": "El OWL-SF-50W es un foco LED solar de alto rendimiento equipado con un avanzado sensor de movimiento PIR. Con salida LED de alto brillo de 50W, panel solar monocristalino de 6V 10W y batería LiFePO4 de gran capacidad de 20000mAh, esta luz proporciona iluminación de seguridad exterior confiable con costo cero de electricidad.\n\nCon clasificación de impermeabilidad IP66, puede soportar diversas condiciones climáticas incluyendo lluvia intensa y nieve. El soporte de montaje ajustable permite una instalación flexible en paredes, postes o techos. Tres modos de trabajo (automático/tenue/siempre encendido) satisfacen diferentes escenarios de uso.",
+      "ja": "OWL-SF-50Wは、高度なPIRモーションセンサーを搭載した高性能ソーラーLED投光器です。50W高輝度LED出力、6V 10W単結晶ソーラーパネル、大容量20000mAhリン酸鉄リチウム電池を搭載し、電気代ゼロで信頼性の高い屋外防犯照明を提供します。\n\nIP66防水規格により、大雨や雪などさまざまな気象条件に耐えることができます。調整可能な取付ブラケットにより、壁、ポール、天井など柔軟な設置が可能です。3つの動作モード（オート/減光/常時点灯）でさまざまな使用シナリオに対応します。"
+    },
+    "images": ["/images/product-1.jpg", "/images/product-2.jpg", "/images/product-3.jpg"],
+    "mainImage": "/images/product-1.jpg",
+    "specs": [
+      { "key": "Power", "value": "50W" },
+      { "key": "Solar Panel", "value": "6V 10W Monocrystalline" },
+      { "key": "Battery", "value": "3.2V 20000mAh LiFePO4" },
+      { "key": "LED Source", "value": "2835 SMD x 180pcs" },
+      { "key": "Color Temperature", "value": "6500K (Cool White)" },
+      { "key": "Motion Sensor", "value": "PIR, 8-12m Range, 120° Angle" },
+      { "key": "Waterproof", "value": "IP66" },
+      { "key": "Charging Time", "value": "6-8 hours (sunny)" },
+      { "key": "Working Time", "value": "8-12 hours (sensor mode)" },
+      { "key": "Material", "value": "ABS + PC" },
+      { "key": "Working Modes", "value": "Auto / Dim / Always-on" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "50 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "2 years", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS, FCC", "icon": "award" },
+      { "id": "cf4", "key": "OEM Logo", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["solar", "flood light", "PIR sensor", "outdoor", "waterproof"],
+    "price": 0,
+    "isHot": true,
+    "isNew": true,
+    "sortOrder": 1,
+    "published": true,
+    "createdAt": 1714521600000,
+    "updatedAt": 1717200000000
+  },
+  {
+    "id": "prod_2",
+    "slug": "ac-powered-led-sensor-wall-light-30w",
+    "model": "OWL-AW-30W",
+    "productCode": "OWL-AW-30W",
+    "categoryId": "cat_ac",
+    "name": {
+      "en": "30W AC Powered LED Sensor Wall Light",
+      "zh": "30W交流电LED感应壁灯",
+      "es": "Lámpara de Pared LED con Sensor de 30W AC",
+      "ja": "30W AC電源LEDセンサー壁灯"
+    },
+    "shortDescription": {
+      "en": "30W AC powered LED wall light with PIR motion sensor, IP54 waterproof, ideal for corridors, stairwells, and parking areas.",
+      "zh": "30W交流电LED壁灯，带PIR人体感应，IP54防水，适用于走廊、楼梯间和停车场。",
+      "es": "Lámpara de pared LED de 30W con corriente alterna y sensor de movimiento PIR, impermeable IP54, ideal para pasillos, escaleras y estacionamientos.",
+      "ja": "30W AC電源LED壁灯、PIRモーションセンサー付き、IP54防水、廊下、階段、駐車場に最適。"
+    },
+    "description": {
+      "en": "The OWL-AW-30W is a commercial-grade AC-powered LED wall light with built-in PIR motion sensor. Designed for continuous operation in high-traffic areas like corridors, stairwells, parking garages, and building exteriors.\n\nWith 30W high-efficiency LED output, it delivers bright, uniform illumination while consuming minimal energy. The integrated PIR sensor automatically turns the light on when motion is detected and switches to standby mode after a customizable timeout period. IP54 water and dust resistance ensures reliable performance in semi-outdoor environments.",
+      "zh": "OWL-AW-30W是一款商用级交流电LED壁灯，内置PIR人体感应传感器。专为走廊、楼梯间、停车场和建筑外墙等人流量大的区域连续运行设计。\n\n30W高效LED输出，提供明亮均匀的照明，同时能耗极低。集成PIR感应器在检测到运动时自动开灯，在可自定义的超时时间后切换到待机模式。IP54防水防尘，确保半户外环境下可靠运行。",
+      "es": "El OWL-AW-30W es una lámpara de pared LED de grado comercial alimentada por corriente alterna con sensor de movimiento PIR integrado. Diseñada para funcionamiento continuo en áreas de alto tráfico como pasillos, escaleras, estacionamientos y exteriores de edificios.\n\nCon una salida LED de alta eficiencia de 30W, ofrece una iluminación brillante y uniforme mientras consume energía mínima. El sensor PIR integrado enciende la luz automáticamente cuando detecta movimiento y cambia al modo de espera después de un período de tiempo de espera personalizable. La resistencia al agua y al polvo IP54 garantiza un rendimiento confiable en entornos semiexteriores.",
+      "ja": "OWL-AW-30Wは、PIRモーションセンサーを内蔵した業務用AC電源LED壁灯です。廊下、階段、駐車場、建物の外壁など、人の往来が多い場所での連続使用に設計されています。\n\n30W高効率LED出力により、明るく均一な照明を提供しながら、消費エネルギーを最小限に抑えます。内蔵PIRセンサーは動きを検知すると自動的に点灯し、カスタマイズ可能なタイムアウト時間後にスタンバイモードに切り替わります。IP54の防水・防塵性能により、半屋外環境でも信頼性の高い性能を発揮します。"
+    },
+    "images": ["/images/product-2.jpg", "/images/product-1.jpg", "/images/product-4.jpg"],
+    "mainImage": "/images/product-2.jpg",
+    "specs": [
+      { "key": "Power", "value": "30W" },
+      { "key": "Input Voltage", "value": "AC 85-265V, 50/60Hz" },
+      { "key": "LED Source", "value": "2835 SMD x 120pcs" },
+      { "key": "Color Temperature", "value": "4000K / 6500K" },
+      { "key": "Motion Sensor", "value": "PIR, 5-8m Range, 110° Angle" },
+      { "key": "Waterproof", "value": "IP54" },
+      { "key": "Standby Power", "value": "0.5W" },
+      { "key": "Material", "value": "Aluminum + PC" },
+      { "key": "Working Temperature", "value": "-20°C ~ 50°C" },
+      { "key": "Working Modes", "value": "Sensor / On / Off" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "100 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "3 years", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS", "icon": "award" },
+      { "id": "cf4", "key": "OEM", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["AC power", "wall light", "PIR sensor", "commercial", "IP54"],
+    "price": 0,
+    "isHot": true,
+    "isNew": false,
+    "sortOrder": 2,
+    "published": true,
+    "createdAt": 1713225600000,
+    "updatedAt": 1716000000000
+  },
+  {
+    "id": "prod_3",
+    "slug": "rechargeable-led-work-light-20w",
+    "model": "OWL-RW-20W",
+    "productCode": "OWL-RW-20W",
+    "categoryId": "cat_battery",
+    "name": {
+      "en": "20W Rechargeable LED Work Light with Magnet",
+      "zh": "20W可充电磁吸LED工作灯",
+      "es": "Lámpara de Trabajo LED Recargable de 20W con Imán",
+      "ja": "20W充電式マグネットLEDワークライト"
+    },
+    "shortDescription": {
+      "en": "Portable 20W rechargeable LED work light with strong magnetic base, 4400mAh battery, USB-C charging, IP65 waterproof.",
+      "zh": "便携式20W可充电LED工作灯，强磁底座，4400mAh电池，USB-C充电，IP65防水。",
+      "es": "Lámpara de trabajo LED recargable portátil de 20W con base magnética fuerte, batería de 4400mAh, carga USB-C, impermeable IP65.",
+      "ja": "ポータブル20W充電式LEDワークライト、強力マグネットベース、4400mAhバッテリー、USB-C充電、IP65防水。"
+    },
+    "description": {
+      "en": "The OWL-RW-20W is a versatile portable LED work light designed for industrial maintenance, automotive repair, emergency lighting, and outdoor activities. Equipped with a powerful magnetic base and hook, it can be easily attached to metal surfaces or hung anywhere you need light.\n\nFeaturing a 4400mAh rechargeable lithium battery and USB-C fast charging, this work light provides up to 10 hours of continuous lighting. Multiple brightness modes (high/medium/low/strobe/SOS) adapt to different working conditions. The robust IP65 waterproof and dustproof design ensures reliable performance in harsh environments.",
+      "zh": "OWL-RW-20W是一款多功能便携式LED工作灯，适用于工业维修、汽车维修、应急照明和户外活动。配备强力磁吸底座和挂钩，可轻松吸附在金属表面或悬挂在任何需要照明的地方。\n\n4400mAh可充电锂电池和USB-C快充，工作灯可提供长达10小时的持续照明。多种亮度模式（高/中/低/闪烁/SOS）适应不同的工作环境。坚固的IP65防水防尘设计，确保在恶劣环境下可靠运行。",
+      "es": "El OWL-RW-20W es una lámpara de trabajo LED portátil versátil diseñada para mantenimiento industrial, reparación automotriz, iluminación de emergencia y actividades al aire libre. Equipada con una potente base magnética y gancho, se puede fijar fácilmente a superficies metálicas o colgar en cualquier lugar donde necesite luz.\n\nCon una batería de litio recargable de 4400mAh y carga rápida USB-C, esta lámpara de trabajo proporciona hasta 10 horas de iluminación continua. Múltiples modos de brillo (alto/medio/bajo/estroboscópico/SOS) se adaptan a diferentes condiciones de trabajo. El robusto diseño impermeable y antipolvo IP65 garantiza un rendimiento confiable en entornos hostiles.",
+      "ja": "OWL-RW-20Wは、産業用メンテナンス、自動車修理、非常用照明、アウトドア活動向けに設計された多目的ポータブルLEDワークライトです。強力なマグネットベースとフックを装備し、金属面に簡単に取り付けたり、必要な場所に吊り下げたりできます。\n\n4400mAh充電式リチウム電池とUSB-C急速充電により、最長10時間の連続照明が可能です。複数の輝度モード（高/中/低/ストロボ/SOS）でさまざまな作業状況に対応します。堅牢なIP65防水・防塵設計により、過酷な環境でも信頼性の高い性能を発揮します。"
+    },
+    "images": ["/images/product-7.jpg", "/images/product-5.jpg", "/images/product-6.jpg"],
+    "mainImage": "/images/product-7.jpg",
+    "specs": [
+      { "key": "Power", "value": "20W" },
+      { "key": "Battery", "value": "3.7V 4400mAh Lithium-ion" },
+      { "key": "Charging", "value": "USB-C, 5V/2A" },
+      { "key": "LED Source", "value": "COB LED" },
+      { "key": "Brightness Modes", "value": "High / Medium / Low / Strobe / SOS" },
+      { "key": "Waterproof", "value": "IP65" },
+      { "key": "Working Time", "value": "3-10 hours" },
+      { "key": "Charging Time", "value": "3-4 hours" },
+      { "key": "Material", "value": "ABS + TPR" },
+      { "key": "Features", "value": "Magnetic Base / Hook / 360° Rotate" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "30 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "1 year", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS, FCC", "icon": "award" },
+      { "id": "cf4", "key": "Custom Logo", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["rechargeable", "work light", "magnetic", "portable", "IP65"],
+    "price": 0,
+    "isHot": false,
+    "isNew": true,
+    "sortOrder": 3,
+    "published": true,
+    "createdAt": 1717200000000,
+    "updatedAt": 1718000000000
+  },
+  {
+    "id": "prod_4",
+    "slug": "hybrid-solar-ac-led-sensor-light-60w",
+    "model": "OWL-HY-60W",
+    "productCode": "OWL-HY-60W",
+    "categoryId": "cat_hybrid",
+    "name": {
+      "en": "60W Hybrid Solar & AC LED Sensor Light",
+      "zh": "60W太阳能+市电双供电LED感应灯",
+      "es": "Lámpara LED con Sensor Híbrida Solar y AC de 60W",
+      "ja": "60Wハイブリッドソーラー＆AC LEDセンサーライト"
+    },
+    "shortDescription": {
+      "en": "60W hybrid power LED sensor light combining solar and AC power for uninterrupted lighting, PIR sensor, IP66 waterproof.",
+      "zh": "60W混合供电LED感应灯，太阳能+市电双供电不间断照明，PIR感应，IP66防水。",
+      "es": "Lámpara LED con sensor de 60W de energía híbrida que combina energía solar y corriente alterna para iluminación ininterrumpida, sensor PIR, impermeable IP66.",
+      "ja": "ソーラーとAC電源を組み合わせた60WハイブリッドLEDセンサーライト、途切れない照明、PIRセンサー、IP66防水。"
+    },
+    "description": {
+      "en": "The OWL-HY-60W is an innovative hybrid-powered LED sensor light that intelligently combines solar energy and AC grid power. During sunny days, it operates entirely on solar power, saving electricity. On cloudy days or when battery is low, it seamlessly switches to AC power ensuring uninterrupted security lighting.\n\nWith 60W powerful LED output and advanced PIR motion sensing, this light provides superior illumination for parking lots, building perimeters, warehouses, and industrial facilities. The intelligent power management system automatically prioritizes solar power, only using grid power as backup. IP66 fully waterproof design for all-weather operation.",
+      "zh": "OWL-HY-60W是一款创新的混合供电LED感应灯，智能结合太阳能和市电网电。晴天时完全使用太阳能运行，节省电费。阴天或电池低电量时，无缝切换到市电，确保障碍照明不中断。\n\n60W强劲LED输出和先进PIR人体感应，为停车场、建筑周边、仓库和工业设施提供卓越照明。智能电源管理系统自动优先使用太阳能，仅在必要时使用电网电力作为后备。IP66全防水设计，全天候运行。",
+      "es": "El OWL-HY-60W es una innovadora lámpara LED con sensor de energía híbrida que combina inteligentemente energía solar y corriente alterna. Durante los días soleados, funciona completamente con energía solar, ahorrando electricidad. En días nublados o cuando la batería está baja, cambia sin problemas a la corriente alterna asegurando una iluminación de seguridad ininterrumpida.\n\nCon una potente salida LED de 60W y detección de movimiento PIR avanzada, esta luz proporciona una iluminación superior para estacionamientos, perímetros de edificios, almacenes e instalaciones industriales. El sistema inteligente de gestión de energía prioriza automáticamente la energía solar, usando la de red solo como respaldo. Diseño completamente impermeable IP66 para funcionamiento en todo tipo de clima.",
+      "ja": "OWL-HY-60Wは、ソーラーとAC電源をインテリジェントに組み合わせた革新的なハイブリッド電源LEDセンサーライトです。晴れた日は完全にソーラーで動作し、電気代を節約します。曇りの日やバッテリー残量が少ない時は、AC電源にシームレスに切り替わり、途切れることのない防犯照明を保証します。\n\n60Wの強力なLED出力と高度なPIRモーションセンシングにより、駐車場、建物の周辺、倉庫、工場施設に優れた照明を提供します。インテリジェントな電力管理システムがソーラーを自動的に優先し、必要な場合にのみグリッド電力をバックアップとして使用します。全天候型動作のIP66完全防水設計。"
+    },
+    "images": ["/images/product-3.jpg", "/images/product-2.jpg", "/images/product-1.jpg"],
+    "mainImage": "/images/product-3.jpg",
+    "specs": [
+      { "key": "Power", "value": "60W" },
+      { "key": "Input Voltage", "value": "AC 85-265V + Solar 6V" },
+      { "key": "Solar Panel", "value": "10W Monocrystalline" },
+      { "key": "Battery", "value": "3.2V 15000mAh LiFePO4" },
+      { "key": "LED Source", "value": "SMD x 200pcs" },
+      { "key": "Color Temperature", "value": "6500K" },
+      { "key": "Motion Sensor", "value": "PIR, 10-15m Range, 120° Angle" },
+      { "key": "Waterproof", "value": "IP66" },
+      { "key": "Power Mode", "value": "Solar Priority / AC Backup" },
+      { "key": "Working Modes", "value": "Sensor / Dim / Always-on" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "30 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "3 years", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS", "icon": "award" },
+      { "id": "cf4", "key": "OEM", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["hybrid", "dual power", "solar", "AC power", "PIR sensor", "IP66"],
+    "price": 0,
+    "isHot": true,
+    "isNew": false,
+    "sortOrder": 4,
+    "published": true,
+    "createdAt": 1712016000000,
+    "updatedAt": 1715000000000
+  },
+  {
+    "id": "prod_5",
+    "slug": "solar-motion-sensor-wall-light-20w",
+    "model": "OWL-SW-20W",
+    "productCode": "OWL-SW-20W",
+    "categoryId": "cat_solar",
+    "name": {
+      "en": "20W Solar Motion Sensor Wall Light",
+      "zh": "20W太阳能人体感应壁灯",
+      "es": "Lámpara de Pared Solar con Sensor de Movimiento de 20W",
+      "ja": "20Wソーラーモーションセンサー壁灯"
+    },
+    "shortDescription": {
+      "en": "20W solar wall light with PIR motion sensor, IP65 waterproof, easy installation, ideal for gardens, patios, and walkways.",
+      "zh": "20W太阳能壁灯，带PIR人体感应，IP65防水，安装简便，适用于花园、庭院和步道。",
+      "es": "Lámpara de pared solar de 20W con sensor de movimiento PIR, impermeable IP65, instalación fácil, ideal para jardines, patios y pasillos.",
+      "ja": "20Wソーラー壁灯、PIRモーションセンサー付き、IP65防水、簡単設置、庭園、テラス、歩道に最適。"
+    },
+    "description": {
+      "en": "The OWL-SW-20W is an elegant and practical solar-powered wall light perfect for residential and commercial exterior applications. Featuring a sleek wall-mounted design with integrated solar panel and PIR motion sensor.\n\nCharged completely by sunlight during the day, it automatically turns on at dusk and off at dawn. The PIR motion sensor boosts brightness when people pass by, saving energy while ensuring safety. IP65 waterproof rating and durable ABS construction guarantee long service life in all weather conditions.",
+      "zh": "OWL-SW-20W是一款优雅实用的太阳能壁灯，非常适合住宅和商业户外应用。采用一体化太阳能板和PIR人体感应器的简洁壁挂设计。\n\n白天完全由阳光充电，黄昏自动亮起，黎明自动熄灭。PIR人体感应器在有人经过时提高亮度，在确保安全的同时节省能源。IP65防水等级和耐用的ABS材质确保在各种天气条件下的长使用寿命。",
+      "es": "El OWL-SW-20W es una lámpara de pared solar elegante y práctica, perfecta para aplicaciones exteriores residenciales y comerciales. Cuenta con un diseño de pared elegante con panel solar integrado y sensor de movimiento PIR.\n\nCargada completamente por la luz solar durante el día, se enciende automáticamente al anochecer y se apaga al amanecer. El sensor de movimiento PIR aumenta el brillo cuando las personas pasan, ahorrando energía mientras garantiza la seguridad. La clasificación de impermeabilidad IP65 y la construcción duradera de ABS garantizan una larga vida útil en todas las condiciones climáticas.",
+      "ja": "OWL-SW-20Wは、住宅用および商業用屋外アプリケーションに最適な、エレガントで実用的なソーラー壁灯です。ソーラーパネルとPIRモーションセンサーを一体化した、スマートな壁掛けデザインを採用しています。\n\n日中は太陽光で完全に充電され、夕暮れ時に自動点灯し、夜明けに自動消灯します。PIRモーションセンサーは人が通ると明るさを上げ、安全性を確保しながらエネルギーを節約します。IP65防水規格と耐久性のあるABS構造により、あらゆる気象条件での長寿命を保証します。"
+    },
+    "images": ["/images/product-5.jpg", "/images/product-6.jpg", "/images/product-7.jpg"],
+    "mainImage": "/images/product-5.jpg",
+    "specs": [
+      { "key": "Power", "value": "20W" },
+      { "key": "Solar Panel", "value": "5.5V 6W Monocrystalline" },
+      { "key": "Battery", "value": "3.7V 4000mAh Lithium" },
+      { "key": "LED Source", "value": "2835 SMD x 72pcs" },
+      { "key": "Color Temperature", "value": "6500K" },
+      { "key": "Motion Sensor", "value": "PIR, 5-8m Range, 120° Angle" },
+      { "key": "Waterproof", "value": "IP65" },
+      { "key": "Charging Time", "value": "6-8 hours" },
+      { "key": "Working Time", "value": "8-10 hours" },
+      { "key": "Material", "value": "ABS + PC" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "100 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "2 years", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS", "icon": "award" },
+      { "id": "cf4", "key": "OEM Logo", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["solar", "wall light", "PIR sensor", "outdoor", "garden"],
+    "price": 0,
+    "isHot": false,
+    "isNew": false,
+    "sortOrder": 5,
+    "published": true,
+    "createdAt": 1710806400000,
+    "updatedAt": 1714000000000
+  },
+  {
+    "id": "prod_6",
+    "slug": "battery-operated-led-sensor-light-10w",
+    "model": "OWL-BW-10W",
+    "productCode": "OWL-BW-10W",
+    "categoryId": "cat_battery",
+    "name": {
+      "en": "10W Battery Operated LED Sensor Light",
+      "zh": "10W电池供电LED感应灯",
+      "es": "Lámpara LED con Sensor a Batería de 10W",
+      "ja": "10W電池式LEDセンサーライト"
+    },
+    "shortDescription": {
+      "en": "10W battery-powered LED sensor light, 4*AA batteries, tool-free installation, perfect for closets, cabinets, and hallways.",
+      "zh": "10W电池供电LED感应灯，4节AA电池，免工具安装，适用于衣柜、橱柜和走廊。",
+      "es": "Lámpara LED con sensor a batería de 10W, 4 pilas AA, instalación sin herramientas, perfecta para armarios, gabinetes y pasillos.",
+      "ja": "10W電池式LEDセンサーライト、単3電池4本、工具不要の設置、クローゼット、キャビネット、廊下に最適。"
+    },
+    "description": {
+      "en": "The OWL-BW-10W is a compact and versatile battery-operated LED sensor light that requires no wiring. Powered by 4 standard AA batteries, it can be installed anywhere in minutes using the included magnetic strip or adhesive tape.\n\nEquipped with a highly sensitive PIR motion sensor and light sensor, it automatically turns on when it detects motion in the dark and turns off after 20 seconds of no movement. Ideal for closets, stairways, cabinets, garages, hallways, and other places without power outlets. The ultra-bright COB LED provides 10W of clear, white illumination.",
+      "zh": "OWL-BW-10W是一款紧凑型多功能电池供电LED感应灯，无需布线。使用4节标准AA电池供电，随附的磁条或胶带可在几分钟内安装到任何地方。\n\n配备高灵敏度PIR人体感应传感器和光感传感器，在黑暗中检测到运动时自动亮起，无活动20秒后自动熄灭。非常适合衣柜、楼梯、橱柜、车库、走廊和其他没有电源插座的地方。超高亮COB LED提供10W的清晰白光照明。",
+      "es": "El OWL-BW-10W es una lámpara LED con sensor a batería compacta y versátil que no requiere cableado. Alimentada por 4 pilas AA estándar, se puede instalar en cualquier lugar en minutos usando la tira magnética o cinta adhesiva incluidas.\n\nEquipada con un sensor de movimiento PIR altamente sensible y sensor de luz, se enciende automáticamente cuando detecta movimiento en la oscuridad y se apaga después de 20 segundos sin movimiento. Ideal para armarios, escaleras, gabinetes, garajes, pasillos y otros lugares sin tomas de corriente. El LED COB ultra brillante proporciona 10W de iluminación blanca clara.",
+      "ja": "OWL-BW-10Wは、配線不要のコンパクトで多目的な電池式LEDセンサーライトです。標準的な単3電池4本で動作し、付属のマグネットストリップまたは粘着テープで数分でどこにでも設置できます。\n\n高感度PIRモーションセンサーと光センサーを搭載し、暗闇で動きを検知すると自動的に点灯し、動きがなくなってから20秒後に自動消灯します。クローゼット、階段、キャビネット、ガレージ、廊下、コンセントのない場所に最適です。超高輝度COB LEDが10Wの鮮明な白色照明を提供します。"
+    },
+    "images": ["/images/product-6.jpg", "/images/product-5.jpg", "/images/product-7.jpg"],
+    "mainImage": "/images/product-6.jpg",
+    "specs": [
+      { "key": "Power", "value": "10W" },
+      { "key": "Power Supply", "value": "4 x AA Batteries (not included)" },
+      { "key": "LED Source", "value": "COB LED" },
+      { "key": "Color Temperature", "value": "6000K / 3000K" },
+      { "key": "Motion Sensor", "value": "PIR, 3-5m Range, 100° Angle" },
+      { "key": "Light Sensor", "value": "Auto-on at night" },
+      { "key": "Waterproof", "value": "IP20 (indoor use)" },
+      { "key": "Battery Life", "value": "~6 months (normal use)" },
+      { "key": "Installation", "value": "Magnetic / Adhesive / Screw" },
+      { "key": "Material", "value": "ABS" }
+    ],
+    "customFields": [
+      { "id": "cf1", "key": "MOQ", "value": "200 pcs", "icon": "package" },
+      { "id": "cf2", "key": "Warranty", "value": "1 year", "icon": "shield" },
+      { "id": "cf3", "key": "Certification", "value": "CE, RoHS, FCC", "icon": "award" },
+      { "id": "cf4", "key": "OEM", "value": "Available", "icon": "brush" }
+    ],
+    "tags": ["battery", "wireless", "PIR sensor", "indoor", "easy install"],
+    "price": 0,
+    "isHot": false,
+    "isNew": true,
+    "sortOrder": 6,
+    "published": true,
+    "createdAt": 1718000000000,
+    "updatedAt": 1719000000000
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "customerName": {
+      "en": "James Wilson",
+      "zh": "詹姆斯·威尔逊",
+      "es": "James Wilson",
+      "ja": "ジェームズ・ウィルソン"
+    },
+    "company": "BrightElectronics Co.",
+    "avatar": "/images/avatars/avatar-1.jpg",
+    "content": {
+      "en": "Excellent quality products and very professional service. The LED sensor lights have been performing perfectly in our commercial projects. Highly recommended!",
+      "zh": "产品质量优秀，服务非常专业。LED感应灯在我们的商业项目中表现完美。强烈推荐！",
+      "es": "Productos de excelente calidad y servicio muy profesional. Las luces LED con sensor han funcionado perfectamente en nuestros proyectos comerciales. ¡Muy recomendado!",
+      "ja": "優れた品質の製品と非常にプロフェッショナルなサービス。LEDセンサーライトは商業プロジェクトで完璧に機能しています。強くお勧めします！"
+    },
+    "rating": 5,
+    "createdAt": 1714521600000
+  },
+  {
+    "id": "2",
+    "customerName": {
+      "en": "Maria Garcia",
+      "zh": "玛丽亚·加西亚",
+      "es": "María García",
+      "ja": "マリア・ガルシア"
+    },
+    "company": "SolarTech Solutions",
+    "avatar": "/images/avatars/avatar-2.jpg",
+    "content": {
+      "en": "We have been working with OWELL for over 3 years. Their OEM service is outstanding and the product quality is consistently excellent. Great partner!",
+      "zh": "我们与OWELL合作已超过3年。他们的OEM服务非常出色，产品质量始终优秀。很好的合作伙伴！",
+      "es": "Hemos trabajado con OWELL por más de 3 años. Su servicio OEM es excepcional y la calidad del producto es consistentemente excelente. ¡Gran socio!",
+      "ja": "OWELLと3年以上取引しています。OEMサービスは素晴らしく、製品品質は一貫して優れています。素晴らしいパートナーです！"
+    },
+    "rating": 5,
+    "createdAt": 1715385600000
+  },
+  {
+    "id": "3",
+    "customerName": {
+      "en": "David Müller",
+      "zh": "大卫·穆勒",
+      "es": "David Müller",
+      "ja": "ダビド・ミュラー"
+    },
+    "company": "EuroLight GmbH",
+    "avatar": "/images/avatars/avatar-3.jpg",
+    "content": {
+      "en": "Fast delivery, competitive pricing, and all products passed our quality inspection. CE certification documentation was complete and professional.",
+      "zh": "交货快，价格有竞争力，所有产品都通过了我们的质检。CE认证文件完整且专业。",
+      "es": "Entrega rápida, precios competitivos y todos los productos pasaron nuestra inspección de calidad. La documentación de certificación CE fue completa y profesional.",
+      "ja": "迅速な配送、競争力のある価格、そしてすべての製品が品質検査に合格しました。CE認証書類は完全でプロフェッショナルでした。"
+    },
+    "rating": 5,
+    "createdAt": 1716249600000
+  },
+  {
+    "id": "4",
+    "customerName": {
+      "en": "Sarah Johnson",
+      "zh": "莎拉·约翰逊",
+      "es": "Sarah Johnson",
+      "ja": "サラ・ジョンソン"
+    },
+    "company": "GreenBuild USA",
+    "avatar": "/images/avatars/avatar-4.jpg",
+    "content": {
+      "en": "The solar sensor lights are amazing quality. Our customers love them! The technical support team is very responsive and helpful.",
+      "zh": "太阳能感应灯质量惊人。我们的客户非常喜欢！技术支持团队响应迅速，乐于助人。",
+      "es": "Las luces solares con sensor tienen una calidad increíble. ¡A nuestros clientes les encantan! El equipo de soporte técnico es muy receptivo y útil.",
+      "ja": "ソーラーセンサーライトの品質は素晴らしいです。顧客に大好評です！テクニカルサポートチームは非常に迅速で親切です。"
+    },
+    "rating": 4,
+    "createdAt": 1717113600000
+  }
+]

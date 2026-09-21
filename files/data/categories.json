@@ -1,0 +1,128 @@
+[
+  {
+    "id": "cat_1",
+    "name": {
+      "en": "AC Powered",
+      "zh": "交流电供电",
+      "es": "Corriente Alterna",
+      "ja": "AC電源"
+    },
+    "slug": "ac-powered",
+    "description": {
+      "en": "Hardwired LED sensor lights for permanent installation.",
+      "zh": "固定安装的硬线LED感应灯。",
+      "es": "Luces LED con sensor de cableado fijo para instalación permanente.",
+      "ja": "恒久的な設置用の配線式LEDセンサーライト。"
+    },
+    "icon": "Zap",
+    "sortOrder": 1
+  },
+  {
+    "id": "cat_2",
+    "name": {
+      "en": "Solar Powered",
+      "zh": "太阳能供电",
+      "es": "Energía Solar",
+      "ja": "ソーラー電源"
+    },
+    "slug": "solar",
+    "description": {
+      "en": "Eco-friendly solar LED sensor lights with zero electricity cost.",
+      "zh": "零电费的环保太阳能LED感应灯。",
+      "es": "Luces LED solares ecológicas con sensor, sin costo de electricidad.",
+      "ja": "電気代ゼロのエコソーラーLEDセンサーライト。"
+    },
+    "icon": "Sun",
+    "sortOrder": 2
+  },
+  {
+    "id": "cat_3",
+    "name": {
+      "en": "Battery Operated",
+      "zh": "干电池供电",
+      "es": "A Batería",
+      "ja": "電池式"
+    },
+    "slug": "battery",
+    "description": {
+      "en": "Wireless battery-powered LED sensor lights, easy to install anywhere.",
+      "zh": "无线电池供电LED感应灯，随处可安装。",
+      "es": "Luces LED inalámbricas a batería con sensor, fáciles de instalar en cualquier lugar.",
+      "ja": "ワイヤレス電池式LEDセンサーライト、どこでも簡単設置。"
+    },
+    "icon": "Battery",
+    "sortOrder": 3
+  },
+  {
+    "id": "cat_4",
+    "name": {
+      "en": "Rechargeable",
+      "zh": "可充电式",
+      "es": "Recargable",
+      "ja": "充電式"
+    },
+    "slug": "rechargeable",
+    "description": {
+      "en": "Rechargeable LED sensor lights with built-in lithium battery.",
+      "zh": "内置锂电池的可充电LED感应灯。",
+      "es": "Luces LED recargables con sensor y batería de litio integrada.",
+      "ja": "内蔵リチウム電池付き充電式LEDセンサーライト。"
+    },
+    "icon": "BatteryCharging",
+    "sortOrder": 4
+  },
+  {
+    "id": "cat_5",
+    "name": {
+      "en": "Hybrid Power",
+      "zh": "混合供电",
+      "es": "Energía Híbrida",
+      "ja": "ハイブリッド電源"
+    },
+    "slug": "hybrid",
+    "description": {
+      "en": "Dual power solar + AC hybrid LED sensor lights for reliable lighting.",
+      "zh": "太阳能+交流双电源混合LED感应灯，照明更可靠。",
+      "es": "Luces LED híbridas de energía solar + CA con sensor para iluminación confiable.",
+      "ja": "信頼性の高い照明のためのソーラー+ ACデュアル電源ハイブリッドLEDセンサーライト。"
+    },
+    "icon": "Infinity",
+    "sortOrder": 5
+  },
+  {
+    "id": "cat_6",
+    "name": {
+      "en": "Table Lamps",
+      "zh": "台灯系列",
+      "es": "Lámparas de Mesa",
+      "ja": "テーブルランプ"
+    },
+    "slug": "table-lamp",
+    "description": {
+      "en": "Modern LED sensor table lamps for office and home use.",
+      "zh": "适用于办公和家居的现代LED感应台灯。",
+      "es": "Lámparas de mesa LED modernas con sensor para oficina y hogar.",
+      "ja": "オフィスと家庭用のモダンなLEDセンサーテーブルランプ。"
+    },
+    "icon": "Lamp",
+    "sortOrder": 6
+  },
+  {
+    "id": "cat_7",
+    "name": {
+      "en": "Work Lights",
+      "zh": "工作灯系列",
+      "es": "Luces de Trabajo",
+      "ja": "ワークライト"
+    },
+    "slug": "work-light",
+    "description": {
+      "en": "Heavy duty rechargeable LED work lights for industrial use.",
+      "zh": "工业级重型可充电LED工作灯。",
+      "es": "Luces de trabajo LED recargables de alta resistencia para uso industrial.",
+      "ja": "産業用の頑丈な充電式LEDワークライト。"
+    },
+    "icon": "Flashlight",
+    "sortOrder": 7
+  }
+]

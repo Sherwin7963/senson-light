@@ -1,0 +1,95 @@
+[
+  {
+    "id": "slide_1",
+    "title": {
+      "en": "Your Trusted LED Lighting Supplier",
+      "zh": "您值得信赖的LED照明供应商",
+      "es": "Su Proveedor de Iluminación LED de Confianza",
+      "ja": "信頼できるLED照明サプライヤー"
+    },
+    "subtitle": {
+      "en": "Professional LED Sensor Light Manufacturer with 10+ Years Experience",
+      "zh": "拥有10年以上经验的专业LED感应灯制造商",
+      "es": "Fabricante Profesional de Luces LED con Sensor con Más de 10 Años de Experiencia",
+      "ja": "10年以上の経験を持つプロフェッショナルLEDセンサーライトメーカー"
+    },
+    "image": "/images/product-1.jpg",
+    "primaryButtonText": {
+      "en": "Get a Quote",
+      "zh": "获取报价",
+      "es": "Solicitar Cotización",
+      "ja": "見積もりを取得"
+    },
+    "primaryButtonLink": "/contact",
+    "secondaryButtonText": {
+      "en": "View Products",
+      "zh": "查看产品",
+      "es": "Ver Productos",
+      "ja": "製品を見る"
+    },
+    "secondaryButtonLink": "/products",
+    "sortOrder": 1
+  },
+  {
+    "id": "slide_2",
+    "title": {
+      "en": "Smart Motion Sensor Technology",
+      "zh": "智能人体感应技术",
+      "es": "Tecnología de Sensor de Movimiento Inteligente",
+      "ja": "スマートモーションセンサー技術"
+    },
+    "subtitle": {
+      "en": "Energy Saving & Intelligent Control for Commercial & Industrial Lighting",
+      "zh": "工商业照明的节能与智能控制",
+      "es": "Ahorro de Energía y Control Inteligente para Iluminación Comercial e Industrial",
+      "ja": "商業・産業用照明の省エネとインテリジェント制御"
+    },
+    "image": "/images/product-3.jpg",
+    "primaryButtonText": {
+      "en": "Learn More",
+      "zh": "了解更多",
+      "es": "Saber Más",
+      "ja": "詳細を見る"
+    },
+    "primaryButtonLink": "/about",
+    "secondaryButtonText": {
+      "en": "View Products",
+      "zh": "查看产品",
+      "es": "Ver Productos",
+      "ja": "製品を見る"
+    },
+    "secondaryButtonLink": "/products",
+    "sortOrder": 2
+  },
+  {
+    "id": "slide_3",
+    "title": {
+      "en": "OEM/ODM Custom Service",
+      "zh": "OEM/ODM定制服务",
+      "es": "Servicio Personalizado OEM/ODM",
+      "ja": "OEM/ODMカスタムサービス"
+    },
+    "subtitle": {
+      "en": "Build Your Brand with Professional Custom Manufacturing Solutions",
+      "zh": "专业定制制造方案，打造您的品牌",
+      "es": "Construya Su Marca con Soluciones de Fabricación Personalizada Profesional",
+      "ja": "プロフェッショナルなカスタム製造ソリューションでブランドを構築"
+    },
+    "image": "/images/product-7.jpg",
+    "primaryButtonText": {
+      "en": "Contact Us",
+      "zh": "联系我们",
+      "es": "Contáctenos",
+      "ja": "お問い合わせ"
+    },
+    "primaryButtonLink": "/contact",
+    "secondaryButtonText": {
+      "en": "View Products",
+      "zh": "查看产品",
+      "es": "Ver Productos",
+      "ja": "製品を見る"
+    },
+    "secondaryButtonLink": "/products",
+    "sortOrder": 3
+  }
+]

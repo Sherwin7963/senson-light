@@ -1,0 +1,104 @@
+{
+  "heroTitle": {
+    "en": "About OWELL Industrial",
+    "zh": "关于OWELL实业",
+    "es": "Sobre OWELL Industrial",
+    "ja": "OWELL Industrialについて"
+  },
+  "heroSubtitle": {
+    "en": "Leading Manufacturer of LED Sensor Lighting Solutions",
+    "zh": "LED感应照明解决方案的领先制造商",
+    "es": "Fabricante Líder de Soluciones de Iluminación LED con Sensor",
+    "ja": "LEDセンサー照明ソリューションのリーディングメーカー"
+  },
+  "heroImage": "/images/product-1.jpg",
+  "introBadge": {
+    "en": "Since 2012",
+    "zh": "始于2012",
+    "es": "Desde 2012",
+    "ja": "2012年設立"
+  },
+  "introParagraphs": [
+    {
+      "id": "p1",
+      "text": {
+        "en": "OWELL Industrial is a professional LED sensor light manufacturer based in China, with over 10 years of experience in designing and producing high-quality LED lighting products for global markets.",
+        "zh": "OWELL实业是一家位于中国的专业LED感应灯制造商，拥有10年以上为全球市场设计和生产高品质LED照明产品的经验。",
+        "es": "OWELL Industrial es un fabricante profesional de luces LED con sensor con sede en China, con más de 10 años de experiencia en el diseño y producción de productos de iluminación LED de alta calidad para mercados globales.",
+        "ja": "OWELL Industrialは中国に拠点を置くプロフェッショナルなLEDセンサーライトメーカーで、世界市場向けに高品質なLED照明製品を設計・製造して10年以上の経験があります。"
+      }
+    },
+    {
+      "id": "p2",
+      "text": {
+        "en": "Our product range includes AC-powered, solar-powered, battery-operated, and hybrid LED sensor lights, serving commercial, industrial, and residential customers worldwide.",
+        "zh": "我们的产品范围包括交流供电、太阳能供电、电池供电和混合式LED感应灯，服务于全球商业、工业和住宅客户。",
+        "es": "Nuestra gama de productos incluye luces LED con sensor de corriente alterna, energía solar, a batería e híbridas, atendiendo a clientes comerciales, industriales y residenciales en todo el mundo.",
+        "ja": "製品ラインナップには、AC電源、ソーラー、電池式、ハイブリッドのLEDセンサーライトが含まれ、世界中の商業、産業、住宅向け顧客にサービスを提供しています。"
+      }
+    }
+  ],
+  "stats": [
+    { "id": "s1", "value": "10+", "label": { "en": "Years Experience", "zh": "年经验", "es": "Años de Experiencia", "ja": "年の経験" } },
+    { "id": "s2", "value": "20000㎡", "label": { "en": "Factory Area", "zh": "工厂面积", "es": "Área de Fábrica", "ja": "工場面積" } },
+    { "id": "s3", "value": "50+", "label": { "en": "Countries", "zh": "出口国家", "es": "Países", "ja": "輸出先国" } },
+    { "id": "s4", "value": "500K+", "label": { "en": "Units Sold", "zh": "年销量", "es": "Unidades Vendidas", "ja": "販売ユニット" } }
+  ],
+  "milestones": [
+    {
+      "id": "m1",
+      "year": "2012",
+      "title": { "en": "Company Founded", "zh": "公司成立", "es": "Fundación de la Empresa", "ja": "会社設立" },
+      "description": { "en": "OWELL Industrial was founded in Shenzhen, China, starting with LED module production.", "zh": "OWELL实业在中国深圳成立，从LED模组生产起步。", "es": "OWELL Industrial fue fundada en Shenzhen, China, comenzando con la producción de módulos LED.", "ja": "OWELL Industrialは中国深センで設立され、LEDモジュール生産から事業を開始しました。" }
+    },
+    {
+      "id": "m2",
+      "year": "2015",
+      "title": { "en": "First Export Order", "zh": "首批出口订单", "es": "Primer Pedido de Exportación", "ja": "初の輸出注文" },
+      "description": { "en": "Completed first overseas export order to European market.", "zh": "完成首批出口欧洲市场的订单。", "es": "Completado el primer pedido de exportación al mercado europeo.", "ja": "欧州市場向け初の輸出注文を完了。" }
+    },
+    {
+      "id": "m3",
+      "year": "2018",
+      "title": { "en": "CE & RoHS Certified", "zh": "CE & RoHS认证", "es": "Certificación CE y RoHS", "ja": "CE & RoHS認証取得" },
+      "description": { "en": "All products passed CE and RoHS certification for EU market.", "zh": "全系列产品通过欧盟CE和RoHS认证。", "es": "Todos los productos pasaron la certificación CE y RoHS para el mercado de la UE.", "ja": "全製品がEU市場向けCEおよびRoHS認証を取得。" }
+    },
+    {
+      "id": "m4",
+      "year": "2020",
+      "title": { "en": "Solar Series Launch", "zh": "太阳能系列发布", "es": "Lanzamiento de la Serie Solar", "ja": "ソーラーシリーズ発売" },
+      "description": { "en": "Launched solar-powered LED sensor light series.", "zh": "推出太阳能LED感应灯系列产品。", "es": "Lanzada la serie de luces LED con sensor de energía solar.", "ja": "ソーラーLEDセンサーライトシリーズを発売。" }
+    },
+    {
+      "id": "m5",
+      "year": "2023",
+      "title": { "en": "Smart Sensor Upgrade", "zh": "智能感应升级", "es": "Actualización de Sensor Inteligente", "ja": "スマートセンサーアップグレード" },
+      "description": { "en": "Released 4th generation smart PIR sensor technology with improved accuracy.", "zh": "发布第四代智能PIR感应技术，精度大幅提升。", "es": "Lanzada la cuarta generación de tecnología de sensor PIR inteligente con mayor precisión.", "ja": "精度が向上した第4世代スマートPIRセンサー技術を発売。" }
+    }
+  ],
+  "gallery": [
+    { "id": "g1", "title": { "en": "Production Workshop", "zh": "生产车间", "es": "Taller de Producción", "ja": "生産工場" }, "description": { "en": "Modern automated production line", "zh": "现代化自动生产线", "es": "Línea de producción automatizada moderna", "ja": "最新の自動化生産ライン" }, "image": "/images/product-2.jpg" },
+    { "id": "g2", "title": { "en": "Quality Control", "zh": "质量检测", "es": "Control de Calidad", "ja": "品質管理" }, "description": { "en": "Strict quality inspection process", "zh": "严格的质检流程", "es": "Estricto proceso de inspección de calidad", "ja": "厳格な品質検査プロセス" }, "image": "/images/product-4.jpg" },
+    { "id": "g3", "title": { "en": "R&D Center", "zh": "研发中心", "es": "Centro de I+D", "ja": "研究開発センター" }, "description": { "en": "Professional R&D team", "zh": "专业研发团队", "es": "Equipo profesional de I+D", "ja": "プロフェッショナルな研究開発チーム" }, "image": "/images/product-5.jpg" },
+    { "id": "g4", "title": { "en": "Warehouse", "zh": "仓储中心", "es": "Almacén", "ja": "倉庫" }, "description": { "en": "Large-scale warehouse management", "zh": "大规模仓储管理", "es": "Gestión de almacén a gran escala", "ja": "大規模倉庫管理" }, "image": "/images/product-6.jpg" }
+  ],
+  "qualitySteps": [
+    { "id": "q1", "title": { "en": "Raw Material Inspection", "zh": "原材料检验", "es": "Inspección de Materias Primas", "ja": "原材料検査" }, "description": { "en": "All incoming materials go through rigorous inspection.", "zh": "所有来料都经过严格检验。", "es": "Todos los materiales entrantes pasan por una inspección rigurosa.", "ja": "すべての受入材料は厳格な検査を受けます。" } },
+    { "id": "q2", "title": { "en": "In-Process Quality Control", "zh": "生产过程质检", "es": "Control de Calidad en Proceso", "ja": "工程内品質管理" }, "description": { "en": "Real-time QC at every production stage.", "zh": "每个生产环节都有实时质检。", "es": "Control de calidad en tiempo real en cada etapa de producción.", "ja": "すべての生産段階でリアルタイムQC。" } },
+    { "id": "q3", "title": { "en": "Aging Test", "zh": "老化测试", "es": "Prueba de Envejecimiento", "ja": "エージングテスト" }, "description": { "en": "48-hour continuous aging test for reliability.", "zh": "48小时连续老化测试确保可靠性。", "es": "Prueba de envejecimiento continuo de 48 horas para confiabilidad.", "ja": "信頼性のための48時間連続エージングテスト。" } },
+    { "id": "q4", "title": { "en": "Final Inspection", "zh": "成品终检", "es": "Inspección Final", "ja": "最終検査" }, "description": { "en": "100% final inspection before packaging.", "zh": "包装前100%成品终检。", "es": "Inspección final 100% antes del empaque.", "ja": "梱包前に100％最終検査。" } },
+    { "id": "q5", "title": { "en": "Packaging & Delivery", "zh": "包装发货", "es": "Empaque y Envío", "ja": "梱包・発送" }, "description": { "en": "Secure packaging with reliable logistics partners.", "zh": "安全包装+可靠物流伙伴。", "es": "Embalaje seguro con socios logísticos confiables.", "ja": "信頼できる物流パートナーによる安全な梱包。" } }
+  ],
+  "certifications": [
+    { "id": "c1", "name": "CE Certified", "authority": "European Union", "image": "/images/product-1.jpg" },
+    { "id": "c2", "name": "RoHS Compliant", "authority": "European Union", "image": "/images/product-2.jpg" },
+    { "id": "c3", "name": "ISO 9001", "authority": "Quality Management", "image": "/images/product-3.jpg" },
+    { "id": "c4", "name": "FCC Certified", "authority": "United States", "image": "/images/product-4.jpg" }
+  ],
+  "oemServices": [
+    { "id": "o1", "title": { "en": "Custom Logo & Branding", "zh": "定制Logo与品牌", "es": "Logo y Marca Personalizados", "ja": "カスタムロゴとブランディング" }, "description": { "en": "Print your logo on products and packaging.", "zh": "在产品和包装上印刷您的logo。", "es": "Imprima su logo en productos y empaques.", "ja": "製品とパッケージにロゴを印刷。" }, "icon": "Brush" },
+    { "id": "o2", "title": { "en": "Custom Housing Design", "zh": "定制外壳设计", "es": "Diseño de Carcasa Personalizado", "ja": "カスタム筐体デザイン" }, "description": { "en": "OEM housing design based on your requirements.", "zh": "根据您的需求定制外壳设计。", "es": "Diseño de carcasa OEM según sus requisitos.", "ja": "ご要望に基づくOEM筐体設計。" }, "icon": "Box" },
+    { "id": "o3", "title": { "en": "Custom Specifications", "zh": "定制技术参数", "es": "Especificaciones Personalizadas", "ja": "カスタム仕様" }, "description": { "en": "Adjust power, color temp, sensor range as needed.", "zh": "按需调整功率、色温、感应距离等参数。", "es": "Ajuste potencia, temperatura de color, rango de sensor según sea necesario.", "ja": "電力、色温度、センサー範囲を必要に応じて調整。" }, "icon": "Sliders" },
+    { "id": "o4", "title": { "en": "Custom Packaging", "zh": "定制包装", "es": "Empaque Personalizado", "ja": "カスタムパッケージ" }, "description": { "en": "Branded packaging with your design and artwork.", "zh": "您设计的品牌化包装。", "es": "Embalaje de marca con su diseño y gráficos.", "ja": "デザインとアートワークによるブランドパッケージ。" }, "icon": "Package" }
+  ]
+}

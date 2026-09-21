@@ -1,0 +1,49 @@
+{
+  "brandName": "OWELL Industrial",
+  "logo": "/images/logo.png",
+  "tagline": {
+    "en": "Your Trusted LED Lighting Supplier",
+    "zh": "您值得信赖的LED照明供应商",
+    "es": "Su Proveedor de Iluminación LED de Confianza",
+    "ja": "信頼できるLED照明サプライヤー"
+  },
+  "contact": {
+    "email": "sales@owell-lighting.com",
+    "phone": "+86-755-12345678",
+    "address": {
+      "en": "Building 3, Industrial Park, Longhua District, Shenzhen, Guangdong, China",
+      "zh": "中国广东省深圳市龙华区工业园3栋",
+      "es": "Edificio 3, Parque Industrial, Distrito de Longhua, Shenzhen, Guangdong, China",
+      "ja": "中国広東省深セン市龍華区工業団地3号棟"
+    },
+    "whatsapp": "+8613800138000",
+    "workingHours": {
+      "en": "Monday - Friday: 9:00 - 18:00 (GMT+8)",
+      "zh": "周一至周五：9:00 - 18:00 (GMT+8)",
+      "es": "Lunes - Viernes: 9:00 - 18:00 (GMT+8)",
+      "ja": "月曜日〜金曜日：9:00〜18:00 (GMT+8)"
+    }
+  },
+  "social": {
+    "facebook": "https://facebook.com/owellindustrial",
+    "linkedin": "https://linkedin.com/company/owell-industrial",
+    "youtube": "https://youtube.com/@owellindustrial",
+    "instagram": "https://instagram.com/owell_lighting"
+  },
+  "copyright": {
+    "en": "© 2024 OWELL Industrial. All rights reserved.",
+    "zh": "© 2024 OWELL实业。保留所有权利。",
+    "es": "© 2024 OWELL Industrial. Todos los derechos reservados.",
+    "ja": "© 2024 OWELL Industrial。全著作権所有。"
+  },
+  "footerLinks": [
+    { "id": "fl1", "label": { "en": "Products", "zh": "产品中心", "es": "Productos", "ja": "製品" }, "href": "/products" },
+    { "id": "fl2", "label": { "en": "About Us", "zh": "关于我们", "es": "Sobre Nosotros", "ja": "会社概要" }, "href": "/about" },
+    { "id": "fl3", "label": { "en": "Contact", "zh": "联系我们", "es": "Contacto", "ja": "お問い合わせ" }, "href": "/contact" },
+    { "id": "fl4", "label": { "en": "News", "zh": "新闻资讯", "es": "Noticias", "ja": "ニュース" }, "href": "/news" },
+    { "id": "fl5", "label": { "en": "Privacy Policy", "zh": "隐私政策", "es": "Política de Privacidad", "ja": "プライバシーポリシー" }, "href": "/privacy-policy" }
+  ],
+  "paymentMethods": ["Visa", "Mastercard", "T/T", "PayPal", "Western Union"],
+  "showWhatsAppFloat": true,
+  "showCookieBanner": true
+}

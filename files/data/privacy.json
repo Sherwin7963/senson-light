@@ -1,0 +1,201 @@
+{
+  "lastUpdated": "2024-06-15",
+  "sections": [
+    {
+      "id": "sec_intro",
+      "title": {
+        "en": "Privacy Policy",
+        "zh": "隐私政策",
+        "es": "Política de Privacidad",
+        "ja": "プライバシーポリシー"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "OWELL Industrial (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
+            "zh": "OWELL实业（\"我们\"）致力于保护您的隐私。本隐私政策解释了当您访问我们的网站或使用我们的服务时，我们如何收集、使用、披露和保护您的信息。",
+            "es": "OWELL Industrial (\"nosotros\") se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando visita nuestro sitio web o utiliza nuestros servicios.",
+            "ja": "OWELL Industrial（「当社」）は、お客様のプライバシーを保護することを約束します。本プライバシーポリシーは、当社のウェブサイトにアクセスしたりサービスを利用したりする際に、情報をどのように収集、使用、開示、保護するかについて説明します。"
+          }
+        },
+        {
+          "id": "p2",
+          "text": {
+            "en": "Please read this privacy policy carefully. By accessing or using our website, you acknowledge that you have read, understood, and agree to all the terms of this policy.",
+            "zh": "请仔细阅读本隐私政策。通过访问或使用我们的网站，您确认您已阅读、理解并同意本政策的所有条款。",
+            "es": "Por favor, lea esta política de privacidad cuidadosamente. Al acceder o utilizar nuestro sitio web, usted reconoce que ha leído, entendido y aceptado todos los términos de esta política.",
+            "ja": "本プライバシーポリシーをよくお読みください。当社ウェブサイトにアクセスまたは利用することにより、お客様は本ポリシーのすべての条件を読み、理解し、同意したことを認めるものとします。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_collect",
+      "title": {
+        "en": "Information We Collect",
+        "zh": "我们收集的信息",
+        "es": "Información que Recopilamos",
+        "ja": "収集する情報"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "We may collect personal information that you voluntarily provide to us when you:\n- Submit an inquiry or contact form\n- Request a quote or product catalog\n- Subscribe to our newsletter\n- Communicate with us via email or phone\n- Register for an account",
+            "zh": "在以下情况下，我们可能会收集您自愿提供的个人信息：\n- 提交询盘或联系表单\n- 请求报价或产品目录\n- 订阅我们的新闻通讯\n- 通过电子邮件或电话与我们沟通\n- 注册账户",
+            "es": "Podemos recopilar información personal que usted nos proporciona voluntariamente cuando:\n- Envía una consulta o formulario de contacto\n- Solicita una cotización o catálogo de productos\n- Se suscribe a nuestro boletín informativo\n- Se comunica con nosotros por correo electrónico o teléfono\n- Registra una cuenta",
+            "ja": "以下の場合に、お客様が自発的に提供された個人情報を収集することがあります：\n- 問い合わせや連絡フォームを送信する場合\n- 見積もりや製品カタログを請求する場合\n- ニュースレターを購読する場合\n- メールや電話で当社と連絡を取る場合\n- アカウントを登録する場合"
+          }
+        },
+        {
+          "id": "p2",
+          "text": {
+            "en": "Personal information may include:\n- Name and company name\n- Email address and phone number\n- Country/region\n- Message or inquiry details\n- Any other information you choose to provide",
+            "zh": "个人信息可能包括：\n- 姓名和公司名称\n- 电子邮箱和电话号码\n- 国家/地区\n- 留言或询盘详情\n- 您选择提供的任何其他信息",
+            "es": "La información personal puede incluir:\n- Nombre y nombre de la empresa\n- Dirección de correo electrónico y número de teléfono\n- País/región\n- Detalles del mensaje o consulta\n- Cualquier otra información que elija proporcionar",
+            "ja": "個人情報には以下が含まれる場合があります：\n- 氏名および会社名\n- メールアドレスおよび電話番号\n- 国/地域\n- メッセージまたは問い合わせの詳細\n- お客様が提供することを選択したその他の情報"
+          }
+        },
+        {
+          "id": "p3",
+          "text": {
+            "en": "We also automatically collect certain information when you visit our website, including:\n- Browser type and version\n- Operating system\n- IP address (anonymized)\n- Pages visited and time spent\n- Referring website\n- Device type",
+            "zh": "当您访问我们的网站时，我们也会自动收集某些信息，包括：\n- 浏览器类型和版本\n- 操作系统\n- IP地址（匿名化）\n- 访问页面和停留时间\n- 推荐网站\n- 设备类型",
+            "es": "También recopilamos automáticamente cierta información cuando visita nuestro sitio web, incluyendo:\n- Tipo y versión de navegador\n- Sistema operativo\n- Dirección IP (anonimizada)\n- Páginas visitadas y tiempo empleado\n- Sitio web de referencia\n- Tipo de dispositivo",
+            "ja": "また、お客様が当社ウェブサイトにアクセスした際に、以下の情報を自動的に収集することがあります：\n- ブラウザの種類とバージョン\n- オペレーティングシステム\n- IPアドレス（匿名化）\n- 訪問したページと滞在時間\n- 参照元ウェブサイト\n- デバイスの種類"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_use",
+      "title": {
+        "en": "How We Use Your Information",
+        "zh": "我们如何使用您的信息",
+        "es": "Cómo Usamos Su Información",
+        "ja": "情報の使用方法"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "We use the information we collect for the following purposes:\n- To respond to your inquiries and provide customer service\n- To send you requested product information, quotes, or catalogs\n- To communicate with you about orders, products, and services\n- To send marketing communications (with your consent)\n- To improve our website and user experience\n- To analyze website traffic and usage patterns\n- To comply with legal obligations",
+            "zh": "我们将收集的信息用于以下目的：\n- 回复您的询盘并提供客户服务\n- 向您发送您请求的产品信息、报价或目录\n- 与您沟通订单、产品和服务相关事宜\n- 发送营销信息（经您同意）\n- 改进我们的网站和用户体验\n- 分析网站流量和使用模式\n- 遵守法定义务",
+            "es": "Usamos la información que recopilamos para los siguientes fines:\n- Responder a sus consultas y brindar servicio al cliente\n- Enviarle información de productos, cotizaciones o catálogos solicitados\n- Comunicarnos con usted sobre pedidos, productos y servicios\n- Enviar comunicaciones de marketing (con su consentimiento)\n- Mejorar nuestro sitio web y la experiencia del usuario\n- Analizar el tráfico del sitio web y los patrones de uso\n- Cumplir con obligaciones legales",
+            "ja": "収集した情報は以下の目的で使用します：\n- お問い合わせへの回答とカスタマーサービスの提供\n- ご請求のあった製品情報、見積もり、カタログの送信\n- 注文、製品、サービスに関するお客様との連絡\n- （お客様の同意に基づく）マーケティングコミュニケーションの送信\n- ウェブサイトとユーザー体験の改善\n- ウェブサイトのトラフィックと利用パターンの分析\n- 法的義務の遵守"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_share",
+      "title": {
+        "en": "Information Sharing",
+        "zh": "信息共享",
+        "es": "Compartir Información",
+        "ja": "情報の共有"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "We do not sell, rent, or lease your personal information to third parties. We may share your information only in the following circumstances:\n- With service providers who assist us in operating our website and business (e.g., email service providers, CRM systems)\n- When required by law or to protect our legal rights\n- In connection with a business transfer or merger\n- With your explicit consent",
+            "zh": "我们不会向第三方出售、出租或租赁您的个人信息。我们仅在以下情况下共享您的信息：\n- 与协助我们运营网站和业务的服务提供商（如邮件服务提供商、CRM系统）\n- 法律要求或为保护我们的合法权益\n- 与业务转让或合并相关\n- 经您明确同意",
+            "es": "No vendemos, alquilamos ni arrendamos su información personal a terceros. Solo podemos compartir su información en las siguientes circunstancias:\n- Con proveedores de servicios que nos ayudan a operar nuestro sitio web y negocio (por ejemplo, proveedores de servicios de correo electrónico, sistemas CRM)\n- Cuando lo requiera la ley o para proteger nuestros derechos legales\n- En relación con una transferencia o fusión empresarial\n- Con su consentimiento explícito",
+            "ja": "お客様の個人情報を第三者に販売、賃貸、またはリースすることはありません。以下の場合に限り、お客様の情報を共有することがあります：\n- ウェブサイトと事業の運営を支援するサービスプロバイダー（メールサービスプロバイダー、CRMシステムなど）\n- 法律で要求される場合、または当社の法的権利を保護するため\n- 事業譲渡または合併に関連して\n- お客様の明示的な同意がある場合"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_security",
+      "title": {
+        "en": "Data Security",
+        "zh": "数据安全",
+        "es": "Seguridad de Datos",
+        "ja": "データセキュリティ"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. These measures include:\n- SSL encryption for data transmission\n- Secure server infrastructure\n- Regular security audits\n- Access controls and authentication\n- Employee training on data protection",
+            "zh": "我们采取适当的技术和组织措施，保护您的个人信息免受未经授权的访问、更改、披露或破坏。这些措施包括：\n- 数据传输SSL加密\n- 安全的服务器基础设施\n- 定期安全审计\n- 访问控制和认证\n- 员工数据保护培训",
+            "es": "Implementamos medidas técnicas y organizativas adecuadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Estas medidas incluyen:\n- Cifrado SSL para la transmisión de datos\n- Infraestructura de servidores segura\n- Auditorías de seguridad periódicas\n- Controles de acceso y autenticación\n- Capacitación de empleados sobre protección de datos",
+            "ja": "不正アクセス、改ざん、開示、または破壊からお客様の個人情報を保護するため、適切な技術的・組織的措置を実施しています。これらの措置には以下が含まれます：\n- データ送信のSSL暗号化\n- 安全なサーバーインフラストラクチャ\n- 定期的なセキュリティ監査\n- アクセス管理と認証\n- 従業員のデータ保護研修"
+          }
+        },
+        {
+          "id": "p2",
+          "text": {
+            "en": "While we strive to protect your personal information, please be aware that no method of transmission over the Internet or electronic storage is 100% secure.",
+            "zh": "虽然我们努力保护您的个人信息，但请注意，任何通过互联网传输或电子存储的方法都不是100%安全的。",
+            "es": "Aunque nos esforzamos por proteger su información personal, tenga en cuenta que ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.",
+            "ja": "お客様の個人情報を保護するために尽力していますが、インターネット上の送信方法や電子的な保存方法は100%安全ではないことにご留意ください。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_cookies",
+      "title": {
+        "en": "Cookies",
+        "zh": "Cookie",
+        "es": "Cookies",
+        "ja": "クッキー"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small text files stored on your device that help us remember your preferences and understand how you use our site.\n\nYou can control cookies through your browser settings. Disabling cookies may affect some functionality of our website.",
+            "zh": "我们使用cookie和类似的追踪技术来增强您在我们网站上的体验。Cookie是存储在您设备上的小型文本文件，帮助我们记住您的偏好并了解您如何使用我们的网站。\n\n您可以通过浏览器设置控制cookie。禁用cookie可能会影响我们网站的某些功能。",
+            "es": "Utilizamos cookies y tecnologías de seguimiento similares para mejorar su experiencia en nuestro sitio web. Las cookies son pequeños archivos de texto almacenados en su dispositivo que nos ayudan a recordar sus preferencias y comprender cómo usa nuestro sitio.\n\nPuede controlar las cookies a través de la configuración de su navegador. Deshabilitar las cookies puede afectar algunas funcionalidades de nuestro sitio web.",
+            "ja": "当社は、ウェブサイトでのお客様の体験を向上させるため、クッキーおよび同様の追跡技術を使用しています。クッキーはデバイスに保存される小さなテキストファイルで、お客様の設定を記憶し、サイトの利用方法を理解するのに役立ちます。\n\nブラウザの設定でクッキーを制御できます。クッキーを無効にすると、ウェブサイトの一部の機能に影響する場合があります。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_rights",
+      "title": {
+        "en": "Your Rights",
+        "zh": "您的权利",
+        "es": "Sus Derechos",
+        "ja": "お客様の権利"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "Depending on your location, you may have certain rights regarding your personal information:\n- Right to access your personal data\n- Right to correct inaccurate data\n- Right to request deletion of your data\n- Right to restrict or object to processing\n- Right to data portability\n- Right to withdraw consent\n\nTo exercise these rights, please contact us at privacy@owell-lighting.com.",
+            "zh": "根据您所在的地区，您可能对个人信息享有某些权利：\n- 访问个人数据的权利\n- 更正不准确数据的权利\n- 请求删除您数据的权利\n- 限制或反对处理的权利\n- 数据可携带权\n- 撤回同意的权利\n\n要行使这些权利，请通过 privacy@owell-lighting.com 联系我们。",
+            "es": "Dependiendo de su ubicación, puede tener ciertos derechos con respecto a su información personal:\n- Derecho a acceder a sus datos personales\n- Derecho a corregir datos inexactos\n- Derecho a solicitar la eliminación de sus datos\n- Derecho a restringir u oponerse al tratamiento\n- Derecho a la portabilidad de datos\n- Derecho a retirar el consentimiento\n\nPara ejercer estos derechos, contáctenos en privacy@owell-lighting.com.",
+            "ja": "所在地によっては、個人情報に関する特定の権利を有する場合があります：\n- 個人データにアクセスする権利\n- 不正確なデータを訂正する権利\n- データの削除を要求する権利\n- 処理を制限または異議を唱える権利\n- データポータビリティの権利\n- 同意を撤回する権利\n\nこれらの権利を行使するには、privacy@owell-lighting.com までお問い合わせください。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_contact",
+      "title": {
+        "en": "Contact Us",
+        "zh": "联系我们",
+        "es": "Contáctenos",
+        "ja": "お問い合わせ"
+      },
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": {
+            "en": "If you have any questions about this Privacy Policy or our data practices, please contact us at:\n\nEmail: privacy@owell-lighting.com\nAddress: Building 3, Industrial Park, Longhua District, Shenzhen, Guangdong, China",
+            "zh": "如果您对本隐私政策或我们的数据实践有任何疑问，请通过以下方式联系我们：\n\n邮箱：privacy@owell-lighting.com\n地址：中国广东省深圳市龙华区工业园3栋",
+            "es": "Si tiene alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de datos, contáctenos en:\n\nCorreo electrónico: privacy@owell-lighting.com\nDirección: Edificio 3, Parque Industrial, Distrito de Longhua, Shenzhen, Guangdong, China",
+            "ja": "本プライバシーポリシーまたはデータの取り扱いについてご質問がある場合は、以下までお問い合わせください：\n\nメール：privacy@owell-lighting.com\n住所：中国広東省深セン市龍華区工業団地3号棟"
+          }
+        }
+      ]
+    }
+  ]
+}

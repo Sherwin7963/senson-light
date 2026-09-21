@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "en": "Industry Experience",
+      "zh": "行业经验",
+      "es": "Experiencia Industrial",
+      "ja": "業界経験"
+    },
+    "icon": "Factory",
+    "description": {
+      "en": "10+ years of professional LED lighting manufacturing experience with 20,000㎡ production facility.",
+      "zh": "10年以上专业LED照明制造经验，拥有20000平方米生产基地。",
+      "es": "Más de 10 años de experiencia profesional en fabricación de iluminación LED con una planta de producción de 20,000㎡.",
+      "ja": "20,000㎡の生産施設を持つ10年以上のプロフェッショナルLED照明製造経験。"
+    },
+    "order": 1
+  },
+  {
+    "id": "2",
+    "title": {
+      "en": "Global Certification",
+      "zh": "全球认证",
+      "es": "Certificación Global",
+      "ja": "グローバル認証"
+    },
+    "icon": "ShieldCheck",
+    "description": {
+      "en": "CE, RoHS, ISO9001, FCC certified products ensuring quality and compliance for global markets.",
+      "zh": "CE、RoHS、ISO9001、FCC认证产品，确保全球市场的质量和合规性。",
+      "es": "Productos certificados CE, RoHS, ISO9001 y FCC que garantizan calidad y cumplimiento para mercados globales.",
+      "ja": "CE、RoHS、ISO9001、FCC認証製品により、世界市場での品質とコンプライアンスを保証します。"
+    },
+    "order": 2
+  },
+  {
+    "id": "3",
+    "title": {
+      "en": "OEM/ODM/JDM Customization",
+      "zh": "OEM/ODM/JDM定制",
+      "es": "Personalización OEM/ODM/JDM",
+      "ja": "OEM/ODM/JDMカスタマイズ"
+    },
+    "icon": "Settings",
+    "description": {
+      "en": "Custom logo, housing design, packaging, and technical parameters to perfectly fit your brand identity.",
+      "zh": "定制logo、外壳设计、包装和技术参数，完美契合您的品牌形象。",
+      "es": "Logo personalizado, diseño de carcasa, empaque y parámetros técnicos para adaptarse perfectamente a su identidad de marca.",
+      "ja": "カスタムロゴ、筐体デザイン、パッケージ、技術パラメータにより、ブランドアイデンティティに完全に適合します。"
+    },
+    "order": 3
+  }
+]

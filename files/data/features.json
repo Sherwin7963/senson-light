@@ -1,0 +1,107 @@
+{
+  "features": [
+    {
+      "id": "feat_1",
+      "title": {
+        "en": "IP65 Waterproof",
+        "zh": "IP65防水",
+        "es": "Impermeable IP65",
+        "ja": "IP65防水"
+      },
+      "description": {
+        "en": "All outdoor products rated IP65 or higher for reliable performance in harsh weather.",
+        "zh": "所有户外产品均达到IP65或以上防护等级，在恶劣天气中性能可靠。",
+        "es": "Todos los productos para exteriores tienen clasificación IP65 o superior para un rendimiento confiable en climas adversos.",
+        "ja": "すべての屋外用製品はIP65以上の等級で、過酷な気象条件でも信頼性の高い性能を発揮します。"
+      },
+      "icon": "Shield",
+      "sortOrder": 1
+    },
+    {
+      "id": "feat_2",
+      "title": {
+        "en": "Energy Efficient",
+        "zh": "高效节能",
+        "es": "Energéticamente Eficiente",
+        "ja": "省エネルギー"
+      },
+      "description": {
+        "en": "Advanced LED technology saves up to 80% energy compared to traditional lighting.",
+        "zh": "先进LED技术比传统照明节省高达80%的能源。",
+        "es": "La tecnología LED avanzada ahorra hasta un 80% de energía en comparación con la iluminación tradicional.",
+        "ja": "先進的なLED技術により、従来の照明と比較して最大80％のエネルギーを節約します。"
+      },
+      "icon": "Leaf",
+      "sortOrder": 2
+    },
+    {
+      "id": "feat_3",
+      "title": {
+        "en": "Long Lifespan",
+        "zh": "超长寿命",
+        "es": "Larga Vida Útil",
+        "ja": "長寿命"
+      },
+      "description": {
+        "en": "50,000+ hour lifespan with 5-year warranty for commercial grade products.",
+        "zh": "50000小时以上使用寿命，商业级产品提供5年质保。",
+        "es": "Más de 50,000 horas de vida útil con garantía de 5 años para productos grado comercial.",
+        "ja": "業務用製品は50,000時間以上の寿命と5年保証付き。"
+      },
+      "icon": "Clock",
+      "sortOrder": 3
+    },
+    {
+      "id": "feat_4",
+      "title": {
+        "en": "Smart Sensor",
+        "zh": "智能感应",
+        "es": "Sensor Inteligente",
+        "ja": "スマートセンサー"
+      },
+      "description": {
+        "en": "High precision PIR motion sensor with adjustable sensitivity and timer settings.",
+        "zh": "高精度PIR人体感应传感器，灵敏度和时间可调。",
+        "es": "Sensor de movimiento PIR de alta precisión con sensibilidad ajustable y configuración de temporizador.",
+        "ja": "感度とタイマー設定が調整可能な高精度PIRモーションセンサー。"
+      },
+      "icon": "Radar",
+      "sortOrder": 4
+    },
+    {
+      "id": "feat_5",
+      "title": {
+        "en": "CE & RoHS Certified",
+        "zh": "CE & RoHS认证",
+        "es": "Certificación CE y RoHS",
+        "ja": "CE & RoHS認証"
+      },
+      "description": {
+        "en": "Full compliance with EU safety and environmental regulations.",
+        "zh": "完全符合欧盟安全和环保法规。",
+        "es": "Cumplimiento total con las normativas de seguridad y medioambientales de la UE.",
+        "ja": "EUの安全および環境規制に完全に準拠しています。"
+      },
+      "icon": "BadgeCheck",
+      "sortOrder": 5
+    },
+    {
+      "id": "feat_6",
+      "title": {
+        "en": "OEM Service",
+        "zh": "OEM服务",
+        "es": "Servicio OEM",
+        "ja": "OEMサービス"
+      },
+      "description": {
+        "en": "Customized products with your brand logo, packaging, and specifications.",
+        "zh": "定制化产品，提供您的品牌logo、包装和规格。",
+        "es": "Productos personalizados con el logo, empaque y especificaciones de su marca.",
+        "ja": "ブランドロゴ、パッケージ、仕様によるカスタマイズ製品。"
+      },
+      "icon": "Palette",
+      "sortOrder": 6
+    }
+  ],
+  "sectionImage": "/images/product-1.jpg"
+}
