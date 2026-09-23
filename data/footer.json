@@ -1,9 +1,24 @@
 {
-  "brandText": "Professional LED sensor light manufacturer from Jiujiang, China",
+  "brandText": {
+    "en": "Professional LED sensor light manufacturer from Jiujiang, China",
+    "zh": "来自中国九江的专业LED感应灯制造商",
+    "es": "Fabricante profesional de luces con sensor LED de Jiujiang, China",
+    "ja": "中国九江のプロフェッショナルLEDセンサーライトメーカー"
+  },
   "email": "sherwin@tanjeon.com",
   "phone": "+86 7928276258",
-  "address": "NO.16 Jiuyuan Road, Automobile Industrial Park, Jiujiang City, Jiangxi Province, China",
-  "copyright": "Jiujiang Ouwei Industrial Co.LTD",
+  "address": {
+    "en": "NO.16 Jiuyuan Road, Automobile Industrial Park, Jiujiang City, Jiangxi Province, China",
+    "zh": "中国江西省九江市汽车工业园区九园路16号",
+    "es": "N.º 16 de la calle Jiuyuan, Parque Industrial del Automóvil de la ciudad de Jiujiang, provincia de Jiangxi (China)",
+    "ja": "中国江西省九江市自動車工業団地、九園路16号"
+  },
+  "copyright": {
+    "en": "Jiujiang Ouwei Industrial Co.LTD",
+    "zh": "九江欧威实业有限公司",
+    "es": "Jiujiang Ouwei Industrial Co.LTD",
+    "ja": "九江欧威工業株式会社"
+  },
   "certifications": [
     "CE",
     "RoHS",
@@ -25,5 +40,5 @@
   "wechatQrImage": "",
   "headerLogo": "",
   "footerLogo": "",
-  "updatedAt": 1790129642334
+  "updatedAt": 1790132422275
 }

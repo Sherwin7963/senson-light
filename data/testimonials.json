@@ -16,7 +16,8 @@
       "ja": ""
     },
     "rating": 4,
-    "createdAt": 1789348333369
+    "createdAt": 1789348333369,
+    "isVisible": false
   },
   {
     "id": "3",
@@ -35,7 +36,8 @@
       "ja": ""
     },
     "rating": 5,
-    "createdAt": 1788916333369
+    "createdAt": 1788916333369,
+    "isVisible": false
   },
   {
     "id": "2",
@@ -54,7 +56,8 @@
       "ja": ""
     },
     "rating": 5,
-    "createdAt": 1788052333369
+    "createdAt": 1788052333369,
+    "isVisible": false
   },
   {
     "id": "1",
@@ -73,6 +76,7 @@
       "ja": ""
     },
     "rating": 5,
-    "createdAt": 1787188333369
+    "createdAt": 1787188333369,
+    "isVisible": false
   }
 ]
