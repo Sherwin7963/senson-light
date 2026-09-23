@@ -60,10 +60,10 @@
         "ja": "迅速な納品"
       },
       "description": {
-        "en": "7-15 days standard lead time",
-        "zh": "7-15天标准提前期",
-        "es": "Plazo de entrega estándar de 7-15 días",
-        "ja": "標準リードタイム7〜15日"
+        "en": "35 days standard lead time",
+        "zh": "35天标准提前期",
+        "es": "Plazo de entrega estándar de 35 días",
+        "ja": "標準リードタイム35日"
       },
       "icon": "Clock",
       "order": 4
