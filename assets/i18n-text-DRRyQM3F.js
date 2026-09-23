@@ -1,0 +1,1 @@
+function e(e,t,n=`en`){if(!e)return``;if(typeof e==`string`)return e;let r=e[t];return r&&r.trim()?r:e[n]??e.en??``}function t(e,t=``,n=``,r=``){return{en:e,zh:t,es:n,ja:r}}function n(e){return e?typeof e==`string`?{en:e,zh:``,es:``,ja:``}:{en:e.en??``,zh:e.zh??``,es:e.es??``,ja:e.ja??``}:{en:``,zh:``,es:``,ja:``}}export{e as n,n as r,t};
