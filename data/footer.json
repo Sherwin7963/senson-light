@@ -35,10 +35,16 @@
   "twitterEnabled": true,
   "instagramUrl": "https://www.instagram.com/owell.industrial",
   "instagramEnabled": false,
+  "redditUrl": "",
+  "redditEnabled": true,
+  "pinterestUrl": "",
+  "pinterestEnabled": true,
+  "snapchatUrl": "",
+  "snapchatEnabled": true,
   "wechatUrl": "https://mp.weixin.qq.com/",
   "wechatEnabled": true,
   "wechatQrImage": "",
   "headerLogo": "",
   "footerLogo": "",
-  "updatedAt": 1790132465105
+  "updatedAt": 1790153123399
 }
