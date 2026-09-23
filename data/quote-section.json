@@ -1,0 +1,47 @@
+{
+  "title": {
+    "en": "Get a Free Quote",
+    "zh": "免费获取报价",
+    "es": "Obtén un presupuesto gratuito",
+    "ja": "無料見積もりを取得"
+  },
+  "subtitle": {
+    "en": "Tell us your requirements and we will respond within 12 hours.",
+    "zh": "告诉我们您的需求，我们将在12小时内回复。",
+    "es": "Cuéntanos tus requisitos y responderemos en 12 horas.",
+    "ja": "ご要望をお聞かせください。12時間以内にご返信いたします。"
+  },
+  "features": [
+    {
+      "id": "f_1790141995143",
+      "icon": "CheckCircle2",
+      "text": {
+        "en": "12-hour fast response",
+        "zh": "12小时快速响应",
+        "es": "Respuesta rápida en 12 horas",
+        "ja": "12時間以内の迅速な対応"
+      }
+    },
+    {
+      "id": "f2",
+      "icon": "CheckCircle2",
+      "text": {
+        "en": "Competitive factory direct price",
+        "zh": "有竞争力的工厂直供价格",
+        "es": "Precio competitivo directo de fábrica",
+        "ja": "競争力のある工場直販価格"
+      }
+    },
+    {
+      "id": "f3",
+      "icon": "Package",
+      "text": {
+        "en": "Custom OEM / ODM support",
+        "zh": "支持OEM/ODM定制",
+        "es": "Soporte OEM / ODM personalizado",
+        "ja": "カスタムOEM / ODMサポート"
+      }
+    }
+  ],
+  "showOnHomepage": true
+}
