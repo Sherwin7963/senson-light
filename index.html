@@ -1,149 +1,110 @@
-<!doctype html>
-<html lang="en">
-  <head><style>
-  #error-overlay { position: fixed; inset: 0; z-index: 999999; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-family: system-ui, -apple-system, sans-serif; padding: 20px; }
-  #error-card { background: #fff; border-radius: 16px; padding: 32px; max-width: 560px; width: 100%; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-  #error-title { color: #dc2626; font-size: 24px; font-weight: 700; margin: 0 0 8px 0; display: flex; align-items: center; gap: 12px; }
-  #error-icon { width: 40px; height: 40px; border-radius: 50%; background: #fee2e2; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  #error-subtitle { color: #64748b; font-size: 16px; margin: 0 0 20px 0; }
-  #error-details-wrapper { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; max-height: 200px; overflow-y: auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; color: #991b1b; white-space: pre-wrap; word-break: break-all; }
-  #error-more-info { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #fecaca; font-size: 11px; color: #b91c1c; }
-  #error-more-info.visible { display: block; }
-  #error-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  #error-refresh { flex: 1; min-width: 140px; background: #dc2626; color: #fff; border: none; padding: 14px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-  #error-refresh:hover { background: #b91c1c; }
-  #error-toggle, #error-copy { padding: 14px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
-  #error-toggle:hover, #error-copy:hover { background: #e2e8f0; }
-  #error-footer { margin-top: 20px; text-align: center; color: #94a3b8; font-size: 12px; }
-</style>
-
-  <base href="/">
-    <style>doubao-watermark::shadow iframe[src*=watermark i],doubao-watermark::shadow iframe[src*=miaoda i],doubao-watermark::shadow iframe[src*=doubao i]{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}doubao-watermark::shadow body>[style*=position\:fixed]{max-height:120px}:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=watermark i],:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=miaoda i],:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=doubao i]{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) body>[style*=position\:fixed]{max-height:120px}</style>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="OWELL Industrial - Your Trusted LED Infrared Sensor Light Manufacturer from China. OEM/ODM custom LED security lighting factory." />
-    <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
-    <title>OWELL Industrial - LED Sensor Light Manufacturer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <style>html,body{color:#f5f5f5;background:#000;min-height:100vh;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,sans-serif}#root{min-height:100vh}#root:empty:before{content:"";border:2px solid #1a1a1a;border-top-color:#e63946;border-radius:50%;width:32px;height:32px;margin:0 auto;animation:.8s linear infinite ws-spin;display:block}#root:empty:after{content:"Loading...";text-align:center;color:#666;letter-spacing:.5px;margin-top:12px;font-size:14px;display:block}#root:empty{flex-direction:column;justify-content:center;align-items:center;padding-top:40vh;display:flex}@keyframes ws-spin{to{transform:rotate(360deg)}}.ws-watchdog-alert{color:#aaa;z-index:99999;background:#1a1a1a;border:1px solid #333;border-radius:6px;max-width:300px;padding:12px 16px;font-size:13px;position:fixed;bottom:20px;right:20px;box-shadow:0 4px 12px #00000080}.ws-watchdog-alert button{color:#fff;cursor:pointer;background:#e63946;border:none;border-radius:4px;margin-top:8px;padding:6px 12px;font-size:12px}</style>
-    <script type="module" src="/assets/index-QeXEhJBb.js"></script>
-    <link rel="modulepreload" href="/assets/toolkit-shim-RVIUYT4N.js">
-    <link rel="modulepreload" href="/assets/dist-D-J4ORno.js">
-    <link rel="modulepreload" href="/assets/jsx-runtime-WTu9FJws.js">
-    <link rel="modulepreload" href="/assets/card-BGpCxCWa.js">
-    <link rel="modulepreload" href="/assets/book-open-B2ASr4Lv.js">
-    <link rel="modulepreload" href="/assets/chevron-left-BzS806yE.js">
-    <link rel="modulepreload" href="/assets/PageBreadcrumb-CHxoE20s.js">
-    <link rel="modulepreload" href="/assets/zoom-in-Doo8g1mL.js">
-    <link rel="modulepreload" href="/assets/file-text-DOm1M4E8.js">
-    <link rel="modulepreload" href="/assets/volume-x-Cozuh2mr.js">
-    <link rel="modulepreload" href="/assets/loader-circle-qdfkDAHl.js">
-    <link rel="modulepreload" href="/assets/play-D61TPQNo.js">
-    <link rel="modulepreload" href="/assets/plus-CKhnhzJ1.js">
-    <link rel="modulepreload" href="/assets/refresh-cw-0avdEmRe.js">
-    <link rel="modulepreload" href="/assets/triangle-alert-BVe2Kv1X.js">
-    <link rel="modulepreload" href="/assets/x-DfwL0srS.js">
-    <link rel="modulepreload" href="/assets/basename-DkWhrF5K.js">
-    <link rel="modulepreload" href="/assets/img-path-Bo0ikVjd.js">
-    <link rel="modulepreload" href="/assets/github-api-ad9a8izq.js">
-    <link rel="modulepreload" href="/assets/GithubConfigContext-BWUmrnrH.js">
-    <link rel="modulepreload" href="/assets/useGithubConfig-jpOWAame.js">
-    <link rel="modulepreload" href="/assets/RemoteDataContext-DBnXWU9H.js">
-    <link rel="modulepreload" href="/assets/i18n-text-DRRyQM3F.js">
-    <link rel="modulepreload" href="/assets/remote-data-safe-gB3bbRMr.js">
-    <link rel="modulepreload" href="/assets/dist-B1quAwfm.js">
-    <link rel="modulepreload" href="/assets/dist-BQSJyF1G.js">
-    <link rel="modulepreload" href="/assets/dist-u781E40w.js">
-    <link rel="modulepreload" href="/assets/tslib.es6-NhdQCYIh.js">
-    <link rel="modulepreload" href="/assets/es2015-BkaUZkTe.js">
-    <link rel="modulepreload" href="/assets/dist-qniw1a_k.js">
-    <link rel="modulepreload" href="/assets/useGithubSync-BC881qU2.js">
-    <link rel="modulepreload" href="/assets/dist-hGBDqryx.js">
-    <link rel="modulepreload" href="/assets/input-Do0E79LT.js">
-    <link rel="modulepreload" href="/assets/format-DVr6sjC1.js">
-    <link rel="modulepreload" href="/assets/proxy-B7aTLcTq.js">
-    <link rel="modulepreload" href="/assets/indexed-db-BRLtctVH.js">
-    <link rel="modulepreload" href="/assets/image-compress-DPj5Rs7A.js">
-    <link rel="stylesheet" href="/assets/index-ju9qWi8G.css">
-  
-<script>
-  // Platform global variables (static deploy)
-  window.appId = "app_static_deploy";
-  window.userId = "static_user";
-  window.tenantId = "static_tenant";
-  window.userName = "Guest";
-  window.csrfToken = "";
-  window.ENVIRONMENT = "production";
-  window.__BASENAME__ = "";
-  window._appInfo = {
-    name: "LED Sensor Light",
-    description: "B2B LED Infrared Sensor Light Website",
-  };
-  window.staticDeploy = true;
-  // GitHub config (injected from env vars at build time)
-  // 用于静态部署时默认启用 GitHub Issue 同步（询盘邮件通知）
-  // 通过环境变量 GITHUB_TOKEN / GITHUB_OWNER / GITHUB_REPO / GITHUB_BRANCH / GITHUB_BASE_PATH 注入
-  // 如果环境变量未设置，__GITHUB_CONFIG__ 为 null，前端走 localStorage 配置
-  window.__GITHUB_CONFIG__ = (function() {
-    try {
-      var token = "__GITHUB_TOKEN_PLACEHOLDER__";
-      var owner = "__GITHUB_OWNER_PLACEHOLDER__";
-      var repo = "__GITHUB_REPO_PLACEHOLDER__";
-      var branch = "__GITHUB_BRANCH_PLACEHOLDER__" || "main";
-      var basePath = "__GITHUB_BASEPATH_PLACEHOLDER__" || "";
-      // 占位符未替换 → 返回 null（不启用全局配置）
-      if (!token || token.indexOf("PLACEHOLDER") >= 0 || !owner || owner.indexOf("PLACEHOLDER") >= 0 || !repo || repo.indexOf("PLACEHOLDER") >= 0) {
-        return null;
-      }
-      return {
-        token: token,
-        owner: owner,
-        repo: repo,
-        branch: branch,
-        basePath: basePath,
-        enabled: true
-      };
-    } catch(e) { return null; }
+<!doctype html><html lang="en"><head><script>(function(){
+  var needsPolyfill=(function(){
+    try{
+      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
+      if(typeof Object.hasOwn!=="function")return true;
+      if(typeof[].at!=="function")return true;
+      if(typeof[].findLast!=="function")return true;
+      return false;
+    }catch(e){return true}
   })();
-</script>
-
-<style>
-  /* Watermark hide for static deploy */
-  [class*="watermark"],
-  [id*="watermark"],
-  [style*="watermark"],
-  .mx-watermark,
-  .lark-watermark,
-  [data-watermark] {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
+  if(needsPolyfill){
+    document.write('<script src="./assets/polyfills.js"><\/script>');
   }
-  body::before,
-  body::after { content: none !important; }
-</style>
-</head>
-  <body>
-    <div id="root"></div>
-    <noscript>
-      <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5f5f5;font-family:system-ui,sans-serif;padding:24px;text-align:center;">
-        <div style="max-width:480px;">
-          <h1 style="font-size:20px;color:#e63946;margin:0 0 16px;">JavaScript Required</h1>
-          <p style="font-size:14px;color:#aaa;line-height:1.6;margin:0 0 16px;">
-            This website requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.
-          </p>
-          <p style="font-size:13px;color:#666;margin:0;">
-            OWELL Industrial - LED Sensor Light Manufacturer
-          </p>
-        </div>
-      </div>
-    </noscript>
-    <script>
-      // ====== 资源加载失败自动重试（JS/CSS 404 时自动追加新 script/link） ======
+})();</script><script>window.appId = "";
+    window.userId = "";
+    window.tenantId = "";
+    window.userName = "";
+    window.csrfToken = "";
+    window.ENVIRONMENT = "production";
+    window.__BASENAME__ = "/";
+    const appInfo = {
+      name: "OWELL Industrial",
+      avatar: "./favicon.png",
+      description: "OWELL Industrial - LED Sensor Light Manufacturer",
+    };
+    if (appInfo.name) {
+      window._appInfo = appInfo;
+    }</script><script>(function(g){
+  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
+  window.__slardarErrBuf=window.__slardarErrBuf||[];
+  var ref=document.referrer||'';
+  function _cap(err){
+    if(window[g]&&!window[g].q){
+      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
+    }else{
+      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
+    }
+  }
+  window.addEventListener('error',function(e){
+    if(e.error==null&&e.target instanceof Element){
+      var t=e.target,url=t.src||t.href||'';
+      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
+      return;
+    }
+    if(e.error!=null){
+      var err=e.error;
+      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
+        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
+      }
+      _cap(err);
+    }else{
+      var msg=e.message||'Script error';
+      var err=new Error(msg);
+      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
+      _cap(err);
+    }
+  },true);
+  window.addEventListener('unhandledrejection',function(e){
+    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
+  });
+})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
+    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
+    slardarScript.crossOrigin = 'anonymous';
+    slardarScript.onload = function() {
+      if (window.KSlardarWeb) {
+        window.KSlardarWeb('context.merge', {
+          tenantId: window.tenantId ?? '',
+          appId: window.appId ?? '',
+          stack_version: "0.1.0",
+          app_type: 6,
+          arch_type: 2,
+        });
+        window.KSlardarWeb('init', {
+          bid: 'apaas_miaoda',
+          env: window.ENVIRONMENT || 'online',
+          userId: window.userId ?? '',
+        });
+        window.KSlardarWeb('start');
+        // Flush errors captured before the SDK finished loading
+        var buf = window.__slardarErrBuf || [];
+        window.__slardarErrBuf = [];
+        buf.forEach(function(err) {
+          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
+        });
+      }
+    };
+    slardarScript.onerror = function() {
+      console.warn('Failed to load Slardar script');
+    };
+    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" crossorigin="anonymous" defer="defer"></script><script>(function (win, export_obj) {
+    win['LogAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+      function _collect() { _collect.q.push(arguments); }
+      _collect.q = _collect.q || [];
+      win[export_obj] = _collect;
+    }
+    win[export_obj].l = +new Date();
+  })(window, 'collectEvent');
+
+  const teaScript = document.createElement('script');
+  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
+  teaScript.crossOrigin = 'anonymous';
+  teaScript.async = true;
+  teaScript.onerror = function() {
+    console.warn('Failed to load Tea script');
+  };
+  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom],doubao-watermark,doubao-watermark-mobile,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}doubao-watermark::shadow{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}body>[style*=position\:fixed]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>OWELL Industrial</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts" crossorigin><style>body,html{color:#f5f5f5;background:#000;min-height:100vh;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,sans-serif}#root{min-height:100vh}#root:empty:before{content:"";border:2px solid #1a1a1a;border-top-color:#e63946;border-radius:50%;width:32px;height:32px;margin:0 auto;animation:.8s linear infinite ws-spin;display:block}#root:empty:after{content:"Loading...";text-align:center;color:#666;letter-spacing:.5px;margin-top:12px;font-size:14px;display:block}#root:empty{flex-direction:column;justify-content:center;align-items:center;padding-top:40vh;display:flex}@keyframes ws-spin{to{transform:rotate(360deg)}}.ws-watchdog-alert{color:#aaa;z-index:99999;background:#1a1a1a;border:1px solid #333;border-radius:6px;max-width:300px;padding:12px 16px;font-size:13px;position:fixed;bottom:20px;right:20px;box-shadow:0 4px 12px #00000080}.ws-watchdog-alert button{color:#fff;cursor:pointer;background:#e63946;border:none;border-radius:4px;margin-top:8px;padding:6px 12px;font-size:12px}</style><script type="module" crossorigin src="./assets/index-D6kECRcc.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-B0Z9INg1.js"><link rel="modulepreload" crossorigin href="./assets/radix-DMWNFCa2.js"><link rel="modulepreload" crossorigin href="./assets/toolkit-IIfuT617.js"><link rel="modulepreload" crossorigin href="./assets/card-Dc7dnkzR.js"><link rel="modulepreload" crossorigin href="./assets/book-open-D9uVfGgX.js"><link rel="modulepreload" crossorigin href="./assets/chevron-down-B1ENmXXc.js"><link rel="modulepreload" crossorigin href="./assets/chevron-up-U8pIBeo1.js"><link rel="modulepreload" crossorigin href="./assets/select-Byk4d-39.js"><link rel="modulepreload" crossorigin href="./assets/chevron-left-DvzQgP-C.js"><link rel="modulepreload" crossorigin href="./assets/PageBreadcrumb-CE1siypE.js"><link rel="modulepreload" crossorigin href="./assets/zoom-in-BBJ1Hi_K.js"><link rel="modulepreload" crossorigin href="./assets/file-text-c1TK7K2e.js"><link rel="modulepreload" crossorigin href="./assets/volume-x-CyG7YWYA.js"><link rel="modulepreload" crossorigin href="./assets/loader-circle-OaDrePMk.js"><link rel="modulepreload" crossorigin href="./assets/play-atMVHz6W.js"><link rel="modulepreload" crossorigin href="./assets/plus-BNZEbgQh.js"><link rel="modulepreload" crossorigin href="./assets/refresh-cw-CCJA0Dqc.js"><link rel="modulepreload" crossorigin href="./assets/triangle-alert-7yNaBQ8B.js"><link rel="modulepreload" crossorigin href="./assets/x-Kdb5_HwX.js"><link rel="modulepreload" crossorigin href="./assets/basename-ba9tt0mp.js"><link rel="modulepreload" crossorigin href="./assets/img-path-BOYavGS5.js"><link rel="modulepreload" crossorigin href="./assets/dist-B8xRGsfL.js"><link rel="modulepreload" crossorigin href="./assets/github-api-BNXmuHT_.js"><link rel="modulepreload" crossorigin href="./assets/GithubConfigContext-C1ko8lbN.js"><link rel="modulepreload" crossorigin href="./assets/useGithubConfig-B2RLRhJc.js"><link rel="modulepreload" crossorigin href="./assets/RemoteDataContext-DK2R527I.js"><link rel="modulepreload" crossorigin href="./assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" crossorigin href="./assets/remote-data-safe-D8jlPsJL.js"><link rel="modulepreload" crossorigin href="./assets/useGithubSync-BGy2HWlP.js"><link rel="modulepreload" crossorigin href="./assets/input-Bhway482.js"><link rel="modulepreload" crossorigin href="./assets/format-DVr6sjC1.js"><link rel="modulepreload" crossorigin href="./assets/proxy-CUJ0e1Ek.js"><link rel="modulepreload" crossorigin href="./assets/indexed-db-PIqlL13c.js"><link rel="modulepreload" crossorigin href="./assets/image-compress-DPj5Rs7A.js"><link rel="stylesheet" crossorigin href="./assets/index-CW0oexkS.css"><meta property="og:title" content="OWELL Industrial"><meta property="og:description" content="OWELL Industrial - LED Sensor Light Manufacturer"><meta property="og:image" content=""><link rel="icon" href=""></head><body><div id="root"></div><noscript><div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5f5f5;font-family:system-ui,sans-serif;padding:24px;text-align:center"><div style="max-width:480px"><h1 style="font-size:20px;color:#e63946;margin:0 0 16px">JavaScript Required</h1><p style="font-size:14px;color:#aaa;line-height:1.6;margin:0 0 16px">This website requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.</p><p style="font-size:13px;color:#666;margin:0">OWELL Industrial - LED Sensor Light Manufacturer</p></div></div></noscript><script>// ====== 资源加载失败自动重试（JS/CSS 404 时自动追加新 script/link） ======
       (function() {
         var retryCount = {};
         var MAX_RETRIES = 2;
@@ -284,147 +245,4 @@
             }, 2000);
           });
         })();
-      })();
-    </script>
-  <script>
-(function() {
-  var errors = [];
-  var maxErrors = 30;
-  var mountTimer = null;
-  var hasMounted = false;
-  var startTime = Date.now();
-  var VERSION = "V113";
-
-  function formatError(type, msg, url, line, col, stack) {
-    var ts = new Date().toISOString();
-    var parts = ["[" + ts + "] [" + type + "]"];
-    if (msg) parts.push(msg);
-    if (url) parts.push("URL: " + url);
-    if (line != null) parts.push("Line: " + line + (col != null ? ":" + col : ""));
-    if (stack) parts.push("Stack: " + stack);
-    return parts.join("\n");
-  }
-
-  function addError(type, msg, url, line, col, stack) {
-    if (errors.length >= maxErrors) errors.shift();
-    errors.push(formatError(type, msg, url, line, col, stack));
-    showError();
-  }
-
-  window.addEventListener("error", function(e) {
-    if (e.target && (e.target.tagName === "IMG" || e.target.tagName === "SOURCE")) {
-      // V122：图片加载失败只记录日志，不触发错误覆盖层
-      // 图片 404 是常见情况，不应让整个页面崩溃
-      var src = e.target.src || "unknown";
-      console.warn("[ResourceLoadError] Failed to load image:", src);
-      return;
-    }
-    e.preventDefault();
-    if (e.target && (e.target.tagName === "SCRIPT" || e.target.tagName === "LINK")) {
-      var tagName = e.target.tagName;
-      var src = e.target.src || e.target.href || "unknown";
-      addError("ResourceLoadError", "Failed to load " + tagName + ": " + src, src, null, null, null);
-      return;
-    }
-    var msg = e.message ? String(e.message) : (e.error && e.error.message ? e.error.message : "Unknown error");
-    var stack = e.error && e.error.stack ? String(e.error.stack) : null;
-    addError("RuntimeError", msg, e.filename, e.lineno, e.colno, stack);
-  }, true);
-
-  window.addEventListener("unhandledrejection", function(e) {
-    e.preventDefault();
-    var reason = e.reason;
-    var msg = "Unhandled Promise Rejection";
-    var stack = null;
-    if (reason) {
-      if (typeof reason === "string") msg = reason;
-      else if (reason.message) { msg = String(reason.message); stack = reason.stack ? String(reason.stack) : null; }
-      else { try { msg = JSON.stringify(reason); } catch(_) { msg = String(reason); } }
-    }
-    addError("PromiseRejection", msg, null, null, null, stack);
-  });
-
-  function checkMount() {
-    if (hasMounted) return;
-    var root = document.getElementById("root");
-    if (root && root.children.length > 0) { hasMounted = true; if (mountTimer) clearInterval(mountTimer); return; }
-    var elapsed = Date.now() - startTime;
-    if (elapsed > 10000 && !hasMounted) {
-      addError("MountTimeout", "App failed to mount within 10 seconds.",
-        null, null, null,
-        "Elapsed: " + elapsed + "ms\nErrors captured: " + errors.length + "\nRoot element: " + (root ? "found" : "not found"));
-    }
-  }
-  mountTimer = setInterval(checkMount, 500);
-
-  if (typeof MutationObserver !== "undefined") {
-    var observer = new MutationObserver(function() {
-      var root = document.getElementById("root");
-      if (root && root.children.length > 0) {
-        hasMounted = true;
-        if (mountTimer) { clearInterval(mountTimer); mountTimer = null; }
-        var overlay = document.getElementById("error-overlay");
-        var realErrors = errors.filter(function(e) { return e.indexOf("[MountTimeout]") === -1; });
-        if (overlay && realErrors.length === 0) overlay.style.display = "none";
-        observer.disconnect();
-      }
-    });
-    if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    else document.addEventListener("DOMContentLoaded", function() { observer.observe(document.body, { childList: true, subtree: true }); });
-  }
-
-  function showError() {
-    var old = document.getElementById("error-overlay");
-    if (old) old.remove();
-    var overlay = document.createElement("div");
-    overlay.id = "error-overlay";
-    var latestError = errors[errors.length - 1] || "";
-    var moreErrors = errors.length > 1
-      ? "\n\n--- Additional errors (" + (errors.length - 1) + " more) ---\n" + errors.slice(0, -1).join("\n\n")
-      : "";
-    overlay.innerHTML =
-      '<div id="error-card">' +
-        '<div id="error-title"><div id="error-icon">!</div><span>Page Load Error</span></div>' +
-        '<p id="error-subtitle">Something went wrong. Details below.</p>' +
-        '<div id="error-details-wrapper">' +
-          '<div id="error-details">' + escapeHtml(latestError) + '</div>' +
-          '<div id="error-more-info">' + escapeHtml(moreErrors) + '</div>' +
-        '</div>' +
-        '<div id="error-actions">' +
-          '<button id="error-refresh">Refresh Page</button>' +
-          '<button id="error-toggle">Toggle Details</button>' +
-          '<button id="error-copy">Copy Error</button>' +
-        '</div>' +
-        '<div id="error-footer">' + VERSION + ' Error Handler | Static Deploy</div>' +
-      '</div>';
-    if (document.body) document.body.appendChild(overlay);
-    else document.addEventListener("DOMContentLoaded", function() { document.body.appendChild(overlay); });
-
-    document.getElementById("error-refresh").addEventListener("click", function() { location.reload(); });
-    document.getElementById("error-toggle").addEventListener("click", function() {
-      document.getElementById("error-more-info").classList.toggle("visible");
-    });
-    document.getElementById("error-copy").addEventListener("click", function() {
-      var text = errors.join("\n\n");
-      var btn = document.getElementById("error-copy");
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(function() { btn.textContent = "Copied!"; setTimeout(function() { btn.textContent = "Copy Error"; }, 2000); }).catch(function() { fallbackCopy(text); });
-      } else fallbackCopy(text);
-      function fallbackCopy(t) {
-        var ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
-        document.body.appendChild(ta); ta.select();
-        try { document.execCommand("copy"); btn.textContent = "Copied!"; } catch(e) { btn.textContent = "Copy failed"; }
-        document.body.removeChild(ta); setTimeout(function() { btn.textContent = "Copy Error"; }, 2000);
-      }
-    });
-  }
-
-  function escapeHtml(str) {
-    var div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-})();
-</script>
-</body>
-</html>
+      })();</script></body></html>
