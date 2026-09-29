@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><style>
+<!doctype html>
+<html lang="en">
+  <head><style>
   #error-overlay { position: fixed; inset: 0; z-index: 999999; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-family: system-ui, -apple-system, sans-serif; padding: 20px; }
   #error-card { background: #fff; border-radius: 16px; padding: 32px; max-width: 560px; width: 100%; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
   #error-title { color: #dc2626; font-size: 24px; font-weight: 700; margin: 0 0 8px 0; display: flex; align-items: center; gap: 12px; }
@@ -15,113 +17,59 @@
   #error-footer { margin-top: 20px; text-align: center; color: #94a3b8; font-size: 12px; }
 </style>
 
-  <base href="/"><script>(function(){
-  var needsPolyfill=(function(){
-    try{
-      if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
-      if(typeof Object.hasOwn!=="function")return true;
-      if(typeof[].at!=="function")return true;
-      if(typeof[].findLast!=="function")return true;
-      return false;
-    }catch(e){return true}
-  })();
-  if(needsPolyfill){
-    document.write('<script src="/assets/polyfills.js"><\/script>');
-  }
-})();</script><script>window.appId = "{{appId}}";
-    window.userId = "{{userId}}";
-    window.tenantId = "{{tenantId}}";
-    window.userName = "{{userName}}";
-    window.csrfToken = "{{csrfToken}}";
-    window.ENVIRONMENT = "{{environment}}";
-    window.__BASENAME__ = "{{basename}}";
-    const appInfo = {
-      name: "{{appName}}",
-      avatar: "{{{appAvatar}}}",
-      description: "{{appDescription}}",
-    };
-    if (appInfo.name) {
-      window._appInfo = appInfo;
-    }</script><script>(function(g){
-  if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
-  window.__slardarErrBuf=window.__slardarErrBuf||[];
-  var ref=document.referrer||'';
-  function _cap(err){
-    if(window[g]&&!window[g].q){
-      window[g]('captureException',err instanceof Error?err:new Error(String(err)),{source:'runtime-error',referrer:ref});
-    }else{
-      (window.__slardarErrBuf=window.__slardarErrBuf||[]).push(err);
-    }
-  }
-  window.addEventListener('error',function(e){
-    if(e.error==null&&e.target instanceof Element){
-      var t=e.target,url=t.src||t.href||'';
-      if(url)window[g]('captureException',new Error('Resource load failed: '+url),{team:'miaoda-sdk',source:'resource-error',resourceType:t.tagName.toLowerCase(),resourceUrl:url,referrer:ref});
-      return;
-    }
-    if(e.error!=null){
-      var err=e.error;
-      if(e.filename&&typeof err.stack==='string'&&err.stack.indexOf(e.filename)<0){
-        try{err.stack+='\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);}catch(ex){}
-      }
-      _cap(err);
-    }else{
-      var msg=e.message||'Script error';
-      var err=new Error(msg);
-      if(e.filename)err.stack=msg+'\n    at '+e.filename+':'+(e.lineno||0)+':'+(e.colno||0);
-      _cap(err);
-    }
-  },true);
-  window.addEventListener('unhandledrejection',function(e){
-    if(e.reason!=null)_cap(e.reason instanceof Error?e.reason:new Error(String(e.reason)));
-  });
-})('KSlardarWeb');</script><script>const slardarScript = document.createElement('script');
-    slardarScript.src = 'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=apaas_miaoda&globalName=KSlardarWeb';
-    slardarScript.crossOrigin = 'anonymous';
-    slardarScript.onload = function() {
-      if (window.KSlardarWeb) {
-        window.KSlardarWeb('context.merge', {
-          tenantId: window.tenantId ?? '',
-          appId: window.appId ?? '',
-          stack_version: "0.1.0",
-          app_type: 6,
-          arch_type: 2,
-        });
-        window.KSlardarWeb('init', {
-          bid: 'apaas_miaoda',
-          env: window.ENVIRONMENT || 'online',
-          userId: window.userId ?? '',
-        });
-        window.KSlardarWeb('start');
-        // Flush errors captured before the SDK finished loading
-        var buf = window.__slardarErrBuf || [];
-        window.__slardarErrBuf = [];
-        buf.forEach(function(err) {
-          window.KSlardarWeb('captureException', err instanceof Error ? err : new Error(String(err)), { source: 'pre-sdk-error', referrer: document.referrer || '' });
-        });
-      }
-    };
-    slardarScript.onerror = function() {
-      console.warn('Failed to load Slardar script');
-    };
-    document.head.appendChild(slardarScript);</script><script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/performance.iife.js" data-app-name="builderV3" defer="defer"></script><script>(function (win, export_obj) {
-    win['LogAnalyticsObject'] = export_obj;
-    if (!win[export_obj]) {
-      function _collect() { _collect.q.push(arguments); }
-      _collect.q = _collect.q || [];
-      win[export_obj] = _collect;
-    }
-    win[export_obj].l = +new Date();
-  })(window, 'collectEvent');
-
-  const teaScript = document.createElement('script');
-  teaScript.src = 'https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js';
-  teaScript.crossOrigin = 'anonymous';
-  teaScript.async = true;
-  teaScript.onerror = function() {
-    console.warn('Failed to load Tea script');
-  };
-  document.head.appendChild(teaScript);</script><style>[class*=apaas i],[class*=built-with i],[class*=built_with i],[class*=builtwith i],[class*=doubao i],[class*=lark-watermark i],[class*=miaoda i],[class*=powered-by i],[class*=powered_by i],[class*=poweredby i],[class*=watermark i],[data-custom-element*=doubao i],[data-custom-element*=miaoda i],[data-custom-element*=watermark i],[data-custom-element=doubao-watermark-mobile],[data-custom-element=doubao-watermark],[id*=apaas-watermark i],[id*=doubao i],[id*=miaoda i],[id*=watermark i],apaas-watermark,body>div[style*="position: fixed"][style*=bottom],body>div[style*="position:fixed"][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*="position:fixed"][style*=bottom],doubao-watermark,doubao-watermark /deep/,doubao-watermark-mobile,doubao-watermark::shadow,iframe[src*=doubao i],iframe[src*=miaoda i],iframe[src*=watermark i],lark-watermark,miaoda-watermark{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;max-width:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;z-index:-999999!important;position:absolute!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;font-size:0!important;line-height:0!important;padding:0!important;margin:0!important;border:none!important;background:0 0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important}body>[style*="position:fixed"]{max-height:120px}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{{appDescription}}"><meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China"><title>{{appName}}</title><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><link rel="preconnect" href="https://miaoda.feishu.cn/fonts"><style>body,html{margin:0;padding:0;background:#000;color:#f5f5f5;font-family:Inter,system-ui,-apple-system,sans-serif;min-height:100vh}#root{min-height:100vh}#root:empty::before{content:'';display:block;width:32px;height:32px;border:2px solid #1a1a1a;border-top-color:#e63946;border-radius:50%;animation:ws-spin .8s linear infinite;margin:0 auto}#root:empty::after{content:'Loading...';display:block;text-align:center;margin-top:12px;font-size:14px;color:#666;letter-spacing:.5px}#root:empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:40vh}@keyframes ws-spin{to{transform:rotate(360deg)}}.ws-watchdog-alert{position:fixed;bottom:20px;right:20px;background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:12px 16px;font-size:13px;color:#aaa;z-index:99999;max-width:300px;box-shadow:0 4px 12px rgba(0,0,0,.5)}.ws-watchdog-alert button{background:#e63946;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;margin-top:8px}</style><script type="module" src="/assets/index-CXm9WZCo.js"></script><link rel="modulepreload" href="/assets/rolldown-runtime-CNC7AqOf.js"><link rel="modulepreload" href="/assets/radix-C4pQ32MD.js"><link rel="modulepreload" href="/assets/toolkit-shim-DXF6KQqy.js"><link rel="modulepreload" href="/assets/card-C2JMgNeW.js"><link rel="modulepreload" href="/assets/users-CCJwYQer.js"><link rel="modulepreload" href="/assets/dist-BrpDDIeb.js"><link rel="modulepreload" href="/assets/github-api-z_rbe_6u.js"><link rel="modulepreload" href="/assets/GithubConfigContext-CuByNwsr.js"><link rel="modulepreload" href="/assets/useGithubConfig-Dw3OcH5L.js"><link rel="modulepreload" href="/assets/RemoteDataContext-9XFRnzjt.js"><link rel="modulepreload" href="/assets/i18n-text-DRRyQM3F.js"><link rel="modulepreload" href="/assets/remote-data-safe-DqTgWgkZ.js"><link rel="modulepreload" href="/assets/useFeatures-CQDas9Yt.js"><link rel="modulepreload" href="/assets/arrow-up-CzoeUO7e.js"><link rel="modulepreload" href="/assets/award-DMOhuUwU.js"><link rel="modulepreload" href="/assets/undo-BgWywjET.js"><link rel="modulepreload" href="/assets/book-open-D25EacZV.js"><link rel="modulepreload" href="/assets/building-2-ivoBKFEB.js"><link rel="modulepreload" href="/assets/user-Ba5qPDzk.js"><link rel="modulepreload" href="/assets/info-BnfNdnp3.js"><link rel="modulepreload" href="/assets/chevron-down-CNZd7AAZ.js"><link rel="modulepreload" href="/assets/chevron-up-cWrMrRAr.js"><link rel="modulepreload" href="/assets/select-BbKipBt_.js"><link rel="modulepreload" href="/assets/chevron-left-BW69-DWM.js"><link rel="modulepreload" href="/assets/PageBreadcrumb-jwTo8VUw.js"><link rel="modulepreload" href="/assets/circle-alert-C0m0qwOF.js"><link rel="modulepreload" href="/assets/circle-check-CxfrPHJk.js"><link rel="modulepreload" href="/assets/circle-question-mark-ypMFZ3UT.js"><link rel="modulepreload" href="/assets/github-DJpQfKH-.js"><link rel="modulepreload" href="/assets/clock-DyVSA-cm.js"><link rel="modulepreload" href="/assets/textarea-ws54m98u.js"><link rel="modulepreload" href="/assets/key-Dr_IZXTE.js"><link rel="modulepreload" href="/assets/share-2-CdATHJ2x.js"><link rel="modulepreload" href="/assets/zoom-in-LynWYmpu.js"><link rel="modulepreload" href="/assets/external-link-BwzpwFgh.js"><link rel="modulepreload" href="/assets/eye-off-BUH2IEV-.js"><link rel="modulepreload" href="/assets/eye-C32gW7cN.js"><link rel="modulepreload" href="/assets/file-text-BA7GDunS.js"><link rel="modulepreload" href="/assets/volume-x-BBphQXdk.js"><link rel="modulepreload" href="/assets/rotate-ccw-D5QM-4oA.js"><link rel="modulepreload" href="/assets/globe-C5YYz6SD.js"><link rel="modulepreload" href="/assets/grip-vertical-CnbvDoFi.js"><link rel="modulepreload" href="/assets/tablet-tZRGy3U5.js"><link rel="modulepreload" href="/assets/thumbs-up-4BY35qyq.js"><link rel="modulepreload" href="/assets/move-up-BJPKldSd.js"><link rel="modulepreload" href="/assets/image-By2tHsou.js"><link rel="modulepreload" href="/assets/key-round-BhT1YNr8.js"><link rel="modulepreload" href="/assets/languages-CiVJ6NVY.js"><link rel="modulepreload" href="/assets/zap-DAkDNKvS.js"><link rel="modulepreload" href="/assets/loader-circle-38rFqgL6.js"><link rel="modulepreload" href="/assets/lock-C-iQQlSz.js"><link rel="modulepreload" href="/assets/mail-CqzWSct1.js"><link rel="modulepreload" href="/assets/package-CW23bSOd.js"><link rel="modulepreload" href="/assets/pen-D22UZvon.js"><link rel="modulepreload" href="/assets/play-DqaP5_wO.js"><link rel="modulepreload" href="/assets/plus-5bSmD1Gi.js"><link rel="modulepreload" href="/assets/refresh-cw-7l27aQOv.js"><link rel="modulepreload" href="/assets/save-Di_idmqp.js"><link rel="modulepreload" href="/assets/search-CuOSwlOO.js"><link rel="modulepreload" href="/assets/server-BKKhOBl6.js"><link rel="modulepreload" href="/assets/settings-DmkSzh-G.js"><link rel="modulepreload" href="/assets/shield-check-CWdPWsUW.js"><link rel="modulepreload" href="/assets/shield-BYoJmK2-.js"><link rel="modulepreload" href="/assets/sparkles-eGRCzvwt.js"><link rel="modulepreload" href="/assets/star-BiEMyKSA.js"><link rel="modulepreload" href="/assets/tag-BuwVMK3B.js"><link rel="modulepreload" href="/assets/target-B8qfv-gN.js"><link rel="modulepreload" href="/assets/trash-2-B9TdqFij.js"><link rel="modulepreload" href="/assets/trending-up-WkLOCmCB.js"><link rel="modulepreload" href="/assets/triangle-alert-CdDNuqq1.js"><link rel="modulepreload" href="/assets/upload-CMbXy2B9.js"><link rel="modulepreload" href="/assets/wrench-CvcGph9f.js"><link rel="modulepreload" href="/assets/x-owK_IJxu.js"><link rel="modulepreload" href="/assets/lucide-react-DT7GmjaB.js"><link rel="modulepreload" href="/assets/basename-BbzSzOiZ.js"><link rel="modulepreload" href="/assets/img-path-EEJRADmf.js"><link rel="modulepreload" href="/assets/useGithubSync-Dp2uVsMC.js"><link rel="modulepreload" href="/assets/input-D7Q1jF95.js"><link rel="modulepreload" href="/assets/format-BcGSa_Z5.js"><link rel="modulepreload" href="/assets/proxy-etLIsAmU.js"><link rel="modulepreload" href="/assets/indexed-db-BZ-bJ55N.js"><link rel="modulepreload" href="/assets/useProducts-Ca7wuD4u.js"><link rel="modulepreload" href="/assets/useCategories-e-wH6QKq.js"><link rel="modulepreload" href="/assets/image-compress-7G1Sv7zJ.js"><link rel="modulepreload" href="/assets/useFactoryVideo-CGU9VODS.js"><link rel="stylesheet" href="/assets/index-DYpngSu8.css"><meta property="og:title" content="{{appName}}"><meta property="og:description" content="{{appDescription}}"><meta property="og:image" content="{{appAvatar}}"><link rel="icon" href="{{appAvatar}}">
+  <base href="/">
+    <style>doubao-watermark::shadow iframe[src*=watermark i],doubao-watermark::shadow iframe[src*=miaoda i],doubao-watermark::shadow iframe[src*=doubao i]{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}doubao-watermark::shadow body>[style*=position\:fixed]{max-height:120px}:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=watermark i],:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=miaoda i],:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) iframe[src*=doubao i]{visibility:hidden!important;opacity:0!important;pointer-events:none!important;z-index:-999999!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;width:0!important;max-width:0!important;height:0!important;max-height:0!important;box-shadow:none!important;text-indent:-9999px!important;white-space:nowrap!important;background:0 0!important;border:none!important;margin:0!important;padding:0!important;font-size:0!important;line-height:0!important;display:none!important;position:absolute!important;overflow:hidden!important}:is(doubao-watermark,doubao-watermark-mobile,miaoda-watermark,apaas-watermark,lark-watermark,[data-custom-element=doubao-watermark],[data-custom-element=doubao-watermark-mobile],[data-custom-element*=watermark i],[data-custom-element*=miaoda i],[data-custom-element*=doubao i],[class*=watermark i],[class*=miaoda i],[class*=doubao i],[class*=powered-by i],[class*=powered_by i],[class*=built-with i],[class*=built_with i],[class*=poweredby i],[class*=builtwith i],[class*=apaas i],[class*=lark-watermark i],[id*=watermark i],[id*=miaoda i],[id*=doubao i],[id*=apaas-watermark i],body>div[style*="position: fixed"][style*=bottom],body>div[style*=position\:fixed][style*=bottom],body>span[style*="position: fixed"][style*=bottom],body>span[style*=position\:fixed][style*=bottom]) body>[style*=position\:fixed]{max-height:120px}</style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OWELL Industrial - Your Trusted LED Infrared Sensor Light Manufacturer from China. OEM/ODM custom LED security lighting factory." />
+    <meta name="keywords" content="LED Security light manufacturer, LED infrared sensor light, PIR motion sensor lamp, outdoor security lighting factory, OEM LED light manufacturer China" />
+    <title>OWELL Industrial - LED Sensor Light Manufacturer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <style>html,body{color:#f5f5f5;background:#000;min-height:100vh;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,sans-serif}#root{min-height:100vh}#root:empty:before{content:"";border:2px solid #1a1a1a;border-top-color:#e63946;border-radius:50%;width:32px;height:32px;margin:0 auto;animation:.8s linear infinite ws-spin;display:block}#root:empty:after{content:"Loading...";text-align:center;color:#666;letter-spacing:.5px;margin-top:12px;font-size:14px;display:block}#root:empty{flex-direction:column;justify-content:center;align-items:center;padding-top:40vh;display:flex}@keyframes ws-spin{to{transform:rotate(360deg)}}.ws-watchdog-alert{color:#aaa;z-index:99999;background:#1a1a1a;border:1px solid #333;border-radius:6px;max-width:300px;padding:12px 16px;font-size:13px;position:fixed;bottom:20px;right:20px;box-shadow:0 4px 12px #00000080}.ws-watchdog-alert button{color:#fff;cursor:pointer;background:#e63946;border:none;border-radius:4px;margin-top:8px;padding:6px 12px;font-size:12px}</style>
+    <script type="module" src="/assets/index-QeXEhJBb.js"></script>
+    <link rel="modulepreload" href="/assets/toolkit-shim-RVIUYT4N.js">
+    <link rel="modulepreload" href="/assets/dist-D-J4ORno.js">
+    <link rel="modulepreload" href="/assets/jsx-runtime-WTu9FJws.js">
+    <link rel="modulepreload" href="/assets/card-BGpCxCWa.js">
+    <link rel="modulepreload" href="/assets/book-open-B2ASr4Lv.js">
+    <link rel="modulepreload" href="/assets/chevron-left-BzS806yE.js">
+    <link rel="modulepreload" href="/assets/PageBreadcrumb-CHxoE20s.js">
+    <link rel="modulepreload" href="/assets/zoom-in-Doo8g1mL.js">
+    <link rel="modulepreload" href="/assets/file-text-DOm1M4E8.js">
+    <link rel="modulepreload" href="/assets/volume-x-Cozuh2mr.js">
+    <link rel="modulepreload" href="/assets/loader-circle-qdfkDAHl.js">
+    <link rel="modulepreload" href="/assets/play-D61TPQNo.js">
+    <link rel="modulepreload" href="/assets/plus-CKhnhzJ1.js">
+    <link rel="modulepreload" href="/assets/refresh-cw-0avdEmRe.js">
+    <link rel="modulepreload" href="/assets/triangle-alert-BVe2Kv1X.js">
+    <link rel="modulepreload" href="/assets/x-DfwL0srS.js">
+    <link rel="modulepreload" href="/assets/basename-DkWhrF5K.js">
+    <link rel="modulepreload" href="/assets/img-path-Bo0ikVjd.js">
+    <link rel="modulepreload" href="/assets/github-api-ad9a8izq.js">
+    <link rel="modulepreload" href="/assets/GithubConfigContext-BWUmrnrH.js">
+    <link rel="modulepreload" href="/assets/useGithubConfig-jpOWAame.js">
+    <link rel="modulepreload" href="/assets/RemoteDataContext-DBnXWU9H.js">
+    <link rel="modulepreload" href="/assets/i18n-text-DRRyQM3F.js">
+    <link rel="modulepreload" href="/assets/remote-data-safe-gB3bbRMr.js">
+    <link rel="modulepreload" href="/assets/dist-B1quAwfm.js">
+    <link rel="modulepreload" href="/assets/dist-BQSJyF1G.js">
+    <link rel="modulepreload" href="/assets/dist-u781E40w.js">
+    <link rel="modulepreload" href="/assets/tslib.es6-NhdQCYIh.js">
+    <link rel="modulepreload" href="/assets/es2015-BkaUZkTe.js">
+    <link rel="modulepreload" href="/assets/dist-qniw1a_k.js">
+    <link rel="modulepreload" href="/assets/useGithubSync-BC881qU2.js">
+    <link rel="modulepreload" href="/assets/dist-hGBDqryx.js">
+    <link rel="modulepreload" href="/assets/input-Do0E79LT.js">
+    <link rel="modulepreload" href="/assets/format-DVr6sjC1.js">
+    <link rel="modulepreload" href="/assets/proxy-B7aTLcTq.js">
+    <link rel="modulepreload" href="/assets/indexed-db-BRLtctVH.js">
+    <link rel="modulepreload" href="/assets/image-compress-DPj5Rs7A.js">
+    <link rel="stylesheet" href="/assets/index-ju9qWi8G.css">
+  
 <script>
   // Platform global variables (static deploy)
   window.appId = "app_static_deploy";
@@ -178,7 +126,24 @@
   body::before,
   body::after { content: none !important; }
 </style>
-</head><body><div id="root"></div><noscript><div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5f5f5;font-family:system-ui,sans-serif;padding:24px;text-align:center"><div style="max-width:480px"><h1 style="font-size:20px;color:#e63946;margin:0 0 16px">JavaScript Required</h1><p style="font-size:14px;color:#aaa;line-height:1.6;margin:0 0 16px">This website requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.</p><p style="font-size:13px;color:#666;margin:0">OWELL Industrial - LED Sensor Light Manufacturer</p></div></div></noscript><script>// ====== 资源加载失败自动重试（JS/CSS 404 时自动追加新 script/link） ======
+</head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5f5f5;font-family:system-ui,sans-serif;padding:24px;text-align:center;">
+        <div style="max-width:480px;">
+          <h1 style="font-size:20px;color:#e63946;margin:0 0 16px;">JavaScript Required</h1>
+          <p style="font-size:14px;color:#aaa;line-height:1.6;margin:0 0 16px;">
+            This website requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.
+          </p>
+          <p style="font-size:13px;color:#666;margin:0;">
+            OWELL Industrial - LED Sensor Light Manufacturer
+          </p>
+        </div>
+      </div>
+    </noscript>
+    <script>
+      // ====== 资源加载失败自动重试（JS/CSS 404 时自动追加新 script/link） ======
       (function() {
         var retryCount = {};
         var MAX_RETRIES = 2;
@@ -319,7 +284,9 @@
             }, 2000);
           });
         })();
-      })();</script><script>
+      })();
+    </script>
+  <script>
 (function() {
   var errors = [];
   var maxErrors = 30;
@@ -459,4 +426,5 @@
   }
 })();
 </script>
-</body></html>
+</body>
+</html>
