@@ -143,6 +143,10 @@
       "ctaTitle": "Still have questions?",
       "ctaSubtitle": "Contact our team for personalized support and quick quotes"
     },
+    "whatsapp": {
+      "tooltip": "Chat with us on WhatsApp",
+      "defaultMessage": "Hello, I'm interested in your LED sensor light products"
+    },
     "contact": {
       "title": "Contact Us",
       "subtitle": "Get in touch with our team for inquiries and quotes",
@@ -183,7 +187,9 @@
       "companyEmail": "sherwin@tanjeon.com",
       "phone": "+86 755 8888 6666",
       "whatsapp": "WhatsApp",
-      "whatsappCta": "Chat on WhatsApp"
+      "whatsappCta": "Chat on WhatsApp",
+      "businessHours": "Business Hours",
+      "findUs": "Find Our Factory"
     },
     "home": {
       "whyChooseTitle": "Why Choose OWELL",
@@ -192,7 +198,24 @@
       "testimonialsTitle": "What Our Clients Say",
       "testimonialsSubtitle": "Trusted by businesses worldwide",
       "quoteTitle": "Get a Free Quote",
-      "quoteSubtitle": "Tell us your requirements and we will reply within 12 hours"
+      "quoteSubtitle": "Tell us your requirements and we will reply within 12 hours",
+      "trustTitle": "Trusted by Industry Leaders Worldwide",
+      "trustSubtitle": "Certified quality, proven reliability, and decades of manufacturing expertise",
+      "certificationsTitle": "Certifications",
+      "certificationsDesc": "All products certified to meet international safety and quality standards",
+      "clientLogosTitle": "Our Global Partners",
+      "clientLogosSubtitle": "Serving distributors, brands, and contractors across 50+ countries",
+      "statsTitle": "Factory Strength at a Glance",
+      "statYears": "Years Experience",
+      "statCountries": "Countries Served",
+      "statProducts": "Product Models",
+      "statClients": "Happy Clients",
+      "requestSample": "Request Sample",
+      "getQuoteNow": "Get Quote Now",
+      "manufacturerDirect": "Manufacturer Direct Pricing",
+      "oemOdm": "OEM / ODM Customization",
+      "yearsExperience": "10+ Years Experience",
+      "heroBadgePrimary": "Factory Direct · OEM/ODM · CE RoHS Certified"
     },
     "productDetail": {
       "backToProducts": "Back to Products",
@@ -218,7 +241,28 @@
       "specsHint": "Detailed technical parameters for your reference.",
       "specsCount": "{n} specifications available",
       "gallerySubtitle": "Detailed views from every angle to help you fully understand the product.",
-      "applicationsBadge": "APPLICATIONS"
+      "applicationsBadge": "APPLICATIONS",
+      "faqTitle": "Frequently Asked Questions",
+      "faqSubtitle": "Everything you need to know about this product",
+      "relatedProducts": "Related Products",
+      "relatedProductsSubtitle": "You may also be interested in these products",
+      "floatingInquiry": "Get Quote",
+      "floatingWhatsApp": "WhatsApp",
+      "specSensorType": "Sensor Type",
+      "specBeamAngle": "Beam Angle",
+      "specLuminous": "Luminous Flux",
+      "specDimensions": "Dimensions",
+      "specWeight": "Weight",
+      "specWarranty": "Warranty",
+      "specCertification": "Certification",
+      "specWorkingTemp": "Working Temperature",
+      "specDelayTime": "Delay Time",
+      "specDetectionRange": "Detection Range",
+      "specParameter": "Parameter",
+      "specValue": "Value",
+      "relatedBadge": "You May Also Like",
+      "relatedSubtitle": "Explore similar products in our collection",
+      "inquire": "Inquire"
     },
     "admin": {
       "login": "Admin Login",
@@ -408,6 +452,8 @@
       },
       "catalog": "Product Catalog",
       "factoryVideo": "Factory Video",
+      "clientLogos": "Client Logos",
+      "clientLogosDesc": "Manage customer and partner logos displayed on the homepage",
       "changePasswordLabel": "Change Password",
       "githubSyncLabel": "GitHub Sync",
       "footerSettings": "Footer Settings",
@@ -1031,6 +1077,10 @@
       "ctaTitle": "还有其他问题？",
       "ctaSubtitle": "联系我们的团队获取专业支持和快速报价"
     },
+    "whatsapp": {
+      "tooltip": "通过WhatsApp与我们联系",
+      "defaultMessage": "您好，我对你们的LED感应灯产品感兴趣"
+    },
     "contact": {
       "title": "联系我们",
       "subtitle": "与我们的团队联系，获取报价和咨询",
@@ -1071,7 +1121,9 @@
       "companyEmail": "sherwin@tanjeon.com",
       "phone": "+86 755 8888 6666",
       "whatsapp": "WhatsApp",
-      "whatsappCta": "WhatsApp 在线咨询"
+      "whatsappCta": "WhatsApp 在线咨询",
+      "businessHours": "营业时间",
+      "findUs": "工厂位置"
     },
     "home": {
       "whyChooseTitle": "为什么选择OWELL",
@@ -1080,7 +1132,24 @@
       "testimonialsTitle": "客户评价",
       "testimonialsSubtitle": "全球企业的信赖之选",
       "quoteTitle": "免费获取报价",
-      "quoteSubtitle": "告诉我们您的需求，我们将在12小时内回复"
+      "quoteSubtitle": "告诉我们您的需求，我们将在12小时内回复",
+      "trustTitle": "深受全球行业领袖信赖",
+      "trustSubtitle": "认证品质、可靠性能、数十年制造经验",
+      "certificationsTitle": "资质认证",
+      "certificationsDesc": "全系列产品通过国际安全与质量标准认证",
+      "clientLogosTitle": "全球合作伙伴",
+      "clientLogosSubtitle": "服务遍及50多个国家的经销商、品牌方和工程商",
+      "statsTitle": "工厂实力一览",
+      "statYears": "年行业经验",
+      "statCountries": "服务国家",
+      "statProducts": "产品型号",
+      "statClients": "合作客户",
+      "requestSample": "申请样品",
+      "getQuoteNow": "立即获取报价",
+      "manufacturerDirect": "工厂直供价格",
+      "oemOdm": "OEM / ODM 定制服务",
+      "yearsExperience": "10年以上行业经验",
+      "heroBadgePrimary": "工厂直供 · OEM/ODM定制 · CE RoHS认证"
     },
     "productDetail": {
       "backToProducts": "返回产品列表",
@@ -1106,7 +1175,28 @@
       "specsHint": "详细技术参数供您参考。",
       "specsCount": "共 {n} 项规格参数",
       "gallerySubtitle": "多角度细节视图，帮助您全面了解产品。",
-      "applicationsBadge": "应用场景"
+      "applicationsBadge": "应用场景",
+      "faqTitle": "常见问题",
+      "faqSubtitle": "关于本产品您需要了解的一切",
+      "relatedProducts": "相关产品",
+      "relatedProductsSubtitle": "您可能还对以下产品感兴趣",
+      "floatingInquiry": "获取报价",
+      "floatingWhatsApp": "WhatsApp",
+      "specSensorType": "传感器类型",
+      "specBeamAngle": "光束角度",
+      "specLuminous": "光通量",
+      "specDimensions": "产品尺寸",
+      "specWeight": "重量",
+      "specWarranty": "质保年限",
+      "specCertification": "认证资质",
+      "specWorkingTemp": "工作温度",
+      "specDelayTime": "延时时间",
+      "specDetectionRange": "探测距离",
+      "specParameter": "参数",
+      "specValue": "数值",
+      "relatedBadge": "您可能还喜欢",
+      "relatedSubtitle": "探索我们系列中的类似产品",
+      "inquire": "询盘"
     },
     "admin": {
       "login": "管理后台登录",
@@ -1296,6 +1386,8 @@
       },
       "catalog": "产品目录",
       "factoryVideo": "工厂视频",
+      "clientLogos": "客户LOGO",
+      "clientLogosDesc": "管理首页展示的客户和合作伙伴LOGO",
       "changePasswordLabel": "修改密码",
       "githubSyncLabel": "GitHub同步",
       "footerSettings": "页脚设置",
@@ -1918,6 +2010,10 @@
       "ctaTitle": "¿Aún tienes preguntas?",
       "ctaSubtitle": "Contacta a nuestro equipo para soporte personalizado y cotizaciones rápidas"
     },
+    "whatsapp": {
+      "tooltip": "Chatea con nosotros en WhatsApp",
+      "defaultMessage": "Hola, estoy interesado en sus productos de luces LED con sensor"
+    },
     "contact": {
       "title": "Contáctenos",
       "subtitle": "Póngase en contacto con nuestro equipo para consultas y presupuestos",
@@ -1958,7 +2054,9 @@
       "companyEmail": "sherwin@tanjeon.com",
       "phone": "+86 755 8888 6666",
       "whatsapp": "WhatsApp",
-      "whatsappCta": "Chatear en WhatsApp"
+      "whatsappCta": "Chatear en WhatsApp",
+      "businessHours": "Horario Comercial",
+      "findUs": "Nuestra Fábrica"
     },
     "home": {
       "whyChooseTitle": "Por Qué Elegir OWELL",
@@ -1967,7 +2065,24 @@
       "testimonialsTitle": "Lo Que Dicen Nuestros Clientes",
       "testimonialsSubtitle": "Confiado por empresas en todo el mundo",
       "quoteTitle": "Solicite un Presupuesto Gratis",
-      "quoteSubtitle": "Cuéntenos sus requisitos y le responderemos en 12 horas"
+      "quoteSubtitle": "Cuéntenos sus requisitos y le responderemos en 12 horas",
+      "trustTitle": "Confiado por Líderes de la Industria en Todo el Mundo",
+      "trustSubtitle": "Calidad certificada, confiabilidad probada y décadas de experiencia en fabricación",
+      "certificationsTitle": "Certificaciones",
+      "certificationsDesc": "Todos los productos certificados para cumplir con estándares internacionales de seguridad y calidad",
+      "clientLogosTitle": "Nuestros Socios Globales",
+      "clientLogosSubtitle": "Atendemos a distribuidores, marcas y contratistas en más de 50 países",
+      "statsTitle": "Fortaleza de Fábrica de un Vistazo",
+      "statYears": "Años de Experiencia",
+      "statCountries": "Países Atendidos",
+      "statProducts": "Modelos de Productos",
+      "statClients": "Clientes Satisfechos",
+      "requestSample": "Solicitar Muestra",
+      "getQuoteNow": "Solicitar Presupuesto Ahora",
+      "manufacturerDirect": "Precio Directo de Fábrica",
+      "oemOdm": "Personalización OEM / ODM",
+      "yearsExperience": "Más de 10 Años de Experiencia",
+      "heroBadgePrimary": "Directo de Fábrica · OEM/ODM · Certificado CE RoHS"
     },
     "productDetail": {
       "backToProducts": "Volver a Productos",
@@ -1993,7 +2108,28 @@
       "specsHint": "Parámetros técnicos detallados para tu referencia.",
       "specsCount": "{n} especificaciones disponibles",
       "gallerySubtitle": "Vistas detalladas desde todos los ángulos para ayudarte a entender completamente el producto.",
-      "applicationsBadge": "APLICACIONES"
+      "applicationsBadge": "APLICACIONES",
+      "faqTitle": "Preguntas Frecuentes",
+      "faqSubtitle": "Todo lo que necesitas saber sobre este producto",
+      "relatedProducts": "Productos Relacionados",
+      "relatedProductsSubtitle": "También pueden interesarte estos productos",
+      "floatingInquiry": "Solicitar Presupuesto",
+      "floatingWhatsApp": "WhatsApp",
+      "specSensorType": "Tipo de Sensor",
+      "specBeamAngle": "Ángulo de Haz",
+      "specLuminous": "Flujo Luminoso",
+      "specDimensions": "Dimensiones",
+      "specWeight": "Peso",
+      "specWarranty": "Garantía",
+      "specCertification": "Certificación",
+      "specWorkingTemp": "Temperatura de Trabajo",
+      "specDelayTime": "Tiempo de Retardo",
+      "specDetectionRange": "Rango de Detección",
+      "specParameter": "Parámetro",
+      "specValue": "Valor",
+      "relatedBadge": "También Puede Gustarle",
+      "relatedSubtitle": "Explore productos similares en nuestra colección",
+      "inquire": "Consultar"
     },
     "admin": {
       "login": "Inicio de Sesión Admin",
@@ -2271,6 +2407,8 @@
         "subtitle": "Administración"
       },
       "catalog": "Catálogo de Productos",
+      "clientLogos": "Logotipos de Clientes",
+      "clientLogosDesc": "Gestionar logotipos de clientes y socios mostrados en la página de inicio",
       "changePasswordLabel": "Cambiar Contraseña",
       "githubSyncLabel": "Sincronización GitHub",
       "footerSettings": "Ajustes del Pie de Página",
@@ -2804,6 +2942,10 @@
       "ctaTitle": "ご質問はありますか？",
       "ctaSubtitle": "専門チームにお問い合わせください。迅速にお見積もりいたします"
     },
+    "whatsapp": {
+      "tooltip": "WhatsAppでお気軽にご連絡ください",
+      "defaultMessage": "こんにちは、LED人感センサーライトの製品に興味があります"
+    },
     "contact": {
       "title": "お問い合わせ",
       "subtitle": "お見積もりやご質問は弊社チームまで",
@@ -2844,7 +2986,9 @@
       "companyEmail": "sherwin@tanjeon.com",
       "phone": "+86 755 8888 6666",
       "whatsapp": "WhatsApp",
-      "whatsappCta": "WhatsAppでチャット"
+      "whatsappCta": "WhatsAppでチャット",
+      "businessHours": "営業時間",
+      "findUs": "工場所在地"
     },
     "home": {
       "whyChooseTitle": "なぜOWELLを選ぶのか",
@@ -2853,7 +2997,24 @@
       "testimonialsTitle": "お客様の声",
       "testimonialsSubtitle": "世界中の企業から信頼されています",
       "quoteTitle": "無料見積もり",
-      "quoteSubtitle": "ご要件をお聞かせください。12時間以内に返信いたします"
+      "quoteSubtitle": "ご要件をお聞かせください。12時間以内に返信いたします",
+      "trustTitle": "世界の業界リーダーから信頼されています",
+      "trustSubtitle": "認証された品質、実証済みの信頼性、そして数十年の製造経験",
+      "certificationsTitle": "認証資格",
+      "certificationsDesc": "すべての製品は国際安全・品質基準に適合しています",
+      "clientLogosTitle": "グローバルパートナー",
+      "clientLogosSubtitle": "50カ国以上の販売店、ブランド、契約業者にサービスを提供",
+      "statsTitle": "工場の強みを一目で",
+      "statYears": "年の経験",
+      "statCountries": "進出国数",
+      "statProducts": "製品モデル数",
+      "statClients": "お客様数",
+      "requestSample": "サンプル請求",
+      "getQuoteNow": "今すぐ見積もり",
+      "manufacturerDirect": "メーカー直売価格",
+      "oemOdm": "OEM / ODM カスタマイズ",
+      "yearsExperience": "10年以上の経験",
+      "heroBadgePrimary": "工場直送 · OEM/ODM · CE RoHS認証"
     },
     "productDetail": {
       "backToProducts": "製品一覧に戻る",
@@ -2879,7 +3040,28 @@
       "specsHint": "詳細な技術パラメータをご参照ください。",
       "specsCount": "{n} 個の仕様があります",
       "gallerySubtitle": "あらゆる角度からの詳細ビューで、製品を完全に理解できます。",
-      "applicationsBadge": "適用シーン"
+      "applicationsBadge": "適用シーン",
+      "faqTitle": "よくある質問",
+      "faqSubtitle": "この製品について知っておくべきことすべて",
+      "relatedProducts": "関連製品",
+      "relatedProductsSubtitle": "これらの製品にも興味があるかもしれません",
+      "floatingInquiry": "見積もりを取得",
+      "floatingWhatsApp": "WhatsApp",
+      "specSensorType": "センサー方式",
+      "specBeamAngle": "ビーム角度",
+      "specLuminous": "光束",
+      "specDimensions": "寸法",
+      "specWeight": "重量",
+      "specWarranty": "保証期間",
+      "specCertification": "認証",
+      "specWorkingTemp": "使用温度範囲",
+      "specDelayTime": "遅延時間",
+      "specDetectionRange": "検知範囲",
+      "specParameter": "パラメーター",
+      "specValue": "値",
+      "relatedBadge": "こちらもおすすめ",
+      "relatedSubtitle": "コレクションの類似製品をご覧ください",
+      "inquire": "問い合わせ"
     },
     "admin": {
       "login": "管理者ログイン",
@@ -3157,6 +3339,8 @@
         "subtitle": "管理画面"
       },
       "catalog": "製品カタログ",
+      "clientLogos": "クライアントロゴ",
+      "clientLogosDesc": "ホームページに表示する顧客・パートナーロゴの管理",
       "changePasswordLabel": "パスワード変更",
       "githubSyncLabel": "GitHub同期",
       "footerSettings": "フッター設定",
