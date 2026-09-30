@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e4de;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4cfc7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 地图背景 -->
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
+  
+  <!-- 主要道路 - 横向 -->
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#ffffff" stroke-width="12"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#c9c4ba" stroke-width="2" stroke-dasharray="8,6"/>
+  <line x1="0" y1="280" x2="800" y2="280" stroke="#ffffff" stroke-width="8"/>
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#d9d5cd" stroke-width="4"/>
+  
+  <!-- 主要道路 - 纵向 -->
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#ffffff" stroke-width="10"/>
+  <line x1="400" y1="0" x2="400" y2="400" stroke="#ffffff" stroke-width="14"/>
+  <line x1="600" y1="0" x2="600" y2="400" stroke="#ffffff" stroke-width="8"/>
+  <line x1="100" y1="0" x2="100" y2="400" stroke="#d9d5cd" stroke-width="4"/>
+  <line x1="700" y1="0" x2="700" y2="400" stroke="#d9d5cd" stroke-width="4"/>
+  
+  <!-- 斜向道路 -->
+  <line x1="300" y1="0" x2="500" y2="400" stroke="#d9d5cd" stroke-width="5"/>
+  <line x1="650" y1="50" x2="750" y2="350" stroke="#d9d5cd" stroke-width="4"/>
+  
+  <!-- 工业区建筑块 -->
+  <rect x="220" y="120" width="80" height="50" fill="#b8b4ac" stroke="#a09c94" stroke-width="1"/>
+  <rect x="320" y="110" width="70" height="60" fill="#c0bcb4" stroke="#a09c94" stroke-width="1"/>
+  <rect x="420" y="130" width="90" height="45" fill="#b8b4ac" stroke="#a09c94" stroke-width="1"/>
+  <rect x="540" y="120" width="60" height="55" fill="#c0bcb4" stroke="#a09c94" stroke-width="1"/>
+  
+  <rect x="220" y="220" width="100" height="50" fill="#c0bcb4" stroke="#a09c94" stroke-width="1"/>
+  <rect x="340" y="210" width="80" height="60" fill="#b8b4ac" stroke="#a09c94" stroke-width="1"/>
+  <rect x="440" y="225" width="70" height="45" fill="#c0bcb4" stroke="#a09c94" stroke-width="1"/>
+  <rect x="530" y="215" width="90" height="55" fill="#b8b4ac" stroke="#a09c94" stroke-width="1"/>
+  
+  <rect x="220" y="300" width="80" height="40" fill="#c5c1b9" stroke="#a8a49c" stroke-width="1"/>
+  <rect x="320" y="295" width="90" height="45" fill="#bdb9b1" stroke="#a8a49c" stroke-width="1"/>
+  <rect x="430" y="305" width="70" height="35" fill="#c5c1b9" stroke="#a8a49c" stroke-width="1"/>
+  <rect x="520" y="298" width="80" height="42" fill="#bdb9b1" stroke="#a8a49c" stroke-width="1"/>
+  
+  <!-- 绿地 -->
+  <ellipse cx="650" cy="250" rx="40" ry="30" fill="#a8c4a0" opacity="0.6"/>
+  <ellipse cx="150" cy="340" rx="50" ry="35" fill="#a8c4a0" opacity="0.5"/>
+  
+  <!-- 水域 -->
+  <path d="M 0 50 Q 200 30, 400 60 T 800 40" fill="none" stroke="#9ac5db" stroke-width="20" opacity="0.5"/>
+  
+  <!-- 道路名称 -->
+  <text x="410" y="175" fill="#666" font-size="11" font-family="Arial, sans-serif" transform="rotate(0, 410, 175)">Jiuyuan Rd</text>
+  <text x="205" y="200" fill="#666" font-size="10" font-family="Arial, sans-serif" transform="rotate(90, 205, 200)">Auto Park Ave</text>
+  
+  <!-- 红色标记点 (在中心交叉位置 = 九园路16号) -->
+  <g filter="url(#shadow)" transform="translate(400, 190)">
+    <!-- 标记底部阴影 -->
+    <ellipse cx="0" cy="25" rx="12" ry="4" fill="#000000" opacity="0.25"/>
+    <!-- 水滴形标记 -->
+    <path d="M 0 -35 C -18 -35, -22 -12, -12 3 C -5 15, 0 25, 0 25 C 0 25, 5 15, 12 3 C 22 -12, 18 -35, 0 -35 Z" 
+          fill="#E63946" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- 内部圆点 -->
+    <circle cx="0" cy="-15" r="8" fill="#ffffff"/>
+    <circle cx="0" cy="-15" r="4" fill="#E63946"/>
+  </g>
+  
+  <!-- 标记点脉冲效果 -->
+  <circle cx="400" cy="190" r="30" fill="none" stroke="#E63946" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="20;45;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 坐标信息 -->
+  <rect x="10" y="10" width="180" height="40" rx="4" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1"/>
+  <text x="20" y="28" fill="#333" font-size="11" font-family="Arial, sans-serif" font-weight="bold">OWELL Industrial</text>
+  <text x="20" y="42" fill="#666" font-size="9" font-family="Arial, sans-serif">29.656658, 115.966619</text>
+  
+  <!-- 比例尺 -->
+  <rect x="680" y="360" width="100" height="14" fill="rgba(255,255,255,0.9)" stroke="#ccc" stroke-width="1" rx="2"/>
+  <line x1="690" y1="367" x2="770" y2="367" stroke="#333" stroke-width="2"/>
+  <line x1="690" y1="363" x2="690" y2="371" stroke="#333" stroke-width="2"/>
+  <line x1="770" y1="363" x2="770" y2="371" stroke="#333" stroke-width="2"/>
+  <text x="720" y="370" fill="#333" font-size="8" font-family="Arial, sans-serif" text-anchor="middle">500m</text>
+</svg>
