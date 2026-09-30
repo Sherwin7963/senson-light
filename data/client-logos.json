@@ -1,0 +1,48 @@
+{
+  "showOnHomepage": false,
+  "logos": [
+    {
+      "id": "1",
+      "name": "Luminex",
+      "image": "",
+      "url": "",
+      "order": 1
+    },
+    {
+      "id": "2",
+      "name": "BrightCo",
+      "image": "",
+      "url": "",
+      "order": 2
+    },
+    {
+      "id": "3",
+      "name": "EcoLight",
+      "image": "",
+      "url": "",
+      "order": 3
+    },
+    {
+      "id": "4",
+      "name": "StarLED",
+      "image": "",
+      "url": "",
+      "order": 4
+    },
+    {
+      "id": "5",
+      "name": "PowerGlow",
+      "image": "",
+      "url": "",
+      "order": 5
+    },
+    {
+      "id": "6",
+      "name": "SunRay",
+      "image": "",
+      "url": "",
+      "order": 6
+    }
+  ],
+  "updatedAt": 1790731872837
+}
