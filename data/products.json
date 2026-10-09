@@ -1,5 +1,189 @@
 [
   {
+    "name": {
+      "en": "VM07A LED Table Light Touch Switch Dimming With Type-C Cable",
+      "zh": "VM07A LED台灯，带触控开关和调光功能，配Type-C数据线",
+      "es": "Lámpara de mesa LED VM07A con regulador de intensidad mediante interruptor táctil y cable tipo C",
+      "ja": "VM07A LED卓上ライト タッチスイッチ式調光機能付き Type-Cケーブル付属"
+    },
+    "category": "AC Powered",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608805_ydfrdf.jpg",
+      "/images/custom/products/1791516608805_yfdwej.jpg",
+      "/images/custom/products/1791516608805_89cxi4.jpg",
+      "/images/custom/products/1791516608805_gimcx5.jpg",
+      "/images/custom/products/1791516608805_h9bvuv.jpg",
+      "/images/custom/products/1791516608805_l2vdzg.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "Iron+PC+ABS+Silica gel",
+          "zh": "铁+PC+ABS+硅胶",
+          "es": "Hierro + PC + ABS + gel de sílice",
+          "ja": "鉄＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791513558712_6e06ml",
+    "image": "/images/custom/products/1791516608805_ydfrdf.jpg",
+    "createdAt": 1791513558712
+  },
+  {
     "id": "p_1788933449190_iw7myv",
     "name": {
       "en": "W720 AC Power High Lumen Dual-Lamp Head LED Sensor Light",
@@ -2579,6 +2763,1138 @@
     "sortOrder": 1,
     "featuredOnHomepage": true,
     "createdAt": 1788242004116
+  },
+  {
+    "name": {
+      "en": "VM07S camping Lamp USB Recharge And Touch switch On the lamp top With Handle And Magnetic Bearing Design",
+      "zh": "VM07S 露营灯，支持USB充电，灯顶设有触控开关，配有手柄和磁吸式底座设计",
+      "es": "Lámpara de camping VM07S con recarga USB e interruptor táctil en la parte superior, con asa y diseño con soporte magnético",
+      "ja": "VM07S キャンプ用ランプ USB充電式、ランプ上部にタッチスイッチ付き、ハンドルと磁気ベアリング設計"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608806_ghrdu5.jpg",
+      "/images/custom/products/1791516608806_7t9eam.jpg",
+      "/images/custom/products/1791516608806_aorzng.jpg",
+      "/images/custom/products/1791516608806_xny8gj.jpg",
+      "/images/custom/products/1791516608806_0e2q3n.jpg",
+      "/images/custom/products/1791516608806_zr5uhw.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "5.5hours",
+          "zh": "5.5小时",
+          "es": "5,5 horas",
+          "ja": "5.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-40hours",
+          "zh": "5-40小时",
+          "es": "5-40 horas",
+          "ja": "5～40時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "CFRP+PC+ABS+Silica gel",
+          "zh": "CFRP+PC+ABS+硅胶",
+          "es": "CFRP + PC + ABS + gel de sílice",
+          "ja": "CFRP＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791516553565_v9xdz8",
+    "image": "/images/custom/products/1791516608806_ghrdu5.jpg",
+    "createdAt": 1791516553565
+  },
+  {
+    "name": {
+      "en": "VM07R LED Desk Lamp, featuring a touch switch and brightness control, comes with a Type-C cable",
+      "zh": "VM07R LED台灯配备触控开关和亮度调节功能，并附带一条Type-C数据线",
+      "es": "La lámpara de escritorio LED VM07R, que cuenta con un interruptor táctil y control de intensidad, incluye un cable tipo C.",
+      "ja": "タッチスイッチと調光機能を備えた「VM07R LEDデスクランプ」には、Type-Cケーブルが付属しています"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608806_f5lm8k.jpg",
+      "/images/custom/products/1791516608807_w3rnph.jpg",
+      "/images/custom/products/1791516608807_flwbpu.jpg",
+      "/images/custom/products/1791516608807_epq0ab.jpg",
+      "/images/custom/products/1791516608807_wa3f1m.jpg",
+      "/images/custom/products/1791516608807_y5rtoz.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "CFRP+PC+ABS+Silica gel",
+          "zh": "CFRP+PC+ABS+硅胶",
+          "es": "CFRP + PC + ABS + gel de sílice",
+          "ja": "CFRP＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791514677411_5tut65",
+    "image": "/images/custom/products/1791516608806_f5lm8k.jpg",
+    "createdAt": 1791514677411
+  },
+  {
+    "name": {
+      "en": "VM07A LED Desk Lamp, featuring a touch switch and brightness control, comes with a Type-C cable",
+      "zh": "VM07A LED台灯配备触控开关和亮度调节功能，并附带一条Type-C数据线",
+      "es": "La lámpara de escritorio LED VM07A, que cuenta con un interruptor táctil y control de intensidad, incluye un cable tipo C.",
+      "ja": "タッチスイッチと調光機能を備えた「VM07A LEDデスクランプ」には、Type-Cケーブルが付属しています。"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608805_ydfrdf.jpg",
+      "/images/custom/products/1791516608805_yfdwej.jpg",
+      "/images/custom/products/1791516608807_h3fp34.jpg",
+      "/images/custom/products/1791516608805_gimcx5.jpg",
+      "/images/custom/products/1791516608805_h9bvuv.jpg",
+      "/images/custom/products/1791516608805_l2vdzg.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "Iron+PC+ABS+Silica gel",
+          "zh": "铁+PC+ABS+硅胶",
+          "es": "Hierro + PC + ABS + gel de sílice",
+          "ja": "鉄＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791514492665_2sa425",
+    "image": "/images/custom/products/1791516608805_ydfrdf.jpg",
+    "createdAt": 1791514492665
+  },
+  {
+    "name": {
+      "en": "VM06R LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "VM06R LED台灯，配备3档触控开关和亮度调节功能，附Type-C数据线",
+      "es": "Lámpara de mesa LED VM06R con interruptor táctil de 3 posiciones y regulación de intensidad, con cable Type-C",
+      "ja": "VM06R LEDテーブルランプ（タッチ式3段階スイッチ＆調光機能付き、Type-Cケーブル付属）"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608807_lnxp2g.jpg",
+      "/images/custom/products/1791516608807_yo4l8m.jpg",
+      "/images/custom/products/1791516608808_zo4cjr.jpg",
+      "/images/custom/products/1791516608808_z68129.jpg",
+      "/images/custom/products/1791516608808_01i57d.jpg",
+      "/images/custom/products/1791516608808_ui2ahx.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "CCT",
+          "zh": "CCT",
+          "es": "CCT",
+          "ja": "CCT"
+        },
+        "value": {
+          "en": "3000K-4000K-6500K",
+          "zh": "3000K-4000K-6500K",
+          "es": "3000 K - 4000 K - 6500 K",
+          "ja": "3000K・4000K・6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "CFRP+PC+ABS+Silica gel",
+          "zh": "CFRP+PC+ABS+硅胶",
+          "es": "CFRP + PC + ABS + gel de sílice",
+          "ja": "CFRP＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791513256263_deaybl",
+    "image": "/images/custom/products/1791516608807_lnxp2g.jpg",
+    "createdAt": 1791513256263
+  },
+  {
+    "name": {
+      "en": "VM06F LED Wine Bottle Lamp Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "VM06F LED 葡萄酒瓶造型台灯，带触控三档开关及调光功能，附Type-C数据线",
+      "es": "Lámpara LED para botella de vino VM06F con interruptor táctil de 3 posiciones y regulación de intensidad, con cable tipo C",
+      "ja": "VM06F LEDワインボトルランプ タッチ式3段階スイッチ＆調光機能付き、Type-Cケーブル付属"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608808_9fknaa.jpg",
+      "/images/custom/products/1791516608808_90f36n.jpg",
+      "/images/custom/products/1791516608808_yerqxu.jpg",
+      "/images/custom/products/1791516608808_49l115.jpg",
+      "/images/custom/products/1791516608808_yi4agr.jpg",
+      "/images/custom/products/1791516608809_558e4f.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "CCT",
+          "zh": "CCT",
+          "es": "CCT",
+          "ja": "CCT"
+        },
+        "value": {
+          "en": "3000K-4000K-6500K",
+          "zh": "3000K-4000K-6500K",
+          "es": "3000 K - 4000 K - 6500 K",
+          "ja": "3000K・4000K・6500K"
+        }
+      },
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V 1A",
+          "zh": "直流 5V 1A",
+          "es": "5 V CC, 1 A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "PC+ABS+Zinc alloy+Silica gel+Iron",
+          "zh": "PC+ABS+锌合金+硅胶+铁",
+          "es": "PC + ABS + aleación de zinc + gel de sílice + hierro",
+          "ja": "PC＋ABS＋亜鉛合金＋シリカゲル＋鉄"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791513002952_fnlfbb",
+    "image": "/images/custom/products/1791516608808_9fknaa.jpg",
+    "createdAt": 1791513002952
+  },
+  {
+    "name": {
+      "en": "VM06A LED Table Light Touch 3-way Switch &Switch Dimming With Type-C Cable",
+      "zh": "VM06A LED台灯触摸三路开关调光带Type-C电缆",
+      "es": "VM06A Luz de mesa LED Interruptor táctil de 3 vías y atenuación del interruptor con cable tipo C",
+      "ja": "VM 06 A LEDテーブルライトタッチ3ウェイスイッチ＆タイプCケーブル付きスイッチ調光"
+    },
+    "category": "Table Lamp",
+    "description": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "structureInfo": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "richDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "showRichDescription": true,
+    "gallery": [
+      "/images/custom/products/1791516608809_9iy5t9.jpg",
+      "/images/custom/products/1791516608809_tkn6yn.jpg",
+      "/images/custom/products/1791516608809_ingopp.jpg",
+      "/images/custom/products/1791516608809_xjot99.jpg",
+      "/images/custom/products/1791516608809_ppmw78.jpg",
+      "/images/custom/products/1791516608809_2mb9bg.jpg"
+    ],
+    "customFields": [
+      {
+        "key": {
+          "en": "Input",
+          "zh": "输入",
+          "es": "Entrada",
+          "ja": "入力"
+        },
+        "value": {
+          "en": "DC 5V 1A",
+          "zh": "DC 5V 1A",
+          "es": "DC 5V 1A",
+          "ja": "DC 5V 1A"
+        }
+      },
+      {
+        "key": {
+          "en": "LED Power",
+          "zh": "LED功率",
+          "es": "Potencia del LED",
+          "ja": "LEDの電力"
+        },
+        "value": {
+          "en": "2.5W",
+          "zh": "2.5W",
+          "es": "2,5 W",
+          "ja": "2.5W"
+        }
+      },
+      {
+        "key": {
+          "en": "Lamp Brightness",
+          "zh": "灯的亮度",
+          "es": "Brillo de la lámpara",
+          "ja": "ランプの明るさ"
+        },
+        "value": {
+          "en": "150LM",
+          "zh": "150LM",
+          "es": "150 LM",
+          "ja": "150LM"
+        }
+      },
+      {
+        "key": {
+          "en": "IP Rate",
+          "zh": "IP速率",
+          "es": "Tarifa de IP",
+          "ja": "IPレート"
+        },
+        "value": {
+          "en": "IP54",
+          "zh": "IP54",
+          "es": "IP54",
+          "ja": "IP54"
+        }
+      },
+      {
+        "key": {
+          "en": "CRI",
+          "zh": "CRI",
+          "es": "CRI",
+          "ja": "CRI"
+        },
+        "value": {
+          "en": ">80Ra",
+          "zh": ">80Ra",
+          "es": ">80Ra",
+          "ja": ">80Ra"
+        }
+      },
+      {
+        "key": {
+          "en": "Charge time",
+          "zh": "充电时间",
+          "es": "Tiempo de carga",
+          "ja": "充電時間"
+        },
+        "value": {
+          "en": "3.5hours",
+          "zh": "3.5小时",
+          "es": "3,5 horas",
+          "ja": "3.5時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Stand-by time",
+          "zh": "待机时间",
+          "es": "Tiempo en modo de espera",
+          "ja": "待機時間"
+        },
+        "value": {
+          "en": "5-60hours",
+          "zh": "5-60小时",
+          "es": "5-60 horas",
+          "ja": "5～60時間"
+        }
+      },
+      {
+        "key": {
+          "en": "Matel",
+          "zh": "马特尔",
+          "es": "Matel",
+          "ja": "マテル"
+        },
+        "value": {
+          "en": "Iron+PC+ABS+Silica gel",
+          "zh": "铁+PC+ABS+硅胶",
+          "es": "Hierro + PC + ABS + gel de sílice",
+          "ja": "鉄＋PC＋ABS＋シリカゲル"
+        }
+      },
+      {
+        "key": {
+          "en": "MOQ",
+          "zh": "最小起订量",
+          "es": "Cantidad mínima de pedido",
+          "ja": "最小注文数量（MOQ）"
+        },
+        "value": {
+          "en": "1000",
+          "zh": "1000",
+          "es": "1000",
+          "ja": "1000"
+        }
+      }
+    ],
+    "features": [],
+    "applicationScenes": [],
+    "oemSupported": true,
+    "sortOrder": 0,
+    "featuredOnHomepage": false,
+    "slug": "",
+    "model": "",
+    "longDescription": {
+      "en": "",
+      "zh": "",
+      "es": "",
+      "ja": ""
+    },
+    "specs": [],
+    "tags": [],
+    "productFaqs": [],
+    "relatedProducts": [],
+    "id": "p_1791512790020_om57c2",
+    "image": "/images/custom/products/1791516608809_9iy5t9.jpg",
+    "createdAt": 1791512790020
   },
   {
     "id": "p_1788918872248_ckcz57",

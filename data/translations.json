@@ -189,7 +189,8 @@
       "whatsapp": "WhatsApp",
       "whatsappCta": "Chat on WhatsApp",
       "businessHours": "Business Hours",
-      "findUs": "Find Our Factory"
+      "findUs": "Find Our Factory",
+      "viewOnGoogleMaps": "View on Google Maps"
     },
     "home": {
       "whyChooseTitle": "Why Choose OWELL",
@@ -1123,7 +1124,8 @@
       "whatsapp": "WhatsApp",
       "whatsappCta": "WhatsApp 在线咨询",
       "businessHours": "营业时间",
-      "findUs": "工厂位置"
+      "findUs": "工厂位置",
+      "viewOnGoogleMaps": "在 Google 地图中查看"
     },
     "home": {
       "whyChooseTitle": "为什么选择OWELL",
@@ -2056,7 +2058,8 @@
       "whatsapp": "WhatsApp",
       "whatsappCta": "Chatear en WhatsApp",
       "businessHours": "Horario Comercial",
-      "findUs": "Nuestra Fábrica"
+      "findUs": "Nuestra Fábrica",
+      "viewOnGoogleMaps": "Ver en Google Maps"
     },
     "home": {
       "whyChooseTitle": "Por Qué Elegir OWELL",
@@ -2988,7 +2991,8 @@
       "whatsapp": "WhatsApp",
       "whatsappCta": "WhatsAppでチャット",
       "businessHours": "営業時間",
-      "findUs": "工場所在地"
+      "findUs": "工場所在地",
+      "viewOnGoogleMaps": "Google Mapsで表示"
     },
     "home": {
       "whyChooseTitle": "なぜOWELLを選ぶのか",
